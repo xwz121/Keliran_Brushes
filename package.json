@@ -35,7 +35,11 @@
     "review:setup": "node scripts/local-env.mjs pnpm exec tsx scripts/prepare-local-review.ts",
     "contacts:local": "node scripts/local-env.mjs node --import tsx scripts/apply-business-profile.ts",
     "audit:release:local": "node scripts/local-env.mjs node --import tsx scripts/audit-release.ts",
-    "checklists:generate": "node --import tsx scripts/generate-checklists.ts"
+    "checklists:generate": "node --import tsx scripts/generate-checklists.ts",
+    "migration:export": "node --import tsx scripts/migration/export-source.ts",
+    "migration:import": "node --import tsx scripts/migration/import-target.ts",
+    "migration:redirects": "node --import tsx scripts/migration/build-redirect-map.ts",
+    "migration:check-redirects": "node scripts/migration/check-redirects.mjs"
   },
   "dependencies": {
     "@aws-sdk/client-s3": "^3.1132.0",
