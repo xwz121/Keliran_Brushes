@@ -1,0 +1,33 @@
+import { spawn } from 'node:child_process'
+import { randomBytes } from 'node:crypto'
+// Deliberately override every external service before dotenv loads the saved production settings.
+const env = {
+  ...process.env,
+  DATABASE_URL: 'postgresql://keliran@127.0.0.1:55439/keliran_redesign',
+  DATABASE_URL_UNPOOLED: 'postgresql://keliran@127.0.0.1:55439/keliran_redesign',
+  NEXT_PUBLIC_SERVER_URL: 'http://127.0.0.1:3000',
+  PAYLOAD_SECRET: 'local-redesign-only-not-for-deployment-2026',
+  CRON_SECRET: randomBytes(32).toString('hex'),
+  CONTENT_PREVIEW_MODE: 'false',
+  DEPLOYMENT_ENV: 'development',
+  VERCEL_ENV: 'development',
+}
+for (const key of [
+  'R2_BUCKET',
+  'R2_PRIVATE_BUCKET',
+  'R2_ENDPOINT',
+  'R2_PUBLIC_URL',
+  'R2_ACCESS_KEY_ID',
+  'R2_SECRET_ACCESS_KEY',
+  'RESEND_API_KEY',
+  'EMAIL_FROM',
+  'SALES_EMAIL',
+  'OPENAI_API_KEY',
+  'TURNSTILE_SECRET_KEY',
+  'NEXT_PUBLIC_TURNSTILE_SITE_KEY',
+])
+  env[key] = ''
+const [command, ...args] = process.argv.slice(2)
+if (!command) throw new Error('Usage: node scripts/local-env.mjs <command> [args]')
+const child = spawn(command, args, { env, stdio: 'inherit' })
+child.on('exit', (code) => process.exit(code ?? 1))

@@ -1,0 +1,334 @@
+{
+  "sourceHash": "5e0251317585c239c237e308e56095090be2732246b0eda5637340ffde875b13",
+  "targetHash": "f19c0d81c1805f146c3dec5e6a7de6aa1452ef426faab2057798a26d3332cb66",
+  "batches": [
+    {
+      "batch": 0,
+      "sourceHash": "b8521c8d5784fee8e38e18e07a30373ebc0ca2657e4ee3c3c9f0d93167b839b5",
+      "targetHash": "68e36f8819b96b796738423f8b985e6284b6bd0427c3ab4515da679e49630359",
+      "model": "gpt-5.6-terra",
+      "responseId": "resp_024fd6c26d694299016ab51f343ac487d0937d0ba56fe1272b",
+      "usage": {
+        "input_tokens": 4566,
+        "input_tokens_details": {
+          "cache_write_tokens": 4563,
+          "cached_tokens": 0
+        },
+        "output_tokens": 610,
+        "output_tokens_details": {
+          "reasoning_tokens": 516
+        },
+        "total_tokens": 5176
+      },
+      "completedAt": "2026-09-24T13:01:48.778Z",
+      "result": {
+        "passed": false,
+        "issues": [
+          {
+            "key": "7afd564bb138630d982d",
+            "issue": "'Finished lengths organised around your assembly and packing requirements' is translated unnaturally as '완성 길이' and does not clearly convey cut-to-length, finished parts prepared around those requirements.",
+            "correction": "조립 및 포장 요구사항에 맞춰 준비되는 절단 완료 길이."
+          }
+        ]
+      },
+      "deterministic": []
+    },
+    {
+      "batch": 1,
+      "sourceHash": "22f293c35574fde2244bb6a7f6732ec953f2e1d9640eb4f704ea5bfe7ac7e431",
+      "targetHash": "2af5e451be6df50c092a739550ca1d2e7b19f4576ebc0db723d69c3eaeea869d",
+      "model": "gpt-5.6-terra",
+      "responseId": "resp_0b7b4d1533fe3f4f016ab51f3dd9cc87d0b30efdbe265b97f8",
+      "usage": {
+        "input_tokens": 5703,
+        "input_tokens_details": {
+          "cache_write_tokens": 5700,
+          "cached_tokens": 0
+        },
+        "output_tokens": 988,
+        "output_tokens_details": {
+          "reasoning_tokens": 516
+        },
+        "total_tokens": 6691
+      },
+      "completedAt": "2026-09-24T13:02:03.167Z",
+      "result": {
+        "passed": false,
+        "issues": [
+          {
+            "key": "45de8260b47ffbd98074",
+            "issue": "“aluminium or steel grade”에서 등급의 수식 관계가 불명확합니다.",
+            "correction": "H, F, T 또는 맞춤 단면; 알루미늄 또는 강재의 등급; 홀 패턴; 마감; 결합 치수."
+          },
+          {
+            "key": "1c9709b059b7d221f116",
+            "issue": "“When to consider it”은 검토 시점이 아니라 해당 재질을 고려할 조건을 뜻합니다.",
+            "correction": "고려할 때"
+          },
+          {
+            "key": "c2d409abde3875e2572e",
+            "issue": "“solid-rubber hardness”의 기술적 의미와 한국어 어순이 부정확합니다.",
+            "correction": "셀 구조, 밀도 및 압축 응답은 서로 다른 사양입니다. 솔리드 고무의 경도로 대체하지 마십시오."
+          },
+          {
+            "key": "78f13afa45e88f442844",
+            "issue": "“sample fit check”가 불필요한 영어식 표현으로 남아 있으며, 조립체 적합성 확인의 의미가 불명확합니다.",
+            "correction": "단면과 틈새 공차를 함께 검토하고, 샘플 장착 확인 및 조립된 인클로저 검증 계획에 합의합니다."
+          },
+          {
+            "key": "70176ab16bf27e7fbea5",
+            "issue": "“the complete bond”는 접착 결합 전체 시스템을 뜻하며, 현재 번역은 완전하게 접착된 상태에 의존한다는 의미로 바뀝니다.",
+            "correction": "기재 코팅, 오염, 적용 온도, 대기 시간 및 하중을 확인하십시오. 테이프 적합성은 전체 접착 결합에 따라 달라집니다."
+          },
+          {
+            "key": "f938bb5fe271d345cb18",
+            "issue": "“Controlled replacement drawing”에서 controlled는 도면 관리 상태를 뜻하며, 현재 번역은 부자연스럽고 의미가 불명확합니다.",
+            "correction": "관리 도면에 따른 교체용 도면 및 장착 확인 샘플."
+          }
+        ]
+      },
+      "deterministic": []
+    },
+    {
+      "batch": 2,
+      "sourceHash": "bd7450b2c8e5bbe6b7da490ca4b20325b9f2433d60e300e0610e477df848dd46",
+      "targetHash": "3e56f21e60bcc5f2825dd7d7c11540287ed67d752cc6594290718dace7ad58f5",
+      "model": "gpt-5.6-terra",
+      "responseId": "resp_08fcddeaf0092473016ab51f4c411887d0beeaf2f5d3de4fda",
+      "usage": {
+        "input_tokens": 5273,
+        "input_tokens_details": {
+          "cache_write_tokens": 5270,
+          "cached_tokens": 0
+        },
+        "output_tokens": 1430,
+        "output_tokens_details": {
+          "reasoning_tokens": 516
+        },
+        "total_tokens": 6703
+      },
+      "completedAt": "2026-09-24T13:02:20.923Z",
+      "result": {
+        "passed": false,
+        "issues": [
+          {
+            "key": "a3467dfe57ddebad346e",
+            "issue": "“Channel retention” is not accurately conveyed as general channel strength.",
+            "correction": "채널 내 고정력, 끝단 마감, 반복 충격 및 화학물질 노출을 확인하십시오."
+          },
+          {
+            "key": "5c84352af54bad5e8282",
+            "issue": "“Acceptance checks” is rendered awkwardly and does not clearly mean acceptance criteria/checks.",
+            "correction": "샘플 검사를 통해 유지력 및 탈락에 대한 허용 기준 검사를 정의하십시오."
+          },
+          {
+            "key": "b36cd3e5ae879f49d32a",
+            "issue": "“Trapped particles” means particles caught in the brush/contact area, not collected particles.",
+            "correction": "필라멘트 재질, 팁 상태, 끼인 입자 및 접촉 압력을 평가하십시오."
+          },
+          {
+            "key": "51d874afd269cda92e9f",
+            "issue": "“Interface” is mistranslated as an electrical contact point; this is a mechanical sealing interface.",
+            "correction": "닫힌 틈새와 검증 계획이 씰을 규정하는 도어, 커버 및 패널 접합부."
+          },
+          {
+            "key": "275e9cf8b006aa25d885",
+            "issue": "“Interface” is mistranslated as an electrical contact point.",
+            "correction": "접합부를 정의하십시오"
+          },
+          {
+            "key": "a91b6a0cc259330fd487",
+            "issue": "“Interface dimensions” is mistranslated as electrical-contact dimensions.",
+            "correction": "조립 도면, 접합부 치수, 환경, 기존 부품 또는 샘플, 주문 수량 및 납품지."
+          },
+          {
+            "key": "03ca23e15a095edd8747",
+            "issue": "“Cable-entry interfaces” is mistranslated as electrical contact points rather than physical interfaces.",
+            "correction": "조립 도면을 기준으로 검토한 정적 씰, 모서리 보호 및 케이블 인입 접합부."
+          },
+          {
+            "key": "8a0a20071ec2b5aa5441",
+            "issue": "“Conveyor interfaces” is mistranslated as electrical contact points.",
+            "correction": "컨베이어 접합부"
+          },
+          {
+            "key": "8e2141c2c59e96a55f56",
+            "issue": "“Conveyor interfaces” is mistranslated as electrical contact points.",
+            "correction": "지정된 컨베이어 접합부용 경접촉 가이드, 와이핑 및 분진 제한 스트립."
+          },
+          {
+            "key": "6a9e094048dcd8c3fa11",
+            "issue": "“Non-safety-critical” is inaccurately rendered as “non-safety-essential,” which changes the safety qualification.",
+            "correction": "안전 중요도가 아닌 개구부 및 칩 관리용 브러시 및 홀더 조립체."
+          },
+          {
+            "key": "9938445159f0a2de7bb6",
+            "issue": "The threshold, side and top “interfaces” are mistranslated as electrical contact points.",
+            "correction": "문턱, 측면 및 상부 접합부에 대해 씰과 스트립 브러시를 별도로 검토합니다."
+          },
+          {
+            "key": "9a76281d2600f8ec8b82",
+            "issue": "“Media” may include more than fluids, and “acceptance tests” is not an approval test.",
+            "correction": "실내 또는 실외 사용, 온도 노출, 접촉 매체, 개폐 사이클, 알려진 경우 재질 등급 및 필요한 수용 시험을 명시하십시오. 좁은 코너가 직선 구간과 혼동되지 않도록 사진과 측정값을 위치별로 식별하십시오."
+          },
+          {
+            "key": "66a4f278ea896fbd56d0",
+            "issue": "“Fill arrangement” for brush filaments is more accurately expressed as the bristle-setting arrangement, not a filling arrangement.",
+            "correction": "- 채널 폭과 높이, 재질 및 벽 두께\n- 전체 높이 및 유효 트림 길이\n- 필라멘트 등급, 직경, 직선 또는 크림프 형태 및 식모 배열\n- 절단 길이, 끝단 마감 및 직진도 공차\n- 홀더 단면, 구멍 위치 및 설치 방향"
+          }
+        ]
+      },
+      "deterministic": [
+        "66d86cdac4bd1e2f827e: numbers differ"
+      ]
+    },
+    {
+      "batch": 3,
+      "sourceHash": "4c2af46e4f74c083e65ba605c184bef8328ad0fd7ff55a9d1756b9e864fde893",
+      "targetHash": "7ee34c59cbc6609d325ce7032b41eb6be7b1f5c488ddaff730ec53c7091bb575",
+      "model": "gpt-5.6-terra",
+      "responseId": "resp_031fd3741b2a11d3016ab51f5e063087d08ab1fea7086e6b72",
+      "usage": {
+        "input_tokens": 4253,
+        "input_tokens_details": {
+          "cache_write_tokens": 4250,
+          "cached_tokens": 0
+        },
+        "output_tokens": 1358,
+        "output_tokens_details": {
+          "reasoning_tokens": 1034
+        },
+        "total_tokens": 5611
+      },
+      "completedAt": "2026-09-24T13:02:40.830Z",
+      "result": {
+        "passed": false,
+        "issues": [
+          {
+            "key": "8f785d95c393064b2d15",
+            "issue": "한국어 문장에 힌디어 단어 “उपलब्ध한”이 포함되어 있어 의미와 전문성이 훼손됩니다. 또한 closed gap은 폐쇄 시의 간극으로 명확히 표현하는 것이 적절합니다.",
+            "correction": "모든 매체, 온도 범위 및 노출 시간을 나열하십시오. 그런 다음 운동, 폐쇄 시 간극, 압축 및 예상 사용 조건을 정의하십시오. 이 정보가 उपलब्ध한 후에만 재료군을 선택하십시오."
+          },
+          {
+            "key": "334a68b049104be5aca4",
+            "issue": "solid-rubber hardness가 일반적인 고무 경도로 번역되어 솔리드 고무와 폼의 구분이 약화되었습니다.",
+            "correction": "이는 보증된 사양이 아닌 참고 값입니다. 지정 등급 데이터시트를 요청하십시오. 경도 또는 밀도, 허용차 및 시험 조건을 별도로 설정하고, 솔리드 고무의 경도와 폼 특성을 적절히 지정하십시오."
+          },
+          {
+            "key": "2ed5b8009b4e81efa22d",
+            "issue": "“Control one change at a time”에서 변경을 관리한다는 표현은 원문의 핵심인 한 번에 하나의 변경만 적용·통제한다는 의미를 충분히 전달하지 못합니다.",
+            "correction": "한 번에 하나의 변경만 적용하십시오"
+          }
+        ]
+      },
+      "deterministic": [
+        "e17714d40ee04947a25c: table structure differs",
+        "7418b25f1d814863c128: table structure differs",
+        "33831c7644301d2c5ed3: table structure differs"
+      ]
+    },
+    {
+      "batch": 4,
+      "sourceHash": "22af8e23715be33f8d0044b3ac2d3d38d169d7b330c91addcf294d1230d96515",
+      "targetHash": "d3d8959ced39e1dfecec9c9a11ea76dcc918510146a6fb24340536bef352cee1",
+      "model": "gpt-5.6-terra",
+      "responseId": "resp_0981bb6cf30fcae9016ab51f71e63c87d0964211437fe7aa55",
+      "usage": {
+        "input_tokens": 4906,
+        "input_tokens_details": {
+          "cache_write_tokens": 4903,
+          "cached_tokens": 0
+        },
+        "output_tokens": 398,
+        "output_tokens_details": {
+          "reasoning_tokens": 178
+        },
+        "total_tokens": 5304
+      },
+      "completedAt": "2026-09-24T13:02:47.623Z",
+      "result": {
+        "passed": false,
+        "issues": [
+          {
+            "key": "d9f3678d736fde52ecbd",
+            "issue": "Korean text contains the untranslated Hindi word “उपलब्ध”.",
+            "correction": "- 계약 주체 및 등록 세부사항\n- 견적 범위 및 제조 / 하도급 책임\n- 승인된 도면 리비전 및 지정 자재\n- 샘플 승인 기록 및 초도품 요구사항\n- 주문별 검사 계획 및 이용 가능한 기록\n- 포장, 배치 식별 및 변경 통지 요구사항"
+          },
+          {
+            "key": "78f562f5c183d1b47d97",
+            "issue": "Korean text contains the untranslated Hindi word “उपलब्ध”.",
+            "correction": "공급업체 설문지와 필요한 증빙 자료를 공유해 주세요. 문서 제공 가능 여부는 선택된 파트너와 주문에 대해 확인됩니다. 실제 부품에 적용되는 증빙을 일반적인 공장 인증서로 대체하지 않습니다."
+          }
+        ]
+      },
+      "deterministic": [
+        "22437c4f3bdb3cfaaa8b: units or material codes differ"
+      ]
+    },
+    {
+      "batch": 5,
+      "sourceHash": "55ad6753a054965cca986779ad4016379318ad688da86eaff31b9d53b960e5e6",
+      "targetHash": "5ff5ecbe1a8dde60d1915c6bda0c68197b43b3c3f6c6d5f3f25059081f0a7221",
+      "model": "gpt-5.6-terra",
+      "responseId": "resp_0ce67dc735a95a23016ab51f78bc4487d0884d8b5a7f775614",
+      "usage": {
+        "input_tokens": 4879,
+        "input_tokens_details": {
+          "cache_write_tokens": 4876,
+          "cached_tokens": 0
+        },
+        "output_tokens": 635,
+        "output_tokens_details": {
+          "reasoning_tokens": 451
+        },
+        "total_tokens": 5514
+      },
+      "completedAt": "2026-09-24T13:02:57.766Z",
+      "result": {
+        "passed": false,
+        "issues": [
+          {
+            "key": "170f61eaad7c257ef193",
+            "issue": "“matched holders”는 단순히 호환되는 홀더가 아니라 브러시에 맞춰진 홀더를 뜻합니다.",
+            "correction": "직선형 및 성형 브러시, 이에 맞는 홀더 및 맞춤형 장비 어셈블리."
+          },
+          {
+            "key": "7957ed46858671cde8cb",
+            "issue": "한국어 문장에 힌디어 단어 “उपलब्ध한지”가 남아 있습니다.",
+            "correction": "등록 설문지와 증빙 요구사항을 보내 주세요. 어떤 기록이 적용 가능하고 이용 가능한지 검토합니다. 법인 정보, 견적 및 주문별 증빙 자료는 적격성 평가 패키지에 포함됩니다."
+          }
+        ]
+      },
+      "deterministic": [
+        "f0505437c5b5587802ba: numbers differ"
+      ]
+    },
+    {
+      "batch": 6,
+      "sourceHash": "d710a8ed0ccda8f93b8fdb20734479603e83da155079d969a81c46f5a0ea4220",
+      "targetHash": "f50a05dd66bb94f83775a82d25869e6da5bd206b673f972c8d3a4cf8a30d2ae1",
+      "model": "gpt-5.6-terra",
+      "responseId": "resp_00e2aee5babf7916016ab51f82d4b087d08f803f6606c63f6e",
+      "usage": {
+        "input_tokens": 1228,
+        "input_tokens_details": {
+          "cache_write_tokens": 1225,
+          "cached_tokens": 0
+        },
+        "output_tokens": 301,
+        "output_tokens_details": {
+          "reasoning_tokens": 283
+        },
+        "total_tokens": 1529
+      },
+      "completedAt": "2026-09-24T13:03:04.203Z",
+      "result": {
+        "passed": true,
+        "issues": []
+      },
+      "deterministic": [
+        "f11a27debcc7fd05cb7c: numbers differ"
+      ]
+    }
+  ]
+}

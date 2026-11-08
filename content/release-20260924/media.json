@@ -1,0 +1,362 @@
+[
+  {
+    "slug": "solid-rubber-profiles",
+    "illustrative": true,
+    "approved": true,
+    "approval": "Owner explicitly approved current website illustrations on 2026-09-24; these are conceptual renderings, not customer or test evidence.",
+    "alt": {
+      "en": "Solid rubber profiles",
+      "fr": "Profilés en caoutchouc compact",
+      "de": "Profile aus Vollgummi",
+      "es": "Perfiles de caucho macizo",
+      "it": "Profili in gomma compatta",
+      "ja": "ソリッドゴム形材",
+      "ko": "솔리드 고무 프로파일",
+      "zh-Hant": "實心橡膠型材"
+    },
+    "sourcePath": "public/images/products/solid-rubber-profiles.webp",
+    "sha256": "09f55a1a00f92a631000c78e70e12b7fe642106d96a38ee06167cde3b53f5ca8"
+  },
+  {
+    "slug": "sponge-rubber-seals",
+    "illustrative": true,
+    "approved": true,
+    "approval": "Owner explicitly approved current website illustrations on 2026-09-24; these are conceptual renderings, not customer or test evidence.",
+    "alt": {
+      "en": "Sponge rubber seals",
+      "fr": "Joints en caoutchouc cellulaire",
+      "de": "Moosgummidichtungen",
+      "es": "Juntas de caucho celular",
+      "it": "Guarnizioni in gomma espansa",
+      "ja": "スポンジゴムシール",
+      "ko": "스펀지 고무 씰",
+      "zh-Hant": "海綿橡膠密封條"
+    },
+    "sourcePath": "public/images/products/sponge-rubber-seals.webp",
+    "sha256": "b38939528cfdbe5a275a1446b80b859d02f2200a7e4abeaa3e1187aeedfb28bc"
+  },
+  {
+    "slug": "edge-trim-bulb-seals",
+    "illustrative": true,
+    "approved": true,
+    "approval": "Owner explicitly approved current website illustrations on 2026-09-24; these are conceptual renderings, not customer or test evidence.",
+    "alt": {
+      "en": "Edge trims and bulb seals",
+      "fr": "Profilés de protection de chant et joints à bulbe",
+      "de": "Kantenschutz- und Hohlkammerdichtprofile",
+      "es": "Perfiles de protección de bordes y juntas de bulbo",
+      "it": "Profili paraspigolo e guarnizioni a bulbo",
+      "ja": "エッジトリム・中空バルブシール",
+      "ko": "에지 트림 및 중공 벌브 씰",
+      "zh-Hant": "護邊條與中空球泡密封條"
+    },
+    "sourcePath": "public/images/products/edge-trim-bulb-seals.webp",
+    "sha256": "2c92774d4f6af90af89205e3695146b45d53ff0af8fb4a5b5039866fba3aae27"
+  },
+  {
+    "slug": "silicone-profiles",
+    "illustrative": true,
+    "approved": true,
+    "approval": "Owner explicitly approved current website illustrations on 2026-09-24; these are conceptual renderings, not customer or test evidence.",
+    "alt": {
+      "en": "Silicone profiles",
+      "fr": "Profilés en silicone",
+      "de": "Silikonprofile",
+      "es": "Perfiles de silicona",
+      "it": "Profili in silicone",
+      "ja": "シリコーン形材",
+      "ko": "실리콘 프로파일",
+      "zh-Hant": "矽膠型材"
+    },
+    "sourcePath": "public/images/products/silicone-profiles.webp",
+    "sha256": "8cbdb991601786330e75a3f31e432ca97476c73d4debb9c1924d32c3593c7aa1"
+  },
+  {
+    "slug": "moulded-rubber-components",
+    "illustrative": true,
+    "approved": true,
+    "approval": "Owner explicitly approved current website illustrations on 2026-09-24; these are conceptual renderings, not customer or test evidence.",
+    "alt": {
+      "en": "Moulded rubber components",
+      "fr": "Pièces moulées en caoutchouc",
+      "de": "Gummiformteile",
+      "es": "Componentes moldeados de caucho",
+      "it": "Componenti stampati in gomma",
+      "ja": "ゴム成形部品",
+      "ko": "고무 성형 부품",
+      "zh-Hant": "橡膠模壓零件"
+    },
+    "sourcePath": "public/images/products/moulded-rubber-components.webp",
+    "sha256": "7f93c11602855c7dc31ba4d89d972266ac79a06c45e93c1ea2fac18bc82a74bc"
+  },
+  {
+    "slug": "die-cut-gaskets",
+    "illustrative": true,
+    "approved": true,
+    "approval": "Owner explicitly approved current website illustrations on 2026-09-24; these are conceptual renderings, not customer or test evidence.",
+    "alt": {
+      "en": "Die-cut gaskets",
+      "fr": "Joints plats découpés",
+      "de": "Gestanzte Flachdichtungen",
+      "es": "Juntas troqueladas",
+      "it": "Guarnizioni fustellate",
+      "ja": "打ち抜きガスケット",
+      "ko": "타발 개스킷",
+      "zh-Hant": "模切墊片"
+    },
+    "sourcePath": "public/images/products/die-cut-gaskets.webp",
+    "sha256": "d3440f6f1affbddaeeb2c925f871bfd7ed484ffc1409e78143d3c81924aba343"
+  },
+  {
+    "slug": "fabricated-sealing-frames",
+    "illustrative": true,
+    "approved": true,
+    "approval": "Owner explicitly approved current website illustrations on 2026-09-24; these are conceptual renderings, not customer or test evidence.",
+    "alt": {
+      "en": "Fabricated sealing frames",
+      "fr": "Cadres de joints assemblés",
+      "de": "Konfektionierte Dichtungsrahmen",
+      "es": "Marcos de sellado ensamblados",
+      "it": "Cornici di tenuta assemblate",
+      "ja": "接合シール枠",
+      "ko": "접합 씰 프레임",
+      "zh-Hant": "接合密封框"
+    },
+    "sourcePath": "public/images/products/fabricated-sealing-frames.webp",
+    "sha256": "2bb93dcb5a5bbf9a4853c784684b46c7f8c1ea5cbb533c905ccf6fc21f5159a1"
+  },
+  {
+    "slug": "metal-channel-strip-brushes",
+    "illustrative": true,
+    "approved": true,
+    "approval": "Owner explicitly approved current website illustrations on 2026-09-24; these are conceptual renderings, not customer or test evidence.",
+    "alt": {
+      "en": "Metal-channel strip brushes",
+      "fr": "Brosses en bande sur feuillard métallique",
+      "de": "Streifenbürsten mit Metallfassung",
+      "es": "Cepillos de tira con canal metálico",
+      "it": "Spazzole a listello con dorso metallico",
+      "ja": "金属チャンネル式ストリップブラシ",
+      "ko": "금속 채널 스트립 브러시",
+      "zh-Hant": "金屬槽條刷"
+    },
+    "sourcePath": "public/images/products/metal-channel-strip-brushes.webp",
+    "sha256": "8f47b8f298c2acd7d7738c63c3b635288ef3d1fbf8c12c9b0cd72848f996e8b7"
+  },
+  {
+    "slug": "formed-strip-brushes",
+    "illustrative": true,
+    "approved": true,
+    "approval": "Owner explicitly approved current website illustrations on 2026-09-24; these are conceptual renderings, not customer or test evidence.",
+    "alt": {
+      "en": "Formed strip brushes",
+      "fr": "Brosses en bande cintrées",
+      "de": "Geformte Streifenbürsten",
+      "es": "Cepillos de tira conformados",
+      "it": "Spazzole a listello sagomate",
+      "ja": "曲げ加工ストリップブラシ",
+      "ko": "성형 스트립 브러시",
+      "zh-Hant": "彎曲成形條刷"
+    },
+    "sourcePath": "public/images/products/formed-strip-brushes.webp",
+    "sha256": "20b95ade44e3bd66a574d266bf3f183e5f14d05f8ed15f2d6b365f6d98fabd01"
+  },
+  {
+    "slug": "brush-holders",
+    "illustrative": true,
+    "approved": true,
+    "approval": "Owner explicitly approved current website illustrations on 2026-09-24; these are conceptual renderings, not customer or test evidence.",
+    "alt": {
+      "en": "Brush holders and channels",
+      "fr": "Supports et profilés porte-brosse",
+      "de": "Bürstenhalter und Aufnahmeprofile",
+      "es": "Soportes y perfiles portacepillos",
+      "it": "Supporti e profili portaspazzola",
+      "ja": "ブラシホルダー・取付チャンネル",
+      "ko": "브러시 홀더 및 장착 채널",
+      "zh-Hant": "條刷支架與固定槽"
+    },
+    "sourcePath": "public/images/products/brush-holders.webp",
+    "sha256": "d4f0f9d0c19eb42730c7034ec3164d63ef33d325681d3b8b7310292360587368"
+  },
+  {
+    "slug": "custom-equipment-brushes",
+    "illustrative": true,
+    "approved": true,
+    "approval": "Owner explicitly approved current website illustrations on 2026-09-24; these are conceptual renderings, not customer or test evidence.",
+    "alt": {
+      "en": "Custom equipment brushes",
+      "fr": "Brosses sur mesure pour équipements",
+      "de": "Zeichnungsgebundene Anlagenbürsten",
+      "es": "Cepillos a medida para equipos",
+      "it": "Spazzole su misura per apparecchiature",
+      "ja": "設備用カスタムブラシ",
+      "ko": "장비용 맞춤 브러시",
+      "zh-Hant": "設備用客製化毛刷"
+    },
+    "sourcePath": "public/images/products/custom-equipment-brushes.webp",
+    "sha256": "faac2b79d0a357d19a4c0c45e15f19bba5125b8d8f35e4e6b079e5034b9e4b1b"
+  },
+  {
+    "slug": "custom-molded-rubber-parts",
+    "illustrative": true,
+    "approved": true,
+    "approval": "Owner explicitly approved current website illustrations on 2026-09-24; these are conceptual renderings, not customer or test evidence.",
+    "alt": {
+      "en": "Custom molded rubber parts",
+      "fr": "Pièces moulées en caoutchouc sur mesure",
+      "de": "Gummiformteile nach Zeichnung",
+      "es": "Piezas moldeadas de caucho a medida",
+      "it": "Parti stampate in gomma su misura",
+      "ja": "カスタム成形ゴム部品",
+      "ko": "맞춤형 성형 고무 부품",
+      "zh-Hant": "客製化橡膠模壓零件"
+    },
+    "sourcePath": "public/images/products/custom-molded-rubber-parts.webp",
+    "sha256": "d7a422fc708233b73996ef3bd81d3124ee7ad90baf4cdb1f20821a157678bc7c"
+  },
+  {
+    "slug": "solid-rubber-gaskets",
+    "illustrative": true,
+    "approved": true,
+    "approval": "Owner explicitly approved current website illustrations on 2026-09-24; these are conceptual renderings, not customer or test evidence.",
+    "alt": {
+      "en": "Solid rubber gaskets and washers",
+      "fr": "Joints plats et rondelles en caoutchouc compact",
+      "de": "Flachdichtungen und Scheiben aus Vollgummi",
+      "es": "Juntas planas y arandelas de caucho macizo",
+      "it": "Guarnizioni piane e rondelle in gomma compatta",
+      "ja": "ソリッドゴムガスケット・ワッシャー",
+      "ko": "솔리드 고무 개스킷 및 와셔",
+      "zh-Hant": "實心橡膠墊片與墊圈"
+    },
+    "sourcePath": "public/images/products/solid-rubber-gaskets.webp",
+    "sha256": "92ab3c84901d9c80a00722da0685369d1e796c3463edc8f9b16f0a460ecf9138"
+  },
+  {
+    "slug": "custom-fkm-o-rings",
+    "illustrative": true,
+    "approved": true,
+    "approval": "Owner explicitly approved current website illustrations on 2026-09-24; these are conceptual renderings, not customer or test evidence.",
+    "alt": {
+      "en": "Custom FKM O-rings",
+      "fr": "Joints toriques FKM sur mesure",
+      "de": "FKM-O-Ringe nach Spezifikation",
+      "es": "Juntas tóricas FKM a medida",
+      "it": "O-ring FKM su misura",
+      "ja": "カスタム FKM Oリング",
+      "ko": "맞춤형 FKM O링",
+      "zh-Hant": "客製化 FKM O 型環"
+    },
+    "sourcePath": "public/images/products/custom-fkm-o-rings.webp",
+    "sha256": "1aeb618b7352deb29f4b4f3ccc3596819defec3569abc491091960026eba1691"
+  },
+  {
+    "slug": "standard-o-rings",
+    "illustrative": true,
+    "approved": true,
+    "approval": "Owner explicitly approved current website illustrations on 2026-09-24; these are conceptual renderings, not customer or test evidence.",
+    "alt": {
+      "en": "Standard O-rings",
+      "fr": "Joints toriques standard",
+      "de": "Standard-O-Ringe",
+      "es": "Juntas tóricas estándar",
+      "it": "O-ring standard",
+      "ja": "標準 Oリング",
+      "ko": "표준 O링",
+      "zh-Hant": "標準 O 型環"
+    },
+    "sourcePath": "public/images/products/standard-o-rings.webp",
+    "sha256": "9fea72d945db83507a52c5184c7e660ce84cae22ef6dd4a5039e6930f51e1188"
+  },
+  {
+    "slug": "o-ring-seal-kits",
+    "illustrative": true,
+    "approved": true,
+    "approval": "Owner explicitly approved current website illustrations on 2026-09-24; these are conceptual renderings, not customer or test evidence.",
+    "alt": {
+      "en": "O-ring and seal kits",
+      "fr": "Kits de joints toriques et de joints d’étanchéité",
+      "de": "O-Ring- und Dichtungssätze",
+      "es": "Kits de juntas tóricas y sellado",
+      "it": "Kit di O-ring e guarnizioni",
+      "ja": "Oリング・シールキット",
+      "ko": "O링 및 씰 키트",
+      "zh-Hant": "O 型環與密封套件"
+    },
+    "sourcePath": "public/images/products/o-ring-seal-kits.webp",
+    "sha256": "b03e3950a22436489514d91daa916d88ad33cd4f2b1bf106e9ad34254bda5ff5"
+  },
+  {
+    "slug": "cut-to-length",
+    "illustrative": true,
+    "approved": true,
+    "approval": "Owner explicitly approved current website illustrations on 2026-09-24; these are conceptual renderings, not customer or test evidence.",
+    "alt": {
+      "en": "Cut-to-length finishing",
+      "fr": "Coupe à longueur",
+      "de": "Zuschnitt auf Länge",
+      "es": "Corte a longitud",
+      "it": "Taglio a misura",
+      "ja": "定寸切断",
+      "ko": "정길이 절단",
+      "zh-Hant": "定長裁切"
+    },
+    "sourcePath": "public/images/products/cut-to-length.webp",
+    "sha256": "1a4469c2279c54ed879c55971409d38e91f5b31f86e7f13143d41c2a72c08d35"
+  },
+  {
+    "slug": "adhesive-backing",
+    "illustrative": true,
+    "approved": true,
+    "approval": "Owner explicitly approved current website illustrations on 2026-09-24; these are conceptual renderings, not customer or test evidence.",
+    "alt": {
+      "en": "Adhesive backing",
+      "fr": "Dos adhésif",
+      "de": "Selbstklebende Rückseite",
+      "es": "Respaldo adhesivo",
+      "it": "Retro adesivo",
+      "ja": "粘着テープ加工",
+      "ko": "접착 테이프 가공",
+      "zh-Hant": "背膠加工"
+    },
+    "sourcePath": "public/images/products/adhesive-backing.webp",
+    "sha256": "b47527f85bf42267d144d0e88c994fd9dc9030b3cc27a363e0d4d06a1e688fee"
+  },
+  {
+    "slug": "slitting-lamination",
+    "illustrative": true,
+    "approved": true,
+    "approval": "Owner explicitly approved current website illustrations on 2026-09-24; these are conceptual renderings, not customer or test evidence.",
+    "alt": {
+      "en": "Slitting and lamination",
+      "fr": "Refente et contrecollage",
+      "de": "Längsschneiden und Laminieren",
+      "es": "Corte longitudinal y laminado",
+      "it": "Taglio longitudinale e laminazione",
+      "ja": "スリット加工・ラミネート加工",
+      "ko": "슬리팅 및 라미네이션",
+      "zh-Hant": "分條與複合貼合"
+    },
+    "sourcePath": "public/images/products/slitting-lamination.webp",
+    "sha256": "e902bf5ffe540e6d8567ffba48b0b040adc1afded6ac7e61df3e9e6d34ed6812"
+  },
+  {
+    "slug": "components-hero",
+    "illustrative": true,
+    "approved": true,
+    "approval": "Owner explicitly approved current website illustrations on 2026-09-24; these are conceptual renderings, not customer or test evidence.",
+    "alt": {
+      "en": "Rubber sealing profiles and industrial strip brushes",
+      "fr": "Profilés d’étanchéité en caoutchouc et brosses industrielles en bande",
+      "de": "Gummidichtprofile und industrielle Streifenbürsten",
+      "es": "Perfiles de sellado de caucho y cepillos industriales de tira",
+      "it": "Profili di tenuta in gomma e spazzole industriali a listello",
+      "ja": "ゴムシール形材と工業用ストリップブラシ",
+      "ko": "고무 씰 프로파일 및 산업용 스트립 브러시",
+      "zh-Hant": "橡膠密封型材與工業條刷"
+    },
+    "sourcePath": "public/images/keliran-v2/components-hero.webp",
+    "sha256": "d74333a37746d6d9e24d341acc59142ef7fef5a05b9f340ac9368fc9c9f3ac6a"
+  }
+]

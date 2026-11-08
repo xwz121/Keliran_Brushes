@@ -1,0 +1,181 @@
+{
+  "sourceHash": "5e0251317585c239c237e308e56095090be2732246b0eda5637340ffde875b13",
+  "targetHash": "5e0251317585c239c237e308e56095090be2732246b0eda5637340ffde875b13",
+  "batches": [
+    {
+      "batch": 0,
+      "sourceHash": "b8521c8d5784fee8e38e18e07a30373ebc0ca2657e4ee3c3c9f0d93167b839b5",
+      "targetHash": "b8521c8d5784fee8e38e18e07a30373ebc0ca2657e4ee3c3c9f0d93167b839b5",
+      "model": "gpt-5.6-terra",
+      "responseId": "resp_025c7e712bebca07016ab51d9f35b487d093a585872a980a57",
+      "usage": {
+        "input_tokens": 3890,
+        "input_tokens_details": {
+          "cache_write_tokens": 3887,
+          "cached_tokens": 0
+        },
+        "output_tokens": 16,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 3906
+      },
+      "completedAt": "2026-09-24T12:54:56.954Z",
+      "result": {
+        "passed": true,
+        "issues": []
+      },
+      "deterministic": []
+    },
+    {
+      "batch": 1,
+      "sourceHash": "22f293c35574fde2244bb6a7f6732ec953f2e1d9640eb4f704ea5bfe7ac7e431",
+      "targetHash": "22f293c35574fde2244bb6a7f6732ec953f2e1d9640eb4f704ea5bfe7ac7e431",
+      "model": "gpt-5.6-terra",
+      "responseId": "resp_0ca4475350664081016ab51da20a9087d09ddc281e1c9a9ae4",
+      "usage": {
+        "input_tokens": 4992,
+        "input_tokens_details": {
+          "cache_write_tokens": 4989,
+          "cached_tokens": 0
+        },
+        "output_tokens": 36,
+        "output_tokens_details": {
+          "reasoning_tokens": 18
+        },
+        "total_tokens": 5028
+      },
+      "completedAt": "2026-09-24T12:54:58.728Z",
+      "result": {
+        "passed": true,
+        "issues": []
+      },
+      "deterministic": []
+    },
+    {
+      "batch": 2,
+      "sourceHash": "bd7450b2c8e5bbe6b7da490ca4b20325b9f2433d60e300e0610e477df848dd46",
+      "targetHash": "bd7450b2c8e5bbe6b7da490ca4b20325b9f2433d60e300e0610e477df848dd46",
+      "model": "gpt-5.6-terra",
+      "responseId": "resp_0f56f16ebdc374d0016ab51da3da6887d0b8c93597d13f3cd3",
+      "usage": {
+        "input_tokens": 4605,
+        "input_tokens_details": {
+          "cache_write_tokens": 4602,
+          "cached_tokens": 0
+        },
+        "output_tokens": 75,
+        "output_tokens_details": {
+          "reasoning_tokens": 57
+        },
+        "total_tokens": 4680
+      },
+      "completedAt": "2026-09-24T12:55:00.882Z",
+      "result": {
+        "passed": true,
+        "issues": []
+      },
+      "deterministic": []
+    },
+    {
+      "batch": 3,
+      "sourceHash": "4c2af46e4f74c083e65ba605c184bef8328ad0fd7ff55a9d1756b9e864fde893",
+      "targetHash": "4c2af46e4f74c083e65ba605c184bef8328ad0fd7ff55a9d1756b9e864fde893",
+      "model": "gpt-5.6-terra",
+      "responseId": "resp_02193e285992b2ab016ab51da5f36887d0b09b3baba85a1956",
+      "usage": {
+        "input_tokens": 3639,
+        "input_tokens_details": {
+          "cache_write_tokens": 3636,
+          "cached_tokens": 0
+        },
+        "output_tokens": 44,
+        "output_tokens_details": {
+          "reasoning_tokens": 26
+        },
+        "total_tokens": 3683
+      },
+      "completedAt": "2026-09-24T12:55:02.632Z",
+      "result": {
+        "passed": true,
+        "issues": []
+      },
+      "deterministic": []
+    },
+    {
+      "batch": 4,
+      "sourceHash": "22af8e23715be33f8d0044b3ac2d3d38d169d7b330c91addcf294d1230d96515",
+      "targetHash": "22af8e23715be33f8d0044b3ac2d3d38d169d7b330c91addcf294d1230d96515",
+      "model": "gpt-5.6-terra",
+      "responseId": "resp_01092e3da628bd8a016ab51e827bd487d0b1215f54eb4a95c0",
+      "usage": {
+        "input_tokens": 4230,
+        "input_tokens_details": {
+          "cache_write_tokens": 0,
+          "cached_tokens": 4227
+        },
+        "output_tokens": 43,
+        "output_tokens_details": {
+          "reasoning_tokens": 25
+        },
+        "total_tokens": 4273
+      },
+      "completedAt": "2026-09-24T12:58:44.365Z",
+      "result": {
+        "passed": true,
+        "issues": []
+      },
+      "deterministic": []
+    },
+    {
+      "batch": 5,
+      "sourceHash": "55ad6753a054965cca986779ad4016379318ad688da86eaff31b9d53b960e5e6",
+      "targetHash": "55ad6753a054965cca986779ad4016379318ad688da86eaff31b9d53b960e5e6",
+      "model": "gpt-5.6-terra",
+      "responseId": "resp_0c5a5c77882e77fd016ab51daace3087d0a59cadf089db9341",
+      "usage": {
+        "input_tokens": 4381,
+        "input_tokens_details": {
+          "cache_write_tokens": 4378,
+          "cached_tokens": 0
+        },
+        "output_tokens": 16,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 4397
+      },
+      "completedAt": "2026-09-24T12:55:07.105Z",
+      "result": {
+        "passed": true,
+        "issues": []
+      },
+      "deterministic": []
+    },
+    {
+      "batch": 6,
+      "sourceHash": "d710a8ed0ccda8f93b8fdb20734479603e83da155079d969a81c46f5a0ea4220",
+      "targetHash": "d710a8ed0ccda8f93b8fdb20734479603e83da155079d969a81c46f5a0ea4220",
+      "model": "gpt-5.6-terra",
+      "responseId": "resp_06bcf28f838c8bee016ab51dac2c4487d0a0cc1b84835823b8",
+      "usage": {
+        "input_tokens": 1109,
+        "input_tokens_details": {
+          "cache_write_tokens": 1106,
+          "cached_tokens": 0
+        },
+        "output_tokens": 55,
+        "output_tokens_details": {
+          "reasoning_tokens": 37
+        },
+        "total_tokens": 1164
+      },
+      "completedAt": "2026-09-24T12:55:08.677Z",
+      "result": {
+        "passed": true,
+        "issues": []
+      },
+      "deterministic": []
+    }
+  ]
+}

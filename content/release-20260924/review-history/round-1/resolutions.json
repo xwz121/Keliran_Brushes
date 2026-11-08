@@ -1,0 +1,714 @@
+{
+  "reviewer": "Codex release coordinator",
+  "reviewedAt": "2026-09-24T13:02:42.263Z",
+  "changes": [
+    {
+      "locale": "fr",
+      "key": "1a80ea103de9718cfa19",
+      "source": "Material families are a starting point. Reference values, not a guaranteed specification. Confirm the actual grade and test conditions for your application.",
+      "before": "Les familles de matériaux constituent un point de départ. Valeurs de référence, non garanties comme spécification. Confirmez la qualité réelle et les conditions d’essai pour votre application.",
+      "after": "Les familles de matériaux constituent un point de départ. Il s’agit de valeurs de référence, et non d’une spécification garantie. Confirmez la qualité réelle et les conditions d’essai pour votre application.",
+      "reason": "Coordinator reviewed the suggested correction against the source."
+    },
+    {
+      "locale": "fr",
+      "key": "45de8260b47ffbd98074",
+      "source": "H, F, T or custom cross-section; aluminium or steel grade; hole pattern; finish; mating dimensions.",
+      "before": "Section H, F, T ou sur mesure ; aluminium ou nuance d’acier ; configuration des trous ; finition ; dimensions d’accouplement.",
+      "after": "Section en H, F, T ou sur mesure ; aluminium ou nuance d’acier ; configuration des trous ; finition ; dimensions de l’interface correspondante.",
+      "reason": "Coordinator reviewed the suggested correction against the source."
+    },
+    {
+      "locale": "fr",
+      "key": "08660e9e47a1ddf548f1",
+      "source": "Material-family reference only: reference values, not a guaranteed specification. Ask for the selected grade data sheet and define acceptance tests before approval.",
+      "before": "Référence de famille de matériaux uniquement : valeurs de référence, non garanties comme spécification. Demander la fiche technique de la nuance sélectionnée et définir les essais d’acceptation avant approbation.",
+      "after": "Référence de famille de matériaux uniquement : valeurs de référence, ne constituant pas une spécification garantie. Demander la fiche technique de la nuance sélectionnée et définir les essais d’acceptation avant approbation.",
+      "reason": "Coordinator reviewed the suggested correction against the source."
+    },
+    {
+      "locale": "fr",
+      "key": "1f50a735d7446eadc797",
+      "source": "Outdoor weathering and the specific oil or additive package need separate review.",
+      "before": "Le vieillissement extérieur et le paquet spécifique d’huile ou d’additifs nécessitent une évaluation distincte.",
+      "after": "Le vieillissement extérieur ainsi que la formulation spécifique de l’huile ou des additifs nécessitent une évaluation distincte.",
+      "reason": "Coordinator reviewed the suggested correction against the source."
+    },
+    {
+      "locale": "fr",
+      "key": "b98584cdf12ac63093f5",
+      "source": "Tear, abrasion and media compatibility depend on grade and part geometry.",
+      "before": "La résistance à la déchirure, à l’abrasion et aux fluides dépend de la nuance et de la géométrie de la pièce.",
+      "after": "La résistance à la déchirure, à l’abrasion et la compatibilité avec les fluides dépendent de la nuance et de la géométrie de la pièce.",
+      "reason": "Coordinator reviewed the suggested correction against the source."
+    },
+    {
+      "locale": "fr",
+      "key": "f998ff1d65368c5c5972",
+      "source": "Not universally compatible with every fluid; low-temperature response varies by compound.",
+      "before": "Non universellement compatible avec tous les fluides ; le comportement à basse température varie selon le composé.",
+      "after": "Pas universellement compatible avec tous les fluides ; le comportement à basse température varie selon la formulation.",
+      "reason": "Coordinator reviewed the suggested correction against the source."
+    },
+    {
+      "locale": "fr",
+      "key": "a2193d9a1bf9742d8799",
+      "source": "Confirm environmental resistance, compound grade and test requirements; no automatic flame rating.",
+      "before": "Confirmer la résistance environnementale, la nuance du composé et les exigences d’essai ; aucune classification au feu automatique.",
+      "after": "Confirmer la résistance environnementale, la nuance de la formulation et les exigences d’essai ; aucun classement au feu n’est automatique.",
+      "reason": "Coordinator reviewed the suggested correction against the source."
+    },
+    {
+      "locale": "fr",
+      "key": "c2d409abde3875e2572e",
+      "source": "Cell structure, density and compression response are distinct specifications; do not substitute solid-rubber hardness.",
+      "before": "La structure cellulaire, la densité et la réponse à la compression sont des spécifications distinctes ; ne pas les substituer à la dureté du caoutchouc plein.",
+      "after": "La structure cellulaire, la densité et la réponse à la compression sont des spécifications distinctes ; ne pas les remplacer par la dureté du caoutchouc plein.",
+      "reason": "Coordinator reviewed the suggested correction against the source."
+    },
+    {
+      "locale": "fr",
+      "key": "62e3b385a55a7b659340",
+      "source": "Check joint geometry, method, local distortion and seam position.",
+      "before": "Vérifier la géométrie du joint, la méthode, la déformation locale et la position de la jonction.",
+      "after": "Vérifier la géométrie de l’assemblage, la méthode, la déformation locale et la position de la jonction.",
+      "reason": "Coordinator reviewed the suggested correction against the source."
+    },
+    {
+      "locale": "fr",
+      "key": "14e1c8878a776e578836",
+      "source": "Compare feasible joining methods against the drawing and acceptance requirements.",
+      "before": "Comparer les méthodes d’assemblage réalisables au plan et aux exigences d’acceptation.",
+      "after": "Comparer les méthodes d’assemblage réalisables au regard du plan et des exigences d’acceptation.",
+      "reason": "Coordinator reviewed the suggested correction against the source."
+    },
+    {
+      "locale": "fr",
+      "key": "51d874afd269cda92e9f",
+      "source": "Door, cover and panel interfaces where the closed gap and validation plan define the seal.",
+      "before": "Interfaces de portes, couvercles et panneaux où le jeu fermé et le plan de validation définissent l'étanchéité.",
+      "after": "Interfaces de portes, couvercles et panneaux où le jeu à l'état fermé et le plan de validation définissent l'étanchéité.",
+      "reason": "Coordinator reviewed the suggested correction against the source."
+    },
+    {
+      "locale": "fr",
+      "key": "22ca91e9d71aba6780cc",
+      "source": "An old seal may have taken a compression set. Record the mating assembly as well as the removed profile. Keep the door in its normal latched condition when measuring the closed gap.",
+      "before": "Un ancien joint peut avoir subi une déformation rémanente à la compression. Relevez l'assemblage accouplé ainsi que le profilé déposé. Maintenez la porte dans sa condition normale verrouillée lors de la mesure du jeu fermé.",
+      "after": "Un ancien joint peut avoir subi une déformation rémanente à la compression. Relevez l'assemblage accouplé ainsi que le profilé déposé. Maintenez la porte dans sa condition normale verrouillée lors de la mesure du jeu porte fermée.",
+      "reason": "Coordinator reviewed the suggested correction against the source."
+    },
+    {
+      "locale": "fr",
+      "key": "6c70b6ad5897ccdc7699",
+      "source": "- Dimensioned cross-section with units and drawing revision\n- Minimum and maximum closed gap around the entire perimeter\n- Panel thickness or groove dimensions and tolerances\n- Corner radius, bend direction and joint position\n- Finished length or frame inside and outside dimensions",
+      "before": "- Coupe transversale cotée avec unités et révision du plan\n- Jeu fermé minimal et maximal sur l'ensemble du périmètre\n- Épaisseur du panneau ou dimensions de rainure et tolérances\n- Rayon d'angle, sens de pliage et position du joint\n- Longueur finie ou dimensions intérieures et extérieures du cadre",
+      "after": "- Coupe transversale cotée avec unités et révision du plan\n- Jeu minimal et maximal à l'état fermé sur l'ensemble du périmètre\n- Épaisseur du panneau ou dimensions de rainure et tolérances\n- Rayon d'angle, sens de pliage et position du joint\n- Longueur finie ou dimensions intérieures et extérieures du cadre",
+      "reason": "Coordinator reviewed the suggested correction against the source."
+    },
+    {
+      "locale": "fr",
+      "key": "b2c5d3bb715034a8ab58",
+      "source": "Specify inner, outer or side-facing bristles, the datum radius, open ends, springback tolerance and assembly drawing. Formed metal channel and flexible polymer backing are different constructions.",
+      "before": "Précisez des poils orientés vers l’intérieur, l’extérieur ou latéralement, le rayon de référence, les extrémités ouvertes, la tolérance de rappel élastique et le plan d’assemblage. Un profilé métallique formé et un support polymère flexible sont des constructions différentes.",
+      "after": "Précisez des filaments orientés vers l’intérieur, l’extérieur ou latéralement, le rayon de référence, les extrémités ouvertes, la tolérance de retour élastique et le plan d’assemblage. Un profilé métallique formé et un support polymère flexible sont des constructions différentes.",
+      "reason": "Coordinator reviewed the suggested correction against the source."
+    },
+    {
+      "locale": "fr",
+      "key": "f38cd0ec857616f85ee6",
+      "source": "Approve the actual compound",
+      "before": "Approuver le compound réel",
+      "after": "Approuver la formulation réelle",
+      "reason": "Coordinator reviewed the suggested correction against the source."
+    },
+    {
+      "locale": "fr",
+      "key": "4e2af0f48559928461e7",
+      "source": "Send the standard edition, relevant clause and expected evidence. We review whether the selected production partner and nominated material can support the requested documentation. Do not assume certification from a product image or a material acronym.",
+      "before": "Envoyez l’édition de la norme, la clause pertinente et les preuves attendues. Nous examinons si le partenaire de production sélectionné et le matériau désigné peuvent fournir la documentation demandée. Ne présumez pas d’une certification à partir d’une image de produit ou d’un acronyme de matériau.",
+      "after": "Envoyez l’édition de la norme, la clause pertinente et les preuves attendues. Nous examinons si le partenaire de production sélectionné et le matériau désigné peuvent étayer la documentation demandée. Ne présumez pas d’une certification à partir d’une image de produit ou d’un acronyme de matériau.",
+      "reason": "Coordinator reviewed the suggested correction against the source."
+    },
+    {
+      "locale": "fr",
+      "key": "913d5abae8e31ffe45d9",
+      "source": "Food contact, high-speed rotating brush seals and safety-critical functions require separate specialist review. Do not use these product families as a basis for an unvalidated safety claim.",
+      "before": "Le contact alimentaire, les joints-brosses rotatifs à grande vitesse et les fonctions critiques pour la sécurité nécessitent un examen spécialisé distinct. N’utilisez pas ces familles de produits comme base d’une affirmation de sécurité non validée.",
+      "after": "Le contact alimentaire, les joints à brosse rotatifs à grande vitesse et les fonctions critiques pour la sécurité nécessitent un examen spécialisé distinct. N’utilisez pas ces familles de produits comme base d’une affirmation de sécurité non validée.",
+      "reason": "Coordinator reviewed the suggested correction against the source."
+    },
+    {
+      "locale": "fr",
+      "key": "a4ed3495a6ff8aec668f",
+      "source": "Keliran brings industrial sealing components and strip brushes into one clear purchasing process. We connect your drawing and application requirements with material selection, production coordination and agreed quality checks, from the first enquiry through repeat supply.",
+      "before": "Keliran réunit les composants d’étanchéité industriels et les brosses linéaires dans un processus d’achat clair. Nous relions votre plan et vos exigences d’application à la sélection des matériaux, à la coordination de la production et aux contrôles qualité convenus, de la première demande jusqu’à l’approvisionnement récurrent.",
+      "after": "Keliran réunit les composants d’étanchéité industriels et les brosses à bande dans un processus d’achat clair. Nous relions votre plan et vos exigences d’application à la sélection des matériaux, à la coordination de la production et aux contrôles qualité convenus, de la première demande jusqu’à l’approvisionnement récurrent.",
+      "reason": "Coordinator reviewed the suggested correction against the source."
+    },
+    {
+      "locale": "fr",
+      "key": "78f562f5c183d1b47d97",
+      "source": "Share your supplier questionnaire and required evidence. Document availability is confirmed for the selected partner and order. We do not substitute a generic factory certificate for evidence applicable to the actual part.",
+      "before": "Partagez votre questionnaire fournisseur et les preuves requises. La disponibilité des documents est confirmée pour le partenaire et la commande sélectionnés. Nous ne remplaçons pas un certificat d’usine générique par des preuves applicables à la pièce réelle.",
+      "after": "Partagez votre questionnaire fournisseur et les preuves requises. La disponibilité des documents est confirmée pour le partenaire et la commande sélectionnés. Nous ne substituons pas un certificat d’usine générique aux preuves applicables à la pièce concernée.",
+      "reason": "Coordinator reviewed the suggested correction against the source."
+    },
+    {
+      "locale": "fr",
+      "key": "6e22c048afe4ec9628eb",
+      "source": "Can you guarantee anti-static brush resistance?",
+      "before": "Pouvez-vous garantir la résistance des brosses antistatiques ?",
+      "after": "Pouvez-vous garantir la résistance électrique des brosses antistatiques ?",
+      "reason": "Coordinator reviewed the suggested correction against the source."
+    },
+    {
+      "locale": "fr",
+      "key": "eb8a8321c9a5acae8ef7",
+      "source": "Yes. Mark unknown fields as “please advise”, describe the application and provide a sketch or photo. We can identify the next information needed.",
+      "before": "Oui. Marquez les champs inconnus comme « please advise », décrivez l’application et fournissez un croquis ou une photo. Nous pouvons identifier les informations complémentaires nécessaires.",
+      "after": "Oui. Indiquez « à préciser » pour les champs inconnus, décrivez l’application et fournissez un croquis ou une photo. Nous pouvons identifier les informations complémentaires nécessaires.",
+      "reason": "Coordinator reviewed the suggested correction against the source."
+    },
+    {
+      "locale": "fr",
+      "key": "e27210bc076ed94bd4b1",
+      "source": "Industrial sealing and strip brushes, sourced around your drawings and quality requirements.",
+      "before": "Étanchéité industrielle et brosses à bandes, approvisionnées selon vos plans et exigences qualité.",
+      "after": "Composants d’étanchéité industrielle et brosses à bandes, approvisionnés selon vos plans et exigences qualité.",
+      "reason": "Coordinator reviewed the suggested correction against the source."
+    },
+    {
+      "locale": "fr",
+      "key": "170f61eaad7c257ef193",
+      "source": "Straight and formed brushes, matched holders and custom equipment assemblies.",
+      "before": "Brosses droites et formées, supports adaptés et ensembles d’équipements sur mesure.",
+      "after": "Brosses droites et formées, porte-brosses assortis et ensembles d’équipements sur mesure.",
+      "reason": "Coordinator reviewed the suggested correction against the source."
+    },
+    {
+      "locale": "fr",
+      "key": "27dbcc451ed2a07f4b5c",
+      "source": "Our website uses Vercel hosting, Alibaba Cloud database services, Cloudflare media storage and security services, and Resend email delivery. Enquiry information may be processed in China and in the regions used by these providers. Enquiry attachments are not sent to website translation or content-generation services.",
+      "before": "Notre site web utilise l’hébergement Vercel, les services de base de données Alibaba Cloud, les services de stockage de médias et de sécurité Cloudflare, ainsi que l’envoi d’e-mails Resend. Les informations de demande peuvent être traitées en Chine et dans les régions utilisées par ces prestataires. Les pièces jointes aux demandes ne sont pas envoyées à des services de traduction ou de génération de contenu pour sites web.",
+      "after": "Notre site web utilise l’hébergement Vercel, les services de base de données Alibaba Cloud, les services de stockage de médias et de sécurité Cloudflare, ainsi que l’envoi d’e-mails Resend. Les informations de demande peuvent être traitées en Chine et dans les régions utilisées par ces prestataires. Les pièces jointes aux demandes ne sont pas envoyées à des services de traduction du site web ou de génération de contenu.",
+      "reason": "Coordinator reviewed the suggested correction against the source."
+    },
+    {
+      "locale": "fr",
+      "key": "e9535f1caea1dd24dede",
+      "source": "Product-family information supports technical discussion. Quotations, approved drawings, samples and agreed order terms define the supply specification. Illustrations do not establish dimensions, certification or performance.",
+      "before": "Les informations sur les familles de produits servent à appuyer les échanges techniques. Les devis, dessins approuvés, échantillons et conditions de commande convenues définissent la spécification de fourniture. Les illustrations ne déterminent pas les dimensions, la certification ou les performances.",
+      "after": "Les informations sur les familles de produits servent à appuyer les échanges techniques. Les devis, dessins approuvés, échantillons et conditions de commande convenues définissent la spécification de fourniture. Les illustrations ne permettent pas d’établir les dimensions, la certification ou les performances.",
+      "reason": "Coordinator reviewed the suggested correction against the source."
+    },
+    {
+      "locale": "fr",
+      "key": "747fdd88e5e087afb80d",
+      "source": "Solid rubber gaskets and washers",
+      "before": "Joints plats et rondelles en caoutchouc plein",
+      "after": "Joints et rondelles en caoutchouc plein",
+      "reason": "Coordinator reviewed the suggested correction against the source."
+    },
+    {
+      "locale": "fr",
+      "key": "e17714d40ee04947a25c",
+      "reason": "Removed an added Markdown separator row to preserve the reviewed source table structure.",
+      "before": "| Famille | Point d’examen | Vérification complémentaire |\n| --- | --- | --- |\n| PA6 / PA66 | Contact mécanique et abrasion | Humidité et qualité |\n| PA612 | Dimensions sensibles à l’humidité | Diamètre, longueur de coupe et remplissage |\n| PBT / PP | Exposition à l’humidité ou aux produits chimiques | Fluide exact et fatigue |\n| PEEK | Service spécialisé | Disponibilité de la qualité et essais |\n| Fil SS304 / SS316 | Contact industriel spécifié | Marquage de surface et perte de fil |\n",
+      "after": "| Famille | Point d’examen | Vérification complémentaire |\n| PA6 / PA66 | Contact mécanique et abrasion | Humidité et qualité |\n| PA612 | Dimensions sensibles à l’humidité | Diamètre, longueur de coupe et remplissage |\n| PBT / PP | Exposition à l’humidité ou aux produits chimiques | Fluide exact et fatigue |\n| PEEK | Service spécialisé | Disponibilité de la qualité et essais |\n| Fil SS304 / SS316 | Contact industriel spécifié | Marquage de surface et perte de fil |\n"
+    },
+    {
+      "locale": "fr",
+      "key": "7418b25f1d814863c128",
+      "reason": "Removed an added Markdown separator row to preserve the reviewed source table structure.",
+      "before": "| Exigence | Preuve à demander | Limite |\n| --- | --- | --- |\n| Indice de protection IP / NEMA | Rapport d’essai de l’enveloppe assemblée | Un joint seul n’établit pas un indice |\n| Propriétés des matériaux | Données de la qualité désignée et essais convenus | Les noms de famille ne constituent pas des résultats d’acceptation de lot |\n| Performance au feu | Norme exacte, qualité, épaisseur et périmètre d’essai | Aucune certification au feu générale |\n| Demande REACH / RoHS | Déclaration à jour pour le matériau ou la pièce fournie | Examinez le périmètre des substances et l’applicabilité |\n| Conformité dimensionnelle | Plan approuvé et enregistrement d’inspection | Définissez la révision, la méthode et l’échantillonnage |\n",
+      "after": "| Exigence | Preuve à demander | Limite |\n| Indice de protection IP / NEMA | Rapport d’essai de l’enveloppe assemblée | Un joint seul n’établit pas un indice |\n| Propriétés des matériaux | Données de la qualité désignée et essais convenus | Les noms de famille ne constituent pas des résultats d’acceptation de lot |\n| Performance au feu | Norme exacte, qualité, épaisseur et périmètre d’essai | Aucune certification au feu générale |\n| Demande REACH / RoHS | Déclaration à jour pour le matériau ou la pièce fournie | Examinez le périmètre des substances et l’applicabilité |\n| Conformité dimensionnelle | Plan approuvé et enregistrement d’inspection | Définissez la révision, la méthode et l’échantillonnage |\n"
+    },
+    {
+      "locale": "fr",
+      "key": "33831c7644301d2c5ed3",
+      "reason": "Removed an added Markdown separator row to preserve the reviewed source table structure.",
+      "before": "| Symptôme | À examiner en premier | Preuves utiles |\n| --- | --- | --- |\n| Fuite de porte | Variation du jeu et charge du loquet | Cartographie du jeu et marques de contact |\n| Joint aplati | Compression, durée et température | Section d’origine et conditions de reprise |\n| Adhésif qui se décolle | Substrat et préparation de surface | Référence de ruban et revêtement |\n| Fuite d’angle | Géométrie du joint et déformation | Plan du joint et vue rapprochée |\n| Perte de filaments | Rétention et impact | Fermeture d’extrémité et échantillon de filaments détachés |\n| Usure rapide de la brosse | Déflexion, alignement et vitesse | Installation et direction de contact |\n",
+      "after": "| Symptôme | À examiner en premier | Preuves utiles |\n| Fuite de porte | Variation du jeu et charge du loquet | Cartographie du jeu et marques de contact |\n| Joint aplati | Compression, durée et température | Section d’origine et conditions de reprise |\n| Adhésif qui se décolle | Substrat et préparation de surface | Référence de ruban et revêtement |\n| Fuite d’angle | Géométrie du joint et déformation | Plan du joint et vue rapprochée |\n| Perte de filaments | Rétention et impact | Fermeture d’extrémité et échantillon de filaments détachés |\n| Usure rapide de la brosse | Déflexion, alignement et vitesse | Installation et direction de contact |\n"
+    },
+    {
+      "locale": "de",
+      "key": "037f1cf25fd526fc9071",
+      "source": "Defined cross-sections for equipment grooves, edges and static interfaces.",
+      "before": "Definierte Querschnitte für Geräuten, Kanten und statische Schnittstellen.",
+      "after": "Definierte Querschnitte für Gerätenuten, Kanten und statische Schnittstellen.",
+      "reason": "Coordinator reviewed the suggested correction against the source."
+    },
+    {
+      "locale": "de",
+      "key": "1ce61e54f37048ad307b",
+      "source": "Defined cross-sections for equipment grooves, edges and static interfaces. Product families are available for sourcing review. Material grade, tooling, minimum batch, inspection scope and production timing are confirmed for the selected partner and order after technical review and sample approval.",
+      "before": "Definierte Querschnitte für Geräuten, Kanten und statische Schnittstellen. Produktfamilien stehen zur Beschaffungsprüfung zur Verfügung. Materialqualität, Werkzeugbau, Mindestlosgröße, Prüfumfang und Fertigungszeitpunkt werden nach technischer Prüfung und Musterfreigabe für den ausgewählten Partner und Auftrag bestätigt.",
+      "after": "Definierte Querschnitte für Gerätenuten, Kanten und statische Schnittstellen. Produktfamilien stehen zur Beschaffungsprüfung zur Verfügung. Materialqualität, Werkzeugbau, Mindestlosgröße, Prüfumfang und Fertigungszeitpunkt werden nach technischer Prüfung und Musterfreigabe für den ausgewählten Partner und Auftrag bestätigt.",
+      "reason": "Coordinator reviewed the suggested correction against the source."
+    },
+    {
+      "locale": "de",
+      "key": "e21366c7be5c77ac3ccd",
+      "source": "Edge trims & bulb seals",
+      "before": "Kantenschutzprofile & Hohlkammerdichtungen",
+      "after": "Kantenschutzprofile & Dichtwulstprofile",
+      "reason": "Coordinator reviewed the suggested correction against the source."
+    },
+    {
+      "locale": "de",
+      "key": "ada02327f6bbdd4fa58c",
+      "source": "Solid and foam silicone profiles reviewed against your environment and drawing.",
+      "before": "Voll- und Schaum-Silikonprofile, geprüft anhand Ihrer Einsatzumgebung und Zeichnung.",
+      "after": "Vollsilikon- und Silikonschaumprofile, bewertet anhand Ihrer Einsatzumgebung und Zeichnung.",
+      "reason": "Coordinator reviewed the suggested correction against the source."
+    },
+    {
+      "locale": "de",
+      "key": "ef4c3b2043b2debe5ca3",
+      "source": "Solid and foam silicone profiles reviewed against your environment and drawing. Product families are available for sourcing review. Material grade, tooling, minimum batch, inspection scope and production timing are confirmed for the selected partner and order after technical review and sample approval.",
+      "before": "Voll- und Schaum-Silikonprofile, geprüft anhand Ihrer Einsatzumgebung und Zeichnung. Produktfamilien stehen zur Beschaffungsprüfung zur Verfügung. Materialqualität, Werkzeugbau, Mindestlosgröße, Prüfumfang und Fertigungszeitpunkt werden nach technischer Prüfung und Musterfreigabe für den ausgewählten Partner und Auftrag bestätigt.",
+      "after": "Vollsilikon- und Silikonschaumprofile, bewertet anhand Ihrer Einsatzumgebung und Zeichnung. Produktfamilien stehen zur Beschaffungsprüfung zur Verfügung. Materialqualität, Werkzeugbau, Mindestlosgröße, Prüfumfang und Fertigungszeitpunkt werden nach technischer Prüfung und Musterfreigabe für den ausgewählten Partner und Auftrag bestätigt.",
+      "reason": "Coordinator reviewed the suggested correction against the source."
+    },
+    {
+      "locale": "de",
+      "key": "c8e51ceb37c56dfd7efe",
+      "source": "Tape and rubber combinations reviewed for the actual substrate and process.",
+      "before": "Klebeband- und Gummikombinationen, geprüft für das tatsächliche Substrat und den Prozess.",
+      "after": "Klebeband- und Gummikombinationen, bewertet für das tatsächliche Substrat und den Prozess.",
+      "reason": "Coordinator reviewed the suggested correction against the source."
+    },
+    {
+      "locale": "de",
+      "key": "ae1f0ec6ea240f10b512",
+      "source": "Mounting profiles matched to the selected brush and equipment interface. Product families are available for sourcing review. Material grade, tooling, minimum batch, inspection scope and production timing are confirmed for the selected partner and order after technical review and sample approval.",
+      "before": "Montageprofile, abgestimmt auf die ausgewählte Bürste und die Geräteschnittstelle. Produktfamilien stehen zur Beschaffungsprüfung zur Verfügung. Materialgüte, Werkzeugausstattung, Mindestlosgröße, Prüfumfang und Produktionszeitpunkt werden nach technischer Prüfung und Musterfreigabe für den ausgewählten Partner und Auftrag bestätigt.",
+      "after": "Montageprofile, abgestimmt auf die ausgewählte Bürste und die Geräteschnittstelle. Produktfamilien stehen zur Beschaffungsprüfung zur Verfügung. Materialgüte, Werkzeugausstattung, Mindestlosgröße, Prüfumfang und Produktionszeitplan werden nach technischer Prüfung und Musterfreigabe für den ausgewählten Partner und Auftrag bestätigt.",
+      "reason": "Coordinator reviewed the suggested correction against the source."
+    },
+    {
+      "locale": "de",
+      "key": "2b3a90f9af80b8c7fbd8",
+      "source": "Drawing-led straight brush assemblies for cleaning, guiding and light contact. Product families are available for sourcing review. Material grade, tooling, minimum batch, inspection scope and production timing are confirmed for the selected partner and order after technical review and sample approval.",
+      "before": "Zeichnungsbasierte gerade Bürstenbaugruppen zum Reinigen, Führen und für leichten Kontakt. Produktfamilien stehen zur Beschaffungsprüfung zur Verfügung. Materialgüte, Werkzeugausstattung, Mindestlosgröße, Prüfumfang und Produktionszeitpunkt werden nach technischer Prüfung und Musterfreigabe für den ausgewählten Partner und Auftrag bestätigt.",
+      "after": "Zeichnungsbasierte gerade Bürstenbaugruppen zum Reinigen, Führen und für leichten Kontakt. Produktfamilien stehen zur Beschaffungsprüfung zur Verfügung. Materialgüte, Werkzeugausstattung, Mindestlosgröße, Prüfumfang und Produktionszeitplan werden nach technischer Prüfung und Musterfreigabe für den ausgewählten Partner und Auftrag bestätigt.",
+      "reason": "Coordinator reviewed the suggested correction against the source."
+    },
+    {
+      "locale": "de",
+      "key": "a3467dfe57ddebad346e",
+      "source": "Check channel retention, end closure, repeated impact and chemical exposure.",
+      "before": "Kanalleistenhalt, Endverschluss, wiederholte Einwirkung und Chemikalienexposition prüfen.",
+      "after": "Sitz der Filamente im Kanal, Endverschluss, wiederholte Stoßbeanspruchung und Chemikalienexposition prüfen.",
+      "reason": "Coordinator reviewed the suggested correction against the source."
+    },
+    {
+      "locale": "de",
+      "key": "1ae2fcbff11511a7e799",
+      "source": "Outdoor weathering, door geometry and joined corners reviewed together.",
+      "before": "Bewitterung im Außenbereich, Türgeometrie und verbundene Ecken werden gemeinsam geprüft.",
+      "after": "Bewitterung im Außenbereich, Türgeometrie und Eckverbindungen werden gemeinsam geprüft.",
+      "reason": "Coordinator reviewed the suggested correction against the source."
+    },
+    {
+      "locale": "de",
+      "key": "31928fd258597e1021c1",
+      "source": "Controlled drawings and samples for recurring replacement parts.",
+      "before": "Kontrollierte Zeichnungen und Muster für wiederkehrende Ersatzteile.",
+      "after": "Gelenkte Zeichnungen und Muster für wiederkehrende Ersatzteile.",
+      "reason": "Coordinator reviewed the suggested correction against the source."
+    },
+    {
+      "locale": "de",
+      "key": "22ca91e9d71aba6780cc",
+      "source": "An old seal may have taken a compression set. Record the mating assembly as well as the removed profile. Keep the door in its normal latched condition when measuring the closed gap.",
+      "before": "Eine alte Dichtung kann eine bleibende Verformung durch Druck angenommen haben. Erfassen Sie sowohl die Gegenbaugruppe als auch das ausgebaute Profil. Halten Sie die Tür beim Messen des geschlossenen Spalts in ihrem normalen verriegelten Zustand.",
+      "after": "Eine alte Dichtung kann einen Druckverformungsrest aufweisen. Erfassen Sie sowohl die Gegenbaugruppe als auch das ausgebaute Profil. Halten Sie die Tür beim Messen des geschlossenen Spalts in ihrem normalen verriegelten Zustand.",
+      "reason": "Coordinator reviewed the suggested correction against the source."
+    },
+    {
+      "locale": "de",
+      "key": "3b339d2b993be898a947",
+      "source": "| Family | Review for | Check before selection |\n| --- | --- | --- |\n| EPDM | Weather, water and ozone exposure | Oil or fuel contact |\n| NBR | Selected oils and static interfaces | Outdoor exposure and additives |\n| Silicone / VMQ | Temperature-dependent applications | Tear, abrasion and media |\n| FKM | Selected chemicals and thermal conditions | Exact media and low-temperature response |\n| Sponge / foam | Compressible interfaces | Cell structure, load and recovery |",
+      "before": "| Familie | Prüfen auf | Vor der Auswahl prüfen |\n| --- | --- | --- |\n| EPDM | Witterungs-, Wasser- und Ozonexposition | Kontakt mit Öl oder Kraftstoff |\n| NBR | Ausgewählte Öle und statische Schnittstellen | Außenexposition und Additive |\n| Silicone / VMQ | Temperaturabhängige Anwendungen | Weiterreißfestigkeit, Abrieb und Medien |\n| FKM | Ausgewählte Chemikalien und thermische Bedingungen | Exakte Medien und Verhalten bei niedrigen Temperaturen |\n| Sponge / foam | Kompressible Schnittstellen | Zellstruktur, Belastung und Rückstellung |",
+      "after": "| Familie | Prüfen auf | Vor der Auswahl prüfen |\n| --- | --- | --- |\n| EPDM | Witterungs-, Wasser- und Ozonexposition | Kontakt mit Öl oder Kraftstoff |\n| NBR | Ausgewählte Öle und statische Dichtstellen | Außenexposition und Additive |\n| Silikon / VMQ | Temperaturabhängige Anwendungen | Weiterreißfestigkeit, Abrieb und Medien |\n| FKM | Ausgewählte Chemikalien und thermische Bedingungen | Exakte Medien und Verhalten bei niedrigen Temperaturen |\n| Zellkautschuk / Schaumstoff | Kompressible Schnittstellen | Zellstruktur, Belastung und Rückstellung |",
+      "reason": "Coordinator reviewed the suggested correction against the source."
+    },
+    {
+      "locale": "de",
+      "key": "f62877eabb5fae5ea807",
+      "source": "Define whether the brush wipes, guides or limits dust. List the contacted surface, allowable marking, medium, moisture, temperature and working deflection.",
+      "before": "Definieren Sie, ob die Bürste wischt, führt oder Staub begrenzt. Listen Sie die berührte Oberfläche, zulässige Markierungen, Medium, Feuchtigkeit, Temperatur und Arbeitsauslenkung auf.",
+      "after": "Definieren Sie, ob die Bürste wischt, führt oder Staub zurückhält. Listen Sie die berührte Oberfläche, zulässige Markierungen, Medium, Feuchtigkeit, Temperatur und Arbeitsauslenkung auf.",
+      "reason": "Coordinator reviewed the suggested correction against the source."
+    },
+    {
+      "locale": "de",
+      "key": "e17714d40ee04947a25c",
+      "source": "| Family | Review focus | Additional check |\n| PA6 / PA66 | Mechanical contact and abrasion | Moisture and grade |\n| PA612 | Moisture-sensitive dimensions | Diameter, trim and fill |\n| PBT / PP | Wet or chemical exposure | Exact medium and fatigue |\n| PEEK | Specialist duty | Grade availability and testing |\n| SS304 / SS316 wire | Specified industrial contact | Surface marking and wire loss |",
+      "before": "| Familie | Prüfschwerpunkt | Zusätzliche Prüfung |\n| --- | --- | --- |\n| PA6 / PA66 | Mechanischer Kontakt und Abrieb | Feuchtigkeit und Qualität |\n| PA612 | Feuchtigkeitsempfindliche Abmessungen | Durchmesser, Besatzlänge und Füllgrad |\n| PBT / PP | Nasse oder chemische Exposition | Exaktes Medium und Ermüdung |\n| PEEK | Spezialisierte Beanspruchung | Verfügbarkeit der Qualität und Prüfung |\n| SS304 / SS316 wire | Spezifizierter industrieller Kontakt | Oberflächenmarkierung und Drahtverlust |",
+      "after": "| Familie | Prüfschwerpunkt | Zusätzliche Prüfung |\n| --- | --- | --- |\n| PA6 / PA66 | Mechanischer Kontakt und Abrieb | Feuchtigkeit und Qualität |\n| PA612 | Feuchtigkeitsempfindliche Abmessungen | Durchmesser, Besatzlänge und Füllgrad |\n| PBT / PP | Nasse oder chemische Exposition | Exaktes Medium und Ermüdung |\n| PEEK | Spezialisierte Beanspruchung | Verfügbarkeit der Qualität und Prüfung |\n| Draht aus SS304 / SS316 | Spezifizierter industrieller Kontakt | Oberflächenmarkierung und Drahtverlust |",
+      "reason": "Coordinator reviewed the suggested correction against the source."
+    },
+    {
+      "locale": "de",
+      "key": "21300def7e6217289e3d",
+      "source": "Material names do not define contact force. Confirm filament diameter, effective trim, density and deflection, then test representative surfaces. No ESD, flame or food-contact performance is implied.",
+      "before": "Werkstoffnamen definieren keine Kontaktkraft. Bestätigen Sie Filamentdurchmesser, wirksame Besatzlänge, Dichte und Auslenkung und prüfen Sie anschließend repräsentative Oberflächen. Es wird keine ESD-, Flammschutz- oder Lebensmittelkontaktleistung vorausgesetzt.",
+      "after": "Werkstoffnamen definieren keine Kontaktkraft. Bestätigen Sie Filamentdurchmesser, wirksame Besatzlänge, Dichte und Auslenkung und prüfen Sie anschließend repräsentative Oberflächen. Daraus ergibt sich keine ESD-, Flammschutz- oder Lebensmittelkontaktleistung.",
+      "reason": "Coordinator reviewed the suggested correction against the source."
+    },
+    {
+      "locale": "de",
+      "key": "33831c7644301d2c5ed3",
+      "source": "| Symptom | Investigate first | Useful evidence |\n| Door leakage | Gap variation and latch loading | Gap map and contact marks |\n| Flattened seal | Squeeze, time and temperature | Original section and recovery conditions |\n| Lifting adhesive | Substrate and surface preparation | Tape reference and coating |\n| Corner leakage | Joint geometry and distortion | Joint drawing and close-up |\n| Filament loss | Retention and impact | End closure and loose-filament sample |\n| Rapid brush wear | Deflection, alignment and speed | Installation and contact direction |",
+      "before": "| Symptom | Zuerst untersuchen | Nützliche Nachweise |\n| --- | --- | --- |\n| Türleckage | Spaltvariation und Verriegelungsbelastung | Spaltkarte und Kontaktspuren |\n| Abgeflachte Dichtung | Stauchung, Zeit und Temperatur | Ursprünglicher Querschnitt und Rückstellbedingungen |\n| Sich ablösender Klebstoff | Substrat und Oberflächenvorbereitung | Klebebandreferenz und Beschichtung |\n| Leckage an Ecken | Fügengeometrie und Verformung | Fugenzeichnung und Nahaufnahme |\n| Filamentverlust | Befestigung und Stoßbelastung | Endverschluss und Probe mit losen Filamenten |\n| Schneller Bürstenverschleiß | Auslenkung, Ausrichtung und Geschwindigkeit | Einbau- und Kontaktrichtung |",
+      "after": "| Symptom | Zuerst untersuchen | Nützliche Nachweise |\n| --- | --- | --- |\n| Türleckage | Spaltvariation und Verriegelungsbelastung | Spaltkarte und Kontaktspuren |\n| Abgeflachte Dichtung | Stauchung, Zeit und Temperatur | Ursprünglicher Querschnitt und Rückstellbedingungen |\n| Sich ablösender Klebstoff | Substrat und Oberflächenvorbereitung | Klebebandreferenz und Beschichtung |\n| Leckage an Ecken | Verbindungsgeometrie und Verformung | Verbindungszeichnung und Nahaufnahme |\n| Filamentverlust | Befestigung und Stoßbelastung | Endverschluss und Probe mit losen Filamenten |\n| Schneller Bürstenverschleiß | Auslenkung, Ausrichtung und Geschwindigkeit | Einbau- und Kontaktrichtung |",
+      "reason": "Coordinator reviewed the suggested correction against the source."
+    },
+    {
+      "locale": "de",
+      "key": "124bcb78a274ea29c486",
+      "source": "Use “please advise” where necessary and attach a clear photo or sketch. The first discussion can establish missing inputs; it does not commit you to a material or design.",
+      "before": "Verwenden Sie bei Bedarf „bitte beraten“ und fügen Sie ein klares Foto oder eine Skizze bei. Das erste Gespräch kann fehlende Eingaben klären; es legt Sie nicht auf einen Werkstoff oder ein Design fest.",
+      "after": "Verwenden Sie bei Bedarf „bitte um Beratung“ und fügen Sie ein klares Foto oder eine Skizze bei. Das erste Gespräch kann fehlende Eingaben klären; es legt Sie nicht auf einen Werkstoff oder ein Design fest.",
+      "reason": "Coordinator reviewed the suggested correction against the source."
+    },
+    {
+      "locale": "de",
+      "key": "78f562f5c183d1b47d97",
+      "source": "Share your supplier questionnaire and required evidence. Document availability is confirmed for the selected partner and order. We do not substitute a generic factory certificate for evidence applicable to the actual part.",
+      "before": "Senden Sie Ihren Lieferantenfragebogen und die erforderlichen Nachweise. Die Verfügbarkeit von Dokumenten wird für den ausgewählten Partner und Auftrag bestätigt. Wir ersetzen kein allgemeines Werkszertifikat durch Nachweise, die für das tatsächliche Teil gelten.",
+      "after": "Senden Sie Ihren Lieferantenfragebogen und die erforderlichen Nachweise. Die Verfügbarkeit von Dokumenten wird für den ausgewählten Partner und Auftrag bestätigt. Wir ersetzen Nachweise, die für das tatsächliche Teil gelten, nicht durch ein allgemeines Werkszertifikat.",
+      "reason": "Coordinator reviewed the suggested correction against the source."
+    },
+    {
+      "locale": "de",
+      "key": "d509f909628904a12d04",
+      "source": "How do I specify a joined frame?",
+      "before": "Wie spezifiziere ich einen geschlossenen Rahmen?",
+      "after": "Wie spezifiziere ich einen zusammengefügten Rahmen?",
+      "reason": "Coordinator reviewed the suggested correction against the source."
+    },
+    {
+      "locale": "de",
+      "key": "4e9f3e53686f6fa94d5e",
+      "source": "Can you guarantee a flame classification?",
+      "before": "Können Sie eine Brandschutzklassifizierung garantieren?",
+      "after": "Können Sie eine Brandklassifizierung garantieren?",
+      "reason": "Coordinator reviewed the suggested correction against the source."
+    },
+    {
+      "locale": "de",
+      "key": "eb8a8321c9a5acae8ef7",
+      "source": "Yes. Mark unknown fields as “please advise”, describe the application and provide a sketch or photo. We can identify the next information needed.",
+      "before": "Ja. Kennzeichnen Sie unbekannte Felder mit „bitte beraten“, beschreiben Sie die Anwendung und fügen Sie eine Skizze oder ein Foto bei. Wir können die als Nächstes benötigten Informationen ermitteln.",
+      "after": "Ja. Kennzeichnen Sie unbekannte Felder mit „bitte angeben“, beschreiben Sie die Anwendung und fügen Sie eine Skizze oder ein Foto bei. Wir können die als Nächstes benötigten Informationen ermitteln.",
+      "reason": "Coordinator reviewed the suggested correction against the source."
+    },
+    {
+      "locale": "de",
+      "key": "fb9fc4f72117c5ee095e",
+      "source": "The right components.\nA clearer path to supply.",
+      "before": "Die richtigen Komponenten.\nEin klarerer Weg zur Versorgung.",
+      "after": "Die richtigen Komponenten.\nEin klarerer Weg zur Belieferung.",
+      "reason": "Coordinator reviewed the suggested correction against the source."
+    },
+    {
+      "locale": "de",
+      "key": "5ea0ffd4373e0341f31f",
+      "source": "Agree the grade and reference for approval.",
+      "before": "Stimmen Sie die Qualität und die Referenz für die Freigabe ab.",
+      "after": "Stimmen Sie Materialgüte und Referenz für die Freigabe ab.",
+      "reason": "Coordinator reviewed the suggested correction against the source."
+    },
+    {
+      "locale": "de",
+      "key": "d36175f049cdfdf0d8cf",
+      "source": "Your specification.\nA considered path to supply.",
+      "before": "Ihre Spezifikation.\nEin durchdachter Weg zur Versorgung.",
+      "after": "Ihre Spezifikation.\nEin durchdachter Weg zur Belieferung.",
+      "reason": "Coordinator reviewed the suggested correction against the source."
+    },
+    {
+      "locale": "de",
+      "key": "f0505437c5b5587802ba",
+      "source": "Enquiry records use a one-year retention target for review. Contact us using the published company contact details to request access, correction or deletion, subject to applicable record-keeping requirements.",
+      "before": "Für Anfrageunterlagen gilt für Prüfzwecke eine angestrebte Aufbewahrungsfrist von einem Jahr. Kontaktieren Sie uns über die veröffentlichten Unternehmens-Kontaktdaten, um Zugang, Berichtigung oder Löschung zu beantragen, vorbehaltlich anwendbarer Aufbewahrungspflichten.",
+      "after": "Für Anfrageunterlagen gilt eine angestrebte Aufbewahrungsfrist von einem Jahr zur Überprüfung. Kontaktieren Sie uns über die veröffentlichten Unternehmens-Kontaktdaten, um Zugang, Berichtigung oder Löschung zu beantragen, vorbehaltlich anwendbarer Aufbewahrungspflichten.",
+      "reason": "Coordinator reviewed the suggested correction against the source."
+    },
+    {
+      "locale": "de",
+      "key": "27dbcc451ed2a07f4b5c",
+      "source": "Our website uses Vercel hosting, Alibaba Cloud database services, Cloudflare media storage and security services, and Resend email delivery. Enquiry information may be processed in China and in the regions used by these providers. Enquiry attachments are not sent to website translation or content-generation services.",
+      "before": "Unsere Website nutzt Vercel-Hosting, Alibaba Cloud-Datenbankdienste, Cloudflare-Dienste für Medienspeicherung und Sicherheit sowie Resend für den E-Mail-Versand. Anfrageinformationen können in China und in den von diesen Anbietern genutzten Regionen verarbeitet werden. Anfrageanhänge werden nicht an Übersetzungs- oder Dienste zur Inhaltsgenerierung für Websites gesendet.",
+      "after": "Unsere Website nutzt Vercel-Hosting, Alibaba Cloud-Datenbankdienste, Cloudflare-Dienste für Medienspeicherung und Sicherheit sowie Resend für den E-Mail-Versand. Anfrageinformationen können in China und in den von diesen Anbietern genutzten Regionen verarbeitet werden. Anfrageanhänge werden nicht an Übersetzungs- oder Content-Generierungsdienste der Website gesendet.",
+      "reason": "Coordinator reviewed the suggested correction against the source."
+    },
+    {
+      "locale": "de",
+      "key": "e17714d40ee04947a25c",
+      "reason": "Removed an added Markdown separator row to preserve the reviewed source table structure.",
+      "before": "| Familie | Prüfschwerpunkt | Zusätzliche Prüfung |\n| --- | --- | --- |\n| PA6 / PA66 | Mechanischer Kontakt und Abrieb | Feuchtigkeit und Qualität |\n| PA612 | Feuchtigkeitsempfindliche Abmessungen | Durchmesser, Besatzlänge und Füllgrad |\n| PBT / PP | Nasse oder chemische Exposition | Exaktes Medium und Ermüdung |\n| PEEK | Spezialisierte Beanspruchung | Verfügbarkeit der Qualität und Prüfung |\n| Draht aus SS304 / SS316 | Spezifizierter industrieller Kontakt | Oberflächenmarkierung und Drahtverlust |",
+      "after": "| Familie | Prüfschwerpunkt | Zusätzliche Prüfung |\n| PA6 / PA66 | Mechanischer Kontakt und Abrieb | Feuchtigkeit und Qualität |\n| PA612 | Feuchtigkeitsempfindliche Abmessungen | Durchmesser, Besatzlänge und Füllgrad |\n| PBT / PP | Nasse oder chemische Exposition | Exaktes Medium und Ermüdung |\n| PEEK | Spezialisierte Beanspruchung | Verfügbarkeit der Qualität und Prüfung |\n| Draht aus SS304 / SS316 | Spezifizierter industrieller Kontakt | Oberflächenmarkierung und Drahtverlust |"
+    },
+    {
+      "locale": "de",
+      "key": "7418b25f1d814863c128",
+      "reason": "Removed an added Markdown separator row to preserve the reviewed source table structure.",
+      "before": "| Anforderung | Anzufordernder Nachweis | Grenze |\n| --- | --- | --- |\n| IP / NEMA-Gehäuseschutzart | Prüfbericht für das montierte Gehäuse | Eine Dichtung allein begründet keine Schutzart |\n| Werkstoffeigenschaften | Daten der benannten Qualität und vereinbarte Prüfungen | Familiennamen sind keine Ergebnisse der Chargenabnahme |\n| Flammschutzleistung | Exakte Norm, Qualität, Dicke und Prüfumfang | Keine pauschale Flammschutzzertifizierung |\n| REACH / RoHS-Anfrage | Aktuelle Erklärung für den gelieferten Werkstoff oder das Teil | Stoffumfang und Anwendbarkeit prüfen |\n| Maßkonformität | Freigegebene Zeichnung und Prüfprotokoll | Revision, Methode und Stichprobenumfang definieren |",
+      "after": "| Anforderung | Anzufordernder Nachweis | Grenze |\n| IP / NEMA-Gehäuseschutzart | Prüfbericht für das montierte Gehäuse | Eine Dichtung allein begründet keine Schutzart |\n| Werkstoffeigenschaften | Daten der benannten Qualität und vereinbarte Prüfungen | Familiennamen sind keine Ergebnisse der Chargenabnahme |\n| Flammschutzleistung | Exakte Norm, Qualität, Dicke und Prüfumfang | Keine pauschale Flammschutzzertifizierung |\n| REACH / RoHS-Anfrage | Aktuelle Erklärung für den gelieferten Werkstoff oder das Teil | Stoffumfang und Anwendbarkeit prüfen |\n| Maßkonformität | Freigegebene Zeichnung und Prüfprotokoll | Revision, Methode und Stichprobenumfang definieren |"
+    },
+    {
+      "locale": "de",
+      "key": "33831c7644301d2c5ed3",
+      "reason": "Removed an added Markdown separator row to preserve the reviewed source table structure.",
+      "before": "| Symptom | Zuerst untersuchen | Nützliche Nachweise |\n| --- | --- | --- |\n| Türleckage | Spaltvariation und Verriegelungsbelastung | Spaltkarte und Kontaktspuren |\n| Abgeflachte Dichtung | Stauchung, Zeit und Temperatur | Ursprünglicher Querschnitt und Rückstellbedingungen |\n| Sich ablösender Klebstoff | Substrat und Oberflächenvorbereitung | Klebebandreferenz und Beschichtung |\n| Leckage an Ecken | Verbindungsgeometrie und Verformung | Verbindungszeichnung und Nahaufnahme |\n| Filamentverlust | Befestigung und Stoßbelastung | Endverschluss und Probe mit losen Filamenten |\n| Schneller Bürstenverschleiß | Auslenkung, Ausrichtung und Geschwindigkeit | Einbau- und Kontaktrichtung |",
+      "after": "| Symptom | Zuerst untersuchen | Nützliche Nachweise |\n| Türleckage | Spaltvariation und Verriegelungsbelastung | Spaltkarte und Kontaktspuren |\n| Abgeflachte Dichtung | Stauchung, Zeit und Temperatur | Ursprünglicher Querschnitt und Rückstellbedingungen |\n| Sich ablösender Klebstoff | Substrat und Oberflächenvorbereitung | Klebebandreferenz und Beschichtung |\n| Leckage an Ecken | Verbindungsgeometrie und Verformung | Verbindungszeichnung und Nahaufnahme |\n| Filamentverlust | Befestigung und Stoßbelastung | Endverschluss und Probe mit losen Filamenten |\n| Schneller Bürstenverschleiß | Auslenkung, Ausrichtung und Geschwindigkeit | Einbau- und Kontaktrichtung |"
+    },
+    {
+      "locale": "es",
+      "key": "13ea42e3ffc00ae42102",
+      "source": "Agree recovery and compression-set test conditions with the selected production partner.",
+      "before": "Acuérdese con el socio de producción seleccionado las condiciones de ensayo de recuperación y deformación remanente por compresión.",
+      "after": "Acuerde con el socio de producción seleccionado las condiciones de ensayo de recuperación y deformación remanente por compresión.",
+      "reason": "Coordinator reviewed the suggested correction against the source."
+    },
+    {
+      "locale": "es",
+      "key": "9a76281d2600f8ec8b82",
+      "source": "State indoor or outdoor use, temperature exposure, media, opening cycles, material grade if known, and required acceptance tests. Identify photographs and measurements by position so that a tight corner is not confused with a straight section.",
+      "before": "Indique uso interior o exterior, exposición a temperatura, medios, ciclos de apertura, grado de material si se conoce y ensayos de aceptación requeridos. Identifique las fotografías y mediciones por posición para que una esquina cerrada no se confunda con un tramo recto.",
+      "after": "Indique uso interior o exterior, exposición a temperatura, medios, ciclos de apertura, grado de material si se conoce y ensayos de aceptación requeridos. Identifique las fotografías y mediciones por posición para que una esquina de radio reducido no se confunda con un tramo recto.",
+      "reason": "Coordinator reviewed the suggested correction against the source."
+    },
+    {
+      "locale": "es",
+      "key": "913d5abae8e31ffe45d9",
+      "source": "Food contact, high-speed rotating brush seals and safety-critical functions require separate specialist review. Do not use these product families as a basis for an unvalidated safety claim.",
+      "before": "El contacto con alimentos, los sellos de cepillo rotativos de alta velocidad y las funciones críticas para la seguridad requieren una revisión especializada independiente. No utilice estas familias de productos como base para una afirmación de seguridad no validada.",
+      "after": "El contacto con alimentos, los sellos de cepillo rotativos de alta velocidad y las funciones críticas para la seguridad requieren una revisión especializada por separado. No utilice estas familias de productos como base para una afirmación de seguridad no validada.",
+      "reason": "Coordinator reviewed the suggested correction against the source."
+    },
+    {
+      "locale": "es",
+      "key": "7c7bdeea004aab5ea329",
+      "source": "Agree the sample quantity, inspection method, evidence required and the person who approves the sample. Identify any qualification or regulatory requirement before requesting a quote.",
+      "before": "Acuérdese la cantidad de muestras, el método de inspección, la evidencia requerida y la persona que aprueba la muestra. Identifique cualquier requisito de cualificación o reglamentario antes de solicitar un presupuesto.",
+      "after": "Acuerde la cantidad de muestras, el método de inspección, la evidencia requerida y la persona que aprueba la muestra. Identifique cualquier requisito de cualificación o reglamentario antes de solicitar un presupuesto.",
+      "reason": "Coordinator reviewed the suggested correction against the source."
+    },
+    {
+      "locale": "es",
+      "key": "124bcb78a274ea29c486",
+      "source": "Use “please advise” where necessary and attach a clear photo or sketch. The first discussion can establish missing inputs; it does not commit you to a material or design.",
+      "before": "Utilice «por favor, asesore» cuando sea necesario y adjunte una foto o croquis claros. La primera conversación puede establecer los datos de entrada que faltan; no le compromete con un material o diseño.",
+      "after": "Utilice «indique, por favor» cuando sea necesario y adjunte una foto o croquis claros. La primera conversación puede establecer los datos de entrada que faltan; no le compromete con un material o diseño.",
+      "reason": "Coordinator reviewed the suggested correction against the source."
+    },
+    {
+      "locale": "es",
+      "key": "48547240dbbe68b26736",
+      "source": "A qualification pack to agree",
+      "before": "Un paquete de cualificación para acordar",
+      "after": "Un paquete de cualificación que acordar",
+      "reason": "Coordinator reviewed the suggested correction against the source."
+    },
+    {
+      "locale": "es",
+      "key": "00cb72b5e977e9fb6212",
+      "source": "Timing is confirmed after technical review, partner scheduling and sample approval requirements are understood.",
+      "before": "El plazo se confirma tras comprender la revisión técnica, la planificación del socio y los requisitos de aprobación de muestras.",
+      "after": "El plazo se confirma tras la revisión técnica y una vez comprendidos la planificación del socio y los requisitos de aprobación de muestras.",
+      "reason": "Coordinator reviewed the suggested correction against the source."
+    },
+    {
+      "locale": "es",
+      "key": "3cda5d6c09880b1695c9",
+      "source": "Agree critical dimensions, measurement methods, sample plan, material identification and available inspection records before order placement.",
+      "before": "Acuérdese antes de realizar el pedido de las dimensiones críticas, los métodos de medición, el plan de muestreo, la identificación del material y los registros de inspección disponibles.",
+      "after": "Acuerde las dimensiones críticas, los métodos de medición, el plan de muestreo, la identificación del material y los registros de inspección disponibles antes de realizar el pedido.",
+      "reason": "Coordinator reviewed the suggested correction against the source."
+    },
+    {
+      "locale": "es",
+      "key": "170f61eaad7c257ef193",
+      "source": "Straight and formed brushes, matched holders and custom equipment assemblies.",
+      "before": "Cepillos rectos y conformados, soportes compatibles y conjuntos de equipos a medida.",
+      "after": "Cepillos rectos y conformados, soportes compatibles y conjuntos a medida para equipos.",
+      "reason": "Coordinator reviewed the suggested correction against the source."
+    },
+    {
+      "locale": "es",
+      "key": "f84048c9b4dc1a402868",
+      "source": "Confirm the contracting entity and applicable terms on the quotation before supplier approval or ordering. Public registration and contact details are shown below when configured.",
+      "before": "Confirme la entidad contratante y las condiciones aplicables en el presupuesto antes de la aprobación del proveedor o de realizar el pedido. Los datos públicos de registro y contacto se muestran a continuación cuando están configurados.",
+      "after": "Confirme la entidad contratante y las condiciones aplicables en el presupuesto antes de aprobar al proveedor o de realizar el pedido. Los datos públicos de registro y contacto se muestran a continuación cuando están configurados.",
+      "reason": "Reviewer attached a paragraph correction to its heading key; corrected mapping after inspecting both source fields."
+    },
+    {
+      "locale": "es",
+      "key": "e17714d40ee04947a25c",
+      "reason": "Removed an added Markdown separator row to preserve the reviewed source table structure.",
+      "before": "| Familia | Enfoque de revisión | Comprobación adicional |\n| --- | --- | --- |\n| PA6 / PA66 | Contacto mecánico y abrasión | Humedad y grado |\n| PA612 | Dimensiones sensibles a la humedad | Diámetro, longitud de filamento y densidad de relleno |\n| PBT / PP | Exposición a humedad o productos químicos | Medio exacto y fatiga |\n| PEEK | Servicio especializado | Disponibilidad del grado y ensayos |\n| Alambre SS304 / SS316 | Contacto industrial especificado | Marcado superficial y pérdida de alambre |",
+      "after": "| Familia | Enfoque de revisión | Comprobación adicional |\n| PA6 / PA66 | Contacto mecánico y abrasión | Humedad y grado |\n| PA612 | Dimensiones sensibles a la humedad | Diámetro, longitud de filamento y densidad de relleno |\n| PBT / PP | Exposición a humedad o productos químicos | Medio exacto y fatiga |\n| PEEK | Servicio especializado | Disponibilidad del grado y ensayos |\n| Alambre SS304 / SS316 | Contacto industrial especificado | Marcado superficial y pérdida de alambre |"
+    },
+    {
+      "locale": "es",
+      "key": "7418b25f1d814863c128",
+      "reason": "Removed an added Markdown separator row to preserve the reviewed source table structure.",
+      "before": "| Requisito | Evidencia que solicitar | Límite |\n| --- | --- | --- |\n| Clasificación de envolvente IP / NEMA | Informe de ensayo de la envolvente montada | Una junta por sí sola no establece una clasificación |\n| Propiedades del material | Datos del grado designado y ensayos acordados | Los nombres de familias no son resultados de aceptación de lote |\n| Comportamiento frente a la llama | Norma exacta, grado, espesor y alcance del ensayo | Sin certificación general frente a la llama |\n| Solicitud REACH / RoHS | Declaración vigente para el material o pieza suministrados | Revise el alcance de las sustancias y la aplicabilidad |\n| Conformidad dimensional | Plano aprobado y registro de inspección | Defina revisión, método y muestreo |",
+      "after": "| Requisito | Evidencia que solicitar | Límite |\n| Clasificación de envolvente IP / NEMA | Informe de ensayo de la envolvente montada | Una junta por sí sola no establece una clasificación |\n| Propiedades del material | Datos del grado designado y ensayos acordados | Los nombres de familias no son resultados de aceptación de lote |\n| Comportamiento frente a la llama | Norma exacta, grado, espesor y alcance del ensayo | Sin certificación general frente a la llama |\n| Solicitud REACH / RoHS | Declaración vigente para el material o pieza suministrados | Revise el alcance de las sustancias y la aplicabilidad |\n| Conformidad dimensional | Plano aprobado y registro de inspección | Defina revisión, método y muestreo |"
+    },
+    {
+      "locale": "es",
+      "key": "33831c7644301d2c5ed3",
+      "reason": "Removed an added Markdown separator row to preserve the reviewed source table structure.",
+      "before": "| Síntoma | Investigar primero | Evidencia útil |\n| --- | --- | --- |\n| Fuga en puerta | Variación de holgura y carga del cierre | Mapa de holguras y marcas de contacto |\n| Junta aplanada | Compresión, tiempo y temperatura | Sección original y condiciones de recuperación |\n| Adhesivo despegado | Sustrato y preparación de superficie | Referencia de cinta y recubrimiento |\n| Fuga en esquina | Geometría de la unión y distorsión | Plano de unión y fotografía de detalle |\n| Pérdida de filamentos | Retención e impacto | Cierre de extremos y muestra de filamento suelto |\n| Desgaste rápido del cepillo | Deflexión, alineación y velocidad | Instalación y dirección de contacto |",
+      "after": "| Síntoma | Investigar primero | Evidencia útil |\n| Fuga en puerta | Variación de holgura y carga del cierre | Mapa de holguras y marcas de contacto |\n| Junta aplanada | Compresión, tiempo y temperatura | Sección original y condiciones de recuperación |\n| Adhesivo despegado | Sustrato y preparación de superficie | Referencia de cinta y recubrimiento |\n| Fuga en esquina | Geometría de la unión y distorsión | Plano de unión y fotografía de detalle |\n| Pérdida de filamentos | Retención e impacto | Cierre de extremos y muestra de filamento suelto |\n| Desgaste rápido del cepillo | Deflexión, alineación y velocidad | Instalación y dirección de contacto |"
+    },
+    {
+      "locale": "it",
+      "key": "4f9cf3ff472716f1ba65",
+      "source": "Adhesive backing",
+      "before": "Supporto adesivo",
+      "after": "Retro adesivo",
+      "reason": "Coordinator reviewed the suggested correction against the source."
+    },
+    {
+      "locale": "it",
+      "key": "5d76f31d6bf56c58dab2",
+      "source": "Straight strips for dust exclusion, wiping and guiding at equipment openings.",
+      "before": "Strisce rettilinee per l'esclusione della polvere, la pulizia e la guida in corrispondenza delle aperture delle apparecchiature.",
+      "after": "Strisce rettilinee per l'esclusione della polvere, la tergitura e la guida in corrispondenza delle aperture delle apparecchiature.",
+      "reason": "Coordinator reviewed the suggested correction against the source."
+    },
+    {
+      "locale": "it",
+      "key": "83cec5fae08eba6a1b03",
+      "source": "Straight strips for dust exclusion, wiping and guiding at equipment openings. Product families are available for sourcing review. Material grade, tooling, minimum batch, inspection scope and production timing are confirmed for the selected partner and order after technical review and sample approval.",
+      "before": "Strisce rettilinee per l'esclusione della polvere, la pulizia e la guida in corrispondenza delle aperture delle apparecchiature. Le famiglie di prodotti sono disponibili per la valutazione di approvvigionamento. La qualità del materiale, l'attrezzaggio, il lotto minimo, l'ambito di ispezione e i tempi di produzione sono confermati per il partner e l'ordine selezionati dopo la revisione tecnica e l'approvazione del campione.",
+      "after": "Strisce rettilinee per l'esclusione della polvere, la tergitura e la guida in corrispondenza delle aperture delle apparecchiature. Le famiglie di prodotti sono disponibili per la valutazione di approvvigionamento. La qualità del materiale, l'attrezzaggio, il lotto minimo, l'ambito di ispezione e i tempi di produzione sono confermati per il partner e l'ordine selezionati dopo la revisione tecnica e l'approvazione del campione.",
+      "reason": "Coordinator reviewed the suggested correction against the source."
+    },
+    {
+      "locale": "it",
+      "key": "5634c065f6a814f53a84",
+      "source": "Review the nominated tape and surface preparation; define peel or ageing checks on the real substrate.",
+      "before": "Esaminare il nastro designato e la preparazione della superficie; definire controlli di pelatura o invecchiamento sul substrato reale.",
+      "after": "Esaminare il nastro designato e la preparazione della superficie; definire prove di pelatura o invecchiamento sul substrato reale.",
+      "reason": "Coordinator reviewed the suggested correction against the source."
+    },
+    {
+      "locale": "it",
+      "key": "22ca91e9d71aba6780cc",
+      "source": "An old seal may have taken a compression set. Record the mating assembly as well as the removed profile. Keep the door in its normal latched condition when measuring the closed gap.",
+      "before": "Una vecchia guarnizione potrebbe aver subito una deformazione permanente da compressione. Registrare l'assemblaggio accoppiato oltre al profilo rimosso. Durante la misurazione, mantenere la porta nella sua normale condizione di chiusura a scatto.",
+      "after": "Una vecchia guarnizione potrebbe aver subito una deformazione permanente da compressione. Registrare l'assemblaggio accoppiato oltre al profilo rimosso. Durante la misurazione, mantenere la porta nella normale condizione di chiusura con il fermo inserito.",
+      "reason": "Coordinator reviewed the suggested correction against the source."
+    },
+    {
+      "locale": "it",
+      "key": "8f785d95c393064b2d15",
+      "source": "List every medium, temperature range and exposure duration. Then define motion, closed gap, compression and expected service conditions. Choose a material family only after this information is available.",
+      "before": "Elencare ogni fluido, intervallo di temperatura e durata dell'esposizione. Quindi definire il movimento, il gioco a tenuta chiusa, la compressione e le condizioni di esercizio previste. Scegliere una famiglia di materiali solo dopo che queste informazioni sono disponibili.",
+      "after": "Elencare ogni fluido, intervallo di temperatura e durata dell'esposizione. Quindi definire il movimento, il gioco in posizione chiusa, la compressione e le condizioni di esercizio previste. Scegliere una famiglia di materiali solo dopo che queste informazioni sono disponibili.",
+      "reason": "Coordinator reviewed the suggested correction against the source."
+    },
+    {
+      "locale": "it",
+      "key": "f62877eabb5fae5ea807",
+      "source": "Define whether the brush wipes, guides or limits dust. List the contacted surface, allowable marking, medium, moisture, temperature and working deflection.",
+      "before": "Definire se la spazzola pulisce, guida o limita la polvere. Elencare la superficie a contatto, la marcatura ammissibile, il fluido, l'umidità, la temperatura e la deflessione di lavoro.",
+      "after": "Definire se la spazzola terge, guida o limita la polvere. Elencare la superficie a contatto, la marcatura ammissibile, il fluido, l'umidità, la temperatura e la deflessione di lavoro.",
+      "reason": "Coordinator reviewed the suggested correction against the source."
+    },
+    {
+      "locale": "it",
+      "key": "00cb72b5e977e9fb6212",
+      "source": "Timing is confirmed after technical review, partner scheduling and sample approval requirements are understood.",
+      "before": "Le tempistiche vengono confermate dopo aver compreso la revisione tecnica, la pianificazione del partner e i requisiti di approvazione del campione.",
+      "after": "Le tempistiche vengono confermate dopo la revisione tecnica e dopo aver chiarito la pianificazione del partner e i requisiti di approvazione del campione.",
+      "reason": "Coordinator reviewed the suggested correction against the source."
+    },
+    {
+      "locale": "it",
+      "key": "eb8a8321c9a5acae8ef7",
+      "source": "Yes. Mark unknown fields as “please advise”, describe the application and provide a sketch or photo. We can identify the next information needed.",
+      "before": "Sì. Contrassegnate i campi sconosciuti come “si prega di indicare”, descrivete l'applicazione e fornite uno schizzo o una foto. Possiamo identificare le informazioni successive necessarie.",
+      "after": "Sì. Contrassegnate i campi sconosciuti come “da definire”, descrivete l'applicazione e fornite uno schizzo o una foto. Possiamo identificare le informazioni successive necessarie.",
+      "reason": "Coordinator reviewed the suggested correction against the source."
+    },
+    {
+      "locale": "it",
+      "key": "cc60aa888356f675ccaf",
+      "source": "Quality management begins with the details that matter in your assembly: fit, material, critical dimensions and operating conditions. We coordinate the requirement review, sample approval and agreed inspection with the selected production partner. The scope and evidence are defined for the actual component and order.",
+      "before": "La gestione della qualità inizia dai dettagli importanti nel vostro assemblaggio: montaggio, materiale, dimensioni critiche e condizioni operative. Coordiniamo la revisione dei requisiti, l'approvazione del campione e l'ispezione concordata con il partner di produzione selezionato. Ambito ed evidenze sono definiti per il componente e l'ordine effettivi.",
+      "after": "La gestione della qualità inizia dai dettagli importanti nel vostro assemblaggio: accoppiamento, materiale, dimensioni critiche e condizioni operative. Coordiniamo la revisione dei requisiti, l'approvazione del campione e l'ispezione concordata con il partner di produzione selezionato. Ambito ed evidenze sono definiti per il componente e l'ordine effettivi.",
+      "reason": "Coordinator reviewed the suggested correction against the source."
+    },
+    {
+      "locale": "it",
+      "key": "7957ed46858671cde8cb",
+      "source": "Send your onboarding questionnaire and evidence requirements. We will review which records are applicable and available. Legal entity details, quotations and order-specific evidence belong in the qualification pack.",
+      "before": "Invia il vostro questionario di qualificazione e i requisiti di evidenza. Esamineremo quali registri sono applicabili e disponibili. I dati dell'entità giuridica, i preventivi e le evidenze specifiche dell'ordine appartengono al fascicolo di qualificazione.",
+      "after": "Inviate il vostro questionario di qualificazione e i requisiti di evidenza. Esamineremo quali registri sono applicabili e disponibili. I dati dell'entità giuridica, i preventivi e le evidenze specifiche dell'ordine appartengono al fascicolo di qualificazione.",
+      "reason": "Coordinator reviewed the suggested correction against the source."
+    },
+    {
+      "locale": "it",
+      "key": "f11a27debcc7fd05cb7c",
+      "source": "The website stores the entry page, referring website domain and campaign tags in session storage for up to 24 hours. These details accompany a submitted enquiry so we can understand how it reached us. They do not verify visitor identity. We do not use advertising cookies or third-party advertising analytics. Cloudflare Turnstile and hosting security services may process technical request information to limit abuse.",
+      "before": "Il sito web memorizza nella memoria di sessione la pagina di accesso, il dominio del sito web di provenienza e i tag della campagna per un massimo di 24 ore. Questi dettagli accompagnano una richiesta inviata, in modo da poter comprendere come ci ha raggiunto. Non verificano l'identità del visitatore. Non utilizziamo cookie pubblicitari né analisi pubblicitarie di terze parti. Cloudflare Turnstile e i servizi di sicurezza dell'hosting possono trattare informazioni tecniche relative alle richieste per limitare gli abusi.",
+      "after": "Il sito web memorizza nella memoria di sessione la pagina di ingresso, il dominio del sito web di provenienza e i tag della campagna per un massimo di 24 ore. Questi dettagli accompagnano una richiesta inviata, in modo da poter comprendere come ci è pervenuta. Non verificano l'identità del visitatore. Non utilizziamo cookie pubblicitari né analisi pubblicitarie di terze parti. Cloudflare Turnstile e i servizi di sicurezza dell'hosting possono trattare informazioni tecniche relative alle richieste per limitare gli abusi.",
+      "reason": "Coordinator reviewed the suggested correction against the source."
+    },
+    {
+      "locale": "it",
+      "key": "b1eaa19832688309f8a1",
+      "source": "Keliran LTD is registered in England and Wales under company number 15698503. Registered office: 483 Green Lanes, London, England, N13 4BS.",
+      "before": "Keliran LTD è registrata in Inghilterra e Galles con il numero di società 15698503. Sede legale: 483 Green Lanes, London, England, N13 4BS.",
+      "after": "Keliran LTD è registrata in Inghilterra e Galles con il numero di registrazione 15698503. Sede legale: 483 Green Lanes, London, England, N13 4BS.",
+      "reason": "Coordinator reviewed the suggested correction against the source."
+    },
+    {
+      "locale": "it",
+      "key": "f84048c9b4dc1a402868",
+      "source": "Confirm the contracting entity and applicable terms on the quotation before supplier approval or ordering. Public registration and contact details are shown below when configured.",
+      "before": "Confermare sul preventivo l'entità contraente e i termini applicabili prima dell'approvazione del fornitore o dell'ordine. I dati di registrazione pubblici e i recapiti sono indicati di seguito, se configurati.",
+      "after": "Confermare sul preventivo l'entità contraente e i termini applicabili prima della qualifica del fornitore o dell'ordine. I dati di registrazione pubblici e i recapiti sono indicati di seguito, se configurati.",
+      "reason": "Coordinator reviewed the suggested correction against the source."
+    },
+    {
+      "locale": "it",
+      "key": "7b5cc9c925ed0d9486fa",
+      "source": "Brush holders and channels",
+      "before": "Supporti e canali per spazzole",
+      "after": "Portaspazzole e canali",
+      "reason": "Coordinator reviewed the suggested correction against the source."
+    },
+    {
+      "locale": "it",
+      "key": "e17714d40ee04947a25c",
+      "reason": "Removed an added Markdown separator row to preserve the reviewed source table structure.",
+      "before": "| Famiglia | Aspetto principale da valutare | Verifica aggiuntiva |\n| --- | --- | --- |\n| PA6 / PA66 | Contatto meccanico e abrasione | Umidità e grado |\n| PA612 | Dimensioni sensibili all'umidità | Diametro, lunghezza libera e densità di riempimento |\n| PBT / PP | Esposizione a umidità o sostanze chimiche | Fluido esatto e fatica |\n| PEEK | Servizio specialistico | Disponibilità del grado e prove |\n| Filo SS304 / SS316 | Contatto industriale specificato | Marcatura della superficie e perdita di filo |",
+      "after": "| Famiglia | Aspetto principale da valutare | Verifica aggiuntiva |\n| PA6 / PA66 | Contatto meccanico e abrasione | Umidità e grado |\n| PA612 | Dimensioni sensibili all'umidità | Diametro, lunghezza libera e densità di riempimento |\n| PBT / PP | Esposizione a umidità o sostanze chimiche | Fluido esatto e fatica |\n| PEEK | Servizio specialistico | Disponibilità del grado e prove |\n| Filo SS304 / SS316 | Contatto industriale specificato | Marcatura della superficie e perdita di filo |"
+    },
+    {
+      "locale": "it",
+      "key": "7418b25f1d814863c128",
+      "reason": "Removed an added Markdown separator row to preserve the reviewed source table structure.",
+      "before": "| Requisito | Evidenza da richiedere | Limite |\n| --- | --- | --- |\n| Grado di protezione dell'involucro IP / NEMA | Rapporto di prova per l'involucro assemblato | Una guarnizione da sola non stabilisce un grado di protezione |\n| Proprietà del materiale | Dati del grado designato e prove concordate | I nomi delle famiglie non sono risultati di accettazione del lotto |\n| Prestazioni alla fiamma | Norma esatta, grado, spessore e ambito di prova | Nessuna certificazione alla fiamma generalizzata |\n| Richiesta REACH / RoHS | Dichiarazione aggiornata per il materiale o componente fornito | Valutare l'ambito delle sostanze e l'applicabilità |\n| Conformità dimensionale | Disegno approvato e rapporto di ispezione | Definire revisione, metodo e campionamento |",
+      "after": "| Requisito | Evidenza da richiedere | Limite |\n| Grado di protezione dell'involucro IP / NEMA | Rapporto di prova per l'involucro assemblato | Una guarnizione da sola non stabilisce un grado di protezione |\n| Proprietà del materiale | Dati del grado designato e prove concordate | I nomi delle famiglie non sono risultati di accettazione del lotto |\n| Prestazioni alla fiamma | Norma esatta, grado, spessore e ambito di prova | Nessuna certificazione alla fiamma generalizzata |\n| Richiesta REACH / RoHS | Dichiarazione aggiornata per il materiale o componente fornito | Valutare l'ambito delle sostanze e l'applicabilità |\n| Conformità dimensionale | Disegno approvato e rapporto di ispezione | Definire revisione, metodo e campionamento |"
+    },
+    {
+      "locale": "it",
+      "key": "33831c7644301d2c5ed3",
+      "reason": "Removed an added Markdown separator row to preserve the reviewed source table structure.",
+      "before": "| Sintomo | Indagare prima | Evidenze utili |\n| --- | --- | --- |\n| Perdita dalla porta | Variazione del gioco e carico della chiusura | Mappa del gioco e segni di contatto |\n| Tenuta schiacciata | Compressione, tempo e temperatura | Sezione originale e condizioni di recupero |\n| Adesivo che si solleva | Substrato e preparazione della superficie | Riferimento del nastro e rivestimento |\n| Perdita dagli angoli | Geometria del giunto e deformazione | Disegno del giunto e dettaglio ravvicinato |\n| Perdita di filamenti | Ritenzione e impatto | Chiusura terminale e campione di filamenti allentati |\n| Rapida usura della spazzola | Deflessione, allineamento e velocità | Installazione e direzione di contatto |",
+      "after": "| Sintomo | Indagare prima | Evidenze utili |\n| Perdita dalla porta | Variazione del gioco e carico della chiusura | Mappa del gioco e segni di contatto |\n| Tenuta schiacciata | Compressione, tempo e temperatura | Sezione originale e condizioni di recupero |\n| Adesivo che si solleva | Substrato e preparazione della superficie | Riferimento del nastro e rivestimento |\n| Perdita dagli angoli | Geometria del giunto e deformazione | Disegno del giunto e dettaglio ravvicinato |\n| Perdita di filamenti | Ritenzione e impatto | Chiusura terminale e campione di filamenti allentati |\n| Rapida usura della spazzola | Deflessione, allineamento e velocità | Installazione e direzione di contatto |"
+    }
+  ]
+}

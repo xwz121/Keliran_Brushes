@@ -1,0 +1,254 @@
+{
+  "sourceHash": "5e0251317585c239c237e308e56095090be2732246b0eda5637340ffde875b13",
+  "targetHash": "0d37b4c9c5af9a9f47077e6eb30be5db7f463fdd140c8298ee6b794e7d03bda0",
+  "batches": [
+    {
+      "batch": 0,
+      "sourceHash": "b8521c8d5784fee8e38e18e07a30373ebc0ca2657e4ee3c3c9f0d93167b839b5",
+      "targetHash": "ffb3e754d163f210b132e345f814a305c231084712e2d9adbc8deff13de9987d",
+      "model": "gpt-5.6-terra",
+      "responseId": "resp_002202ac698674b0016ab51f2b774087d0a36c46751e239d3c",
+      "usage": {
+        "input_tokens": 5023,
+        "input_tokens_details": {
+          "cache_write_tokens": 5020,
+          "cached_tokens": 0
+        },
+        "output_tokens": 998,
+        "output_tokens_details": {
+          "reasoning_tokens": 727
+        },
+        "total_tokens": 6021
+      },
+      "completedAt": "2026-09-24T13:01:46.083Z",
+      "result": {
+        "passed": false,
+        "issues": [
+          {
+            "key": "28802d1773c31aad74ec",
+            "issue": "「シールバルブ」は弁（valve）を意味し得るため、圧縮可能な sealing bulb の意味が不正確です。",
+            "correction": "エッジ保持機能と圧縮可能なバルブシールを組み合わせたグリップオンプロファイル。"
+          },
+          {
+            "key": "c6fb2a7ddcf8bc9102b7",
+            "issue": "「シールバルブ」は弁（valve）を意味し得るため、圧縮可能な sealing bulb の意味が不正確です。",
+            "correction": "エッジ保持機能と圧縮可能なバルブシールを組み合わせたグリップオンプロファイル。製品ファミリーは調達検討用にご利用いただけます。材料グレード、金型、最小ロット、検査範囲および生産時期は、技術レビューおよびサンプル承認後に、選定された生産パートナーおよび注文ごとに確認されます。"
+          }
+        ]
+      },
+      "deterministic": []
+    },
+    {
+      "batch": 1,
+      "sourceHash": "22f293c35574fde2244bb6a7f6732ec953f2e1d9640eb4f704ea5bfe7ac7e431",
+      "targetHash": "3fa0d729f3414c7418f8d2686340d11b1b1ec25356fab86a9829ce84e8f066e3",
+      "model": "gpt-5.6-terra",
+      "responseId": "resp_079f7ca5ad012095016ab51f3b2df487d0897162aa833bd803",
+      "usage": {
+        "input_tokens": 6125,
+        "input_tokens_details": {
+          "cache_write_tokens": 6122,
+          "cached_tokens": 0
+        },
+        "output_tokens": 610,
+        "output_tokens_details": {
+          "reasoning_tokens": 516
+        },
+        "total_tokens": 6735
+      },
+      "completedAt": "2026-09-24T13:01:55.410Z",
+      "result": {
+        "passed": false,
+        "issues": [
+          {
+            "key": "4d8f18eed8f846fadcfb",
+            "issue": "「接着剤付き端部」は、接着剤が塗布された端部そのものを指すように読め、接着部が浮くという不具合の意味が不明確です。",
+            "correction": "接着部の浮き"
+          }
+        ]
+      },
+      "deterministic": []
+    },
+    {
+      "batch": 2,
+      "sourceHash": "bd7450b2c8e5bbe6b7da490ca4b20325b9f2433d60e300e0610e477df848dd46",
+      "targetHash": "2da7cc2483dba7c8ccb2ac2348798f562c1eb9490b309b9780c13d69ee805dda",
+      "model": "gpt-5.6-terra",
+      "responseId": "resp_0d050217e19cda8b016ab51f44928c87d0a70e1be0077136ef",
+      "usage": {
+        "input_tokens": 5622,
+        "input_tokens_details": {
+          "cache_write_tokens": 5619,
+          "cached_tokens": 0
+        },
+        "output_tokens": 525,
+        "output_tokens_details": {
+          "reasoning_tokens": 507
+        },
+        "total_tokens": 6147
+      },
+      "completedAt": "2026-09-24T13:02:05.195Z",
+      "result": {
+        "passed": true,
+        "issues": []
+      },
+      "deterministic": [
+        "66d86cdac4bd1e2f827e: numbers differ"
+      ]
+    },
+    {
+      "batch": 3,
+      "sourceHash": "4c2af46e4f74c083e65ba605c184bef8328ad0fd7ff55a9d1756b9e864fde893",
+      "targetHash": "d61e091eba0b607e19b052b3917f9488a10c046d003e6eea1b47d33a3568e47d",
+      "model": "gpt-5.6-terra",
+      "responseId": "resp_0e9d00a1732b8690016ab51f4e48dc87d0814569b5e5cc615e",
+      "usage": {
+        "input_tokens": 4659,
+        "input_tokens_details": {
+          "cache_write_tokens": 4656,
+          "cached_tokens": 0
+        },
+        "output_tokens": 2369,
+        "output_tokens_details": {
+          "reasoning_tokens": 1651
+        },
+        "total_tokens": 7028
+      },
+      "completedAt": "2026-09-24T13:02:36.952Z",
+      "result": {
+        "passed": false,
+        "issues": [
+          {
+            "key": "3b339d2b993be898a947",
+            "issue": "“Silicone” remains untranslated, although it is not an abbreviation that needs to be retained.",
+            "correction": "| ファミリー | 確認対象 | 選定前の確認事項 |\n| --- | --- | --- |\n| EPDM | 天候、水およびオゾンへの曝露 | 油または燃料との接触 |\n| NBR | 特定の油および静的界面 | 屋外曝露および添加剤 |\n| シリコーン / VMQ | 温度依存の用途 | 引裂き、摩耗および媒体 |\n| FKM | 特定の化学薬品および熱条件 | 正確な媒体および低温時の応答 |\n| Sponge / foam | 圧縮可能な界面 | セル構造、荷重および復元性 |"
+          },
+          {
+            "key": "e17714d40ee04947a25c",
+            "issue": "“wire” is left untranslated in the SS304 / SS316 material-family entry.",
+            "correction": "| ファミリー | 確認の焦点 | 追加確認事項 |\n| --- | --- | --- |\n| PA6 / PA66 | 機械的接触および摩耗 | 湿気およびグレード |\n| PA612 | 湿気の影響を受けやすい寸法 | 直径、トリムおよび充填率 |\n| PBT / PP | 湿潤または化学的曝露 | 正確な媒体および疲労 |\n| PEEK | 特殊用途 | グレードの入手性および試験 |\n| SS304 / SS316 ワイヤ | 指定された工業的接触 | 表面マーキングおよびワイヤ脱落 |"
+          },
+          {
+            "key": "7418b25f1d814863c128",
+            "issue": "The table header “Boundary” is translated as 「境界」, which does not convey the intended limitation or scope constraint of the evidence.",
+            "correction": "| 要件 | 要求すべきエビデンス | 制約 |\n| --- | --- | --- |\n| IP / NEMA エンクロージャ等級 | 組立済みエンクロージャの試験報告書 | ガスケット単体では等級は成立しません |\n| 材料特性 | 指定グレードのデータおよび合意した試験 | ファミリー名はロット受入結果ではありません |\n| 難燃性能 | 正確な規格、グレード、厚さおよび試験範囲 | 包括的な難燃認証はありません |\n| REACH / RoHS 要求 | 供給材料または部品に関する最新の宣言書 | 物質の対象範囲および適用性を確認してください |\n| 寸法適合性 | 承認図面および検査記録 | 改訂、方法およびサンプリングを定義してください |"
+          }
+        ]
+      },
+      "deterministic": [
+        "e17714d40ee04947a25c: table structure differs",
+        "7418b25f1d814863c128: table structure differs",
+        "33831c7644301d2c5ed3: table structure differs",
+        "2ed5b8009b4e81efa22d: numbers differ"
+      ]
+    },
+    {
+      "batch": 4,
+      "sourceHash": "22af8e23715be33f8d0044b3ac2d3d38d169d7b330c91addcf294d1230d96515",
+      "targetHash": "16eff636ec46ac5f03a48be3abce61a30c6a9103b19046ee856e414fa92a8125",
+      "model": "gpt-5.6-terra",
+      "responseId": "resp_07a5bd876fef3cee016ab51f6e0c1c87d09f5d0c279d4d38ad",
+      "usage": {
+        "input_tokens": 5183,
+        "input_tokens_details": {
+          "cache_write_tokens": 5180,
+          "cached_tokens": 0
+        },
+        "output_tokens": 1345,
+        "output_tokens_details": {
+          "reasoning_tokens": 1217
+        },
+        "total_tokens": 6528
+      },
+      "completedAt": "2026-09-24T13:02:57.393Z",
+      "result": {
+        "passed": false,
+        "issues": [
+          {
+            "key": "00cb72b5e977e9fb6212",
+            "issue": "「Timing」が「時期」となっており、生産リードタイムに関する回答として不明確です。生産パートナーのスケジュールも、より自然な技術日本語にできます。",
+            "correction": "技術レビュー、生産パートナーのスケジュールおよびサンプル承認要件が把握された後に、リードタイムを確認します。"
+          }
+        ]
+      },
+      "deterministic": [
+        "22437c4f3bdb3cfaaa8b: units or material codes differ"
+      ]
+    },
+    {
+      "batch": 5,
+      "sourceHash": "55ad6753a054965cca986779ad4016379318ad688da86eaff31b9d53b960e5e6",
+      "targetHash": "04b56d01d536e2e1805a0ebfcdd1430644e5fe46eefb7b13865e0f556405c65e",
+      "model": "gpt-5.6-terra",
+      "responseId": "resp_0672b83569dbebd4016ab51f8277ec87d0a8c0db3f53478643",
+      "usage": {
+        "input_tokens": 5360,
+        "input_tokens_details": {
+          "cache_write_tokens": 5357,
+          "cached_tokens": 0
+        },
+        "output_tokens": 1478,
+        "output_tokens_details": {
+          "reasoning_tokens": 1208
+        },
+        "total_tokens": 6838
+      },
+      "completedAt": "2026-09-24T13:03:20.349Z",
+      "result": {
+        "passed": false,
+        "issues": [
+          {
+            "key": "322f449a3f5a67bdbc9f",
+            "issue": "「コンポーネント事例」は顧客案件・実績事例を示すように読める可能性があり、シナリオページが検討内容であって検証済みプロジェクト結果ではないという限定と整合しません。",
+            "correction": "Keliran / コンポーネントに関する検討"
+          },
+          {
+            "key": "5ea0ffd4373e0341f31f",
+            "issue": "「参照基準」は、原文にない規格・基準を示唆します。原文の reference は承認のために合意する参照品を指します。",
+            "correction": "グレードと承認用の参照品について合意します。"
+          },
+          {
+            "key": "fd3095ee780e3a3775ae",
+            "issue": "「帰属情報」はこの文脈では不自然で、引合いの流入元・帰属の把握という意味が明確になっていません。",
+            "correction": "引合いの流入元情報およびセキュリティ"
+          }
+        ]
+      },
+      "deterministic": [
+        "b813dc81b123f83594e7: numbers differ",
+        "f0505437c5b5587802ba: numbers differ"
+      ]
+    },
+    {
+      "batch": 6,
+      "sourceHash": "d710a8ed0ccda8f93b8fdb20734479603e83da155079d969a81c46f5a0ea4220",
+      "targetHash": "509b5f618db7b4a8a6b20759be73d344a432b2112ba58d5843ade4a03d5abb92",
+      "model": "gpt-5.6-terra",
+      "responseId": "resp_0b39e87036a10385016ab51f997d1487d0869818a7c84d86d7",
+      "usage": {
+        "input_tokens": 1353,
+        "input_tokens_details": {
+          "cache_write_tokens": 1350,
+          "cached_tokens": 0
+        },
+        "output_tokens": 409,
+        "output_tokens_details": {
+          "reasoning_tokens": 231
+        },
+        "total_tokens": 1762
+      },
+      "completedAt": "2026-09-24T13:03:28.622Z",
+      "result": {
+        "passed": false,
+        "issues": [
+          {
+            "key": "e9535f1caea1dd24dede",
+            "issue": "「図示は…保証するものではありません」は、原文の「寸法、認証または性能を確立しない」という限定を保証の不在へ変えており、供給仕様を定める文脈との対応が弱くなっています。",
+            "correction": "製品群に関する情報は、技術的な協議を支援するものです。見積書、承認済み図面、サンプル、および合意された注文条件により、供給仕様が定義されます。図示は、寸法、認証、または性能を規定するものではありません。"
+          }
+        ]
+      },
+      "deterministic": []
+    }
+  ]
+}

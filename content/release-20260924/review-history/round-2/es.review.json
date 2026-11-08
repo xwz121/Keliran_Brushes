@@ -1,0 +1,245 @@
+{
+  "sourceHash": "5e0251317585c239c237e308e56095090be2732246b0eda5637340ffde875b13",
+  "targetHash": "bf1f47e97f6c252ff21446c00591e7f5bec84619acbe833335599b8869bfe8c5",
+  "batches": [
+    {
+      "batch": 0,
+      "sourceHash": "b8521c8d5784fee8e38e18e07a30373ebc0ca2657e4ee3c3c9f0d93167b839b5",
+      "targetHash": "a14dae3d147a272bfafd8e167f8e907784ebefdc0a1d1e34e84199ec0f2616da",
+      "model": "gpt-5.6-terra",
+      "responseId": "resp_0010cda226b3a0b5016ab51e8581a487d0a999b06f1c0e40e8",
+      "usage": {
+        "input_tokens": 4505,
+        "input_tokens_details": {
+          "cache_write_tokens": 4502,
+          "cached_tokens": 0
+        },
+        "output_tokens": 524,
+        "output_tokens_details": {
+          "reasoning_tokens": 506
+        },
+        "total_tokens": 5029
+      },
+      "completedAt": "2026-09-24T12:58:53.595Z",
+      "result": {
+        "passed": true,
+        "issues": []
+      },
+      "deterministic": []
+    },
+    {
+      "batch": 1,
+      "sourceHash": "22f293c35574fde2244bb6a7f6732ec953f2e1d9640eb4f704ea5bfe7ac7e431",
+      "targetHash": "4b2eb0cd64418466b92d96283484893aea683efeb0307d8d23e5bdfa7a426e37",
+      "model": "gpt-5.6-terra",
+      "responseId": "resp_01976fa6d659b4e7016ab51f79e6b487d0aa1e4671067372a3",
+      "usage": {
+        "input_tokens": 5609,
+        "input_tokens_details": {
+          "cache_write_tokens": 5606,
+          "cached_tokens": 0
+        },
+        "output_tokens": 1081,
+        "output_tokens_details": {
+          "reasoning_tokens": 818
+        },
+        "total_tokens": 6690
+      },
+      "completedAt": "2026-09-24T13:03:06.498Z",
+      "result": {
+        "passed": false,
+        "issues": [
+          {
+            "key": "faad8fa9bed926f54d33",
+            "issue": "En la terminología de cepillos, “trim” y “fill” se refieren a parámetros de la fibra y su densidad, no a un recorte genérico ni a relleno.",
+            "correction": "El diámetro del filamento, la longitud de fibra y la densidad de relleno siguen determinando el comportamiento de contacto."
+          },
+          {
+            "key": "62e3b385a55a7b659340",
+            "issue": "“Seam position” debe especificarse como la posición de la línea de unión; “posición de la junta” puede confundirse con la propia junta de estanqueidad.",
+            "correction": "Compruebe la geometría de la unión, el método, la deformación local y la posición de la línea de unión."
+          },
+          {
+            "key": "182a7b02bac7bc793165",
+            "issue": "“Brush trim” y “fill” se han traducido de forma imprecisa para una especificación de cepillos.",
+            "correction": "Revise la longitud de fibra, la densidad de relleno y la posición del portacepillos; después ensaye el conjunto en condiciones operativas reales."
+          }
+        ]
+      },
+      "deterministic": []
+    },
+    {
+      "batch": 2,
+      "sourceHash": "bd7450b2c8e5bbe6b7da490ca4b20325b9f2433d60e300e0610e477df848dd46",
+      "targetHash": "bebc91495a3d20fcd53cc07e91610a5d507ab8bfd267a790e4d7f8aca5300b86",
+      "model": "gpt-5.6-terra",
+      "responseId": "resp_046c3a77b6d8f793016ab51f8b8f2c87d0aa88fdf29040d22b",
+      "usage": {
+        "input_tokens": 5156,
+        "input_tokens_details": {
+          "cache_write_tokens": 5153,
+          "cached_tokens": 0
+        },
+        "output_tokens": 1143,
+        "output_tokens_details": {
+          "reasoning_tokens": 888
+        },
+        "total_tokens": 6299
+      },
+      "completedAt": "2026-09-24T13:03:24.655Z",
+      "result": {
+        "passed": false,
+        "issues": [
+          {
+            "key": "a3467dfe57ddebad346e",
+            "issue": "«Retención del canal» puede interpretarse como la retención del propio canal, en lugar de la retención del cepillo en el canal.",
+            "correction": "Compruebe la retención en el canal, el cierre de los extremos, los impactos repetidos y la exposición química."
+          },
+          {
+            "key": "56a44eabd032f8ac0183",
+            "issue": "«Proyecto de cliente informado» no expresa que no se trata de un proyecto de cliente comunicado o documentado.",
+            "correction": "Un flujo de trabajo de compras ilustrativo, no un proyecto de cliente documentado ni un resultado de rendimiento."
+          },
+          {
+            "key": "36820032cf161450690a",
+            "issue": "«Soporte» puede confundirse con el portacepillos; aquí «backing» se refiere a la base del cepillo e interviene en la altura total.",
+            "correction": "La altura total incluye la base del cepillo. La longitud efectiva de las cerdas es el filamento expuesto desde el canal hasta su punta. Indique ambas; no cite una «altura de cepillo» ambigua."
+          }
+        ]
+      },
+      "deterministic": []
+    },
+    {
+      "batch": 3,
+      "sourceHash": "4c2af46e4f74c083e65ba605c184bef8328ad0fd7ff55a9d1756b9e864fde893",
+      "targetHash": "b19db5602ebcf5482f7395084b3c86ba1d9183bffdbdc0a1e1bf17ccdd83eca5",
+      "model": "gpt-5.6-terra",
+      "responseId": "resp_0b061efe4017e3af016ab51f9db57087d093024f5ab8ae0048",
+      "usage": {
+        "input_tokens": 4150,
+        "input_tokens_details": {
+          "cache_write_tokens": 4147,
+          "cached_tokens": 0
+        },
+        "output_tokens": 2526,
+        "output_tokens_details": {
+          "reasoning_tokens": 1965
+        },
+        "total_tokens": 6676
+      },
+      "completedAt": "2026-09-24T13:04:00.580Z",
+      "result": {
+        "passed": false,
+        "issues": [
+          {
+            "key": "8f785d95c393064b2d15",
+            "issue": "«Holgura cerrada» is ambiguous and can suggest a gap that has been closed, rather than the gap dimension in the closed position.",
+            "correction": "Enumere cada medio, intervalo de temperatura y duración de la exposición. A continuación, defina el movimiento, la holgura en posición cerrada, la compresión y las condiciones de servicio previstas. Elija una familia de materiales solo después de disponer de esta información."
+          },
+          {
+            "key": "f62877eabb5fae5ea807",
+            "issue": "«Limpia» changes the specified wiping function into cleaning. The source distinguishes the brush’s functional contact role from guiding and dust limitation.",
+            "correction": "Defina si el cepillo actúa como elemento de barrido, guía o limita el polvo. Enumere la superficie en contacto, las marcas admisibles, el medio, la humedad, la temperatura y la deflexión de trabajo."
+          },
+          {
+            "key": "21300def7e6217289e3d",
+            "issue": "The final disclaimer is grammatically unclear in Spanish and does not naturally express that no ESD, flame or food-contact performance is implied.",
+            "correction": "Los nombres de materiales no definen la fuerza de contacto. Confirme el diámetro del filamento, la longitud efectiva de filamento, la densidad y la deflexión; después, ensaye superficies representativas. No se presupone ninguna prestación ESD, de comportamiento frente a la llama ni de aptitud para el contacto con alimentos."
+          },
+          {
+            "key": "33831c7644301d2c5ed3",
+            "issue": "«Carga del cierre» does not specifically convey latch loading, and «sección original» is insufficiently precise for the original seal cross-section needed for investigation.",
+            "correction": "| Síntoma | Investigar primero | Evidencia útil |\n| Fuga en puerta | Variación de holgura y carga del pestillo | Mapa de holguras y marcas de contacto |\n| Junta aplanada | Compresión, tiempo y temperatura | Sección transversal original y condiciones de recuperación |\n| Adhesivo despegado | Sustrato y preparación de superficie | Referencia de cinta y recubrimiento |\n| Fuga en esquina | Geometría de la unión y distorsión | Plano de unión y fotografía de detalle |\n| Pérdida de filamentos | Retención e impacto | Cierre de extremos y muestra de filamento suelto |\n| Desgaste rápido del cepillo | Deflexión, alineación y velocidad | Instalación y dirección de contacto |"
+          }
+        ]
+      },
+      "deterministic": []
+    },
+    {
+      "batch": 4,
+      "sourceHash": "22af8e23715be33f8d0044b3ac2d3d38d169d7b330c91addcf294d1230d96515",
+      "targetHash": "340afe29b975524d1a1fb9c86e6fed58798dac91ccd62514df3c365cf3481aad",
+      "model": "gpt-5.6-terra",
+      "responseId": "resp_03686d81c3714c47016ab51fc2701c87d0894f8c03f45964b5",
+      "usage": {
+        "input_tokens": 4720,
+        "input_tokens_details": {
+          "cache_write_tokens": 4717,
+          "cached_tokens": 0
+        },
+        "output_tokens": 534,
+        "output_tokens_details": {
+          "reasoning_tokens": 516
+        },
+        "total_tokens": 5254
+      },
+      "completedAt": "2026-09-24T13:04:11.508Z",
+      "result": {
+        "passed": true,
+        "issues": []
+      },
+      "deterministic": []
+    },
+    {
+      "batch": 5,
+      "sourceHash": "55ad6753a054965cca986779ad4016379318ad688da86eaff31b9d53b960e5e6",
+      "targetHash": "de33c2449557b5bb17933e5a520498ead7381a2960244c44f586d5af78ba9217",
+      "model": "gpt-5.6-terra",
+      "responseId": "resp_0aaf7fedc19a1bb4016ab51fcce05087d08e58e517f6e13a56",
+      "usage": {
+        "input_tokens": 4765,
+        "input_tokens_details": {
+          "cache_write_tokens": 4762,
+          "cached_tokens": 0
+        },
+        "output_tokens": 1211,
+        "output_tokens_details": {
+          "reasoning_tokens": 1034
+        },
+        "total_tokens": 5976
+      },
+      "completedAt": "2026-09-24T13:04:31.528Z",
+      "result": {
+        "passed": false,
+        "issues": [
+          {
+            "key": "8ef9cd91235a740c8dee",
+            "issue": "“Tooling” is a specific production term and should not be rendered as generic “herramientas”.",
+            "correction": "Revisamos los socios de producción, el utillaje, el proceso y la documentación frente al requisito real."
+          },
+          {
+            "key": "0a89398d3c9bdbe0b042",
+            "issue": "“Revisión de plano” can mean a drawing review rather than an approved drawing revision/version, which is the common controlled reference in repeat supply.",
+            "correction": "Una versión aprobada del plano y una muestra aprobada crean una referencia común. Acuerde las dimensiones críticas, la identidad del material, el embalaje y el control de cambios para el suministro recurrente."
+          }
+        ]
+      },
+      "deterministic": []
+    },
+    {
+      "batch": 6,
+      "sourceHash": "d710a8ed0ccda8f93b8fdb20734479603e83da155079d969a81c46f5a0ea4220",
+      "targetHash": "4dd31b9a4671e1dc4684f15e837b8d7462593ebec227ae4a5ee5bf434d1f006d",
+      "model": "gpt-5.6-terra",
+      "responseId": "resp_0f87c39e91e13021016ab51fe09d1487d0a0fb7275bbb93cd4",
+      "usage": {
+        "input_tokens": 1204,
+        "input_tokens_details": {
+          "cache_write_tokens": 1201,
+          "cached_tokens": 0
+        },
+        "output_tokens": 317,
+        "output_tokens_details": {
+          "reasoning_tokens": 299
+        },
+        "total_tokens": 1521
+      },
+      "completedAt": "2026-09-24T13:04:38.051Z",
+      "result": {
+        "passed": true,
+        "issues": []
+      },
+      "deterministic": []
+    }
+  ]
+}

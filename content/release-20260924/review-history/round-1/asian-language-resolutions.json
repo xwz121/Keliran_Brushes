@@ -1,0 +1,558 @@
+{
+  "reviewer": "Codex release coordinator",
+  "reviewedAt": "2026-09-24T13:05:36.188Z",
+  "changes": [
+    {
+      "locale": "ja",
+      "key": "28802d1773c31aad74ec",
+      "source": "Grip-on profiles combining edge retention with a compressible sealing bulb.",
+      "before": "エッジ保持機能と圧縮可能なシールバルブを組み合わせたグリップオンプロファイル。",
+      "after": "エッジ保持機能と膨らみのある圧縮可能なシール部を組み合わせたグリップオンプロファイル。",
+      "reason": "Clarified the compressible bulb shape without implying a valve or adding a hollow construction."
+    },
+    {
+      "locale": "ja",
+      "key": "c6fb2a7ddcf8bc9102b7",
+      "source": "Grip-on profiles combining edge retention with a compressible sealing bulb. Product families are available for sourcing review. Material grade, tooling, minimum batch, inspection scope and production timing are confirmed for the selected partner and order after technical review and sample approval.",
+      "before": "エッジ保持機能と圧縮可能なシールバルブを組み合わせたグリップオンプロファイル。製品ファミリーは調達検討用にご利用いただけます。材料グレード、金型、最小ロット、検査範囲および生産時期は、技術レビューおよびサンプル承認後に、選定された生産パートナーおよび注文ごとに確認されます。",
+      "after": "エッジ保持機能と膨らみのある圧縮可能なシール部を組み合わせたグリップオンプロファイル。製品ファミリーは調達検討用にご利用いただけます。材料グレード、金型、最小ロット、検査範囲および生産時期は、技術レビューおよびサンプル承認後に、選定された生産パートナーおよび注文ごとに確認されます。",
+      "reason": "Clarified the compressible bulb shape without implying a valve or adding a hollow construction."
+    },
+    {
+      "locale": "ja",
+      "key": "4d8f18eed8f846fadcfb",
+      "source": "Adhesive edges lifting",
+      "before": "接着剤付き端部の浮き",
+      "after": "接着部の浮き",
+      "reason": "Coordinator checked the correction against the source."
+    },
+    {
+      "locale": "ja",
+      "key": "3b339d2b993be898a947",
+      "source": "| Family | Review for | Check before selection |\n| --- | --- | --- |\n| EPDM | Weather, water and ozone exposure | Oil or fuel contact |\n| NBR | Selected oils and static interfaces | Outdoor exposure and additives |\n| Silicone / VMQ | Temperature-dependent applications | Tear, abrasion and media |\n| FKM | Selected chemicals and thermal conditions | Exact media and low-temperature response |\n| Sponge / foam | Compressible interfaces | Cell structure, load and recovery |",
+      "before": "| ファミリー | 確認対象 | 選定前の確認事項 |\n| --- | --- | --- |\n| EPDM | 天候、水およびオゾンへの曝露 | 油または燃料との接触 |\n| NBR | 特定の油および静的界面 | 屋外曝露および添加剤 |\n| Silicone / VMQ | 温度依存の用途 | 引裂き、摩耗および媒体 |\n| FKM | 特定の化学薬品および熱条件 | 正確な媒体および低温時の応答 |\n| Sponge / foam | 圧縮可能な界面 | セル構造、荷重および復元性 |",
+      "after": "| ファミリー | 確認対象 | 選定前の確認事項 |\n| --- | --- | --- |\n| EPDM | 天候、水およびオゾンへの曝露 | 油または燃料との接触 |\n| NBR | 特定の油および静的界面 | 屋外曝露および添加剤 |\n| シリコーン / VMQ | 温度依存の用途 | 引裂き、摩耗および媒体 |\n| FKM | 特定の化学薬品および熱条件 | 正確な媒体および低温時の応答 |\n| スポンジ / フォーム | 圧縮可能な界面 | セル構造、荷重および復元性 |",
+      "reason": "Coordinator checked the correction against the source."
+    },
+    {
+      "locale": "ja",
+      "key": "e17714d40ee04947a25c",
+      "source": "| Family | Review focus | Additional check |\n| PA6 / PA66 | Mechanical contact and abrasion | Moisture and grade |\n| PA612 | Moisture-sensitive dimensions | Diameter, trim and fill |\n| PBT / PP | Wet or chemical exposure | Exact medium and fatigue |\n| PEEK | Specialist duty | Grade availability and testing |\n| SS304 / SS316 wire | Specified industrial contact | Surface marking and wire loss |",
+      "before": "| ファミリー | 確認の焦点 | 追加確認事項 |\n| --- | --- | --- |\n| PA6 / PA66 | 機械的接触および摩耗 | 湿気およびグレード |\n| PA612 | 湿気の影響を受けやすい寸法 | 直径、トリムおよび充填率 |\n| PBT / PP | 湿潤または化学的曝露 | 正確な媒体および疲労 |\n| PEEK | 特殊用途 | グレードの入手性および試験 |\n| SS304 / SS316 wire | 指定された工業的接触 | 表面マーキングおよびワイヤ脱落 |",
+      "after": "| ファミリー | 確認の焦点 | 追加確認事項 |\n| --- | --- | --- |\n| PA6 / PA66 | 機械的接触および摩耗 | 湿気およびグレード |\n| PA612 | 湿気の影響を受けやすい寸法 | 直径、トリムおよび充填率 |\n| PBT / PP | 湿潤または化学的曝露 | 正確な媒体および疲労 |\n| PEEK | 特殊用途 | グレードの入手性および試験 |\n| SS304 / SS316 ワイヤ | 指定された工業的接触 | 表面マーキングおよびワイヤ脱落 |",
+      "reason": "Coordinator checked the correction against the source."
+    },
+    {
+      "locale": "ja",
+      "key": "7418b25f1d814863c128",
+      "source": "| Requirement | Evidence to request | Boundary |\n| IP / NEMA enclosure rating | Test report for the assembled enclosure | A gasket alone does not establish a rating |\n| Material properties | Nominated grade data and agreed tests | Family names are not batch acceptance results |\n| Flame performance | Exact standard, grade, thickness and test scope | No blanket flame certification |\n| REACH / RoHS request | Current declaration for the supplied material or part | Review substance scope and applicability |\n| Dimensional conformity | Approved drawing and inspection record | Define revision, method and sampling |",
+      "before": "| 要件 | 要求すべきエビデンス | 境界 |\n| --- | --- | --- |\n| IP / NEMA エンクロージャ等級 | 組立済みエンクロージャの試験報告書 | ガスケット単体では等級は成立しません |\n| 材料特性 | 指定グレードのデータおよび合意した試験 | ファミリー名はロット受入結果ではありません |\n| 難燃性能 | 正確な規格、グレード、厚さおよび試験範囲 | 包括的な難燃認証はありません |\n| REACH / RoHS 要求 | 供給材料または部品に関する最新の宣言書 | 物質の対象範囲および適用性を確認してください |\n| 寸法適合性 | 承認図面および検査記録 | 改訂、方法およびサンプリングを定義してください |",
+      "after": "| 要件 | 要求すべきエビデンス | 制約 |\n| --- | --- | --- |\n| IP / NEMA エンクロージャ等級 | 組立済みエンクロージャの試験報告書 | ガスケット単体では等級は成立しません |\n| 材料特性 | 指定グレードのデータおよび合意した試験 | ファミリー名はロット受入結果ではありません |\n| 難燃性能 | 正確な規格、グレード、厚さおよび試験範囲 | 包括的な難燃認証はありません |\n| REACH / RoHS 要求 | 供給材料または部品に関する最新の宣言書 | 物質の対象範囲および適用性を確認してください |\n| 寸法適合性 | 承認図面および検査記録 | 改訂、方法およびサンプリングを定義してください |",
+      "reason": "Coordinator checked the correction against the source."
+    },
+    {
+      "locale": "ja",
+      "key": "00cb72b5e977e9fb6212",
+      "source": "Timing is confirmed after technical review, partner scheduling and sample approval requirements are understood.",
+      "before": "技術レビュー、パートナーのスケジューリングおよびサンプル承認要件が把握された後に、時期を確認します。",
+      "after": "技術レビュー、生産パートナーのスケジュールおよびサンプル承認要件が把握された後に、リードタイムを確認します。",
+      "reason": "Coordinator checked the correction against the source."
+    },
+    {
+      "locale": "ja",
+      "key": "322f449a3f5a67bdbc9f",
+      "source": "Keliran / Component studies",
+      "before": "Keliran / コンポーネント事例",
+      "after": "Keliran / コンポーネントに関する検討",
+      "reason": "Coordinator checked the correction against the source."
+    },
+    {
+      "locale": "ja",
+      "key": "5ea0ffd4373e0341f31f",
+      "source": "Agree the grade and reference for approval.",
+      "before": "承認のため、グレードと参照基準について合意します。",
+      "after": "グレードと承認用の参照品について合意します。",
+      "reason": "Coordinator checked the correction against the source."
+    },
+    {
+      "locale": "ja",
+      "key": "fd3095ee780e3a3775ae",
+      "source": "Enquiry attribution and security",
+      "before": "引合いの帰属情報およびセキュリティ",
+      "after": "引合いの流入元情報およびセキュリティ",
+      "reason": "Coordinator checked the correction against the source."
+    },
+    {
+      "locale": "ja",
+      "key": "e9535f1caea1dd24dede",
+      "source": "Product-family information supports technical discussion. Quotations, approved drawings, samples and agreed order terms define the supply specification. Illustrations do not establish dimensions, certification or performance.",
+      "before": "製品群に関する情報は、技術的な協議を支援するものです。見積書、承認済み図面、サンプル、および合意された注文条件により、供給仕様が定義されます。図示は、寸法、認証、または性能を保証するものではありません。",
+      "after": "製品群に関する情報は、技術的な協議を支援するものです。見積書、承認済み図面、サンプル、および合意された注文条件により、供給仕様が定義されます。図示は、寸法、認証、または性能を規定するものではありません。",
+      "reason": "Coordinator checked the correction against the source."
+    },
+    {
+      "locale": "ja",
+      "key": "66d86cdac4bd1e2f827e",
+      "source": "Five measurements for a useful review",
+      "before": "有用なレビューのための5つの測定項目",
+      "after": "有用なレビューのための五つの測定項目",
+      "reason": "Preserved written-number conventions and avoided repeating a protected material code without changing meaning."
+    },
+    {
+      "locale": "ja",
+      "key": "2ed5b8009b4e81efa22d",
+      "source": "Control one change at a time",
+      "before": "一度に変更するのは1項目にする",
+      "after": "一度に変更するのは一項目にする",
+      "reason": "Preserved written-number conventions and avoided repeating a protected material code without changing meaning."
+    },
+    {
+      "locale": "ja",
+      "key": "22437c4f3bdb3cfaaa8b",
+      "source": "Is one EPDM compound equivalent to another?",
+      "before": "あるEPDMコンパウンドは別のEPDMコンパウンドと同等ですか？",
+      "after": "EPDMコンパウンドは配合が異なっても同等ですか？",
+      "reason": "Preserved written-number conventions and avoided repeating a protected material code without changing meaning."
+    },
+    {
+      "locale": "ja",
+      "key": "b813dc81b123f83594e7",
+      "source": "Two product lines. One accountable partner.",
+      "before": "2つの製品ライン。責任ある1つのパートナー。",
+      "after": "二つの製品ライン。一つの責任あるパートナー。",
+      "reason": "Preserved written-number conventions and avoided repeating a protected material code without changing meaning."
+    },
+    {
+      "locale": "ja",
+      "key": "f0505437c5b5587802ba",
+      "source": "Enquiry records use a one-year retention target for review. Contact us using the published company contact details to request access, correction or deletion, subject to applicable record-keeping requirements.",
+      "before": "引合い記録は、確認のため1年間の保持を目標としています。アクセス、訂正または削除を請求する場合は、適用される記録保持要件に従い、公開されている会社連絡先を使用してお問い合わせください。",
+      "after": "引合い記録は、確認のため一年間の保持を目標としています。アクセス、訂正または削除を請求する場合は、適用される記録保持要件に従い、公開されている会社連絡先を使用してお問い合わせください。",
+      "reason": "Preserved written-number conventions and avoided repeating a protected material code without changing meaning."
+    },
+    {
+      "locale": "ko",
+      "key": "7afd564bb138630d982d",
+      "source": "Finished lengths organised around your assembly and packing requirements.",
+      "before": "조립 및 포장 요구사항에 맞춰 구성된 완성 길이.",
+      "after": "조립 및 포장 요구사항에 맞춰 준비되는 절단 완료 길이.",
+      "reason": "Coordinator checked the correction against the source."
+    },
+    {
+      "locale": "ko",
+      "key": "45de8260b47ffbd98074",
+      "source": "H, F, T or custom cross-section; aluminium or steel grade; hole pattern; finish; mating dimensions.",
+      "before": "H, F, T 또는 맞춤 단면; 알루미늄 또는 강재 등급; 홀 패턴; 마감; 결합 치수.",
+      "after": "H, F, T 또는 맞춤 단면; 알루미늄 또는 강재의 등급; 홀 패턴; 마감; 결합 치수.",
+      "reason": "Coordinator checked the correction against the source."
+    },
+    {
+      "locale": "ko",
+      "key": "1c9709b059b7d221f116",
+      "source": "When to consider it",
+      "before": "검토 시점",
+      "after": "고려할 때",
+      "reason": "Coordinator checked the correction against the source."
+    },
+    {
+      "locale": "ko",
+      "key": "c2d409abde3875e2572e",
+      "source": "Cell structure, density and compression response are distinct specifications; do not substitute solid-rubber hardness.",
+      "before": "셀 구조, 밀도 및 압축 응답은 서로 다른 사양입니다. 고무 솔리드 경도로 대체하지 마십시오.",
+      "after": "셀 구조, 밀도 및 압축 응답은 서로 다른 사양입니다. 솔리드 고무의 경도로 대체하지 마십시오.",
+      "reason": "Coordinator checked the correction against the source."
+    },
+    {
+      "locale": "ko",
+      "key": "78f13afa45e88f442844",
+      "source": "Review the section and gap tolerance together; agree a sample fit check and the assembled-enclosure validation plan.",
+      "before": "단면과 틈새 공차를 함께 검토하고, 샘플 피트 체크 및 조립된 인클로저 검증 계획에 합의합니다.",
+      "after": "단면과 틈새 공차를 함께 검토하고, 샘플 장착 확인 및 조립된 인클로저 검증 계획에 합의합니다.",
+      "reason": "Coordinator checked the correction against the source."
+    },
+    {
+      "locale": "ko",
+      "key": "70176ab16bf27e7fbea5",
+      "source": "Check substrate coating, contamination, application temperature, dwell time and load. Tape compatibility depends on the complete bond.",
+      "before": "기재 코팅, 오염, 적용 온도, 대기 시간 및 하중을 확인하십시오. 테이프 적합성은 완전한 접착 결합에 따라 달라집니다.",
+      "after": "기재 코팅, 오염, 적용 온도, 대기 시간 및 하중을 확인하십시오. 테이프 적합성은 전체 접착 결합에 따라 달라집니다.",
+      "reason": "Coordinator checked the correction against the source."
+    },
+    {
+      "locale": "ko",
+      "key": "f938bb5fe271d345cb18",
+      "source": "Controlled replacement drawing and fit-check sample.",
+      "before": "관리된 교체 도면 및 피트 체크 샘플.",
+      "after": "문서 관리가 적용된 교체용 도면 및 장착 확인 샘플.",
+      "reason": "Coordinator checked the correction against the source."
+    },
+    {
+      "locale": "ko",
+      "key": "a3467dfe57ddebad346e",
+      "source": "Check channel retention, end closure, repeated impact and chemical exposure.",
+      "before": "채널 유지력, 끝단 마감, 반복 충격 및 화학물질 노출을 확인하십시오.",
+      "after": "채널 내 고정력, 끝단 마감, 반복 충격 및 화학물질 노출을 확인하십시오.",
+      "reason": "Coordinator checked the correction against the source."
+    },
+    {
+      "locale": "ko",
+      "key": "5c84352af54bad5e8282",
+      "source": "Define retention and shedding acceptance checks with sample inspection.",
+      "before": "샘플 검사를 통해 유지력 및 탈락 허용 기준 검사를 정의하십시오.",
+      "after": "샘플 검사를 통해 유지력 및 탈락에 대한 허용 기준 검사를 정의하십시오.",
+      "reason": "Coordinator checked the correction against the source."
+    },
+    {
+      "locale": "ko",
+      "key": "b36cd3e5ae879f49d32a",
+      "source": "Assess filament material, tip condition, trapped particles and contact pressure.",
+      "before": "필라멘트 재질, 팁 상태, 포집된 입자 및 접촉 압력을 평가하십시오.",
+      "after": "필라멘트 재질, 팁 상태, 끼인 입자 및 접촉 압력을 평가하십시오.",
+      "reason": "Coordinator checked the correction against the source."
+    },
+    {
+      "locale": "ko",
+      "key": "51d874afd269cda92e9f",
+      "source": "Door, cover and panel interfaces where the closed gap and validation plan define the seal.",
+      "before": "닫힌 틈새와 검증 계획이 씰을 정의하는 도어, 커버 및 패널 접점.",
+      "after": "닫힌 틈새와 검증 계획이 씰을 규정하는 도어, 커버 및 패널 접합부.",
+      "reason": "Coordinator checked the correction against the source."
+    },
+    {
+      "locale": "ko",
+      "key": "275e9cf8b006aa25d885",
+      "source": "Define the interface",
+      "before": "접점을 정의하십시오",
+      "after": "접합부를 정의하십시오",
+      "reason": "Coordinator checked the correction against the source."
+    },
+    {
+      "locale": "ko",
+      "key": "a91b6a0cc259330fd487",
+      "source": "Assembly drawing, interface dimensions, environment, original part or sample, order quantity and destination.",
+      "before": "조립 도면, 접점 치수, 환경, 기존 부품 또는 샘플, 주문 수량 및 납품지.",
+      "after": "조립 도면, 접합부 치수, 환경, 기존 부품 또는 샘플, 주문 수량 및 납품지.",
+      "reason": "Coordinator checked the correction against the source."
+    },
+    {
+      "locale": "ko",
+      "key": "03ca23e15a095edd8747",
+      "source": "Static seals, edge protection and cable-entry interfaces reviewed against the assembly drawing.",
+      "before": "조립 도면을 기준으로 검토한 정적 씰, 모서리 보호 및 케이블 인입 접점.",
+      "after": "조립 도면을 기준으로 검토한 정적 씰, 모서리 보호 및 케이블 인입 접합부.",
+      "reason": "Coordinator checked the correction against the source."
+    },
+    {
+      "locale": "ko",
+      "key": "8a0a20071ec2b5aa5441",
+      "source": "Conveyor interfaces",
+      "before": "컨베이어 접점",
+      "after": "컨베이어 접합부",
+      "reason": "Coordinator checked the correction against the source."
+    },
+    {
+      "locale": "ko",
+      "key": "8e2141c2c59e96a55f56",
+      "source": "Light-contact guiding, wiping and dust-limiting strips for specified conveyor interfaces.",
+      "before": "지정된 컨베이어 접점용 경접촉 가이드, 와이핑 및 분진 제한 스트립.",
+      "after": "지정된 컨베이어 접합부용 경접촉 가이드, 와이핑 및 분진 제한 스트립.",
+      "reason": "Coordinator checked the correction against the source."
+    },
+    {
+      "locale": "ko",
+      "key": "6a9e094048dcd8c3fa11",
+      "source": "Brush-and-holder assemblies for non-safety-critical openings and chip management.",
+      "before": "비안전 필수 개구부 및 칩 관리용 브러시 및 홀더 조립체.",
+      "after": "안전 핵심 기능을 담당하지 않는 개구부 및 칩 관리용 브러시와 홀더 조립체.",
+      "reason": "Coordinator checked the correction against the source."
+    },
+    {
+      "locale": "ko",
+      "key": "9938445159f0a2de7bb6",
+      "source": "Seals and strip brushes considered separately for threshold, side and top interfaces.",
+      "before": "문턱, 측면 및 상부 접점에 대해 씰과 스트립 브러시를 별도로 검토합니다.",
+      "after": "문턱, 측면 및 상부 접합부에 대해 씰과 스트립 브러시를 별도로 검토합니다.",
+      "reason": "Coordinator checked the correction against the source."
+    },
+    {
+      "locale": "ko",
+      "key": "9a76281d2600f8ec8b82",
+      "source": "State indoor or outdoor use, temperature exposure, media, opening cycles, material grade if known, and required acceptance tests. Identify photographs and measurements by position so that a tight corner is not confused with a straight section.",
+      "before": "실내 또는 실외 사용, 온도 노출, 유체, 개폐 사이클, 알려진 경우 재질 등급 및 필요한 승인 시험을 명시하십시오. 좁은 코너가 직선 구간과 혼동되지 않도록 사진과 측정값을 위치별로 식별하십시오.",
+      "after": "실내 또는 실외 사용, 온도 노출, 접촉 매체, 개폐 사이클, 알려진 경우 재질 등급 및 필요한 인수 시험을 명시하십시오. 반경이 작은 코너가 직선 구간과 혼동되지 않도록 사진과 측정값을 위치별로 식별하십시오.",
+      "reason": "Coordinator checked the correction against the source."
+    },
+    {
+      "locale": "ko",
+      "key": "66a4f278ea896fbd56d0",
+      "source": "- Channel width and height, material and wall thickness\n- Overall height and effective trim length\n- Filament grade, diameter, straight or crimped form, and fill arrangement\n- Cut length, end closure and straightness tolerance\n- Holder section, hole positions and installation orientation",
+      "before": "- 채널 폭과 높이, 재질 및 벽 두께\n- 전체 높이 및 유효 트림 길이\n- 필라멘트 등급, 직경, 직선 또는 크림프 형태 및 충전 배열\n- 절단 길이, 끝단 마감 및 직진도 공차\n- 홀더 단면, 구멍 위치 및 설치 방향",
+      "after": "- 채널 폭과 높이, 재질 및 벽 두께\n- 전체 높이 및 유효 트림 길이\n- 필라멘트 등급, 직경, 직선 또는 크림프 형태 및 식모 배열\n- 절단 길이, 끝단 마감 및 직진도 공차\n- 홀더 단면, 구멍 위치 및 설치 방향",
+      "reason": "Coordinator checked the correction against the source."
+    },
+    {
+      "locale": "ko",
+      "key": "8f785d95c393064b2d15",
+      "source": "List every medium, temperature range and exposure duration. Then define motion, closed gap, compression and expected service conditions. Choose a material family only after this information is available.",
+      "before": "모든 매체, 온도 범위 및 노출 시간을 나열하십시오. 그런 다음 운동, 닫힌 간극, 압축 및 예상 사용 조건을 정의하십시오. 이 정보가 उपलब्ध한 후에만 재료군을 선택하십시오.",
+      "after": "모든 매체, 온도 범위 및 노출 시간을 나열하십시오. 그런 다음 운동, 폐쇄 시 간극, 압축 및 예상 사용 조건을 정의하십시오. 이 정보를 확보한 후에만 재료군을 선택하십시오.",
+      "reason": "Removed the Hindi fragment which the suggested correction itself had retained."
+    },
+    {
+      "locale": "ko",
+      "key": "334a68b049104be5aca4",
+      "source": "These are reference values, not a guaranteed specification. Ask for the nominated grade data sheet. Set hardness or density, tolerances and test conditions separately; specify solid-rubber hardness and foam properties appropriately.",
+      "before": "이는 보증된 사양이 아닌 참고 값입니다. 지정 등급 데이터시트를 요청하십시오. 경도 또는 밀도, 허용차 및 시험 조건을 별도로 설정하고, 고무 경도와 폼 특성을 적절히 지정하십시오.",
+      "after": "이는 보증된 사양이 아닌 참고 값입니다. 지정 등급 데이터시트를 요청하십시오. 경도 또는 밀도, 허용차 및 시험 조건을 별도로 설정하고, 솔리드 고무의 경도와 폼 특성을 적절히 지정하십시오.",
+      "reason": "Coordinator checked the correction against the source."
+    },
+    {
+      "locale": "ko",
+      "key": "2ed5b8009b4e81efa22d",
+      "source": "Control one change at a time",
+      "before": "한 번에 하나의 변경만 관리하십시오",
+      "after": "한 번에 하나의 변경만 적용하십시오",
+      "reason": "Coordinator checked the correction against the source."
+    },
+    {
+      "locale": "ko",
+      "key": "d9f3678d736fde52ecbd",
+      "source": "- Contracting entity and registration details\n- Quotation scope and manufacturing / subcontracting responsibilities\n- Approved drawing revision and nominated material\n- Sample approval record and first-article requirements\n- Order-specific inspection plan and available records\n- Packing, batch identification and change-notification requirements",
+      "before": "- 계약 주체 및 등록 세부사항\n- 견적 범위 및 제조 / 하도급 책임\n- 승인된 도면 리비전 및 지정 자재\n- 샘플 승인 기록 및 초도품 요구사항\n- 주문별 검사 계획 및 उपलब्ध 기록\n- 포장, 배치 식별 및 변경 통지 요구사항",
+      "after": "- 계약 주체 및 등록 세부사항\n- 견적 범위 및 제조 / 하도급 책임\n- 승인된 도면 리비전 및 지정 자재\n- 샘플 승인 기록 및 초도품 요구사항\n- 주문별 검사 계획 및 이용 가능한 기록\n- 포장, 배치 식별 및 변경 통지 요구사항",
+      "reason": "Coordinator checked the correction against the source."
+    },
+    {
+      "locale": "ko",
+      "key": "78f562f5c183d1b47d97",
+      "source": "Share your supplier questionnaire and required evidence. Document availability is confirmed for the selected partner and order. We do not substitute a generic factory certificate for evidence applicable to the actual part.",
+      "before": "공급업체 설문지와 필요한 증빙 자료를 공유해 주세요. 문서 उपलब्ध 여부는 선택된 파트너와 주문에 대해 확인됩니다. 실제 부품에 적용되는 증빙을 일반적인 공장 인증서로 대체하지 않습니다.",
+      "after": "공급업체 설문지와 필요한 증빙 자료를 공유해 주세요. 문서 제공 가능 여부는 선택된 파트너와 주문에 대해 확인됩니다. 실제 부품에 적용되는 증빙을 일반적인 공장 인증서로 대체하지 않습니다.",
+      "reason": "Coordinator checked the correction against the source."
+    },
+    {
+      "locale": "ko",
+      "key": "170f61eaad7c257ef193",
+      "source": "Straight and formed brushes, matched holders and custom equipment assemblies.",
+      "before": "직선형 및 성형 브러시, 호환 홀더 및 맞춤형 장비 어셈블리.",
+      "after": "직선형 및 성형 브러시, 이에 맞는 홀더 및 맞춤형 장비 어셈블리.",
+      "reason": "Coordinator checked the correction against the source."
+    },
+    {
+      "locale": "ko",
+      "key": "7957ed46858671cde8cb",
+      "source": "Send your onboarding questionnaire and evidence requirements. We will review which records are applicable and available. Legal entity details, quotations and order-specific evidence belong in the qualification pack.",
+      "before": "등록 설문지와 증빙 요구사항을 보내 주세요. 어떤 기록이 적용 가능하고 उपलब्ध한지 검토합니다. 법인 정보, 견적 및 주문별 증빙 자료는 적격성 평가 패키지에 포함됩니다.",
+      "after": "등록 설문지와 증빙 요구사항을 보내 주세요. 어떤 기록이 적용 가능하고 이용 가능한지 검토합니다. 법인 정보, 견적 및 주문별 증빙 자료는 적격성 평가 패키지에 포함됩니다.",
+      "reason": "Coordinator checked the correction against the source."
+    },
+    {
+      "locale": "ko",
+      "key": "66d86cdac4bd1e2f827e",
+      "source": "Five measurements for a useful review",
+      "before": "유용한 검토를 위한 5가지 측정값",
+      "after": "유용한 검토를 위한 다섯 가지 측정값",
+      "reason": "Preserved written-number conventions and avoided repeating a protected material code without changing meaning."
+    },
+    {
+      "locale": "ko",
+      "key": "22437c4f3bdb3cfaaa8b",
+      "source": "Is one EPDM compound equivalent to another?",
+      "before": "한 EPDM 컴파운드는 다른 EPDM 컴파운드와 동등한가요?",
+      "after": "배합이 다른 EPDM 컴파운드도 서로 동등한가요?",
+      "reason": "Preserved written-number conventions and avoided repeating a protected material code without changing meaning."
+    },
+    {
+      "locale": "ko",
+      "key": "f0505437c5b5587802ba",
+      "source": "Enquiry records use a one-year retention target for review. Contact us using the published company contact details to request access, correction or deletion, subject to applicable record-keeping requirements.",
+      "before": "문의 기록은 검토를 위해 1년 보존을 목표로 합니다. 적용되는 기록 보관 요건을 전제로, 공개된 회사 연락처를 통해 열람, 정정 또는 삭제를 요청할 수 있습니다.",
+      "after": "문의 기록은 검토를 위해 일 년 보존을 목표로 합니다. 적용되는 기록 보관 요건을 전제로, 공개된 회사 연락처를 통해 열람, 정정 또는 삭제를 요청할 수 있습니다.",
+      "reason": "Preserved written-number conventions and avoided repeating a protected material code without changing meaning."
+    },
+    {
+      "locale": "ko",
+      "key": "f11a27debcc7fd05cb7c",
+      "source": "The website stores the entry page, referring website domain and campaign tags in session storage for up to 24 hours. These details accompany a submitted enquiry so we can understand how it reached us. They do not verify visitor identity. We do not use advertising cookies or third-party advertising analytics. Cloudflare Turnstile and hosting security services may process technical request information to limit abuse.",
+      "before": "웹사이트는 최대 24시간 동안 유입 페이지, 참조 웹사이트 도메인 및 캠페인 태그를 세션 스토리지에 저장합니다. 이러한 정보는 문의가 제출될 때 함께 전송되어 문의가 어떤 경로로 접수되었는지 파악하는 데 사용됩니다. 이 정보는 방문자 신원을 확인하지 않습니다. 당사는 광고 쿠키 또는 제3자 광고 분석을 사용하지 않습니다. Cloudflare Turnstile 및 호스팅 보안 서비스는 악용을 제한하기 위해 기술적 요청 정보를 처리할 수 있습니다.",
+      "after": "웹사이트는 최대 24시간 동안 유입 페이지, 참조 웹사이트 도메인 및 캠페인 태그를 세션 스토리지에 저장합니다. 이러한 정보는 문의가 제출될 때 함께 전송되어 문의가 어떤 경로로 접수되었는지 파악하는 데 사용됩니다. 이 정보는 방문자 신원을 확인하지 않습니다. 당사는 광고 쿠키 또는 제삼자 광고 분석을 사용하지 않습니다. Cloudflare Turnstile 및 호스팅 보안 서비스는 악용을 제한하기 위해 기술적 요청 정보를 처리할 수 있습니다.",
+      "reason": "Preserved written-number conventions and avoided repeating a protected material code without changing meaning."
+    },
+    {
+      "locale": "zh-Hant",
+      "key": "aea73c958b81e30154cd",
+      "source": "Channel cross-section; backing width; overall and trim height; filament grade and diameter; density; cut length.",
+      "before": "槽鋼截面；背板寬度；總高度及刷毛高度；刷絲牌號與直徑；密度；裁切長度。",
+      "after": "槽道截面；背板寬度；總高度及刷毛高度；刷絲牌號與直徑；密度；裁切長度。",
+      "reason": "Coordinator checked the correction against the source."
+    },
+    {
+      "locale": "zh-Hant",
+      "key": "45de8260b47ffbd98074",
+      "source": "H, F, T or custom cross-section; aluminium or steel grade; hole pattern; finish; mating dimensions.",
+      "before": "H、F、T 或客製截面；鋁或鋼等級；孔型；表面處理；配合尺寸。",
+      "after": "H、F、T 或客製截面；鋁或鋼等級；孔位排列；表面處理；配合尺寸。",
+      "reason": "Coordinator checked the correction against the source."
+    },
+    {
+      "locale": "zh-Hant",
+      "key": "287bcd94f4382c6ae5bf",
+      "source": "Custom equipment brushes",
+      "before": "客製設備刷條",
+      "after": "客製化設備用刷具",
+      "reason": "Coordinator checked the correction against the source."
+    },
+    {
+      "locale": "zh-Hant",
+      "key": "f998ff1d65368c5c5972",
+      "source": "Not universally compatible with every fluid; low-temperature response varies by compound.",
+      "before": "並非與所有流體均相容；低溫反應因膠料而異。",
+      "after": "並非與所有流體均相容；低溫性能因膠料而異。",
+      "reason": "Coordinator checked the correction against the source."
+    },
+    {
+      "locale": "zh-Hant",
+      "key": "8dca050923a8308a9d70",
+      "source": "A nylon option when dimensional response to moisture matters.",
+      "before": "當材料尺寸對濕度的反應重要時，可考慮的尼龍選項。",
+      "after": "需要考量濕度引起的尺寸變化時，可評估的尼龍選項。",
+      "reason": "Coordinator checked the correction against the source."
+    },
+    {
+      "locale": "zh-Hant",
+      "key": "62b29f7ed411e65f6dde",
+      "source": "A flattened seal no longer follows the door after repeated use.",
+      "before": "經重複使用後，壓扁的密封條不再隨門體回復。",
+      "after": "經反覆使用後，壓扁的密封條無法再隨門體移動保持貼合。",
+      "reason": "Coordinator checked the correction against the source."
+    },
+    {
+      "locale": "zh-Hant",
+      "key": "5634c065f6a814f53a84",
+      "source": "Review the nominated tape and surface preparation; define peel or ageing checks on the real substrate.",
+      "before": "審查指定膠帶及表面處理；在實際基材上定義剝離或老化檢查。",
+      "after": "審查指定膠帶及表面前處理；在實際基材上定義剝離或老化檢查。",
+      "reason": "Coordinator checked the correction against the source."
+    },
+    {
+      "locale": "zh-Hant",
+      "key": "1351ea522f1af1f585c1",
+      "source": "Dust at equipment openings",
+      "before": "設備開口處有灰塵",
+      "after": "設備開口處的粉塵",
+      "reason": "The source does not specify leakage direction; retained the broader meaning."
+    },
+    {
+      "locale": "zh-Hant",
+      "key": "a3467dfe57ddebad346e",
+      "source": "Check channel retention, end closure, repeated impact and chemical exposure.",
+      "before": "檢查槽道保持力、端部封閉、重複衝擊及化學品暴露。",
+      "after": "檢查槽道固持力、端部封閉、重複衝擊及化學品暴露。",
+      "reason": "Coordinator checked the correction against the source."
+    },
+    {
+      "locale": "zh-Hant",
+      "key": "5c84352af54bad5e8282",
+      "source": "Define retention and shedding acceptance checks with sample inspection.",
+      "before": "透過樣品檢驗定義保持力及掉毛的驗收檢查。",
+      "after": "透過樣品檢驗界定固持力及刷絲脫落的驗收檢查。",
+      "reason": "Coordinator checked the correction against the source."
+    },
+    {
+      "locale": "zh-Hant",
+      "key": "414a99190cc5e72468d1",
+      "source": "Retention method, inspection scope and agreed acceptance criteria.",
+      "before": "保持方法、檢驗範圍及議定的驗收標準。",
+      "after": "固持方式、檢驗範圍及議定的驗收標準。",
+      "reason": "Coordinator checked the correction against the source."
+    },
+    {
+      "locale": "zh-Hant",
+      "key": "16e6e17b44237a8daaac",
+      "source": "Profiles, gaskets and moulded parts for access covers and service openings.",
+      "before": "適用於存取護罩及維修開口的型材、墊片及模製零件。",
+      "after": "用於檢修蓋及維修開口的型材、墊片及模製零件。",
+      "reason": "Coordinator checked the correction against the source."
+    },
+    {
+      "locale": "zh-Hant",
+      "key": "8c3a321b29b8912532a8",
+      "source": "Assembled to your approved bill of materials.",
+      "before": "依據您已核准的材料清單組裝。",
+      "after": "依據您已核准的物料清單組裝。",
+      "reason": "Coordinator checked the correction against the source."
+    },
+    {
+      "locale": "zh-Hant",
+      "key": "9a76281d2600f8ec8b82",
+      "source": "State indoor or outdoor use, temperature exposure, media, opening cycles, material grade if known, and required acceptance tests. Identify photographs and measurements by position so that a tight corner is not confused with a straight section.",
+      "before": "說明室內或室外使用、溫度暴露、介質、開啟週期、材料等級（如已知）及所需驗收測試。按位置識別照片與量測資料，以免將緊密角部與直線段混淆。",
+      "after": "說明室內或室外使用、溫度暴露、介質、開啟週期、材料等級（如已知）及所需驗收測試。按位置識別照片與量測資料，以免將小半徑轉角與直線段混淆。",
+      "reason": "Coordinator checked the correction against the source."
+    },
+    {
+      "locale": "zh-Hant",
+      "key": "d22dfcc6d62e2648b34d",
+      "source": "For formed brushes",
+      "before": "適用於成形刷條",
+      "after": "成形刷條",
+      "reason": "Coordinator checked the correction against the source."
+    },
+    {
+      "locale": "zh-Hant",
+      "key": "cce7c5d175d2c104ed8d",
+      "source": "Channel material and holder material may differ. Confirm galvanised steel, stainless grade or aluminium alloy, cut-edge condition and coating. Aluminium holder supply does not imply in-house extrusion.",
+      "before": "槽材與固定座材料可能不同。請確認鍍鋅鋼、不鏽鋼等級或鋁合金、切邊狀況及塗層。提供鋁製固定座不表示具備內部擠製能力。",
+      "after": "槽材與固定座材料可能不同。請確認鍍鋅鋼、不鏽鋼等級或鋁合金、切邊狀況及塗層。提供鋁製固定座不表示採用內部擠製。",
+      "reason": "Coordinator checked the correction against the source."
+    },
+    {
+      "locale": "zh-Hant",
+      "key": "c54bb1d7342db8d0a4d9",
+      "source": "No. Compound, hardness, cure system and test conditions affect performance. Review the nominated grade and agreed acceptance tests.",
+      "before": "不一定。配方、硬度、硫化系統及測試條件均會影響性能。請審查指定牌號及已議定的驗收測試。",
+      "after": "不。配方、硬度、硫化系統及測試條件均會影響性能。請審查指定牌號及已議定的驗收測試。",
+      "reason": "Coordinator checked the correction against the source."
+    },
+    {
+      "locale": "zh-Hant",
+      "key": "e98ef78af8da37ed75bd",
+      "source": "A clear specification is only the beginning. Agree how the part will be sampled, inspected and controlled.",
+      "before": "清晰的規格只是開始。確認零件將如何進行樣品驗證、檢驗與管制。",
+      "after": "清晰的規格只是開始。請議定零件的取樣、檢驗及管制方式。",
+      "reason": "Coordinator checked the correction against the source."
+    },
+    {
+      "locale": "zh-Hant",
+      "key": "93022dba658fb05397a0",
+      "source": "Start with what\nneeds to work.",
+      "before": "從必須\n正常運作的事項開始。",
+      "after": "從需要\n發揮作用的功能開始。",
+      "reason": "Coordinator checked the correction against the source."
+    },
+    {
+      "locale": "zh-Hant",
+      "key": "f0505437c5b5587802ba",
+      "source": "Enquiry records use a one-year retention target for review. Contact us using the published company contact details to request access, correction or deletion, subject to applicable record-keeping requirements.",
+      "before": "詢價紀錄以一年為檢視保存目標。您可使用已公布的公司聯絡資料聯絡我們，要求存取、更正或刪除，但須遵守適用的紀錄保存要求。",
+      "after": "詢價紀錄的保存目標為一年，並會進行檢視。您可使用已公布的公司聯絡資料聯絡我們，要求存取、更正或刪除，但須遵守適用的紀錄保存要求。",
+      "reason": "Coordinator checked the correction against the source."
+    },
+    {
+      "locale": "zh-Hant",
+      "key": "f11a27debcc7fd05cb7c",
+      "source": "The website stores the entry page, referring website domain and campaign tags in session storage for up to 24 hours. These details accompany a submitted enquiry so we can understand how it reached us. They do not verify visitor identity. We do not use advertising cookies or third-party advertising analytics. Cloudflare Turnstile and hosting security services may process technical request information to limit abuse.",
+      "before": "本網站會在工作階段儲存空間中儲存進入頁面、引薦網站網域及活動標籤，最長 24 小時。這些詳細資料會隨提交的詢價一併提供，使我們能了解其如何到達我們網站。它們不會驗證訪客身分。我們不使用廣告 Cookie 或第三方廣告分析工具。Cloudflare Turnstile 和主機安全服務可能會處理技術性請求資訊，以限制濫用。",
+      "after": "本網站會在工作階段儲存空間中儲存進入頁面、引薦網站網域及活動標籤，最長 24 小時。這些詳細資料會隨提交的詢價一併提供，使我們能了解該詢價如何送達我們。這些資訊不會驗證訪客身分。我們不使用廣告 Cookie 或第三方廣告分析工具。Cloudflare Turnstile 和主機安全服務可能會處理技術性請求資訊，以限制濫用。",
+      "reason": "Coordinator checked the correction against the source."
+    },
+    {
+      "locale": "zh-Hant",
+      "key": "f84048c9b4dc1a402868",
+      "source": "Confirm the contracting entity and applicable terms on the quotation before supplier approval or ordering. Public registration and contact details are shown below when configured.",
+      "before": "在核准供應商或下單前，請於報價單上確認簽約實體及適用條款。如已設定，公開註冊及聯絡詳細資料將顯示於下方。",
+      "after": "在核准供應商或下單前，請於報價單上確認簽約實體及適用條款。如已設定，公開登記資料及聯絡詳細資料將顯示於下方。",
+      "reason": "Coordinator checked the correction against the source."
+    }
+  ]
+}

@@ -1,0 +1,326 @@
+{
+  "sourceHash": "5e0251317585c239c237e308e56095090be2732246b0eda5637340ffde875b13",
+  "targetHash": "18df3bf384d6ea712f2011c5e110d74f0e03bf35ebf530bead2a96bc9f629fb7",
+  "batches": [
+    {
+      "batch": 0,
+      "sourceHash": "b8521c8d5784fee8e38e18e07a30373ebc0ca2657e4ee3c3c9f0d93167b839b5",
+      "targetHash": "26f6ee627fbfa62e66b1eb5222da728c7f2e6090d7c9e649eeb226936d715d0d",
+      "model": "gpt-5.6-terra",
+      "responseId": "resp_0108c6f4d0c57bfe016ab51e81dc9887d08c101e4bdf66c2aa",
+      "usage": {
+        "input_tokens": 4440,
+        "input_tokens_details": {
+          "cache_write_tokens": 4437,
+          "cached_tokens": 0
+        },
+        "output_tokens": 2004,
+        "output_tokens_details": {
+          "reasoning_tokens": 1512
+        },
+        "total_tokens": 6444
+      },
+      "completedAt": "2026-09-24T12:59:10.044Z",
+      "result": {
+        "passed": false,
+        "issues": [
+          {
+            "key": "037f1cf25fd526fc9071",
+            "issue": "„Geräuten“ is a typo and does not convey “equipment”.",
+            "correction": "Definierte Querschnitte für Gerätenuten, Kanten und statische Schnittstellen."
+          },
+          {
+            "key": "1ce61e54f37048ad307b",
+            "issue": "„Geräuten“ is a typo and does not convey “equipment”.",
+            "correction": "Definierte Querschnitte für Gerätenuten, Kanten und statische Schnittstellen. Produktfamilien stehen zur Beschaffungsprüfung zur Verfügung. Materialqualität, Werkzeugbau, Mindestlosgröße, Prüfumfang und Fertigungszeitpunkt werden nach technischer Prüfung und Musterfreigabe für den ausgewählten Partner und Auftrag bestätigt."
+          },
+          {
+            "key": "e21366c7be5c77ac3ccd",
+            "issue": "“Bulb seals” are not necessarily hollow-chamber seals; „Hohlkammerdichtungen“ adds an unsupported construction characteristic.",
+            "correction": "Kantenschutzprofile & Dichtwulstprofile"
+          },
+          {
+            "key": "ada02327f6bbdd4fa58c",
+            "issue": "„geprüft“ implies testing, whereas the source only states that the profiles are reviewed against the environment and drawing.",
+            "correction": "Vollsilikon- und Silikonschaumprofile, bewertet anhand Ihrer Einsatzumgebung und Zeichnung."
+          },
+          {
+            "key": "ef4c3b2043b2debe5ca3",
+            "issue": "„geprüft“ implies testing, whereas the source only states that the profiles are reviewed against the environment and drawing.",
+            "correction": "Vollsilikon- und Silikonschaumprofile, bewertet anhand Ihrer Einsatzumgebung und Zeichnung. Produktfamilien stehen zur Beschaffungsprüfung zur Verfügung. Materialqualität, Werkzeugbau, Mindestlosgröße, Prüfumfang und Fertigungszeitpunkt werden nach technischer Prüfung und Musterfreigabe für den ausgewählten Partner und Auftrag bestätigt."
+          },
+          {
+            "key": "c8e51ceb37c56dfd7efe",
+            "issue": "„geprüft“ implies testing, while the source only says the combinations are reviewed for the actual substrate and process.",
+            "correction": "Klebeband- und Gummikombinationen, bewertet für das tatsächliche Substrat und den Prozess."
+          }
+        ]
+      },
+      "deterministic": []
+    },
+    {
+      "batch": 1,
+      "sourceHash": "22f293c35574fde2244bb6a7f6732ec953f2e1d9640eb4f704ea5bfe7ac7e431",
+      "targetHash": "4748f8acdd2035f3421fbbcfb5c008387c26b944ece8b248cbfd95c160fdbc5e",
+      "model": "gpt-5.6-terra",
+      "responseId": "resp_0c87d7ea16cfd428016ab51e9f274487d09e507f6c6cbd5911",
+      "usage": {
+        "input_tokens": 5585,
+        "input_tokens_details": {
+          "cache_write_tokens": 5582,
+          "cached_tokens": 0
+        },
+        "output_tokens": 1292,
+        "output_tokens_details": {
+          "reasoning_tokens": 1034
+        },
+        "total_tokens": 6877
+      },
+      "completedAt": "2026-09-24T12:59:30.009Z",
+      "result": {
+        "passed": false,
+        "issues": [
+          {
+            "key": "ae1f0ec6ea240f10b512",
+            "issue": "„Produktionszeitpunkt“ narrows “production timing” to a single point in time rather than the production schedule/timing.",
+            "correction": "Montageprofile, abgestimmt auf die ausgewählte Bürste und die Geräteschnittstelle. Produktfamilien stehen zur Beschaffungsprüfung zur Verfügung. Materialgüte, Werkzeugausstattung, Mindestlosgröße, Prüfumfang und Produktionszeitplan werden nach technischer Prüfung und Musterfreigabe für den ausgewählten Partner und Auftrag bestätigt."
+          },
+          {
+            "key": "2b3a90f9af80b8c7fbd8",
+            "issue": "„Produktionszeitpunkt“ narrows “production timing” to a single point in time rather than the production schedule/timing.",
+            "correction": "Zeichnungsbasierte gerade Bürstenbaugruppen zum Reinigen, Führen und für leichten Kontakt. Produktfamilien stehen zur Beschaffungsprüfung zur Verfügung. Materialgüte, Werkzeugausstattung, Mindestlosgröße, Prüfumfang und Produktionszeitplan werden nach technischer Prüfung und Musterfreigabe für den ausgewählten Partner und Auftrag bestätigt."
+          }
+        ]
+      },
+      "deterministic": []
+    },
+    {
+      "batch": 2,
+      "sourceHash": "bd7450b2c8e5bbe6b7da490ca4b20325b9f2433d60e300e0610e477df848dd46",
+      "targetHash": "35394d6814cdfb51ec37e31aa7355530e768ffc1bb7110d1df7d63998e6c0bf1",
+      "model": "gpt-5.6-terra",
+      "responseId": "resp_000dd720e2399b11016ab51eb3242c87d086407246350ca973",
+      "usage": {
+        "input_tokens": 5188,
+        "input_tokens_details": {
+          "cache_write_tokens": 5185,
+          "cached_tokens": 0
+        },
+        "output_tokens": 1250,
+        "output_tokens_details": {
+          "reasoning_tokens": 936
+        },
+        "total_tokens": 6438
+      },
+      "completedAt": "2026-09-24T12:59:49.695Z",
+      "result": {
+        "passed": false,
+        "issues": [
+          {
+            "key": "a3467dfe57ddebad346e",
+            "issue": "„Kanalleistenhalt“ ist kein geeigneter technischer Ausdruck für die Rückhaltung im Bürstenkanal; „wiederholte Einwirkung“ gibt repeated impact nicht präzise wieder.",
+            "correction": "Sitz der Filamente im Kanal, Endverschluss, wiederholte Stoßbeanspruchung und Chemikalienexposition prüfen."
+          },
+          {
+            "key": "1ae2fcbff11511a7e799",
+            "issue": "„Verbundene Ecken“ ist für joined corners technisch unpräzise; gemeint sind die Eckverbindungen.",
+            "correction": "Bewitterung im Außenbereich, Türgeometrie und Eckverbindungen werden gemeinsam geprüft."
+          },
+          {
+            "key": "31928fd258597e1021c1",
+            "issue": "„Kontrollierte Zeichnungen“ vermittelt die Dokumentenlenkung von controlled drawings nicht korrekt.",
+            "correction": "Gelenkte Zeichnungen und Muster für wiederkehrende Ersatzteile."
+          },
+          {
+            "key": "22ca91e9d71aba6780cc",
+            "issue": "Compression set sollte mit dem fachtechnischen Begriff „Druckverformungsrest“ wiedergegeben werden.",
+            "correction": "Eine alte Dichtung kann einen Druckverformungsrest aufweisen. Erfassen Sie sowohl die Gegenbaugruppe als auch das ausgebaute Profil. Halten Sie die Tür beim Messen des geschlossenen Spalts in ihrem normalen verriegelten Zustand."
+          }
+        ]
+      },
+      "deterministic": []
+    },
+    {
+      "batch": 3,
+      "sourceHash": "4c2af46e4f74c083e65ba605c184bef8328ad0fd7ff55a9d1756b9e864fde893",
+      "targetHash": "5fd2b542717bf584a520caf0ca387b8deacaf7506bd18c8e4add0f754a7ea5b0",
+      "model": "gpt-5.6-terra",
+      "responseId": "resp_0db9a0a89cd0baea016ab51ec8917c87d09cbcee4fcbcbedb3",
+      "usage": {
+        "input_tokens": 4227,
+        "input_tokens_details": {
+          "cache_write_tokens": 4224,
+          "cached_tokens": 0
+        },
+        "output_tokens": 2996,
+        "output_tokens_details": {
+          "reasoning_tokens": 2070
+        },
+        "total_tokens": 7223
+      },
+      "completedAt": "2026-09-24T13:00:34.348Z",
+      "result": {
+        "passed": false,
+        "issues": [
+          {
+            "key": "3b339d2b993be898a947",
+            "issue": "Several material-family and technical terms remain untranslated or are imprecise: “Silicone”, “Sponge / foam” and “static interfaces”.",
+            "correction": "| Familie | Prüfen auf | Vor der Auswahl prüfen |\n| --- | --- | --- |\n| EPDM | Witterungs-, Wasser- und Ozonexposition | Kontakt mit Öl oder Kraftstoff |\n| NBR | Ausgewählte Öle und statische Dichtstellen | Außenexposition und Additive |\n| Silikon / VMQ | Temperaturabhängige Anwendungen | Weiterreißfestigkeit, Abrieb und Medien |\n| FKM | Ausgewählte Chemikalien und thermische Bedingungen | Exakte Medien und Verhalten bei niedrigen Temperaturen |\n| Zellkautschuk / Schaumstoff | Kompressible Schnittstellen | Zellstruktur, Belastung und Rückstellung |"
+          },
+          {
+            "key": "f62877eabb5fae5ea807",
+            "issue": "“Staub begrenzt” is not natural technical German and does not clearly express the intended dust-control function.",
+            "correction": "Definieren Sie, ob die Bürste wischt, führt oder Staub zurückhält. Listen Sie die berührte Oberfläche, zulässige Markierungen, Medium, Feuchtigkeit, Temperatur und Arbeitsauslenkung auf."
+          },
+          {
+            "key": "e17714d40ee04947a25c",
+            "issue": "The material designation “SS304 / SS316 wire” has been left partly in English rather than rendered as a natural German technical term.",
+            "correction": "| Familie | Prüfschwerpunkt | Zusätzliche Prüfung |\n| --- | --- | --- |\n| PA6 / PA66 | Mechanischer Kontakt und Abrieb | Feuchtigkeit und Qualität |\n| PA612 | Feuchtigkeitsempfindliche Abmessungen | Durchmesser, Besatzlänge und Füllgrad |\n| PBT / PP | Nasse oder chemische Exposition | Exaktes Medium und Ermüdung |\n| PEEK | Spezialisierte Beanspruchung | Verfügbarkeit der Qualität und Prüfung |\n| Draht aus SS304 / SS316 | Spezifizierter industrieller Kontakt | Oberflächenmarkierung und Drahtverlust |"
+          },
+          {
+            "key": "21300def7e6217289e3d",
+            "issue": "“wird keine ... Leistung vorausgesetzt” changes “is implied” into an assumption. The source states that no performance claim follows from the material name.",
+            "correction": "Werkstoffnamen definieren keine Kontaktkraft. Bestätigen Sie Filamentdurchmesser, wirksame Besatzlänge, Dichte und Auslenkung und prüfen Sie anschließend repräsentative Oberflächen. Daraus ergibt sich keine ESD-, Flammschutz- oder Lebensmittelkontaktleistung."
+          },
+          {
+            "key": "33831c7644301d2c5ed3",
+            "issue": "“Fügengeometrie” and “Fugenzeichnung” do not accurately convey the geometry and drawing of the corner joint.",
+            "correction": "| Symptom | Zuerst untersuchen | Nützliche Nachweise |\n| --- | --- | --- |\n| Türleckage | Spaltvariation und Verriegelungsbelastung | Spaltkarte und Kontaktspuren |\n| Abgeflachte Dichtung | Stauchung, Zeit und Temperatur | Ursprünglicher Querschnitt und Rückstellbedingungen |\n| Sich ablösender Klebstoff | Substrat und Oberflächenvorbereitung | Klebebandreferenz und Beschichtung |\n| Leckage an Ecken | Verbindungsgeometrie und Verformung | Verbindungszeichnung und Nahaufnahme |\n| Filamentverlust | Befestigung und Stoßbelastung | Endverschluss und Probe mit losen Filamenten |\n| Schneller Bürstenverschleiß | Auslenkung, Ausrichtung und Geschwindigkeit | Einbau- und Kontaktrichtung |"
+          },
+          {
+            "key": "124bcb78a274ea29c486",
+            "issue": "“bitte beraten” is not a natural equivalent of the quotation-request instruction “please advise”.",
+            "correction": "Verwenden Sie bei Bedarf „bitte um Beratung“ und fügen Sie ein klares Foto oder eine Skizze bei. Das erste Gespräch kann fehlende Eingaben klären; es legt Sie nicht auf einen Werkstoff oder ein Design fest."
+          }
+        ]
+      },
+      "deterministic": [
+        "e17714d40ee04947a25c: table structure differs",
+        "7418b25f1d814863c128: table structure differs",
+        "33831c7644301d2c5ed3: table structure differs"
+      ]
+    },
+    {
+      "batch": 4,
+      "sourceHash": "22af8e23715be33f8d0044b3ac2d3d38d169d7b330c91addcf294d1230d96515",
+      "targetHash": "796102ff7e5ff95f492f078c16ce008cdadc409d7c3bb5a3ea8ca8946dd2dbf0",
+      "model": "gpt-5.6-terra",
+      "responseId": "resp_0e64a5f528e4cfd2016ab51ef3848087d089655f683294009c",
+      "usage": {
+        "input_tokens": 4841,
+        "input_tokens_details": {
+          "cache_write_tokens": 4838,
+          "cached_tokens": 0
+        },
+        "output_tokens": 1582,
+        "output_tokens_details": {
+          "reasoning_tokens": 1251
+        },
+        "total_tokens": 6423
+      },
+      "completedAt": "2026-09-24T13:00:59.293Z",
+      "result": {
+        "passed": false,
+        "issues": [
+          {
+            "key": "78f562f5c183d1b47d97",
+            "issue": "Die Formulierung kehrt das Verhältnis zwischen allgemeinem Werkszertifikat und teilspezifischen Nachweisen um.",
+            "correction": "Senden Sie Ihren Lieferantenfragebogen und die erforderlichen Nachweise. Die Verfügbarkeit von Dokumenten wird für den ausgewählten Partner und Auftrag bestätigt. Wir ersetzen Nachweise, die für das tatsächliche Teil gelten, nicht durch ein allgemeines Werkszertifikat."
+          },
+          {
+            "key": "d509f909628904a12d04",
+            "issue": "„Geschlossenen Rahmen“ bedeutet nicht zwingend einen gefügten bzw. verbundenen Rahmen.",
+            "correction": "Wie spezifiziere ich einen zusammengefügten Rahmen?"
+          },
+          {
+            "key": "4e9f3e53686f6fa94d5e",
+            "issue": "„Brandschutzklassifizierung“ ist hier nicht die präzise technische Entsprechung für „flame classification“.",
+            "correction": "Können Sie eine Brandklassifizierung garantieren?"
+          },
+          {
+            "key": "eb8a8321c9a5acae8ef7",
+            "issue": "„bitte beraten“ ist als Kennzeichnung unbekannter Felder im Deutschen nicht idiomatisch und gibt „please advise“ nicht angemessen wieder.",
+            "correction": "Ja. Kennzeichnen Sie unbekannte Felder mit „bitte angeben“, beschreiben Sie die Anwendung und fügen Sie eine Skizze oder ein Foto bei. Wir können die als Nächstes benötigten Informationen ermitteln."
+          }
+        ]
+      },
+      "deterministic": []
+    },
+    {
+      "batch": 5,
+      "sourceHash": "55ad6753a054965cca986779ad4016379318ad688da86eaff31b9d53b960e5e6",
+      "targetHash": "4abfb15b329415f3d8e32545c6a42d905d00efd2c149ca6d44a86e59015efff5",
+      "model": "gpt-5.6-terra",
+      "responseId": "resp_076cab9508028716016ab51f0c62e087d09fea544f6f50b052",
+      "usage": {
+        "input_tokens": 4910,
+        "input_tokens_details": {
+          "cache_write_tokens": 4907,
+          "cached_tokens": 0
+        },
+        "output_tokens": 1610,
+        "output_tokens_details": {
+          "reasoning_tokens": 1205
+        },
+        "total_tokens": 6520
+      },
+      "completedAt": "2026-09-24T13:01:24.659Z",
+      "result": {
+        "passed": false,
+        "issues": [
+          {
+            "key": "fb9fc4f72117c5ee095e",
+            "issue": "„Versorgung“ is not the appropriate procurement term for supply in this context.",
+            "correction": "Die richtigen Komponenten.\nEin klarerer Weg zur Belieferung."
+          },
+          {
+            "key": "5ea0ffd4373e0341f31f",
+            "issue": "„Qualität“ does not accurately convey the material grade specified in the source.",
+            "correction": "Stimmen Sie Materialgüte und Referenz für die Freigabe ab."
+          },
+          {
+            "key": "d36175f049cdfdf0d8cf",
+            "issue": "„Weg zur Versorgung“ is unnatural and imprecise in a procurement context.",
+            "correction": "Ihre Spezifikation.\nEin durchdachter Weg zur Belieferung."
+          },
+          {
+            "key": "f0505437c5b5587802ba",
+            "issue": "„für Prüfzwecke“ changes the source’s general review purpose into testing or audit purposes.",
+            "correction": "Für Anfrageunterlagen gilt eine angestrebte Aufbewahrungsfrist von einem Jahr zur Überprüfung. Kontaktieren Sie uns über die veröffentlichten Unternehmens-Kontaktdaten, um Zugang, Berichtigung oder Löschung zu beantragen, vorbehaltlich anwendbarer Aufbewahrungspflichten."
+          },
+          {
+            "key": "27dbcc451ed2a07f4b5c",
+            "issue": "The final sentence incorrectly frames the services as services for generating website content, rather than translation or content-generation services used by the website.",
+            "correction": "Unsere Website nutzt Vercel-Hosting, Alibaba Cloud-Datenbankdienste, Cloudflare-Dienste für Medienspeicherung und Sicherheit sowie Resend für den E-Mail-Versand. Anfrageinformationen können in China und in den von diesen Anbietern genutzten Regionen verarbeitet werden. Anfrageanhänge werden nicht an Übersetzungs- oder Content-Generierungsdienste der Website gesendet."
+          }
+        ]
+      },
+      "deterministic": []
+    },
+    {
+      "batch": 6,
+      "sourceHash": "d710a8ed0ccda8f93b8fdb20734479603e83da155079d969a81c46f5a0ea4220",
+      "targetHash": "126e8d9fd6f9e28142695394d3b01a093b892f4142664ade29796a7dd26c6797",
+      "model": "gpt-5.6-terra",
+      "responseId": "resp_0125f263ba42a908016ab51f25bdf087d0bac47e1db600c5d7",
+      "usage": {
+        "input_tokens": 1230,
+        "input_tokens_details": {
+          "cache_write_tokens": 1227,
+          "cached_tokens": 0
+        },
+        "output_tokens": 298,
+        "output_tokens_details": {
+          "reasoning_tokens": 280
+        },
+        "total_tokens": 1528
+      },
+      "completedAt": "2026-09-24T13:01:30.366Z",
+      "result": {
+        "passed": true,
+        "issues": []
+      },
+      "deterministic": []
+    }
+  ]
+}

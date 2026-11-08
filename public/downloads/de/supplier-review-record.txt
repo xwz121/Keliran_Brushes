@@ -1,0 +1,17 @@
+KELIRAN
+Sie prüfen Keliran als Lieferanten?
+Leeres Untersuchungsprotokoll
+2026-09-26
+
+Diese druckbare Vorlage hilft, eine geplante Untersuchung zu strukturieren. Sie enthält weder Kundenergebnisse noch freigegebene Prüfdaten. Fehlerbild, Messstelle, Zeichnungsstand und Nachweise gemeinsam erfassen.
+
+Angaben für Ihre Lieferantenstammdaten: ____________________
+Anwendung: ____________________
+Zeichnungsnummer / Revision: ____________________
+Werkstoff / Qualität: ____________________
+Kriterien für die Musterfreigabe: ____________________
+Kritische Maße und Prüfverfahren: ____________________
+Verpackung und Chargenkennzeichnung: ____________________
+Änderungsmitteilung und Zeichnungsstand: ____________________
+
+https://keliran.com/de/guides/supplier-qualification

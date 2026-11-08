@@ -1,0 +1,5 @@
+source,target,scope,decision,reason,approval_required
+/en/sealing/solid-rubber-profiles,/en/products/solid-rubber-profiles,eight existing locales,retain-and-differentiate,Category selection versus commercial family; no performance sample,true-before-any-permanent-move
+/en/sealing/sponge-rubber-seals,/en/products/sponge-rubber-seals,eight existing locales,retain-and-differentiate,Compare interface shapes before family enquiry,true-before-any-permanent-move
+/en/products/custom-molded-rubber-parts,/en/products/moulded-rubber-components,eight existing locales,retain,RUB-001 is an existing business reference; actual scope difference not confirmed,true
+/en/cases/scenario-enclosure-door-leaks,/en/solutions/enclosure-door-leaks,eight existing locales,retain-and-differentiate,Scenario becomes a blank investigation record; solution retains diagnostic explanation,true-before-any-permanent-move

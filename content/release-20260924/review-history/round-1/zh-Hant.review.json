@@ -1,0 +1,302 @@
+{
+  "sourceHash": "5e0251317585c239c237e308e56095090be2732246b0eda5637340ffde875b13",
+  "targetHash": "47f3e601169e114be07e8f5e60316ca7c613450c67f1de65b1e482c062a7d47e",
+  "batches": [
+    {
+      "batch": 0,
+      "sourceHash": "b8521c8d5784fee8e38e18e07a30373ebc0ca2657e4ee3c3c9f0d93167b839b5",
+      "targetHash": "391710a278719c209f09ea60ddcf8860f17cc6df598bce9525c4d267a76ad9b9",
+      "model": "gpt-5.6-terra",
+      "responseId": "resp_0c59f341b231a0c0016ab51f38b2f487d099471b10fa1c928f",
+      "usage": {
+        "input_tokens": 4683,
+        "input_tokens_details": {
+          "cache_write_tokens": 4680,
+          "cached_tokens": 0
+        },
+        "output_tokens": 617,
+        "output_tokens_details": {
+          "reasoning_tokens": 511
+        },
+        "total_tokens": 5300
+      },
+      "completedAt": "2026-09-24T13:01:52.963Z",
+      "result": {
+        "passed": false,
+        "issues": [
+          {
+            "key": "aea73c958b81e30154cd",
+            "issue": "「槽鋼截面」將 channel 理解為鋼材槽鋼，額外引入了未在原文指定的材料。",
+            "correction": "槽道截面；背板寬度；總高度及刷毛高度；刷絲牌號與直徑；密度；裁切長度。"
+          }
+        ]
+      },
+      "deterministic": []
+    },
+    {
+      "batch": 1,
+      "sourceHash": "22f293c35574fde2244bb6a7f6732ec953f2e1d9640eb4f704ea5bfe7ac7e431",
+      "targetHash": "bb474a567cbad40c4e3eaa4433bb0f4dc08cf86105128d2a76ebc1aa37917980",
+      "model": "gpt-5.6-terra",
+      "responseId": "resp_09084f077411130f016ab51f4209e487d0b3aecb5ecf492ba5",
+      "usage": {
+        "input_tokens": 5834,
+        "input_tokens_details": {
+          "cache_write_tokens": 5831,
+          "cached_tokens": 0
+        },
+        "output_tokens": 2920,
+        "output_tokens_details": {
+          "reasoning_tokens": 2348
+        },
+        "total_tokens": 8754
+      },
+      "completedAt": "2026-09-24T13:02:29.826Z",
+      "result": {
+        "passed": false,
+        "issues": [
+          {
+            "key": "45de8260b47ffbd98074",
+            "issue": "「hole pattern」譯為「孔型」僅指孔的型式，遺漏孔位排列／配置的意思。",
+            "correction": "H、F、T 或客製截面；鋁或鋼等級；孔位排列；表面處理；配合尺寸。"
+          },
+          {
+            "key": "287bcd94f4382c6ae5bf",
+            "issue": "「brushes」譯為「刷條」不當限縮了原文較廣義的客製設備刷具。",
+            "correction": "客製化設備用刷具"
+          },
+          {
+            "key": "f998ff1d65368c5c5972",
+            "issue": "「low-temperature response」譯為「低溫反應」不符材料技術語境，應指低溫性能／表現。",
+            "correction": "並非與所有流體均相容；低溫性能因膠料而異。"
+          },
+          {
+            "key": "8dca050923a8308a9d70",
+            "issue": "「dimensional response to moisture」譯為「材料尺寸對濕度的反應」不自然，且未清楚表達濕度造成的尺寸變化。",
+            "correction": "當材料尺寸對濕度變化的反應重要時，可考慮的尼龍選項。"
+          },
+          {
+            "key": "62b29f7ed411e65f6dde",
+            "issue": "原文指密封條在反覆使用後無法再隨門體回彈並保持接觸；「隨門體回復」表意不準確。",
+            "correction": "經重複使用後，壓扁的密封條不再能隨門體回彈。"
+          },
+          {
+            "key": "5634c065f6a814f53a84",
+            "issue": "「surface preparation」譯為「表面處理」可能指表面處理製程，未準確表達黏接前的表面前處理。",
+            "correction": "審查指定膠帶及表面前處理；在實際基材上定義剝離或老化檢查。"
+          },
+          {
+            "key": "1351ea522f1af1f585c1",
+            "issue": "原文指設備開口處的漏塵問題；「設備開口處有灰塵」僅描述灰塵存在，遺漏逸散／洩漏的問題。",
+            "correction": "設備開口處漏塵"
+          }
+        ]
+      },
+      "deterministic": []
+    },
+    {
+      "batch": 2,
+      "sourceHash": "bd7450b2c8e5bbe6b7da490ca4b20325b9f2433d60e300e0610e477df848dd46",
+      "targetHash": "0c3c03622f2960c687a99d41044062fa7a35f41b345cce66b25cd96e3cbb11da",
+      "model": "gpt-5.6-terra",
+      "responseId": "resp_0451ee16fbdf39a0016ab51f66e6d487d0bc243e2292421733",
+      "usage": {
+        "input_tokens": 5322,
+        "input_tokens_details": {
+          "cache_write_tokens": 5319,
+          "cached_tokens": 0
+        },
+        "output_tokens": 3379,
+        "output_tokens_details": {
+          "reasoning_tokens": 2857
+        },
+        "total_tokens": 8701
+      },
+      "completedAt": "2026-09-24T13:03:11.321Z",
+      "result": {
+        "passed": false,
+        "issues": [
+          {
+            "key": "a3467dfe57ddebad346e",
+            "issue": "「槽道保持力」不夠準確地表達刷條槽道的固持能力。",
+            "correction": "檢查槽道固持力、端部封閉、重複衝擊及化學品暴露。"
+          },
+          {
+            "key": "5c84352af54bad5e8282",
+            "issue": "「掉毛」過於口語，未使用刷條的技術術語。",
+            "correction": "透過樣品檢驗界定固持力及刷絲脫落的驗收檢查。"
+          },
+          {
+            "key": "414a99190cc5e72468d1",
+            "issue": "「保持方法」未準確表達 retention method 的固持／固定方式。",
+            "correction": "固持方式、檢驗範圍及議定的驗收標準。"
+          },
+          {
+            "key": "16e6e17b44237a8daaac",
+            "issue": "「護罩」可能暗示安全防護裝置；原文僅指設備外罩及檢修開口。",
+            "correction": "用於檢修蓋及維修開口的型材、墊片及模製零件。"
+          },
+          {
+            "key": "8c3a321b29b8912532a8",
+            "issue": "bill of materials 應譯為「物料清單」，而非僅指材料的「材料清單」。",
+            "correction": "依據您已核准的物料清單組裝。"
+          },
+          {
+            "key": "9a76281d2600f8ec8b82",
+            "issue": "「緊密角部」未表達 tight corner 所指的小半徑轉角。",
+            "correction": "說明室內或室外使用、溫度暴露、介質、開啟週期、材料等級（如已知）及所需驗收測試。按位置識別照片與量測資料，以免將小半徑轉角與直線段混淆。"
+          },
+          {
+            "key": "d22dfcc6d62e2648b34d",
+            "issue": "作為段落標題時，「適用於成形刷條」改變了原文單純限定適用範圍的意思。",
+            "correction": "成形刷條"
+          }
+        ]
+      },
+      "deterministic": []
+    },
+    {
+      "batch": 3,
+      "sourceHash": "4c2af46e4f74c083e65ba605c184bef8328ad0fd7ff55a9d1756b9e864fde893",
+      "targetHash": "a489e785014cf5639c897599cdf94ea26f98392e067af5a06dc0e08de69e9324",
+      "model": "gpt-5.6-terra",
+      "responseId": "resp_0a58dab250290446016ab51f9073fc87d09fa3fca6f901d19b",
+      "usage": {
+        "input_tokens": 4321,
+        "input_tokens_details": {
+          "cache_write_tokens": 4318,
+          "cached_tokens": 0
+        },
+        "output_tokens": 1097,
+        "output_tokens_details": {
+          "reasoning_tokens": 954
+        },
+        "total_tokens": 5418
+      },
+      "completedAt": "2026-09-24T13:03:26.560Z",
+      "result": {
+        "passed": false,
+        "issues": [
+          {
+            "key": "cce7c5d175d2c104ed8d",
+            "issue": "「具備內部擠製能力」將原文的「不表示為內部擠製」改為是否具備能力，擴大了原文所作的限定。",
+            "correction": "槽材與固定座材料可能不同。請確認鍍鋅鋼、不鏽鋼等級或鋁合金、切邊狀況及塗層。提供鋁製固定座不表示採用內部擠製。"
+          }
+        ]
+      },
+      "deterministic": [
+        "e17714d40ee04947a25c: table structure differs",
+        "7418b25f1d814863c128: table structure differs",
+        "33831c7644301d2c5ed3: table structure differs"
+      ]
+    },
+    {
+      "batch": 4,
+      "sourceHash": "22af8e23715be33f8d0044b3ac2d3d38d169d7b330c91addcf294d1230d96515",
+      "targetHash": "4720e2a3cf6d75573f256293e5d7dbbd33e5d82abc852e88eaeaaf8f855f4146",
+      "model": "gpt-5.6-terra",
+      "responseId": "resp_0fe0d08813250c9f016ab51f9fa3fc87d08127a87666f6cec1",
+      "usage": {
+        "input_tokens": 4910,
+        "input_tokens_details": {
+          "cache_write_tokens": 4907,
+          "cached_tokens": 0
+        },
+        "output_tokens": 314,
+        "output_tokens_details": {
+          "reasoning_tokens": 196
+        },
+        "total_tokens": 5224
+      },
+      "completedAt": "2026-09-24T13:03:34.090Z",
+      "result": {
+        "passed": false,
+        "issues": [
+          {
+            "key": "c54bb1d7342db8d0a4d9",
+            "issue": "「No.」被譯為「不一定」，弱化了原文明確表示不同 EPDM 配方不具等同性的結論。",
+            "correction": "不。配方、硬度、硫化系統及測試條件均會影響性能。請審查指定牌號及已議定的驗收測試。"
+          }
+        ]
+      },
+      "deterministic": []
+    },
+    {
+      "batch": 5,
+      "sourceHash": "55ad6753a054965cca986779ad4016379318ad688da86eaff31b9d53b960e5e6",
+      "targetHash": "9984726284d1235bfe41d16094c795def3ba984521ae6e53c9ac24b12148a99e",
+      "model": "gpt-5.6-terra",
+      "responseId": "resp_0f911dd636922b2f016ab51fa7389087d086d6776f52049b69",
+      "usage": {
+        "input_tokens": 4962,
+        "input_tokens_details": {
+          "cache_write_tokens": 4959,
+          "cached_tokens": 0
+        },
+        "output_tokens": 1740,
+        "output_tokens_details": {
+          "reasoning_tokens": 1457
+        },
+        "total_tokens": 6702
+      },
+      "completedAt": "2026-09-24T13:03:59.142Z",
+      "result": {
+        "passed": false,
+        "issues": [
+          {
+            "key": "e98ef78af8da37ed75bd",
+            "issue": "「sampled」被譯為「樣品驗證」，改變了原文關於樣品製作／提供方式的意思。",
+            "correction": "清晰的規格只是開始。議定零件樣品的製作、檢驗及管制方式。"
+          },
+          {
+            "key": "93022dba658fb05397a0",
+            "issue": "「what needs to work」被譯為「必須正常運作的事項」，語意生硬，且未準確表達應先釐清需實現的功能。",
+            "correction": "從需要\n發揮作用的功能開始。"
+          },
+          {
+            "key": "f0505437c5b5587802ba",
+            "issue": "「one-year retention target for review」的譯文不自然，且未清楚表達一年保存目標仍會接受檢視，而非保證固定保存期限。",
+            "correction": "詢價紀錄的保存目標為一年，並會進行檢視。您可使用已公布的公司聯絡資料聯絡我們，要求存取、更正或刪除，但須遵守適用的紀錄保存要求。"
+          }
+        ]
+      },
+      "deterministic": []
+    },
+    {
+      "batch": 6,
+      "sourceHash": "d710a8ed0ccda8f93b8fdb20734479603e83da155079d969a81c46f5a0ea4220",
+      "targetHash": "0b0b4a43819840f7213dc3c38a9af005b2a57f81a87fc010109b29ebd5a0f68a",
+      "model": "gpt-5.6-terra",
+      "responseId": "resp_0d9f9efcc877e686016ab51fc034ac87d093250399ef53ea6c",
+      "usage": {
+        "input_tokens": 1242,
+        "input_tokens_details": {
+          "cache_write_tokens": 1239,
+          "cached_tokens": 0
+        },
+        "output_tokens": 505,
+        "output_tokens_details": {
+          "reasoning_tokens": 218
+        },
+        "total_tokens": 1747
+      },
+      "completedAt": "2026-09-24T13:04:05.821Z",
+      "result": {
+        "passed": false,
+        "issues": [
+          {
+            "key": "f11a27debcc7fd05cb7c",
+            "issue": "「使我們能了解其如何到達我們網站」將 submitted enquiry 的來源誤述為其到達網站的方式，語意不自然且不準確。",
+            "correction": "本網站會在工作階段儲存空間中儲存進入頁面、引薦網站網域及活動標籤，最長 24 小時。這些詳細資料會隨提交的詢價一併提供，使我們能了解該詢價如何送達我們。他們不會驗證訪客身分。我們不使用廣告 Cookie 或第三方廣告分析工具。Cloudflare Turnstile 和主機安全服務可能會處理技術性請求資訊，以限制濫用。"
+          },
+          {
+            "key": "f84048c9b4dc1a402868",
+            "issue": "「公開註冊」遺漏 registration details 的「資料／詳情」含義。",
+            "correction": "在核准供應商或下單前，請於報價單上確認簽約實體及適用條款。如已設定，公開登記資料及聯絡詳細資料將顯示於下方。"
+          }
+        ]
+      },
+      "deterministic": []
+    }
+  ]
+}

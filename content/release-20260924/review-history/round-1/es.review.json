@@ -1,0 +1,241 @@
+{
+  "sourceHash": "5e0251317585c239c237e308e56095090be2732246b0eda5637340ffde875b13",
+  "targetHash": "3dc63d6d77c5a7124b09c212aa212300bf8d6d3ca17b86b15ed7b16d795b725a",
+  "batches": [
+    {
+      "batch": 0,
+      "sourceHash": "b8521c8d5784fee8e38e18e07a30373ebc0ca2657e4ee3c3c9f0d93167b839b5",
+      "targetHash": "a14dae3d147a272bfafd8e167f8e907784ebefdc0a1d1e34e84199ec0f2616da",
+      "model": "gpt-5.6-terra",
+      "responseId": "resp_0010cda226b3a0b5016ab51e8581a487d0a999b06f1c0e40e8",
+      "usage": {
+        "input_tokens": 4505,
+        "input_tokens_details": {
+          "cache_write_tokens": 4502,
+          "cached_tokens": 0
+        },
+        "output_tokens": 524,
+        "output_tokens_details": {
+          "reasoning_tokens": 506
+        },
+        "total_tokens": 5029
+      },
+      "completedAt": "2026-09-24T12:58:53.595Z",
+      "result": {
+        "passed": true,
+        "issues": []
+      },
+      "deterministic": []
+    },
+    {
+      "batch": 1,
+      "sourceHash": "22f293c35574fde2244bb6a7f6732ec953f2e1d9640eb4f704ea5bfe7ac7e431",
+      "targetHash": "6ca711dba3d59bdac6da575cc97ec8b5106f8b2c6b1790d0cc5ebea6d5870aaf",
+      "model": "gpt-5.6-terra",
+      "responseId": "resp_00e8bd784cad5cef016ab51e8eadc487d0bc05549ae51d7def",
+      "usage": {
+        "input_tokens": 5611,
+        "input_tokens_details": {
+          "cache_write_tokens": 5608,
+          "cached_tokens": 0
+        },
+        "output_tokens": 337,
+        "output_tokens_details": {
+          "reasoning_tokens": 245
+        },
+        "total_tokens": 5948
+      },
+      "completedAt": "2026-09-24T12:59:00.178Z",
+      "result": {
+        "passed": false,
+        "issues": [
+          {
+            "key": "13ea42e3ffc00ae42102",
+            "issue": "«Acuérdese» significa “remember” y no expresa la acción de acordar las condiciones de ensayo con el socio de producción.",
+            "correction": "Acuerde con el socio de producción seleccionado las condiciones de ensayo de recuperación y deformación remanente por compresión."
+          }
+        ]
+      },
+      "deterministic": []
+    },
+    {
+      "batch": 2,
+      "sourceHash": "bd7450b2c8e5bbe6b7da490ca4b20325b9f2433d60e300e0610e477df848dd46",
+      "targetHash": "80286d8b4a553000257a55e60185fb18785ea573a80f20b69f66489bb605cb58",
+      "model": "gpt-5.6-terra",
+      "responseId": "resp_072a821da37278fa016ab51e95427887d0b794103b4c09285c",
+      "usage": {
+        "input_tokens": 5155,
+        "input_tokens_details": {
+          "cache_write_tokens": 5152,
+          "cached_tokens": 0
+        },
+        "output_tokens": 1048,
+        "output_tokens_details": {
+          "reasoning_tokens": 918
+        },
+        "total_tokens": 6203
+      },
+      "completedAt": "2026-09-24T12:59:16.160Z",
+      "result": {
+        "passed": false,
+        "issues": [
+          {
+            "key": "9a76281d2600f8ec8b82",
+            "issue": "“Tight corner” refers to a corner with a small/tight radius, not a closed corner. “Esquina cerrada” changes the technical meaning.",
+            "correction": "Indique uso interior o exterior, exposición a temperatura, medios, ciclos de apertura, grado de material si se conoce y ensayos de aceptación requeridos. Identifique las fotografías y mediciones por posición para que una esquina de radio reducido no se confunda con un tramo recto."
+          }
+        ]
+      },
+      "deterministic": []
+    },
+    {
+      "batch": 3,
+      "sourceHash": "4c2af46e4f74c083e65ba605c184bef8328ad0fd7ff55a9d1756b9e864fde893",
+      "targetHash": "c3180e4d6147744b3cdffe764fea1971faf82458e89b90be122c34d36738938d",
+      "model": "gpt-5.6-terra",
+      "responseId": "resp_0e983aaaad461a7a016ab51ea53dc887d0a5bec17e927c1187",
+      "usage": {
+        "input_tokens": 4175,
+        "input_tokens_details": {
+          "cache_write_tokens": 4172,
+          "cached_tokens": 0
+        },
+        "output_tokens": 1245,
+        "output_tokens_details": {
+          "reasoning_tokens": 923
+        },
+        "total_tokens": 5420
+      },
+      "completedAt": "2026-09-24T12:59:35.552Z",
+      "result": {
+        "passed": false,
+        "issues": [
+          {
+            "key": "913d5abae8e31ffe45d9",
+            "issue": "«Independiente» adds a qualification not present in the source. The source requires a separate specialist review, without claiming independence.",
+            "correction": "El contacto con alimentos, los sellos de cepillo rotativos de alta velocidad y las funciones críticas para la seguridad requieren una revisión especializada por separado. No utilice estas familias de productos como base para una afirmación de seguridad no validada."
+          },
+          {
+            "key": "7c7bdeea004aab5ea329",
+            "issue": "«Acuérdese la cantidad» is grammatically incorrect and changes “Agree” into “Remember.”",
+            "correction": "Acuerde la cantidad de muestras, el método de inspección, la evidencia requerida y la persona que aprueba la muestra. Identifique cualquier requisito de cualificación o reglamentario antes de solicitar un presupuesto."
+          },
+          {
+            "key": "124bcb78a274ea29c486",
+            "issue": "«Por favor, asesore» is not a natural or correct Spanish equivalent of “please advise.”",
+            "correction": "Utilice «indique, por favor» cuando sea necesario y adjunte una foto o croquis claros. La primera conversación puede establecer los datos de entrada que faltan; no le compromete con un material o diseño."
+          },
+          {
+            "key": "48547240dbbe68b26736",
+            "issue": "The heading is incomplete and unnatural in Spanish.",
+            "correction": "Un paquete de cualificación que acordar"
+          }
+        ]
+      },
+      "deterministic": [
+        "e17714d40ee04947a25c: table structure differs",
+        "7418b25f1d814863c128: table structure differs",
+        "33831c7644301d2c5ed3: table structure differs"
+      ]
+    },
+    {
+      "batch": 4,
+      "sourceHash": "22af8e23715be33f8d0044b3ac2d3d38d169d7b330c91addcf294d1230d96515",
+      "targetHash": "6603940dc8ac47a83b6cd47d66fc81428cac2812e4615d066621219de69d6efc",
+      "model": "gpt-5.6-terra",
+      "responseId": "resp_012797eb61dd3f22016ab51eb89cf887d0aecb8f6fd6ffc596",
+      "usage": {
+        "input_tokens": 4720,
+        "input_tokens_details": {
+          "cache_write_tokens": 4717,
+          "cached_tokens": 0
+        },
+        "output_tokens": 436,
+        "output_tokens_details": {
+          "reasoning_tokens": 241
+        },
+        "total_tokens": 5156
+      },
+      "completedAt": "2026-09-24T12:59:42.459Z",
+      "result": {
+        "passed": false,
+        "issues": [
+          {
+            "key": "00cb72b5e977e9fb6212",
+            "issue": "La traducción indica que se debe «comprender la revisión técnica», en lugar de expresar que el plazo se confirma tras la revisión técnica y una vez entendidos los demás requisitos.",
+            "correction": "El plazo se confirma tras la revisión técnica y una vez comprendidos la planificación del socio y los requisitos de aprobación de muestras."
+          },
+          {
+            "key": "3cda5d6c09880b1695c9",
+            "issue": "«Acuérdese» significa ‘recuerde’, no ‘acuerde’. Se pierde el requisito de acordar estos elementos antes de realizar el pedido.",
+            "correction": "Acuerde las dimensiones críticas, los métodos de medición, el plan de muestreo, la identificación del material y los registros de inspección disponibles antes de realizar el pedido."
+          }
+        ]
+      },
+      "deterministic": []
+    },
+    {
+      "batch": 5,
+      "sourceHash": "55ad6753a054965cca986779ad4016379318ad688da86eaff31b9d53b960e5e6",
+      "targetHash": "48a3ca37391ef3697f6f3fb315ed0fd36fb5e7b725c80190e8f562953b87bd7a",
+      "model": "gpt-5.6-terra",
+      "responseId": "resp_0727bdce74e3fede016ab51ebf9df087d0af0d6d6c0b63569d",
+      "usage": {
+        "input_tokens": 4765,
+        "input_tokens_details": {
+          "cache_write_tokens": 4762,
+          "cached_tokens": 0
+        },
+        "output_tokens": 588,
+        "output_tokens_details": {
+          "reasoning_tokens": 508
+        },
+        "total_tokens": 5353
+      },
+      "completedAt": "2026-09-24T12:59:52.053Z",
+      "result": {
+        "passed": false,
+        "issues": [
+          {
+            "key": "170f61eaad7c257ef193",
+            "issue": "«Conjuntos de equipos a medida» can imply assemblies made up of equipment, rather than custom assemblies for equipment.",
+            "correction": "Cepillos rectos y conformados, soportes compatibles y conjuntos a medida para equipos."
+          }
+        ]
+      },
+      "deterministic": []
+    },
+    {
+      "batch": 6,
+      "sourceHash": "d710a8ed0ccda8f93b8fdb20734479603e83da155079d969a81c46f5a0ea4220",
+      "targetHash": "f6261d0b44cab6239b2f0705f20154df56246d3ed98110b6624c3008f3012234",
+      "model": "gpt-5.6-terra",
+      "responseId": "resp_02aedad26eb0b9fa016ab51ec91e3887d0b746a3a40f730f9a",
+      "usage": {
+        "input_tokens": 1205,
+        "input_tokens_details": {
+          "cache_write_tokens": 1202,
+          "cached_tokens": 0
+        },
+        "output_tokens": 569,
+        "output_tokens_details": {
+          "reasoning_tokens": 460
+        },
+        "total_tokens": 1774
+      },
+      "completedAt": "2026-09-24T13:00:00.429Z",
+      "result": {
+        "passed": false,
+        "issues": [
+          {
+            "key": "2690813e084962851710",
+            "issue": "«la aprobación del proveedor» puede interpretarse como la aprobación otorgada por el proveedor, en lugar de la aprobación del proveedor como parte del proceso de compra.",
+            "correction": "Confirme la entidad contratante y las condiciones aplicables en el presupuesto antes de aprobar al proveedor o de realizar el pedido. Los datos públicos de registro y contacto se muestran a continuación cuando están configurados."
+          }
+        ]
+      },
+      "deterministic": []
+    }
+  ]
+}

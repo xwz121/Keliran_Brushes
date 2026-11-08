@@ -1,0 +1,267 @@
+{
+  "sourceHash": "5e0251317585c239c237e308e56095090be2732246b0eda5637340ffde875b13",
+  "targetHash": "24379eeb24729dbf61641e2140a8b8c2095d7b07919d4ebc60d1e4097701dd30",
+  "batches": [
+    {
+      "batch": 0,
+      "sourceHash": "b8521c8d5784fee8e38e18e07a30373ebc0ca2657e4ee3c3c9f0d93167b839b5",
+      "targetHash": "356e738c344b45d5fa082a12a33f70ef38651b9da1b4ff718cdecd98aac1543b",
+      "model": "gpt-5.6-terra",
+      "responseId": "resp_08241d8190ed24f4016ab51ed18b1887d09910cb90c6a4882b",
+      "usage": {
+        "input_tokens": 4809,
+        "input_tokens_details": {
+          "cache_write_tokens": 4806,
+          "cached_tokens": 0
+        },
+        "output_tokens": 1242,
+        "output_tokens_details": {
+          "reasoning_tokens": 939
+        },
+        "total_tokens": 6051
+      },
+      "completedAt": "2026-09-24T13:00:18.587Z",
+      "result": {
+        "passed": false,
+        "issues": [
+          {
+            "key": "4f9cf3ff472716f1ba65",
+            "issue": "“Adhesive backing” is not accurately conveyed by “Supporto adesivo”, which can refer to an adhesive support rather than an adhesive backing on the product.",
+            "correction": "Retro adesivo"
+          },
+          {
+            "key": "5d76f31d6bf56c58dab2",
+            "issue": "“Wiping” is translated as “pulizia”, which loses the specific wiping/contact function of the strip brush.",
+            "correction": "Strisce rettilinee per l'esclusione della polvere, la tergitura e la guida in corrispondenza delle aperture delle apparecchiature."
+          },
+          {
+            "key": "83cec5fae08eba6a1b03",
+            "issue": "“Wiping” is translated as “pulizia”, which loses the specific wiping/contact function of the strip brush.",
+            "correction": "Strisce rettilinee per l'esclusione della polvere, la tergitura e la guida in corrispondenza delle aperture delle apparecchiature. Le famiglie di prodotti sono disponibili per la valutazione di approvvigionamento. La qualità del materiale, l'attrezzaggio, il lotto minimo, l'ambito di ispezione e i tempi di produzione sono confermati per il partner e l'ordine selezionati dopo la revisione tecnica e l'approvazione del campione."
+          }
+        ]
+      },
+      "deterministic": []
+    },
+    {
+      "batch": 1,
+      "sourceHash": "22f293c35574fde2244bb6a7f6732ec953f2e1d9640eb4f704ea5bfe7ac7e431",
+      "targetHash": "179b46a3c0cdc45c77731d663249e71c8e269e9f731587e67433fc9351143436",
+      "model": "gpt-5.6-terra",
+      "responseId": "resp_008c27c3fd4be3f6016ab51ee3a81c87d0a9dce6a817a1c63d",
+      "usage": {
+        "input_tokens": 5869,
+        "input_tokens_details": {
+          "cache_write_tokens": 5866,
+          "cached_tokens": 0
+        },
+        "output_tokens": 720,
+        "output_tokens_details": {
+          "reasoning_tokens": 618
+        },
+        "total_tokens": 6589
+      },
+      "completedAt": "2026-09-24T13:00:29.537Z",
+      "result": {
+        "passed": false,
+        "issues": [
+          {
+            "key": "5634c065f6a814f53a84",
+            "issue": "\"Peel ... checks\" is rendered as \"controlli di pelatura\", which can suggest a peeling operation rather than adhesion/peel testing.",
+            "correction": "Esaminare il nastro designato e la preparazione della superficie; definire prove di pelatura o invecchiamento sul substrato reale."
+          }
+        ]
+      },
+      "deterministic": []
+    },
+    {
+      "batch": 2,
+      "sourceHash": "bd7450b2c8e5bbe6b7da490ca4b20325b9f2433d60e300e0610e477df848dd46",
+      "targetHash": "58c491f081cd6b57896e1e1bed38bc6178818d5b177f1fbaef1c28661abf254b",
+      "model": "gpt-5.6-terra",
+      "responseId": "resp_091af86fc3652e94016ab51eeea8a887d0a1fdb1eb2f9ddc48",
+      "usage": {
+        "input_tokens": 5459,
+        "input_tokens_details": {
+          "cache_write_tokens": 5456,
+          "cached_tokens": 0
+        },
+        "output_tokens": 644,
+        "output_tokens_details": {
+          "reasoning_tokens": 516
+        },
+        "total_tokens": 6103
+      },
+      "completedAt": "2026-09-24T13:00:40.065Z",
+      "result": {
+        "passed": false,
+        "issues": [
+          {
+            "key": "22ca91e9d71aba6780cc",
+            "issue": "“Normal latched condition” does not specifically mean a snap closure (“chiusura a scatto”); the translation adds an unsupported mechanism.",
+            "correction": "Una vecchia guarnizione potrebbe aver subito una deformazione permanente da compressione. Registrare l'assemblaggio accoppiato oltre al profilo rimosso. Durante la misurazione, mantenere la porta nella normale condizione di chiusura con il fermo inserito."
+          }
+        ]
+      },
+      "deterministic": []
+    },
+    {
+      "batch": 3,
+      "sourceHash": "4c2af46e4f74c083e65ba605c184bef8328ad0fd7ff55a9d1756b9e864fde893",
+      "targetHash": "7e3dd68ff298642025b4cd318ce4e22cc91aa8e813af15fcb5f245d7a09b3cb8",
+      "model": "gpt-5.6-terra",
+      "responseId": "resp_02085250ee4f469f016ab51ef9344c87d09e01c83fdd7c44a1",
+      "usage": {
+        "input_tokens": 4425,
+        "input_tokens_details": {
+          "cache_write_tokens": 4422,
+          "cached_tokens": 0
+        },
+        "output_tokens": 1425,
+        "output_tokens_details": {
+          "reasoning_tokens": 1195
+        },
+        "total_tokens": 5850
+      },
+      "completedAt": "2026-09-24T13:01:01.940Z",
+      "result": {
+        "passed": false,
+        "issues": [
+          {
+            "key": "8f785d95c393064b2d15",
+            "issue": "“closed gap” is rendered as “gioco a tenuta chiusa”, which is not a correct technical expression for the gap in the closed position.",
+            "correction": "Elencare ogni fluido, intervallo di temperatura e durata dell'esposizione. Quindi definire il movimento, il gioco in posizione chiusa, la compressione e le condizioni di esercizio previste. Scegliere una famiglia di materiali solo dopo che queste informazioni sono disponibili."
+          },
+          {
+            "key": "f62877eabb5fae5ea807",
+            "issue": "“wipes” describes a brushing/wiping function, not necessarily cleaning; “pulisce” narrows the intended function.",
+            "correction": "Definire se la spazzola tergi, guida o limita la polvere. Elencare la superficie a contatto, la marcatura ammissibile, il fluido, l'umidità, la temperatura e la deflessione di lavoro."
+          }
+        ]
+      },
+      "deterministic": [
+        "e17714d40ee04947a25c: table structure differs",
+        "7418b25f1d814863c128: table structure differs",
+        "33831c7644301d2c5ed3: table structure differs"
+      ]
+    },
+    {
+      "batch": 4,
+      "sourceHash": "22af8e23715be33f8d0044b3ac2d3d38d169d7b330c91addcf294d1230d96515",
+      "targetHash": "136b61233708a94c48da0a6950fe12c12666287e92f0e0764b07672ad914cfa2",
+      "model": "gpt-5.6-terra",
+      "responseId": "resp_0b60ec49fa4f1ea0016ab51f0f1d8887d0bfebe6849d4e5e53",
+      "usage": {
+        "input_tokens": 4979,
+        "input_tokens_details": {
+          "cache_write_tokens": 4976,
+          "cached_tokens": 0
+        },
+        "output_tokens": 730,
+        "output_tokens_details": {
+          "reasoning_tokens": 516
+        },
+        "total_tokens": 5709
+      },
+      "completedAt": "2026-09-24T13:01:14.954Z",
+      "result": {
+        "passed": false,
+        "issues": [
+          {
+            "key": "00cb72b5e977e9fb6212",
+            "issue": "La formulazione italiana indica che deve essere “compresa la revisione tecnica”, anziché che la revisione tecnica deve essere effettuata prima della conferma delle tempistiche.",
+            "correction": "Le tempistiche vengono confermate dopo la revisione tecnica e dopo aver chiarito la pianificazione del partner e i requisiti di approvazione del campione."
+          },
+          {
+            "key": "eb8a8321c9a5acae8ef7",
+            "issue": "“si prega di indicare” non rende chiaramente l'istruzione di contrassegnare i campi sconosciuti affinché Keliran fornisca indicazioni.",
+            "correction": "Sì. Contrassegnate i campi sconosciuti come “da definire”, descrivete l'applicazione e fornite uno schizzo o una foto. Possiamo identificare le informazioni successive necessarie."
+          }
+        ]
+      },
+      "deterministic": []
+    },
+    {
+      "batch": 5,
+      "sourceHash": "55ad6753a054965cca986779ad4016379318ad688da86eaff31b9d53b960e5e6",
+      "targetHash": "bb9832f2f9b033578383bac0a70b4418a223056211bb12cea7c294a5aeacff36",
+      "model": "gpt-5.6-terra",
+      "responseId": "resp_069d1ac7626b7d70016ab51f1c0ff887d0b257055c860475d4",
+      "usage": {
+        "input_tokens": 5062,
+        "input_tokens_details": {
+          "cache_write_tokens": 5059,
+          "cached_tokens": 0
+        },
+        "output_tokens": 920,
+        "output_tokens_details": {
+          "reasoning_tokens": 661
+        },
+        "total_tokens": 5982
+      },
+      "completedAt": "2026-09-24T13:01:30.367Z",
+      "result": {
+        "passed": false,
+        "issues": [
+          {
+            "key": "cc60aa888356f675ccaf",
+            "issue": "“Fit” è reso come “montaggio”, che indica il processo di assemblaggio anziché l’accoppiamento/adattamento del componente nell’assemblaggio.",
+            "correction": "La gestione della qualità inizia dai dettagli importanti nel vostro assemblaggio: accoppiamento, materiale, dimensioni critiche e condizioni operative. Coordiniamo la revisione dei requisiti, l'approvazione del campione e l'ispezione concordata con il partner di produzione selezionato. Ambito ed evidenze sono definiti per il componente e l'ordine effettivi."
+          },
+          {
+            "key": "7957ed46858671cde8cb",
+            "issue": "“Invia il vostro” contiene un’incongruenza grammaticale tra imperativo singolare e possessivo plurale.",
+            "correction": "Inviate il vostro questionario di qualificazione e i requisiti di evidenza. Esamineremo quali registri sono applicabili e disponibili. I dati dell'entità giuridica, i preventivi e le evidenze specifiche dell'ordine appartengono al fascicolo di qualificazione."
+          }
+        ]
+      },
+      "deterministic": []
+    },
+    {
+      "batch": 6,
+      "sourceHash": "d710a8ed0ccda8f93b8fdb20734479603e83da155079d969a81c46f5a0ea4220",
+      "targetHash": "54fad3902e6b21684f7d276359abbc578653821afadb3199e3f5aab405dd5270",
+      "model": "gpt-5.6-terra",
+      "responseId": "resp_0d271f96556a57c1016ab51f2b78c487d0a5e66d300607eea9",
+      "usage": {
+        "input_tokens": 1259,
+        "input_tokens_details": {
+          "cache_write_tokens": 1256,
+          "cached_tokens": 0
+        },
+        "output_tokens": 874,
+        "output_tokens_details": {
+          "reasoning_tokens": 436
+        },
+        "total_tokens": 2133
+      },
+      "completedAt": "2026-09-24T13:01:43.570Z",
+      "result": {
+        "passed": false,
+        "issues": [
+          {
+            "key": "f11a27debcc7fd05cb7c",
+            "issue": "«Come ci ha raggiunto» attribuisce l'azione al visitatore anziché alla richiesta e non rende in modo preciso il riferimento alla provenienza della richiesta.",
+            "correction": "Il sito web memorizza nella memoria di sessione la pagina di ingresso, il dominio del sito web di provenienza e i tag della campagna per un massimo di 24 ore. Questi dettagli accompagnano una richiesta inviata, in modo da poter comprendere come ci è pervenuta. Non verificano l'identità del visitatore. Non utilizziamo cookie pubblicitari né analisi pubblicitarie di terze parti. Cloudflare Turnstile e i servizi di sicurezza dell'hosting possono trattare informazioni tecniche relative alle richieste per limitare gli abusi."
+          },
+          {
+            "key": "b1eaa19832688309f8a1",
+            "issue": "«Numero di società» non è la formulazione italiana appropriata per un company number britannico.",
+            "correction": "Keliran LTD è registrata in Inghilterra e Galles con il numero di registrazione 15698503. Sede legale: 483 Green Lanes, London, England, N13 4BS."
+          },
+          {
+            "key": "f84048c9b4dc1a402868",
+            "issue": "«Approvazione del fornitore» è ambiguo e non rende chiaramente il processo di supplier approval/qualifica del fornitore in ambito acquisti.",
+            "correction": "Confermare sul preventivo l'entità contraente e i termini applicabili prima della qualifica del fornitore o dell'ordine. I dati di registrazione pubblici e i recapiti sono indicati di seguito, se configurati."
+          },
+          {
+            "key": "7b5cc9c925ed0d9486fa",
+            "issue": "«Supporti» è generico; «portaspazzole» è il termine tecnico diretto per brush holders.",
+            "correction": "Portaspazzole e canali"
+          }
+        ]
+      },
+      "deterministic": []
+    }
+  ]
+}

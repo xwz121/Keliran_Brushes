@@ -1,0 +1,23 @@
+KELIRAN | ENCLOSURE & EQUIPMENT SEALING RFQ
+Complete the details you know; mark unknown items as "please advise".
+
+Company / contact / work email:
+Project / application:
+Drawing number, revision and units:
+Part / profile type:
+Cross-section and critical tolerances:
+Minimum / maximum closed gap (mm):
+Panel thickness / groove / grip range (mm):
+Corner radius / joint method / frame dimensions:
+Material grade / solid or sponge / hardness or density:
+Environment / media / temperature and exposure time:
+Adhesive reference / substrate / surface preparation:
+Actual quantity and unit / sample quantity:
+Estimated annual usage / destination:
+Inspection methods / sample approval / documents required:
+Packing / batch labels / change-notification requirements:
+Safety-related function / applicable standard and evidence:
+
+An IP or NEMA enclosure rating must be validated on your assembled enclosure.
+Material, tooling, minimum batch and timing are confirmed after technical review.
+Keliran is a sourcing and quality-management trading business, not the manufacturer.

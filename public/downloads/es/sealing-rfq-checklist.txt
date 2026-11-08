@@ -1,0 +1,32 @@
+KELIRAN
+Sellado de envolventes y equipos
+Solicitar presupuesto
+
+Complete los datos conocidos y marque los desconocidos como «asesoramiento necesario». La idoneidad, la cantidad mínima y el plazo requieren una revisión específica del proyecto.
+
+Aplicación: ____________________
+Número de plano / revisión: ____________________
+Condiciones de funcionamiento: ____________________
+Temperatura mínima de funcionamiento (°C): ____________________
+Temperatura máxima de funcionamiento (°C): ____________________
+Cantidad del pedido y unidad: ____________________
+Consumo anual estimado: ____________________
+Cantidad de muestras / requisitos de aprobación: ____________________
+Destino: ____________________
+¿El componente desempeña una función crítica para la seguridad?: ____________________
+Tipo de perfil / componente: ____________________
+Holgura mínima en posición cerrada (mm): ____________________
+Holgura máxima en posición cerrada (mm): ____________________
+Espesor del panel / rango de agarre (mm): ____________________
+Material / grado: ____________________
+Dureza o densidad de la espuma: ____________________
+Método de montaje: ____________________
+Esquinas y uniones: ____________________
+Grado de protección objetivo del conjunto: ____________________
+
+El grado de protección IP o NEMA debe validarse en la envolvente ensamblada.
+Describa la función de seguridad y las evidencias necesarias en sus requisitos. Enviar una consulta solicita una revisión; no confirma la idoneidad para esa función.
+
+contact@keliran.com
++8617509072335
++447536120830

@@ -1,0 +1,17 @@
+KELIRAN
+Vous évaluez Keliran comme fournisseur ?
+Fiche vierge d’investigation
+2026-09-26
+
+Utilisez cette fiche imprimable pour organiser une investigation envisagée. Elle ne contient aucun résultat client ni donnée de contrôle approuvée. Regroupez le symptôme, la position de mesure, la révision du plan et les justificatifs.
+
+Informations pour votre fiche fournisseur: ____________________
+Application: ____________________
+Numéro de plan / indice de révision: ____________________
+Matériau / nuance: ____________________
+Critères d’approbation des échantillons: ____________________
+Cotes critiques et méthode de contrôle: ____________________
+Emballage et étiquettes de lot: ____________________
+Notification des modifications et révision du plan: ____________________
+
+https://keliran.com/fr/guides/supplier-qualification

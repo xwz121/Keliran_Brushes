@@ -1,0 +1,37 @@
+KELIRAN
+Cepillos lineales industriales
+Solicitar presupuesto
+
+Complete los datos conocidos y marque los desconocidos como «asesoramiento necesario». La idoneidad, la cantidad mínima y el plazo requieren una revisión específica del proyecto.
+
+Aplicación: ____________________
+Número de plano / revisión: ____________________
+Condiciones de funcionamiento: ____________________
+Temperatura mínima de funcionamiento (°C): ____________________
+Temperatura máxima de funcionamiento (°C): ____________________
+Cantidad del pedido y unidad: ____________________
+Consumo anual estimado: ____________________
+Cantidad de muestras / requisitos de aprobación: ____________________
+Destino: ____________________
+¿El componente desempeña una función crítica para la seguridad?: ____________________
+Sección del canal de soporte: ____________________
+Material / grado del canal de soporte: ____________________
+Ancho de la base (mm): ____________________
+Altura del canal de soporte (mm): ____________________
+Altura total (mm): ____________________
+Longitud libre del filamento (mm): ____________________
+Longitud final (mm): ____________________
+Grado del filamento: ____________________
+Diámetro del filamento (mm): ____________________
+Densidad / disposición del relleno: ____________________
+Conformado / radio: ____________________
+Soporte y detalles de montaje: ____________________
+Perfil del portacepillo / sección de montaje: ____________________
+Material / grado del portacepillo: ____________________
+Contacto / velocidad / deflexión: ____________________
+
+Describa la función de seguridad y las evidencias necesarias en sus requisitos. Enviar una consulta solicita una revisión; no confirma la idoneidad para esa función.
+
+contact@keliran.com
++8617509072335
++447536120830

@@ -1,0 +1,17 @@
+KELIRAN
+Evaluating Keliran as a supplier?
+Blank investigation record
+2026-09-26
+
+Use this printable record to organise a proposed investigation. It contains no customer result or approved inspection data. Keep the symptom, measurement position, drawing revision and evidence together.
+
+Details for your supplier record: ____________________
+Application: ____________________
+Drawing number / revision: ____________________
+Material / grade: ____________________
+Sample approval criteria: ____________________
+Critical dimensions and inspection method: ____________________
+Packaging and batch labels: ____________________
+Change notification and drawing revision: ____________________
+
+https://keliran.com/en/guides/supplier-qualification

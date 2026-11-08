@@ -1,0 +1,322 @@
+{
+  "sourceHash": "5e0251317585c239c237e308e56095090be2732246b0eda5637340ffde875b13",
+  "targetHash": "9e2bb6a8c6097709606be367ff004dfa4540a4d83400657ba46a7afb6ce29858",
+  "batches": [
+    {
+      "batch": 0,
+      "sourceHash": "b8521c8d5784fee8e38e18e07a30373ebc0ca2657e4ee3c3c9f0d93167b839b5",
+      "targetHash": "fb48cb4e62be8b1eb913fb7e5424b58116f09e0157dc33cff820d32816651ae0",
+      "model": "gpt-5.6-terra",
+      "responseId": "resp_015c4e7f92194f62016ab51e825a7c87d096ed85736c3afff8",
+      "usage": {
+        "input_tokens": 4589,
+        "input_tokens_details": {
+          "cache_write_tokens": 4586,
+          "cached_tokens": 0
+        },
+        "output_tokens": 1666,
+        "output_tokens_details": {
+          "reasoning_tokens": 1552
+        },
+        "total_tokens": 6255
+      },
+      "completedAt": "2026-09-24T12:59:09.552Z",
+      "result": {
+        "passed": false,
+        "issues": [
+          {
+            "key": "1a80ea103de9718cfa19",
+            "issue": "La formulation « non garanties comme spécification » est grammaticalement incomplète et ne restitue pas clairement l’opposition entre valeurs de référence et spécification garantie.",
+            "correction": "Les familles de matériaux constituent un point de départ. Il s’agit de valeurs de référence, et non d’une spécification garantie. Confirmez la qualité réelle et les conditions d’essai pour votre application."
+          }
+        ]
+      },
+      "deterministic": []
+    },
+    {
+      "batch": 1,
+      "sourceHash": "22f293c35574fde2244bb6a7f6732ec953f2e1d9640eb4f704ea5bfe7ac7e431",
+      "targetHash": "b101882fae0b1dde34822021d864ba24d2986bbdf63b5787347d22fb4b137150",
+      "model": "gpt-5.6-terra",
+      "responseId": "resp_009a66fcb6970457016ab51e9e9d0887d0a8a38acbfbe9c779",
+      "usage": {
+        "input_tokens": 5696,
+        "input_tokens_details": {
+          "cache_write_tokens": 5693,
+          "cached_tokens": 0
+        },
+        "output_tokens": 2312,
+        "output_tokens_details": {
+          "reasoning_tokens": 1552
+        },
+        "total_tokens": 8008
+      },
+      "completedAt": "2026-09-24T12:59:42.890Z",
+      "result": {
+        "passed": false,
+        "issues": [
+          {
+            "key": "45de8260b47ffbd98074",
+            "issue": "« Section H » omet la préposition nécessaire et « dimensions d’accouplement » ne désigne pas naturellement les dimensions de l’interface correspondante.",
+            "correction": "Section en H, F, T ou sur mesure ; aluminium ou nuance d’acier ; configuration des trous ; finition ; dimensions de l’interface correspondante."
+          },
+          {
+            "key": "08660e9e47a1ddf548f1",
+            "issue": "« non garanties comme spécification » est imprécis et peu naturel ; le texte source indique explicitement qu’il ne s’agit pas d’une spécification garantie.",
+            "correction": "Référence de famille de matériaux uniquement : valeurs de référence, ne constituant pas une spécification garantie. Demander la fiche technique de la nuance sélectionnée et définir les essais d’acceptation avant approbation."
+          },
+          {
+            "key": "1f50a735d7446eadc797",
+            "issue": "« paquet spécifique d’huile » est une traduction littérale inadaptée de « oil or additive package », qui désigne la formulation du fluide et de ses additifs.",
+            "correction": "Le vieillissement extérieur ainsi que la formulation spécifique de l’huile ou des additifs nécessitent une évaluation distincte."
+          },
+          {
+            "key": "b98584cdf12ac63093f5",
+            "issue": "La « media compatibility » est une compatibilité avec les fluides ou milieux, et non une résistance aux fluides.",
+            "correction": "La résistance à la déchirure, à l’abrasion et la compatibilité avec les fluides dépendent de la nuance et de la géométrie de la pièce."
+          },
+          {
+            "key": "f998ff1d65368c5c5972",
+            "issue": "« composé » est imprécis dans ce contexte d’élastomères ; la variation concerne la formulation du compound.",
+            "correction": "Pas universellement compatible avec tous les fluides ; le comportement à basse température varie selon la formulation."
+          },
+          {
+            "key": "a2193d9a1bf9742d8799",
+            "issue": "« aucune classification au feu automatique » est peu idiomatique et ne rend pas clairement l’absence de classement au feu implicite.",
+            "correction": "Confirmer la résistance environnementale, la nuance de la formulation et les exigences d’essai ; aucun classement au feu n’est automatique."
+          },
+          {
+            "key": "c2d409abde3875e2572e",
+            "issue": "La construction « ne pas les substituer à » inverse le sens pratique de l’instruction : ces caractéristiques ne doivent pas être remplacées par la dureté d’un caoutchouc plein.",
+            "correction": "La structure cellulaire, la densité et la réponse à la compression sont des spécifications distinctes ; ne pas les remplacer par la dureté du caoutchouc plein."
+          },
+          {
+            "key": "62e3b385a55a7b659340",
+            "issue": "« géométrie du joint » peut être compris comme la géométrie du joint d’étanchéité, alors que le source vise la géométrie de la jonction au coin.",
+            "correction": "Vérifier la géométrie de l’assemblage, la méthode, la déformation locale et la position de la jonction."
+          },
+          {
+            "key": "14e1c8878a776e578836",
+            "issue": "« comparer ... au plan » est grammaticalement incorrect et ne traduit pas clairement l’évaluation des méthodes par rapport au plan et aux critères d’acceptation.",
+            "correction": "Comparer les méthodes d’assemblage réalisables au regard du plan et des exigences d’acceptation."
+          }
+        ]
+      },
+      "deterministic": []
+    },
+    {
+      "batch": 2,
+      "sourceHash": "bd7450b2c8e5bbe6b7da490ca4b20325b9f2433d60e300e0610e477df848dd46",
+      "targetHash": "452b0cb45c67862b42a84a988bbe8f82063760e3445f704f0db04a9f6f3e8263",
+      "model": "gpt-5.6-terra",
+      "responseId": "resp_0966109d0dc0c608016ab51ebff73c87d087b8efd7046e9fc6",
+      "usage": {
+        "input_tokens": 5291,
+        "input_tokens_details": {
+          "cache_write_tokens": 5288,
+          "cached_tokens": 0
+        },
+        "output_tokens": 1300,
+        "output_tokens_details": {
+          "reasoning_tokens": 982
+        },
+        "total_tokens": 6591
+      },
+      "completedAt": "2026-09-24T13:00:02.705Z",
+      "result": {
+        "passed": false,
+        "issues": [
+          {
+            "key": "51d874afd269cda92e9f",
+            "issue": "« jeu fermé » is not natural technical French and can be ambiguous; the source means the gap when the assembly is closed.",
+            "correction": "Interfaces de portes, couvercles et panneaux où le jeu à l'état fermé et le plan de validation définissent l'étanchéité."
+          },
+          {
+            "key": "22ca91e9d71aba6780cc",
+            "issue": "« jeu fermé » is ambiguous; the source specifically refers to measuring the gap with the door closed in its normal latched condition.",
+            "correction": "Un ancien joint peut avoir subi une déformation rémanente à la compression. Relevez l'assemblage accouplé ainsi que le profilé déposé. Maintenez la porte dans sa condition normale verrouillée lors de la mesure du jeu porte fermée."
+          },
+          {
+            "key": "6c70b6ad5897ccdc7699",
+            "issue": "« Jeu fermé minimal et maximal » is not idiomatic and does not clearly state that the gap is measured in the closed condition.",
+            "correction": "- Coupe transversale cotée avec unités et révision du plan\n- Jeu minimal et maximal à l'état fermé sur l'ensemble du périmètre\n- Épaisseur du panneau ou dimensions de rainure et tolérances\n- Rayon d'angle, sens de pliage et position du joint\n- Longueur finie ou dimensions intérieures et extérieures du cadre"
+          }
+        ]
+      },
+      "deterministic": []
+    },
+    {
+      "batch": 3,
+      "sourceHash": "4c2af46e4f74c083e65ba605c184bef8328ad0fd7ff55a9d1756b9e864fde893",
+      "targetHash": "14c693c5e22eb1f5b43af51fb9b8434c7c2a7795eb71f1035c099227d7319382",
+      "model": "gpt-5.6-terra",
+      "responseId": "resp_0470a2d57811bab7016ab51ed3d85887d08e4a4190db816c7d",
+      "usage": {
+        "input_tokens": 4282,
+        "input_tokens_details": {
+          "cache_write_tokens": 4279,
+          "cached_tokens": 0
+        },
+        "output_tokens": 2205,
+        "output_tokens_details": {
+          "reasoning_tokens": 1719
+        },
+        "total_tokens": 6487
+      },
+      "completedAt": "2026-09-24T13:00:36.371Z",
+      "result": {
+        "passed": false,
+        "issues": [
+          {
+            "key": "b2c5d3bb715034a8ab58",
+            "issue": "« Poils » is less precise than the technical term used elsewhere for brush bristles/filaments.",
+            "correction": "Précisez des filaments orientés vers l’intérieur, l’extérieur ou latéralement, le rayon de référence, les extrémités ouvertes, la tolérance de retour élastique et le plan d’assemblage. Un profilé métallique formé et un support polymère flexible sont des constructions différentes."
+          },
+          {
+            "key": "f38cd0ec857616f85ee6",
+            "issue": "The English technical term “compound” is left untranslated; the heading should refer to the actual rubber formulation.",
+            "correction": "Approuver la formulation réelle"
+          },
+          {
+            "key": "4e2af0f48559928461e7",
+            "issue": "« Peuvent fournir la documentation » is stronger than “can support the requested documentation” and can imply a documentation commitment.",
+            "correction": "Envoyez l’édition de la norme, la clause pertinente et les preuves attendues. Nous examinons si le partenaire de production sélectionné et le matériau désigné peuvent étayer la documentation demandée. Ne présumez pas d’une certification à partir d’une image de produit ou d’un acronyme de matériau."
+          },
+          {
+            "key": "913d5abae8e31ffe45d9",
+            "issue": "« Joints-brosses rotatifs » is not natural French technical terminology for rotating brush seals.",
+            "correction": "Le contact alimentaire, les joints à brosse rotatifs à grande vitesse et les fonctions critiques pour la sécurité nécessitent un examen spécialisé distinct. N’utilisez pas ces familles de produits comme base d’une affirmation de sécurité non validée."
+          },
+          {
+            "key": "a4ed3495a6ff8aec668f",
+            "issue": "« Brosses linéaires » does not reliably denote strip brushes; “brosses à bande” preserves the product category.",
+            "correction": "Keliran réunit les composants d’étanchéité industriels et les brosses à bande dans un processus d’achat clair. Nous relions votre plan et vos exigences d’application à la sélection des matériaux, à la coordination de la production et aux contrôles qualité convenus, de la première demande jusqu’à l’approvisionnement récurrent."
+          }
+        ]
+      },
+      "deterministic": [
+        "e17714d40ee04947a25c: table structure differs",
+        "7418b25f1d814863c128: table structure differs",
+        "33831c7644301d2c5ed3: table structure differs"
+      ]
+    },
+    {
+      "batch": 4,
+      "sourceHash": "22af8e23715be33f8d0044b3ac2d3d38d169d7b330c91addcf294d1230d96515",
+      "targetHash": "f070f4f4056025db24e1e7b0cd94ecbce9bfa50c638214b73abac9ce1ad751f6",
+      "model": "gpt-5.6-terra",
+      "responseId": "resp_044e0c136a5ec0b7016ab51ef5728887d08655b11c85edd1a8",
+      "usage": {
+        "input_tokens": 4864,
+        "input_tokens_details": {
+          "cache_write_tokens": 4861,
+          "cached_tokens": 0
+        },
+        "output_tokens": 1613,
+        "output_tokens_details": {
+          "reasoning_tokens": 1370
+        },
+        "total_tokens": 6477
+      },
+      "completedAt": "2026-09-24T13:01:02.277Z",
+      "result": {
+        "passed": false,
+        "issues": [
+          {
+            "key": "78f562f5c183d1b47d97",
+            "issue": "The French reverses the relationship between the generic factory certificate and the part-applicable evidence.",
+            "correction": "Partagez votre questionnaire fournisseur et les preuves requises. La disponibilité des documents est confirmée pour le partenaire et la commande sélectionnés. Nous ne substituons pas un certificat d’usine générique aux preuves applicables à la pièce concernée."
+          },
+          {
+            "key": "6e22c048afe4ec9628eb",
+            "issue": "“Résistance des brosses antistatiques” can mean mechanical resistance; in context, the source concerns electrical/ESD resistance.",
+            "correction": "Pouvez-vous garantir la résistance électrique des brosses antistatiques ?"
+          },
+          {
+            "key": "eb8a8321c9a5acae8ef7",
+            "issue": "The instruction phrase “please advise” remains untranslated.",
+            "correction": "Oui. Indiquez « à préciser » pour les champs inconnus, décrivez l’application et fournissez un croquis ou une photo. Nous pouvons identifier les informations complémentaires nécessaires."
+          }
+        ]
+      },
+      "deterministic": []
+    },
+    {
+      "batch": 5,
+      "sourceHash": "55ad6753a054965cca986779ad4016379318ad688da86eaff31b9d53b960e5e6",
+      "targetHash": "c577df4eaed88be4a04ac25faae725c9a93fe54b2433f518c4202172d676a83a",
+      "model": "gpt-5.6-terra",
+      "responseId": "resp_0cc2a877b5249641016ab51f0f574887d0a62d6162ba9b4d3f",
+      "usage": {
+        "input_tokens": 4908,
+        "input_tokens_details": {
+          "cache_write_tokens": 4905,
+          "cached_tokens": 0
+        },
+        "output_tokens": 1466,
+        "output_tokens_details": {
+          "reasoning_tokens": 1167
+        },
+        "total_tokens": 6374
+      },
+      "completedAt": "2026-09-24T13:01:25.350Z",
+      "result": {
+        "passed": false,
+        "issues": [
+          {
+            "key": "e27210bc076ed94bd4b1",
+            "issue": "La traduction omet la notion de « components » et présente l’étanchéité comme une activité plutôt que comme une catégorie de produits.",
+            "correction": "Composants d’étanchéité industrielle et brosses à bandes, approvisionnés selon vos plans et exigences qualité."
+          },
+          {
+            "key": "170f61eaad7c257ef193",
+            "issue": "« Supports adaptés » ne restitue pas précisément les holders assortis aux brosses.",
+            "correction": "Brosses droites et formées, porte-brosses assortis et ensembles d’équipements sur mesure."
+          },
+          {
+            "key": "27dbcc451ed2a07f4b5c",
+            "issue": "« services de traduction ou de génération de contenu pour sites web » modifie le sens : la source vise les services de traduction du site web et les services de génération de contenu.",
+            "correction": "Notre site web utilise l’hébergement Vercel, les services de base de données Alibaba Cloud, les services de stockage de médias et de sécurité Cloudflare, ainsi que l’envoi d’e-mails Resend. Les informations de demande peuvent être traitées en Chine et dans les régions utilisées par ces prestataires. Les pièces jointes aux demandes ne sont pas envoyées à des services de traduction du site web ou de génération de contenu."
+          }
+        ]
+      },
+      "deterministic": []
+    },
+    {
+      "batch": 6,
+      "sourceHash": "d710a8ed0ccda8f93b8fdb20734479603e83da155079d969a81c46f5a0ea4220",
+      "targetHash": "00bac78ddc2c16428ea08a338f793b58a2dd3cb461b2922c6428d0de61d3d995",
+      "model": "gpt-5.6-terra",
+      "responseId": "resp_0086d7cf9f7de646016ab51f269dfc87d0a9bc1c6b49a24e35",
+      "usage": {
+        "input_tokens": 1251,
+        "input_tokens_details": {
+          "cache_write_tokens": 1248,
+          "cached_tokens": 0
+        },
+        "output_tokens": 806,
+        "output_tokens_details": {
+          "reasoning_tokens": 642
+        },
+        "total_tokens": 2057
+      },
+      "completedAt": "2026-09-24T13:01:39.153Z",
+      "result": {
+        "passed": false,
+        "issues": [
+          {
+            "key": "e9535f1caea1dd24dede",
+            "issue": "« ne déterminent pas » does not accurately convey that illustrations do not establish or substantiate the stated characteristics.",
+            "correction": "Les informations sur les familles de produits servent à appuyer les échanges techniques. Les devis, dessins approuvés, échantillons et conditions de commande convenues définissent la spécification de fourniture. Les illustrations ne permettent pas d’établir les dimensions, la certification ou les performances."
+          },
+          {
+            "key": "747fdd88e5e087afb80d",
+            "issue": "« plats » adds a restriction not present in the source.",
+            "correction": "Joints et rondelles en caoutchouc plein"
+          }
+        ]
+      },
+      "deterministic": []
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+KELIRAN
+Enclosure & equipment sealing
+Request a quotation
+
+Fill in the known details and mark unknown items as “please advise”. Suitability, minimum quantity and lead time require project-specific review.
+
+Application: ____________________
+Drawing number / revision: ____________________
+Operating environment: ____________________
+Minimum operating temperature (°C): ____________________
+Maximum operating temperature (°C): ____________________
+Order quantity & unit: ____________________
+Estimated annual usage: ____________________
+Sample quantity / approval requirements: ____________________
+Destination: ____________________
+Does the component have a safety-critical function?: ____________________
+Profile / component type: ____________________
+Minimum closed gap (mm): ____________________
+Maximum closed gap (mm): ____________________
+Panel thickness / grip range (mm): ____________________
+Material / grade: ____________________
+Hardness or foam density: ____________________
+Mounting method: ____________________
+Corners and joints: ____________________
+Target assembly rating: ____________________
+
+An IP or NEMA enclosure rating must be validated on your assembled enclosure.
+Describe the safety function and required evidence in your requirements. Submitting an enquiry requests a review; it does not confirm suitability for that function.
+
+contact@keliran.com
++8617509072335
++447536120830

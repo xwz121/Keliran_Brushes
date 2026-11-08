@@ -1,0 +1,14 @@
+{
+  "at": "2026-09-26T18:24:58.869Z",
+  "origin": "https://keliran.com",
+  "phase": "after",
+  "sitemapStatus": 200,
+  "urls": 1024,
+  "fetched": 1024,
+  "errors": [],
+  "wrongCanonical": [],
+  "noindex": [],
+  "missingH1": [],
+  "renderedBrowser": "not-tested-by-this-script",
+  "rawEvidence": ".local/seo-geo-after"
+}

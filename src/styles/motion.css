@@ -1,0 +1,101 @@
+/* Motion layer (DESIGN.md: restrained, plays once, honours reduced motion).
+   Nothing here hides content when JavaScript is unavailable; scroll reveals live in src/lib/motion. */
+.hero-line {
+  display: block;
+}
+.site-header {
+  transition: box-shadow 0.25s ease;
+}
+.site-header .brand-logo {
+  transform-origin: left center;
+  transition: transform 0.25s ease;
+}
+.site-header[data-condensed] {
+  box-shadow: 0 8px 16px #171d3210;
+}
+.site-header[data-condensed] .brand-logo {
+  transform: scale(0.88);
+}
+/* Drawn top rules: identical to the former borders until the engine animates --km-draw. */
+.workflow-grid {
+  --km-line: #a7a9ae;
+}
+.partner-proof {
+  --km-line: #45495b;
+}
+.workflow-grid[data-motion='draw'] > article,
+.partner-proof[data-motion='draw'] > div {
+  position: relative;
+  border-top-color: transparent;
+}
+.workflow-grid[data-motion='draw'] > article::before,
+.partner-proof[data-motion='draw'] > div::before {
+  content: '';
+  position: absolute;
+  top: -1px;
+  left: 0;
+  right: 0;
+  height: 0;
+  border-top: 1px solid var(--km-line);
+  transform: scaleX(var(--km-draw, 1));
+  transform-origin: left center;
+}
+@media (prefers-reduced-motion: no-preference) {
+  @keyframes km-rise {
+    from {
+      transform: translateY(14px);
+    }
+  }
+  @keyframes km-enter {
+    from {
+      opacity: 0;
+      transform: translateY(16px);
+    }
+  }
+  @keyframes km-drop {
+    from {
+      opacity: 0;
+      transform: translateY(-4px);
+    }
+  }
+  /* Headline text only moves (no fade) so it paints on the first frame for LCP. */
+  .home-hero-copy .hero-line,
+  .home-hero-copy .hero-description,
+  .line-intro h1,
+  .page-intro:not(.rfq-intro) h1 {
+    animation: km-rise 0.6s cubic-bezier(0.22, 1, 0.36, 1) backwards;
+  }
+  .home-hero-copy .hero-line {
+    animation-delay: calc(var(--i, 0) * 90ms);
+  }
+  .home-hero-copy .hero-description {
+    animation-delay: 160ms;
+  }
+  .enter {
+    animation: km-enter 0.6s cubic-bezier(0.22, 1, 0.36, 1) backwards;
+    animation-delay: calc(var(--i, 0) * 60ms);
+  }
+  .language-options,
+  .mobile-nav {
+    animation: km-drop 0.15s ease-out;
+  }
+  .form-success > * {
+    animation: km-enter 0.5s cubic-bezier(0.22, 1, 0.36, 1) backwards;
+  }
+  .form-success > :nth-child(2) {
+    animation-delay: 60ms;
+  }
+  .form-success > :nth-child(3) {
+    animation-delay: 120ms;
+  }
+  .form-success > :nth-child(n + 4) {
+    animation-delay: 180ms;
+  }
+}
+@media print {
+  .km-anim {
+    opacity: 1 !important;
+    transform: none !important;
+    clip-path: none !important;
+  }
+}

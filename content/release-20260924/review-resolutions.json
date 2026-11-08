@@ -1,0 +1,1213 @@
+{
+  "method": "Independent API review of all source and translated fields, followed by Codex coordinator review of every reported issue and correction. This is AI-assisted editorial review, not a claim of human-native, legal or certification review.",
+  "completedAt": "2026-09-24T13:06:27.282Z",
+  "sourceHash": "5e0251317585c239c237e308e56095090be2732246b0eda5637340ffde875b13",
+  "locales": {
+    "en": {
+      "reviewHash": "867dca640ae525c92f501df0a30642b891abe70946a1e9542966e44f702d6562",
+      "reviewedTargetHash": "5e0251317585c239c237e308e56095090be2732246b0eda5637340ffde875b13",
+      "finalTargetHash": "5e0251317585c239c237e308e56095090be2732246b0eda5637340ffde875b13",
+      "deterministicChecks": [],
+      "issues": [],
+      "resolutionEvidence": []
+    },
+    "fr": {
+      "reviewHash": "78d99c0442d0cf3dcfe6e815b372866b67a814268c0e747cdfcbf7e937c9760e",
+      "reviewedTargetHash": "9e2bb6a8c6097709606be367ff004dfa4540a4d83400657ba46a7afb6ce29858",
+      "finalTargetHash": "fe852449f88feb8d40e5dfc5b5cc76e0e7fd03852d8db950feaf49da858a0434",
+      "deterministicChecks": [],
+      "issues": [
+        {
+          "batch": 0,
+          "key": "1a80ea103de9718cfa19",
+          "issue": "La formulation « non garanties comme spécification » est grammaticalement incomplète et ne restitue pas clairement l’opposition entre valeurs de référence et spécification garantie.",
+          "disposition": "resolved",
+          "finalKey": "1a80ea103de9718cfa19",
+          "finalText": "Les familles de matériaux constituent un point de départ. Il s’agit de valeurs de référence, et non d’une spécification garantie. Confirmez la qualité réelle et les conditions d’essai pour votre application."
+        },
+        {
+          "batch": 1,
+          "key": "45de8260b47ffbd98074",
+          "issue": "« Section H » omet la préposition nécessaire et « dimensions d’accouplement » ne désigne pas naturellement les dimensions de l’interface correspondante.",
+          "disposition": "resolved",
+          "finalKey": "45de8260b47ffbd98074",
+          "finalText": "Section en H, F, T ou sur mesure ; aluminium ou nuance d’acier ; configuration des trous ; finition ; dimensions de l’interface correspondante."
+        },
+        {
+          "batch": 1,
+          "key": "08660e9e47a1ddf548f1",
+          "issue": "« non garanties comme spécification » est imprécis et peu naturel ; le texte source indique explicitement qu’il ne s’agit pas d’une spécification garantie.",
+          "disposition": "resolved",
+          "finalKey": "08660e9e47a1ddf548f1",
+          "finalText": "Référence de famille de matériaux uniquement : valeurs de référence, ne constituant pas une spécification garantie. Demander la fiche technique de la nuance sélectionnée et définir les essais d’acceptation avant approbation."
+        },
+        {
+          "batch": 1,
+          "key": "1f50a735d7446eadc797",
+          "issue": "« paquet spécifique d’huile » est une traduction littérale inadaptée de « oil or additive package », qui désigne la formulation du fluide et de ses additifs.",
+          "disposition": "resolved",
+          "finalKey": "1f50a735d7446eadc797",
+          "finalText": "Le vieillissement extérieur ainsi que la formulation spécifique de l’huile ou des additifs nécessitent une évaluation distincte."
+        },
+        {
+          "batch": 1,
+          "key": "b98584cdf12ac63093f5",
+          "issue": "La « media compatibility » est une compatibilité avec les fluides ou milieux, et non une résistance aux fluides.",
+          "disposition": "resolved",
+          "finalKey": "b98584cdf12ac63093f5",
+          "finalText": "La résistance à la déchirure, à l’abrasion et la compatibilité avec les fluides dépendent de la nuance et de la géométrie de la pièce."
+        },
+        {
+          "batch": 1,
+          "key": "f998ff1d65368c5c5972",
+          "issue": "« composé » est imprécis dans ce contexte d’élastomères ; la variation concerne la formulation du compound.",
+          "disposition": "resolved",
+          "finalKey": "f998ff1d65368c5c5972",
+          "finalText": "Pas universellement compatible avec tous les fluides ; le comportement à basse température varie selon la formulation."
+        },
+        {
+          "batch": 1,
+          "key": "a2193d9a1bf9742d8799",
+          "issue": "« aucune classification au feu automatique » est peu idiomatique et ne rend pas clairement l’absence de classement au feu implicite.",
+          "disposition": "resolved",
+          "finalKey": "a2193d9a1bf9742d8799",
+          "finalText": "Confirmer la résistance environnementale, la nuance de la formulation et les exigences d’essai ; aucun classement au feu n’est automatique."
+        },
+        {
+          "batch": 1,
+          "key": "c2d409abde3875e2572e",
+          "issue": "La construction « ne pas les substituer à » inverse le sens pratique de l’instruction : ces caractéristiques ne doivent pas être remplacées par la dureté d’un caoutchouc plein.",
+          "disposition": "resolved",
+          "finalKey": "c2d409abde3875e2572e",
+          "finalText": "La structure cellulaire, la densité et la réponse à la compression sont des spécifications distinctes ; ne pas les remplacer par la dureté du caoutchouc plein."
+        },
+        {
+          "batch": 1,
+          "key": "62e3b385a55a7b659340",
+          "issue": "« géométrie du joint » peut être compris comme la géométrie du joint d’étanchéité, alors que le source vise la géométrie de la jonction au coin.",
+          "disposition": "resolved",
+          "finalKey": "62e3b385a55a7b659340",
+          "finalText": "Vérifier la géométrie de l’assemblage, la méthode, la déformation locale et la position de la jonction."
+        },
+        {
+          "batch": 1,
+          "key": "14e1c8878a776e578836",
+          "issue": "« comparer ... au plan » est grammaticalement incorrect et ne traduit pas clairement l’évaluation des méthodes par rapport au plan et aux critères d’acceptation.",
+          "disposition": "resolved",
+          "finalKey": "14e1c8878a776e578836",
+          "finalText": "Comparer les méthodes d’assemblage réalisables au regard du plan et des exigences d’acceptation."
+        },
+        {
+          "batch": 2,
+          "key": "51d874afd269cda92e9f",
+          "issue": "« jeu fermé » is not natural technical French and can be ambiguous; the source means the gap when the assembly is closed.",
+          "disposition": "resolved",
+          "finalKey": "51d874afd269cda92e9f",
+          "finalText": "Interfaces de portes, couvercles et panneaux où le jeu à l'état fermé et le plan de validation définissent l'étanchéité."
+        },
+        {
+          "batch": 2,
+          "key": "22ca91e9d71aba6780cc",
+          "issue": "« jeu fermé » is ambiguous; the source specifically refers to measuring the gap with the door closed in its normal latched condition.",
+          "disposition": "resolved",
+          "finalKey": "22ca91e9d71aba6780cc",
+          "finalText": "Un ancien joint peut avoir subi une déformation rémanente à la compression. Relevez l'assemblage accouplé ainsi que le profilé déposé. Maintenez la porte dans sa condition normale verrouillée lors de la mesure du jeu porte fermée."
+        },
+        {
+          "batch": 2,
+          "key": "6c70b6ad5897ccdc7699",
+          "issue": "« Jeu fermé minimal et maximal » is not idiomatic and does not clearly state that the gap is measured in the closed condition.",
+          "disposition": "resolved",
+          "finalKey": "6c70b6ad5897ccdc7699",
+          "finalText": "- Coupe transversale cotée avec unités et révision du plan\n- Jeu minimal et maximal à l'état fermé sur l'ensemble du périmètre\n- Épaisseur du panneau ou dimensions de rainure et tolérances\n- Rayon d'angle, sens de pliage et position du joint\n- Longueur finie ou dimensions intérieures et extérieures du cadre"
+        },
+        {
+          "batch": 3,
+          "key": "b2c5d3bb715034a8ab58",
+          "issue": "« Poils » is less precise than the technical term used elsewhere for brush bristles/filaments.",
+          "disposition": "resolved",
+          "finalKey": "b2c5d3bb715034a8ab58",
+          "finalText": "Précisez des filaments orientés vers l’intérieur, l’extérieur ou latéralement, le rayon de référence, les extrémités ouvertes, la tolérance de retour élastique et le plan d’assemblage. Un profilé métallique formé et un support polymère flexible sont des constructions différentes."
+        },
+        {
+          "batch": 3,
+          "key": "f38cd0ec857616f85ee6",
+          "issue": "The English technical term “compound” is left untranslated; the heading should refer to the actual rubber formulation.",
+          "disposition": "resolved",
+          "finalKey": "f38cd0ec857616f85ee6",
+          "finalText": "Approuver la formulation réelle"
+        },
+        {
+          "batch": 3,
+          "key": "4e2af0f48559928461e7",
+          "issue": "« Peuvent fournir la documentation » is stronger than “can support the requested documentation” and can imply a documentation commitment.",
+          "disposition": "resolved",
+          "finalKey": "4e2af0f48559928461e7",
+          "finalText": "Envoyez l’édition de la norme, la clause pertinente et les preuves attendues. Nous examinons si le partenaire de production sélectionné et le matériau désigné peuvent étayer la documentation demandée. Ne présumez pas d’une certification à partir d’une image de produit ou d’un acronyme de matériau."
+        },
+        {
+          "batch": 3,
+          "key": "913d5abae8e31ffe45d9",
+          "issue": "« Joints-brosses rotatifs » is not natural French technical terminology for rotating brush seals.",
+          "disposition": "resolved",
+          "finalKey": "913d5abae8e31ffe45d9",
+          "finalText": "Le contact alimentaire, les joints à brosse rotatifs à grande vitesse et les fonctions critiques pour la sécurité nécessitent un examen spécialisé distinct. N’utilisez pas ces familles de produits comme base d’une affirmation de sécurité non validée."
+        },
+        {
+          "batch": 3,
+          "key": "a4ed3495a6ff8aec668f",
+          "issue": "« Brosses linéaires » does not reliably denote strip brushes; “brosses à bande” preserves the product category.",
+          "disposition": "resolved",
+          "finalKey": "a4ed3495a6ff8aec668f",
+          "finalText": "Keliran réunit les composants d’étanchéité industriels et les brosses à bande dans un processus d’achat clair. Nous relions votre plan et vos exigences d’application à la sélection des matériaux, à la coordination de la production et aux contrôles qualité convenus, de la première demande jusqu’à l’approvisionnement récurrent."
+        },
+        {
+          "batch": 4,
+          "key": "78f562f5c183d1b47d97",
+          "issue": "The French reverses the relationship between the generic factory certificate and the part-applicable evidence.",
+          "disposition": "resolved",
+          "finalKey": "78f562f5c183d1b47d97",
+          "finalText": "Partagez votre questionnaire fournisseur et les preuves requises. La disponibilité des documents est confirmée pour le partenaire et la commande sélectionnés. Nous ne substituons pas un certificat d’usine générique aux preuves applicables à la pièce concernée."
+        },
+        {
+          "batch": 4,
+          "key": "6e22c048afe4ec9628eb",
+          "issue": "“Résistance des brosses antistatiques” can mean mechanical resistance; in context, the source concerns electrical/ESD resistance.",
+          "disposition": "resolved",
+          "finalKey": "6e22c048afe4ec9628eb",
+          "finalText": "Pouvez-vous garantir la résistance électrique des brosses antistatiques ?"
+        },
+        {
+          "batch": 4,
+          "key": "eb8a8321c9a5acae8ef7",
+          "issue": "The instruction phrase “please advise” remains untranslated.",
+          "disposition": "resolved",
+          "finalKey": "eb8a8321c9a5acae8ef7",
+          "finalText": "Oui. Indiquez « à préciser » pour les champs inconnus, décrivez l’application et fournissez un croquis ou une photo. Nous pouvons identifier les informations complémentaires nécessaires."
+        },
+        {
+          "batch": 5,
+          "key": "e27210bc076ed94bd4b1",
+          "issue": "La traduction omet la notion de « components » et présente l’étanchéité comme une activité plutôt que comme une catégorie de produits.",
+          "disposition": "resolved",
+          "finalKey": "e27210bc076ed94bd4b1",
+          "finalText": "Composants d’étanchéité industrielle et brosses à bandes, approvisionnés selon vos plans et exigences qualité."
+        },
+        {
+          "batch": 5,
+          "key": "170f61eaad7c257ef193",
+          "issue": "« Supports adaptés » ne restitue pas précisément les holders assortis aux brosses.",
+          "disposition": "resolved",
+          "finalKey": "170f61eaad7c257ef193",
+          "finalText": "Brosses droites et formées, porte-brosses assortis et ensembles d’équipements sur mesure."
+        },
+        {
+          "batch": 5,
+          "key": "27dbcc451ed2a07f4b5c",
+          "issue": "« services de traduction ou de génération de contenu pour sites web » modifie le sens : la source vise les services de traduction du site web et les services de génération de contenu.",
+          "disposition": "resolved",
+          "finalKey": "27dbcc451ed2a07f4b5c",
+          "finalText": "Notre site web utilise l’hébergement Vercel, les services de base de données Alibaba Cloud, les services de stockage de médias et de sécurité Cloudflare, ainsi que l’envoi d’e-mails Resend. Les informations de demande peuvent être traitées en Chine et dans les régions utilisées par ces prestataires. Les pièces jointes aux demandes ne sont pas envoyées à des services de traduction du site web ou de génération de contenu."
+        },
+        {
+          "batch": 6,
+          "key": "e9535f1caea1dd24dede",
+          "issue": "« ne déterminent pas » does not accurately convey that illustrations do not establish or substantiate the stated characteristics.",
+          "disposition": "resolved",
+          "finalKey": "e9535f1caea1dd24dede",
+          "finalText": "Les informations sur les familles de produits servent à appuyer les échanges techniques. Les devis, dessins approuvés, échantillons et conditions de commande convenues définissent la spécification de fourniture. Les illustrations ne permettent pas d’établir les dimensions, la certification ou les performances."
+        },
+        {
+          "batch": 6,
+          "key": "747fdd88e5e087afb80d",
+          "issue": "« plats » adds a restriction not present in the source.",
+          "disposition": "resolved",
+          "finalKey": "747fdd88e5e087afb80d",
+          "finalText": "Joints et rondelles en caoutchouc plein"
+        }
+      ],
+      "resolutionEvidence": [
+        "review-history/round-1/resolutions.json"
+      ]
+    },
+    "de": {
+      "reviewHash": "4df197f14a4ac39e5005c99e8ec24bd16378488e37e6ce6cb105d0269c452453",
+      "reviewedTargetHash": "18df3bf384d6ea712f2011c5e110d74f0e03bf35ebf530bead2a96bc9f629fb7",
+      "finalTargetHash": "a15ead14a10e48ae8cf51f2fc072b2633c25127459907094a6d2070c8ef41f22",
+      "deterministicChecks": [],
+      "issues": [
+        {
+          "batch": 0,
+          "key": "037f1cf25fd526fc9071",
+          "issue": "„Geräuten“ is a typo and does not convey “equipment”.",
+          "disposition": "resolved",
+          "finalKey": "037f1cf25fd526fc9071",
+          "finalText": "Definierte Querschnitte für Gerätenuten, Kanten und statische Schnittstellen."
+        },
+        {
+          "batch": 0,
+          "key": "1ce61e54f37048ad307b",
+          "issue": "„Geräuten“ is a typo and does not convey “equipment”.",
+          "disposition": "resolved",
+          "finalKey": "1ce61e54f37048ad307b",
+          "finalText": "Definierte Querschnitte für Gerätenuten, Kanten und statische Schnittstellen. Produktfamilien stehen zur Beschaffungsprüfung zur Verfügung. Materialqualität, Werkzeugbau, Mindestlosgröße, Prüfumfang und Fertigungszeitpunkt werden nach technischer Prüfung und Musterfreigabe für den ausgewählten Partner und Auftrag bestätigt."
+        },
+        {
+          "batch": 0,
+          "key": "e21366c7be5c77ac3ccd",
+          "issue": "“Bulb seals” are not necessarily hollow-chamber seals; „Hohlkammerdichtungen“ adds an unsupported construction characteristic.",
+          "disposition": "resolved",
+          "finalKey": "e21366c7be5c77ac3ccd",
+          "finalText": "Kantenschutzprofile & Dichtwulstprofile"
+        },
+        {
+          "batch": 0,
+          "key": "ada02327f6bbdd4fa58c",
+          "issue": "„geprüft“ implies testing, whereas the source only states that the profiles are reviewed against the environment and drawing.",
+          "disposition": "resolved",
+          "finalKey": "ada02327f6bbdd4fa58c",
+          "finalText": "Vollsilikon- und Silikonschaumprofile, bewertet anhand Ihrer Einsatzumgebung und Zeichnung."
+        },
+        {
+          "batch": 0,
+          "key": "ef4c3b2043b2debe5ca3",
+          "issue": "„geprüft“ implies testing, whereas the source only states that the profiles are reviewed against the environment and drawing.",
+          "disposition": "resolved",
+          "finalKey": "ef4c3b2043b2debe5ca3",
+          "finalText": "Vollsilikon- und Silikonschaumprofile, bewertet anhand Ihrer Einsatzumgebung und Zeichnung. Produktfamilien stehen zur Beschaffungsprüfung zur Verfügung. Materialqualität, Werkzeugbau, Mindestlosgröße, Prüfumfang und Fertigungszeitpunkt werden nach technischer Prüfung und Musterfreigabe für den ausgewählten Partner und Auftrag bestätigt."
+        },
+        {
+          "batch": 0,
+          "key": "c8e51ceb37c56dfd7efe",
+          "issue": "„geprüft“ implies testing, while the source only says the combinations are reviewed for the actual substrate and process.",
+          "disposition": "resolved",
+          "finalKey": "c8e51ceb37c56dfd7efe",
+          "finalText": "Klebeband- und Gummikombinationen, bewertet für das tatsächliche Substrat und den Prozess."
+        },
+        {
+          "batch": 1,
+          "key": "ae1f0ec6ea240f10b512",
+          "issue": "„Produktionszeitpunkt“ narrows “production timing” to a single point in time rather than the production schedule/timing.",
+          "disposition": "resolved",
+          "finalKey": "ae1f0ec6ea240f10b512",
+          "finalText": "Montageprofile, abgestimmt auf die ausgewählte Bürste und die Geräteschnittstelle. Produktfamilien stehen zur Beschaffungsprüfung zur Verfügung. Materialgüte, Werkzeugausstattung, Mindestlosgröße, Prüfumfang und Produktionszeitplan werden nach technischer Prüfung und Musterfreigabe für den ausgewählten Partner und Auftrag bestätigt."
+        },
+        {
+          "batch": 1,
+          "key": "2b3a90f9af80b8c7fbd8",
+          "issue": "„Produktionszeitpunkt“ narrows “production timing” to a single point in time rather than the production schedule/timing.",
+          "disposition": "resolved",
+          "finalKey": "2b3a90f9af80b8c7fbd8",
+          "finalText": "Zeichnungsbasierte gerade Bürstenbaugruppen zum Reinigen, Führen und für leichten Kontakt. Produktfamilien stehen zur Beschaffungsprüfung zur Verfügung. Materialgüte, Werkzeugausstattung, Mindestlosgröße, Prüfumfang und Produktionszeitplan werden nach technischer Prüfung und Musterfreigabe für den ausgewählten Partner und Auftrag bestätigt."
+        },
+        {
+          "batch": 2,
+          "key": "a3467dfe57ddebad346e",
+          "issue": "„Kanalleistenhalt“ ist kein geeigneter technischer Ausdruck für die Rückhaltung im Bürstenkanal; „wiederholte Einwirkung“ gibt repeated impact nicht präzise wieder.",
+          "disposition": "resolved",
+          "finalKey": "a3467dfe57ddebad346e",
+          "finalText": "Sitz der Filamente im Kanal, Endverschluss, wiederholte Stoßbeanspruchung und Chemikalienexposition prüfen."
+        },
+        {
+          "batch": 2,
+          "key": "1ae2fcbff11511a7e799",
+          "issue": "„Verbundene Ecken“ ist für joined corners technisch unpräzise; gemeint sind die Eckverbindungen.",
+          "disposition": "resolved",
+          "finalKey": "1ae2fcbff11511a7e799",
+          "finalText": "Bewitterung im Außenbereich, Türgeometrie und Eckverbindungen werden gemeinsam geprüft."
+        },
+        {
+          "batch": 2,
+          "key": "31928fd258597e1021c1",
+          "issue": "„Kontrollierte Zeichnungen“ vermittelt die Dokumentenlenkung von controlled drawings nicht korrekt.",
+          "disposition": "resolved",
+          "finalKey": "31928fd258597e1021c1",
+          "finalText": "Gelenkte Zeichnungen und Muster für wiederkehrende Ersatzteile."
+        },
+        {
+          "batch": 2,
+          "key": "22ca91e9d71aba6780cc",
+          "issue": "Compression set sollte mit dem fachtechnischen Begriff „Druckverformungsrest“ wiedergegeben werden.",
+          "disposition": "resolved",
+          "finalKey": "22ca91e9d71aba6780cc",
+          "finalText": "Eine alte Dichtung kann einen Druckverformungsrest aufweisen. Erfassen Sie sowohl die Gegenbaugruppe als auch das ausgebaute Profil. Halten Sie die Tür beim Messen des geschlossenen Spalts in ihrem normalen verriegelten Zustand."
+        },
+        {
+          "batch": 3,
+          "key": "3b339d2b993be898a947",
+          "issue": "Several material-family and technical terms remain untranslated or are imprecise: “Silicone”, “Sponge / foam” and “static interfaces”.",
+          "disposition": "resolved",
+          "finalKey": "3b339d2b993be898a947",
+          "finalText": "| Familie | Prüfen auf | Vor der Auswahl prüfen |\n| --- | --- | --- |\n| EPDM | Witterungs-, Wasser- und Ozonexposition | Kontakt mit Öl oder Kraftstoff |\n| NBR | Ausgewählte Öle und statische Dichtstellen | Außenexposition und Additive |\n| Silikon / VMQ | Temperaturabhängige Anwendungen | Weiterreißfestigkeit, Abrieb und Medien |\n| FKM | Ausgewählte Chemikalien und thermische Bedingungen | Exakte Medien und Verhalten bei niedrigen Temperaturen |\n| Zellkautschuk / Schaumstoff | Kompressible Schnittstellen | Zellstruktur, Belastung und Rückstellung |"
+        },
+        {
+          "batch": 3,
+          "key": "f62877eabb5fae5ea807",
+          "issue": "“Staub begrenzt” is not natural technical German and does not clearly express the intended dust-control function.",
+          "disposition": "resolved",
+          "finalKey": "f62877eabb5fae5ea807",
+          "finalText": "Definieren Sie, ob die Bürste wischt, führt oder Staub zurückhält. Listen Sie die berührte Oberfläche, zulässige Markierungen, Medium, Feuchtigkeit, Temperatur und Arbeitsauslenkung auf."
+        },
+        {
+          "batch": 3,
+          "key": "e17714d40ee04947a25c",
+          "issue": "The material designation “SS304 / SS316 wire” has been left partly in English rather than rendered as a natural German technical term.",
+          "disposition": "resolved",
+          "finalKey": "e17714d40ee04947a25c",
+          "finalText": "| Familie | Prüfschwerpunkt | Zusätzliche Prüfung |\n| PA6 / PA66 | Mechanischer Kontakt und Abrieb | Feuchtigkeit und Qualität |\n| PA612 | Feuchtigkeitsempfindliche Abmessungen | Durchmesser, Besatzlänge und Füllgrad |\n| PBT / PP | Nasse oder chemische Exposition | Exaktes Medium und Ermüdung |\n| PEEK | Spezialisierte Beanspruchung | Verfügbarkeit der Qualität und Prüfung |\n| Draht aus SS304 / SS316 | Spezifizierter industrieller Kontakt | Oberflächenmarkierung und Drahtverlust |"
+        },
+        {
+          "batch": 3,
+          "key": "21300def7e6217289e3d",
+          "issue": "“wird keine ... Leistung vorausgesetzt” changes “is implied” into an assumption. The source states that no performance claim follows from the material name.",
+          "disposition": "resolved",
+          "finalKey": "21300def7e6217289e3d",
+          "finalText": "Werkstoffnamen definieren keine Kontaktkraft. Bestätigen Sie Filamentdurchmesser, wirksame Besatzlänge, Dichte und Auslenkung und prüfen Sie anschließend repräsentative Oberflächen. Daraus ergibt sich keine ESD-, Flammschutz- oder Lebensmittelkontaktleistung."
+        },
+        {
+          "batch": 3,
+          "key": "33831c7644301d2c5ed3",
+          "issue": "“Fügengeometrie” and “Fugenzeichnung” do not accurately convey the geometry and drawing of the corner joint.",
+          "disposition": "resolved",
+          "finalKey": "33831c7644301d2c5ed3",
+          "finalText": "| Symptom | Zuerst untersuchen | Nützliche Nachweise |\n| Türleckage | Spaltvariation und Verriegelungsbelastung | Spaltkarte und Kontaktspuren |\n| Abgeflachte Dichtung | Stauchung, Zeit und Temperatur | Ursprünglicher Querschnitt und Rückstellbedingungen |\n| Sich ablösender Klebstoff | Substrat und Oberflächenvorbereitung | Klebebandreferenz und Beschichtung |\n| Leckage an Ecken | Verbindungsgeometrie und Verformung | Verbindungszeichnung und Nahaufnahme |\n| Filamentverlust | Befestigung und Stoßbelastung | Endverschluss und Probe mit losen Filamenten |\n| Schneller Bürstenverschleiß | Auslenkung, Ausrichtung und Geschwindigkeit | Einbau- und Kontaktrichtung |"
+        },
+        {
+          "batch": 3,
+          "key": "124bcb78a274ea29c486",
+          "issue": "“bitte beraten” is not a natural equivalent of the quotation-request instruction “please advise”.",
+          "disposition": "resolved",
+          "finalKey": "124bcb78a274ea29c486",
+          "finalText": "Verwenden Sie bei Bedarf „bitte um Beratung“ und fügen Sie ein klares Foto oder eine Skizze bei. Das erste Gespräch kann fehlende Eingaben klären; es legt Sie nicht auf einen Werkstoff oder ein Design fest."
+        },
+        {
+          "batch": 4,
+          "key": "78f562f5c183d1b47d97",
+          "issue": "Die Formulierung kehrt das Verhältnis zwischen allgemeinem Werkszertifikat und teilspezifischen Nachweisen um.",
+          "disposition": "resolved",
+          "finalKey": "78f562f5c183d1b47d97",
+          "finalText": "Senden Sie Ihren Lieferantenfragebogen und die erforderlichen Nachweise. Die Verfügbarkeit von Dokumenten wird für den ausgewählten Partner und Auftrag bestätigt. Wir ersetzen Nachweise, die für das tatsächliche Teil gelten, nicht durch ein allgemeines Werkszertifikat."
+        },
+        {
+          "batch": 4,
+          "key": "d509f909628904a12d04",
+          "issue": "„Geschlossenen Rahmen“ bedeutet nicht zwingend einen gefügten bzw. verbundenen Rahmen.",
+          "disposition": "resolved",
+          "finalKey": "d509f909628904a12d04",
+          "finalText": "Wie spezifiziere ich einen zusammengefügten Rahmen?"
+        },
+        {
+          "batch": 4,
+          "key": "4e9f3e53686f6fa94d5e",
+          "issue": "„Brandschutzklassifizierung“ ist hier nicht die präzise technische Entsprechung für „flame classification“.",
+          "disposition": "resolved",
+          "finalKey": "4e9f3e53686f6fa94d5e",
+          "finalText": "Können Sie eine Brandklassifizierung garantieren?"
+        },
+        {
+          "batch": 4,
+          "key": "eb8a8321c9a5acae8ef7",
+          "issue": "„bitte beraten“ ist als Kennzeichnung unbekannter Felder im Deutschen nicht idiomatisch und gibt „please advise“ nicht angemessen wieder.",
+          "disposition": "resolved",
+          "finalKey": "eb8a8321c9a5acae8ef7",
+          "finalText": "Ja. Kennzeichnen Sie unbekannte Felder mit „bitte angeben“, beschreiben Sie die Anwendung und fügen Sie eine Skizze oder ein Foto bei. Wir können die als Nächstes benötigten Informationen ermitteln."
+        },
+        {
+          "batch": 5,
+          "key": "fb9fc4f72117c5ee095e",
+          "issue": "„Versorgung“ is not the appropriate procurement term for supply in this context.",
+          "disposition": "resolved",
+          "finalKey": "fb9fc4f72117c5ee095e",
+          "finalText": "Die richtigen Komponenten.\nEin klarerer Weg zur Belieferung."
+        },
+        {
+          "batch": 5,
+          "key": "5ea0ffd4373e0341f31f",
+          "issue": "„Qualität“ does not accurately convey the material grade specified in the source.",
+          "disposition": "resolved",
+          "finalKey": "5ea0ffd4373e0341f31f",
+          "finalText": "Stimmen Sie Materialgüte und Referenz für die Freigabe ab."
+        },
+        {
+          "batch": 5,
+          "key": "d36175f049cdfdf0d8cf",
+          "issue": "„Weg zur Versorgung“ is unnatural and imprecise in a procurement context.",
+          "disposition": "resolved",
+          "finalKey": "d36175f049cdfdf0d8cf",
+          "finalText": "Ihre Spezifikation.\nEin durchdachter Weg zur Belieferung."
+        },
+        {
+          "batch": 5,
+          "key": "f0505437c5b5587802ba",
+          "issue": "„für Prüfzwecke“ changes the source’s general review purpose into testing or audit purposes.",
+          "disposition": "resolved",
+          "finalKey": "f0505437c5b5587802ba",
+          "finalText": "Für Anfrageunterlagen gilt eine angestrebte Aufbewahrungsfrist von einem Jahr zur Überprüfung. Kontaktieren Sie uns über die veröffentlichten Unternehmens-Kontaktdaten, um Zugang, Berichtigung oder Löschung zu beantragen, vorbehaltlich anwendbarer Aufbewahrungspflichten."
+        },
+        {
+          "batch": 5,
+          "key": "27dbcc451ed2a07f4b5c",
+          "issue": "The final sentence incorrectly frames the services as services for generating website content, rather than translation or content-generation services used by the website.",
+          "disposition": "resolved",
+          "finalKey": "27dbcc451ed2a07f4b5c",
+          "finalText": "Unsere Website nutzt Vercel-Hosting, Alibaba Cloud-Datenbankdienste, Cloudflare-Dienste für Medienspeicherung und Sicherheit sowie Resend für den E-Mail-Versand. Anfrageinformationen können in China und in den von diesen Anbietern genutzten Regionen verarbeitet werden. Anfrageanhänge werden nicht an Übersetzungs- oder Content-Generierungsdienste der Website gesendet."
+        }
+      ],
+      "resolutionEvidence": [
+        "review-history/round-1/resolutions.json"
+      ]
+    },
+    "es": {
+      "reviewHash": "ac4aab23d0bc85a7e29a501d18c71697deb902c4080b702ecca5886c5dbb0124",
+      "reviewedTargetHash": "bf1f47e97f6c252ff21446c00591e7f5bec84619acbe833335599b8869bfe8c5",
+      "finalTargetHash": "2318f09c5ac5ec947799853cca38d1fc0e12927523203bae01cc98104943e52f",
+      "deterministicChecks": [],
+      "issues": [
+        {
+          "batch": 1,
+          "key": "faad8fa9bed926f54d33",
+          "issue": "En la terminología de cepillos, “trim” y “fill” se refieren a parámetros de la fibra y su densidad, no a un recorte genérico ni a relleno.",
+          "disposition": "resolved",
+          "finalKey": "faad8fa9bed926f54d33",
+          "finalText": "El diámetro del filamento, la longitud de fibra y la densidad de relleno siguen determinando el comportamiento de contacto."
+        },
+        {
+          "batch": 1,
+          "key": "62e3b385a55a7b659340",
+          "issue": "“Seam position” debe especificarse como la posición de la línea de unión; “posición de la junta” puede confundirse con la propia junta de estanqueidad.",
+          "disposition": "resolved",
+          "finalKey": "62e3b385a55a7b659340",
+          "finalText": "Compruebe la geometría de la unión, el método, la deformación local y la posición de la línea de unión."
+        },
+        {
+          "batch": 1,
+          "key": "182a7b02bac7bc793165",
+          "issue": "“Brush trim” y “fill” se han traducido de forma imprecisa para una especificación de cepillos.",
+          "disposition": "resolved",
+          "finalKey": "182a7b02bac7bc793165",
+          "finalText": "Revise la longitud de fibra, la densidad de relleno y la posición del portacepillos; después ensaye el conjunto en condiciones operativas reales."
+        },
+        {
+          "batch": 2,
+          "key": "a3467dfe57ddebad346e",
+          "issue": "«Retención del canal» puede interpretarse como la retención del propio canal, en lugar de la retención del cepillo en el canal.",
+          "disposition": "resolved",
+          "finalKey": "a3467dfe57ddebad346e",
+          "finalText": "Compruebe la retención en el canal, el cierre de los extremos, los impactos repetidos y la exposición química."
+        },
+        {
+          "batch": 2,
+          "key": "56a44eabd032f8ac0183",
+          "issue": "«Proyecto de cliente informado» no expresa que no se trata de un proyecto de cliente comunicado o documentado.",
+          "disposition": "resolved",
+          "finalKey": "56a44eabd032f8ac0183",
+          "finalText": "Un flujo de trabajo de compras ilustrativo, no un proyecto de cliente documentado ni un resultado de rendimiento."
+        },
+        {
+          "batch": 2,
+          "key": "36820032cf161450690a",
+          "issue": "«Soporte» puede confundirse con el portacepillos; aquí «backing» se refiere a la base del cepillo e interviene en la altura total.",
+          "disposition": "resolved",
+          "finalKey": "36820032cf161450690a",
+          "finalText": "La altura total incluye la base del cepillo. La longitud efectiva de las cerdas es el filamento expuesto desde el canal hasta su punta. Indique ambas; no cite una «altura de cepillo» ambigua."
+        },
+        {
+          "batch": 3,
+          "key": "8f785d95c393064b2d15",
+          "issue": "«Holgura cerrada» is ambiguous and can suggest a gap that has been closed, rather than the gap dimension in the closed position.",
+          "disposition": "resolved",
+          "finalKey": "8f785d95c393064b2d15",
+          "finalText": "Enumere cada medio, intervalo de temperatura y duración de la exposición. A continuación, defina el movimiento, la holgura en posición cerrada, la compresión y las condiciones de servicio previstas. Elija una familia de materiales solo después de disponer de esta información."
+        },
+        {
+          "batch": 3,
+          "key": "f62877eabb5fae5ea807",
+          "issue": "«Limpia» changes the specified wiping function into cleaning. The source distinguishes the brush’s functional contact role from guiding and dust limitation.",
+          "disposition": "resolved",
+          "finalKey": "f62877eabb5fae5ea807",
+          "finalText": "Defina si el cepillo actúa como elemento de barrido, guía o limita el polvo. Enumere la superficie en contacto, las marcas admisibles, el medio, la humedad, la temperatura y la deflexión de trabajo."
+        },
+        {
+          "batch": 3,
+          "key": "21300def7e6217289e3d",
+          "issue": "The final disclaimer is grammatically unclear in Spanish and does not naturally express that no ESD, flame or food-contact performance is implied.",
+          "disposition": "resolved",
+          "finalKey": "21300def7e6217289e3d",
+          "finalText": "Los nombres de materiales no definen la fuerza de contacto. Confirme el diámetro del filamento, la longitud efectiva de filamento, la densidad y la deflexión; después, ensaye superficies representativas. No se presupone ninguna prestación ESD, de comportamiento frente a la llama ni de aptitud para el contacto con alimentos."
+        },
+        {
+          "batch": 3,
+          "key": "33831c7644301d2c5ed3",
+          "issue": "«Carga del cierre» does not specifically convey latch loading, and «sección original» is insufficiently precise for the original seal cross-section needed for investigation.",
+          "disposition": "resolved",
+          "finalKey": "33831c7644301d2c5ed3",
+          "finalText": "| Síntoma | Investigar primero | Evidencia útil |\n| Fuga en puerta | Variación de holgura y carga del pestillo | Mapa de holguras y marcas de contacto |\n| Junta aplanada | Compresión, tiempo y temperatura | Sección transversal original y condiciones de recuperación |\n| Adhesivo despegado | Sustrato y preparación de superficie | Referencia de cinta y recubrimiento |\n| Fuga en esquina | Geometría de la unión y distorsión | Plano de unión y fotografía de detalle |\n| Pérdida de filamentos | Retención e impacto | Cierre de extremos y muestra de filamento suelto |\n| Desgaste rápido del cepillo | Deflexión, alineación y velocidad | Instalación y dirección de contacto |"
+        },
+        {
+          "batch": 5,
+          "key": "8ef9cd91235a740c8dee",
+          "issue": "“Tooling” is a specific production term and should not be rendered as generic “herramientas”.",
+          "disposition": "resolved",
+          "finalKey": "8ef9cd91235a740c8dee",
+          "finalText": "Revisamos los socios de producción, el utillaje, el proceso y la documentación frente al requisito real."
+        },
+        {
+          "batch": 5,
+          "key": "0a89398d3c9bdbe0b042",
+          "issue": "“Revisión de plano” can mean a drawing review rather than an approved drawing revision/version, which is the common controlled reference in repeat supply.",
+          "disposition": "resolved",
+          "finalKey": "0a89398d3c9bdbe0b042",
+          "finalText": "Una versión aprobada del plano y una muestra aprobada crean una referencia común. Acuerde las dimensiones críticas, la identidad del material, el embalaje y el control de cambios para el suministro recurrente."
+        }
+      ],
+      "resolutionEvidence": [
+        "review-history/round-1/resolutions.json",
+        "review-history/round-2/es-resolutions.json"
+      ]
+    },
+    "it": {
+      "reviewHash": "309e930d203c979596d836f904a34bf4adca5cb2e11a3a00eec3612eb941019c",
+      "reviewedTargetHash": "24379eeb24729dbf61641e2140a8b8c2095d7b07919d4ebc60d1e4097701dd30",
+      "finalTargetHash": "b67a350640f5c92b20562322382d980e0021174e8b83722852835fab12dd4f43",
+      "deterministicChecks": [],
+      "issues": [
+        {
+          "batch": 0,
+          "key": "4f9cf3ff472716f1ba65",
+          "issue": "“Adhesive backing” is not accurately conveyed by “Supporto adesivo”, which can refer to an adhesive support rather than an adhesive backing on the product.",
+          "disposition": "resolved",
+          "finalKey": "4f9cf3ff472716f1ba65",
+          "finalText": "Retro adesivo"
+        },
+        {
+          "batch": 0,
+          "key": "5d76f31d6bf56c58dab2",
+          "issue": "“Wiping” is translated as “pulizia”, which loses the specific wiping/contact function of the strip brush.",
+          "disposition": "resolved",
+          "finalKey": "5d76f31d6bf56c58dab2",
+          "finalText": "Strisce rettilinee per l'esclusione della polvere, la tergitura e la guida in corrispondenza delle aperture delle apparecchiature."
+        },
+        {
+          "batch": 0,
+          "key": "83cec5fae08eba6a1b03",
+          "issue": "“Wiping” is translated as “pulizia”, which loses the specific wiping/contact function of the strip brush.",
+          "disposition": "resolved",
+          "finalKey": "83cec5fae08eba6a1b03",
+          "finalText": "Strisce rettilinee per l'esclusione della polvere, la tergitura e la guida in corrispondenza delle aperture delle apparecchiature. Le famiglie di prodotti sono disponibili per la valutazione di approvvigionamento. La qualità del materiale, l'attrezzaggio, il lotto minimo, l'ambito di ispezione e i tempi di produzione sono confermati per il partner e l'ordine selezionati dopo la revisione tecnica e l'approvazione del campione."
+        },
+        {
+          "batch": 1,
+          "key": "5634c065f6a814f53a84",
+          "issue": "\"Peel ... checks\" is rendered as \"controlli di pelatura\", which can suggest a peeling operation rather than adhesion/peel testing.",
+          "disposition": "resolved",
+          "finalKey": "5634c065f6a814f53a84",
+          "finalText": "Esaminare il nastro designato e la preparazione della superficie; definire prove di pelatura o invecchiamento sul substrato reale."
+        },
+        {
+          "batch": 2,
+          "key": "22ca91e9d71aba6780cc",
+          "issue": "“Normal latched condition” does not specifically mean a snap closure (“chiusura a scatto”); the translation adds an unsupported mechanism.",
+          "disposition": "resolved",
+          "finalKey": "22ca91e9d71aba6780cc",
+          "finalText": "Una vecchia guarnizione potrebbe aver subito una deformazione permanente da compressione. Registrare l'assemblaggio accoppiato oltre al profilo rimosso. Durante la misurazione, mantenere la porta nella normale condizione di chiusura con il fermo inserito."
+        },
+        {
+          "batch": 3,
+          "key": "8f785d95c393064b2d15",
+          "issue": "“closed gap” is rendered as “gioco a tenuta chiusa”, which is not a correct technical expression for the gap in the closed position.",
+          "disposition": "resolved",
+          "finalKey": "8f785d95c393064b2d15",
+          "finalText": "Elencare ogni fluido, intervallo di temperatura e durata dell'esposizione. Quindi definire il movimento, il gioco in posizione chiusa, la compressione e le condizioni di esercizio previste. Scegliere una famiglia di materiali solo dopo che queste informazioni sono disponibili."
+        },
+        {
+          "batch": 3,
+          "key": "f62877eabb5fae5ea807",
+          "issue": "“wipes” describes a brushing/wiping function, not necessarily cleaning; “pulisce” narrows the intended function.",
+          "disposition": "resolved",
+          "finalKey": "f62877eabb5fae5ea807",
+          "finalText": "Definire se la spazzola terge, guida o limita la polvere. Elencare la superficie a contatto, la marcatura ammissibile, il fluido, l'umidità, la temperatura e la deflessione di lavoro."
+        },
+        {
+          "batch": 4,
+          "key": "00cb72b5e977e9fb6212",
+          "issue": "La formulazione italiana indica che deve essere “compresa la revisione tecnica”, anziché che la revisione tecnica deve essere effettuata prima della conferma delle tempistiche.",
+          "disposition": "resolved",
+          "finalKey": "00cb72b5e977e9fb6212",
+          "finalText": "Le tempistiche vengono confermate dopo la revisione tecnica e dopo aver chiarito la pianificazione del partner e i requisiti di approvazione del campione."
+        },
+        {
+          "batch": 4,
+          "key": "eb8a8321c9a5acae8ef7",
+          "issue": "“si prega di indicare” non rende chiaramente l'istruzione di contrassegnare i campi sconosciuti affinché Keliran fornisca indicazioni.",
+          "disposition": "resolved",
+          "finalKey": "eb8a8321c9a5acae8ef7",
+          "finalText": "Sì. Contrassegnate i campi sconosciuti come “da definire”, descrivete l'applicazione e fornite uno schizzo o una foto. Possiamo identificare le informazioni successive necessarie."
+        },
+        {
+          "batch": 5,
+          "key": "cc60aa888356f675ccaf",
+          "issue": "“Fit” è reso come “montaggio”, che indica il processo di assemblaggio anziché l’accoppiamento/adattamento del componente nell’assemblaggio.",
+          "disposition": "resolved",
+          "finalKey": "cc60aa888356f675ccaf",
+          "finalText": "La gestione della qualità inizia dai dettagli importanti nel vostro assemblaggio: accoppiamento, materiale, dimensioni critiche e condizioni operative. Coordiniamo la revisione dei requisiti, l'approvazione del campione e l'ispezione concordata con il partner di produzione selezionato. Ambito ed evidenze sono definiti per il componente e l'ordine effettivi."
+        },
+        {
+          "batch": 5,
+          "key": "7957ed46858671cde8cb",
+          "issue": "“Invia il vostro” contiene un’incongruenza grammaticale tra imperativo singolare e possessivo plurale.",
+          "disposition": "resolved",
+          "finalKey": "7957ed46858671cde8cb",
+          "finalText": "Inviate il vostro questionario di qualificazione e i requisiti di evidenza. Esamineremo quali registri sono applicabili e disponibili. I dati dell'entità giuridica, i preventivi e le evidenze specifiche dell'ordine appartengono al fascicolo di qualificazione."
+        },
+        {
+          "batch": 6,
+          "key": "f11a27debcc7fd05cb7c",
+          "issue": "«Come ci ha raggiunto» attribuisce l'azione al visitatore anziché alla richiesta e non rende in modo preciso il riferimento alla provenienza della richiesta.",
+          "disposition": "resolved",
+          "finalKey": "f11a27debcc7fd05cb7c",
+          "finalText": "Il sito web memorizza nella memoria di sessione la pagina di ingresso, il dominio del sito web di provenienza e i tag della campagna per un massimo di 24 ore. Questi dettagli accompagnano una richiesta inviata, in modo da poter comprendere come ci è pervenuta. Non verificano l'identità del visitatore. Non utilizziamo cookie pubblicitari né analisi pubblicitarie di terze parti. Cloudflare Turnstile e i servizi di sicurezza dell'hosting possono trattare informazioni tecniche relative alle richieste per limitare gli abusi."
+        },
+        {
+          "batch": 6,
+          "key": "b1eaa19832688309f8a1",
+          "issue": "«Numero di società» non è la formulazione italiana appropriata per un company number britannico.",
+          "disposition": "resolved",
+          "finalKey": "b1eaa19832688309f8a1",
+          "finalText": "Keliran LTD è registrata in Inghilterra e Galles con il numero di registrazione 15698503. Sede legale: 483 Green Lanes, London, England, N13 4BS."
+        },
+        {
+          "batch": 6,
+          "key": "f84048c9b4dc1a402868",
+          "issue": "«Approvazione del fornitore» è ambiguo e non rende chiaramente il processo di supplier approval/qualifica del fornitore in ambito acquisti.",
+          "disposition": "resolved",
+          "finalKey": "f84048c9b4dc1a402868",
+          "finalText": "Confermare sul preventivo l'entità contraente e i termini applicabili prima della qualifica del fornitore o dell'ordine. I dati di registrazione pubblici e i recapiti sono indicati di seguito, se configurati."
+        },
+        {
+          "batch": 6,
+          "key": "7b5cc9c925ed0d9486fa",
+          "issue": "«Supporti» è generico; «portaspazzole» è il termine tecnico diretto per brush holders.",
+          "disposition": "resolved",
+          "finalKey": "7b5cc9c925ed0d9486fa",
+          "finalText": "Portaspazzole e canali"
+        }
+      ],
+      "resolutionEvidence": [
+        "review-history/round-1/resolutions.json"
+      ]
+    },
+    "ja": {
+      "reviewHash": "d21b29de6653f54cb6726ba79c83cd7ca36996f98285aee699b55c72e762ef39",
+      "reviewedTargetHash": "0d37b4c9c5af9a9f47077e6eb30be5db7f463fdd140c8298ee6b794e7d03bda0",
+      "finalTargetHash": "7cbe396f51c75556b8103054264065debb78c10485593fdcd3fd9d3f555d356e",
+      "deterministicChecks": [],
+      "issues": [
+        {
+          "batch": 0,
+          "key": "28802d1773c31aad74ec",
+          "issue": "「シールバルブ」は弁（valve）を意味し得るため、圧縮可能な sealing bulb の意味が不正確です。",
+          "disposition": "resolved",
+          "finalKey": "28802d1773c31aad74ec",
+          "finalText": "エッジ保持機能と膨らみのある圧縮可能なシール部を組み合わせたグリップオンプロファイル。"
+        },
+        {
+          "batch": 0,
+          "key": "c6fb2a7ddcf8bc9102b7",
+          "issue": "「シールバルブ」は弁（valve）を意味し得るため、圧縮可能な sealing bulb の意味が不正確です。",
+          "disposition": "resolved",
+          "finalKey": "c6fb2a7ddcf8bc9102b7",
+          "finalText": "エッジ保持機能と膨らみのある圧縮可能なシール部を組み合わせたグリップオンプロファイル。製品ファミリーは調達検討用にご利用いただけます。材料グレード、金型、最小ロット、検査範囲および生産時期は、技術レビューおよびサンプル承認後に、選定された生産パートナーおよび注文ごとに確認されます。"
+        },
+        {
+          "batch": 1,
+          "key": "4d8f18eed8f846fadcfb",
+          "issue": "「接着剤付き端部」は、接着剤が塗布された端部そのものを指すように読め、接着部が浮くという不具合の意味が不明確です。",
+          "disposition": "resolved",
+          "finalKey": "4d8f18eed8f846fadcfb",
+          "finalText": "接着部の浮き"
+        },
+        {
+          "batch": 3,
+          "key": "3b339d2b993be898a947",
+          "issue": "“Silicone” remains untranslated, although it is not an abbreviation that needs to be retained.",
+          "disposition": "resolved",
+          "finalKey": "3b339d2b993be898a947",
+          "finalText": "| ファミリー | 確認対象 | 選定前の確認事項 |\n| --- | --- | --- |\n| EPDM | 天候、水およびオゾンへの曝露 | 油または燃料との接触 |\n| NBR | 特定の油および静的界面 | 屋外曝露および添加剤 |\n| シリコーン / VMQ | 温度依存の用途 | 引裂き、摩耗および媒体 |\n| FKM | 特定の化学薬品および熱条件 | 正確な媒体および低温時の応答 |\n| スポンジ / フォーム | 圧縮可能な界面 | セル構造、荷重および復元性 |"
+        },
+        {
+          "batch": 3,
+          "key": "e17714d40ee04947a25c",
+          "issue": "“wire” is left untranslated in the SS304 / SS316 material-family entry.",
+          "disposition": "resolved",
+          "finalKey": "e17714d40ee04947a25c",
+          "finalText": "| ファミリー | 確認の焦点 | 追加確認事項 |\n| PA6 / PA66 | 機械的接触および摩耗 | 湿気およびグレード |\n| PA612 | 湿気の影響を受けやすい寸法 | 直径、トリムおよび充填率 |\n| PBT / PP | 湿潤または化学的曝露 | 正確な媒体および疲労 |\n| PEEK | 特殊用途 | グレードの入手性および試験 |\n| SS304 / SS316 ワイヤ | 指定された工業的接触 | 表面マーキングおよびワイヤ脱落 |"
+        },
+        {
+          "batch": 3,
+          "key": "7418b25f1d814863c128",
+          "issue": "The table header “Boundary” is translated as 「境界」, which does not convey the intended limitation or scope constraint of the evidence.",
+          "disposition": "resolved",
+          "finalKey": "7418b25f1d814863c128",
+          "finalText": "| 要件 | 要求すべきエビデンス | 制約 |\n| IP / NEMA エンクロージャ等級 | 組立済みエンクロージャの試験報告書 | ガスケット単体では等級は成立しません |\n| 材料特性 | 指定グレードのデータおよび合意した試験 | ファミリー名はロット受入結果ではありません |\n| 難燃性能 | 正確な規格、グレード、厚さおよび試験範囲 | 包括的な難燃認証はありません |\n| REACH / RoHS 要求 | 供給材料または部品に関する最新の宣言書 | 物質の対象範囲および適用性を確認してください |\n| 寸法適合性 | 承認図面および検査記録 | 改訂、方法およびサンプリングを定義してください |"
+        },
+        {
+          "batch": 4,
+          "key": "00cb72b5e977e9fb6212",
+          "issue": "「Timing」が「時期」となっており、生産リードタイムに関する回答として不明確です。生産パートナーのスケジュールも、より自然な技術日本語にできます。",
+          "disposition": "resolved",
+          "finalKey": "00cb72b5e977e9fb6212",
+          "finalText": "技術レビュー、生産パートナーのスケジュールおよびサンプル承認要件が把握された後に、リードタイムを確認します。"
+        },
+        {
+          "batch": 5,
+          "key": "322f449a3f5a67bdbc9f",
+          "issue": "「コンポーネント事例」は顧客案件・実績事例を示すように読める可能性があり、シナリオページが検討内容であって検証済みプロジェクト結果ではないという限定と整合しません。",
+          "disposition": "resolved",
+          "finalKey": "322f449a3f5a67bdbc9f",
+          "finalText": "Keliran / コンポーネントに関する検討"
+        },
+        {
+          "batch": 5,
+          "key": "5ea0ffd4373e0341f31f",
+          "issue": "「参照基準」は、原文にない規格・基準を示唆します。原文の reference は承認のために合意する参照品を指します。",
+          "disposition": "resolved",
+          "finalKey": "5ea0ffd4373e0341f31f",
+          "finalText": "グレードと承認用の参照品について合意します。"
+        },
+        {
+          "batch": 5,
+          "key": "fd3095ee780e3a3775ae",
+          "issue": "「帰属情報」はこの文脈では不自然で、引合いの流入元・帰属の把握という意味が明確になっていません。",
+          "disposition": "resolved",
+          "finalKey": "fd3095ee780e3a3775ae",
+          "finalText": "引合いの流入元情報およびセキュリティ"
+        },
+        {
+          "batch": 6,
+          "key": "e9535f1caea1dd24dede",
+          "issue": "「図示は…保証するものではありません」は、原文の「寸法、認証または性能を確立しない」という限定を保証の不在へ変えており、供給仕様を定める文脈との対応が弱くなっています。",
+          "disposition": "resolved",
+          "finalKey": "e9535f1caea1dd24dede",
+          "finalText": "製品群に関する情報は、技術的な協議を支援するものです。見積書、承認済み図面、サンプル、および合意された注文条件により、供給仕様が定義されます。図示は、寸法、認証、または性能を規定するものではありません。"
+        }
+      ],
+      "resolutionEvidence": [
+        "review-history/round-1/asian-language-resolutions.json"
+      ]
+    },
+    "ko": {
+      "reviewHash": "67a948711cba6761af76baa95837c2afbb184383555b6ccdbacd16a2c72b5893",
+      "reviewedTargetHash": "f19c0d81c1805f146c3dec5e6a7de6aa1452ef426faab2057798a26d3332cb66",
+      "finalTargetHash": "56ba83af2093f8b8fda5b4673ef20dbd6caf406472acab8fecfa72507ea985ce",
+      "deterministicChecks": [],
+      "issues": [
+        {
+          "batch": 0,
+          "key": "7afd564bb138630d982d",
+          "issue": "'Finished lengths organised around your assembly and packing requirements' is translated unnaturally as '완성 길이' and does not clearly convey cut-to-length, finished parts prepared around those requirements.",
+          "disposition": "resolved",
+          "finalKey": "7afd564bb138630d982d",
+          "finalText": "조립 및 포장 요구사항에 맞춰 준비되는 절단 완료 길이."
+        },
+        {
+          "batch": 1,
+          "key": "45de8260b47ffbd98074",
+          "issue": "“aluminium or steel grade”에서 등급의 수식 관계가 불명확합니다.",
+          "disposition": "resolved",
+          "finalKey": "45de8260b47ffbd98074",
+          "finalText": "H, F, T 또는 맞춤 단면; 알루미늄 또는 강재의 등급; 홀 패턴; 마감; 결합 치수."
+        },
+        {
+          "batch": 1,
+          "key": "1c9709b059b7d221f116",
+          "issue": "“When to consider it”은 검토 시점이 아니라 해당 재질을 고려할 조건을 뜻합니다.",
+          "disposition": "resolved",
+          "finalKey": "1c9709b059b7d221f116",
+          "finalText": "고려할 때"
+        },
+        {
+          "batch": 1,
+          "key": "c2d409abde3875e2572e",
+          "issue": "“solid-rubber hardness”의 기술적 의미와 한국어 어순이 부정확합니다.",
+          "disposition": "resolved",
+          "finalKey": "c2d409abde3875e2572e",
+          "finalText": "셀 구조, 밀도 및 압축 응답은 서로 다른 사양입니다. 솔리드 고무의 경도로 대체하지 마십시오."
+        },
+        {
+          "batch": 1,
+          "key": "78f13afa45e88f442844",
+          "issue": "“sample fit check”가 불필요한 영어식 표현으로 남아 있으며, 조립체 적합성 확인의 의미가 불명확합니다.",
+          "disposition": "resolved",
+          "finalKey": "78f13afa45e88f442844",
+          "finalText": "단면과 틈새 공차를 함께 검토하고, 샘플 장착 확인 및 조립된 인클로저 검증 계획에 합의합니다."
+        },
+        {
+          "batch": 1,
+          "key": "70176ab16bf27e7fbea5",
+          "issue": "“the complete bond”는 접착 결합 전체 시스템을 뜻하며, 현재 번역은 완전하게 접착된 상태에 의존한다는 의미로 바뀝니다.",
+          "disposition": "resolved",
+          "finalKey": "70176ab16bf27e7fbea5",
+          "finalText": "기재 코팅, 오염, 적용 온도, 대기 시간 및 하중을 확인하십시오. 테이프 적합성은 전체 접착 결합에 따라 달라집니다."
+        },
+        {
+          "batch": 1,
+          "key": "f938bb5fe271d345cb18",
+          "issue": "“Controlled replacement drawing”에서 controlled는 도면 관리 상태를 뜻하며, 현재 번역은 부자연스럽고 의미가 불명확합니다.",
+          "disposition": "resolved",
+          "finalKey": "f938bb5fe271d345cb18",
+          "finalText": "문서 관리가 적용된 교체용 도면 및 장착 확인 샘플."
+        },
+        {
+          "batch": 2,
+          "key": "a3467dfe57ddebad346e",
+          "issue": "“Channel retention” is not accurately conveyed as general channel strength.",
+          "disposition": "resolved",
+          "finalKey": "a3467dfe57ddebad346e",
+          "finalText": "채널 내 고정력, 끝단 마감, 반복 충격 및 화학물질 노출을 확인하십시오."
+        },
+        {
+          "batch": 2,
+          "key": "5c84352af54bad5e8282",
+          "issue": "“Acceptance checks” is rendered awkwardly and does not clearly mean acceptance criteria/checks.",
+          "disposition": "resolved",
+          "finalKey": "5c84352af54bad5e8282",
+          "finalText": "샘플 검사를 통해 유지력 및 탈락에 대한 허용 기준 검사를 정의하십시오."
+        },
+        {
+          "batch": 2,
+          "key": "b36cd3e5ae879f49d32a",
+          "issue": "“Trapped particles” means particles caught in the brush/contact area, not collected particles.",
+          "disposition": "resolved",
+          "finalKey": "b36cd3e5ae879f49d32a",
+          "finalText": "필라멘트 재질, 팁 상태, 끼인 입자 및 접촉 압력을 평가하십시오."
+        },
+        {
+          "batch": 2,
+          "key": "51d874afd269cda92e9f",
+          "issue": "“Interface” is mistranslated as an electrical contact point; this is a mechanical sealing interface.",
+          "disposition": "resolved",
+          "finalKey": "51d874afd269cda92e9f",
+          "finalText": "닫힌 틈새와 검증 계획이 씰을 규정하는 도어, 커버 및 패널 접합부."
+        },
+        {
+          "batch": 2,
+          "key": "275e9cf8b006aa25d885",
+          "issue": "“Interface” is mistranslated as an electrical contact point.",
+          "disposition": "resolved",
+          "finalKey": "275e9cf8b006aa25d885",
+          "finalText": "접합부를 정의하십시오"
+        },
+        {
+          "batch": 2,
+          "key": "a91b6a0cc259330fd487",
+          "issue": "“Interface dimensions” is mistranslated as electrical-contact dimensions.",
+          "disposition": "resolved",
+          "finalKey": "a91b6a0cc259330fd487",
+          "finalText": "조립 도면, 접합부 치수, 환경, 기존 부품 또는 샘플, 주문 수량 및 납품지."
+        },
+        {
+          "batch": 2,
+          "key": "03ca23e15a095edd8747",
+          "issue": "“Cable-entry interfaces” is mistranslated as electrical contact points rather than physical interfaces.",
+          "disposition": "resolved",
+          "finalKey": "03ca23e15a095edd8747",
+          "finalText": "조립 도면을 기준으로 검토한 정적 씰, 모서리 보호 및 케이블 인입 접합부."
+        },
+        {
+          "batch": 2,
+          "key": "8a0a20071ec2b5aa5441",
+          "issue": "“Conveyor interfaces” is mistranslated as electrical contact points.",
+          "disposition": "resolved",
+          "finalKey": "8a0a20071ec2b5aa5441",
+          "finalText": "컨베이어 접합부"
+        },
+        {
+          "batch": 2,
+          "key": "8e2141c2c59e96a55f56",
+          "issue": "“Conveyor interfaces” is mistranslated as electrical contact points.",
+          "disposition": "resolved",
+          "finalKey": "8e2141c2c59e96a55f56",
+          "finalText": "지정된 컨베이어 접합부용 경접촉 가이드, 와이핑 및 분진 제한 스트립."
+        },
+        {
+          "batch": 2,
+          "key": "6a9e094048dcd8c3fa11",
+          "issue": "“Non-safety-critical” is inaccurately rendered as “non-safety-essential,” which changes the safety qualification.",
+          "disposition": "resolved",
+          "finalKey": "6a9e094048dcd8c3fa11",
+          "finalText": "안전 핵심 기능을 담당하지 않는 개구부 및 칩 관리용 브러시와 홀더 조립체."
+        },
+        {
+          "batch": 2,
+          "key": "9938445159f0a2de7bb6",
+          "issue": "The threshold, side and top “interfaces” are mistranslated as electrical contact points.",
+          "disposition": "resolved",
+          "finalKey": "9938445159f0a2de7bb6",
+          "finalText": "문턱, 측면 및 상부 접합부에 대해 씰과 스트립 브러시를 별도로 검토합니다."
+        },
+        {
+          "batch": 2,
+          "key": "9a76281d2600f8ec8b82",
+          "issue": "“Media” may include more than fluids, and “acceptance tests” is not an approval test.",
+          "disposition": "resolved",
+          "finalKey": "9a76281d2600f8ec8b82",
+          "finalText": "실내 또는 실외 사용, 온도 노출, 접촉 매체, 개폐 사이클, 알려진 경우 재질 등급 및 필요한 인수 시험을 명시하십시오. 반경이 작은 코너가 직선 구간과 혼동되지 않도록 사진과 측정값을 위치별로 식별하십시오."
+        },
+        {
+          "batch": 2,
+          "key": "66a4f278ea896fbd56d0",
+          "issue": "“Fill arrangement” for brush filaments is more accurately expressed as the bristle-setting arrangement, not a filling arrangement.",
+          "disposition": "resolved",
+          "finalKey": "66a4f278ea896fbd56d0",
+          "finalText": "- 채널 폭과 높이, 재질 및 벽 두께\n- 전체 높이 및 유효 트림 길이\n- 필라멘트 등급, 직경, 직선 또는 크림프 형태 및 식모 배열\n- 절단 길이, 끝단 마감 및 직진도 공차\n- 홀더 단면, 구멍 위치 및 설치 방향"
+        },
+        {
+          "batch": 3,
+          "key": "8f785d95c393064b2d15",
+          "issue": "한국어 문장에 힌디어 단어 “उपलब्ध한”이 포함되어 있어 의미와 전문성이 훼손됩니다. 또한 closed gap은 폐쇄 시의 간극으로 명확히 표현하는 것이 적절합니다.",
+          "disposition": "resolved",
+          "finalKey": "8f785d95c393064b2d15",
+          "finalText": "모든 매체, 온도 범위 및 노출 시간을 나열하십시오. 그런 다음 운동, 폐쇄 시 간극, 압축 및 예상 사용 조건을 정의하십시오. 이 정보를 확보한 후에만 재료군을 선택하십시오."
+        },
+        {
+          "batch": 3,
+          "key": "334a68b049104be5aca4",
+          "issue": "solid-rubber hardness가 일반적인 고무 경도로 번역되어 솔리드 고무와 폼의 구분이 약화되었습니다.",
+          "disposition": "resolved",
+          "finalKey": "334a68b049104be5aca4",
+          "finalText": "이는 보증된 사양이 아닌 참고 값입니다. 지정 등급 데이터시트를 요청하십시오. 경도 또는 밀도, 허용차 및 시험 조건을 별도로 설정하고, 솔리드 고무의 경도와 폼 특성을 적절히 지정하십시오."
+        },
+        {
+          "batch": 3,
+          "key": "2ed5b8009b4e81efa22d",
+          "issue": "“Control one change at a time”에서 변경을 관리한다는 표현은 원문의 핵심인 한 번에 하나의 변경만 적용·통제한다는 의미를 충분히 전달하지 못합니다.",
+          "disposition": "resolved",
+          "finalKey": "2ed5b8009b4e81efa22d",
+          "finalText": "한 번에 하나의 변경만 적용하십시오"
+        },
+        {
+          "batch": 4,
+          "key": "d9f3678d736fde52ecbd",
+          "issue": "Korean text contains the untranslated Hindi word “उपलब्ध”.",
+          "disposition": "resolved",
+          "finalKey": "d9f3678d736fde52ecbd",
+          "finalText": "- 계약 주체 및 등록 세부사항\n- 견적 범위 및 제조 / 하도급 책임\n- 승인된 도면 리비전 및 지정 자재\n- 샘플 승인 기록 및 초도품 요구사항\n- 주문별 검사 계획 및 이용 가능한 기록\n- 포장, 배치 식별 및 변경 통지 요구사항"
+        },
+        {
+          "batch": 4,
+          "key": "78f562f5c183d1b47d97",
+          "issue": "Korean text contains the untranslated Hindi word “उपलब्ध”.",
+          "disposition": "resolved",
+          "finalKey": "78f562f5c183d1b47d97",
+          "finalText": "공급업체 설문지와 필요한 증빙 자료를 공유해 주세요. 문서 제공 가능 여부는 선택된 파트너와 주문에 대해 확인됩니다. 실제 부품에 적용되는 증빙을 일반적인 공장 인증서로 대체하지 않습니다."
+        },
+        {
+          "batch": 5,
+          "key": "170f61eaad7c257ef193",
+          "issue": "“matched holders”는 단순히 호환되는 홀더가 아니라 브러시에 맞춰진 홀더를 뜻합니다.",
+          "disposition": "resolved",
+          "finalKey": "170f61eaad7c257ef193",
+          "finalText": "직선형 및 성형 브러시, 이에 맞는 홀더 및 맞춤형 장비 어셈블리."
+        },
+        {
+          "batch": 5,
+          "key": "7957ed46858671cde8cb",
+          "issue": "한국어 문장에 힌디어 단어 “उपलब्ध한지”가 남아 있습니다.",
+          "disposition": "resolved",
+          "finalKey": "7957ed46858671cde8cb",
+          "finalText": "등록 설문지와 증빙 요구사항을 보내 주세요. 어떤 기록이 적용 가능하고 이용 가능한지 검토합니다. 법인 정보, 견적 및 주문별 증빙 자료는 적격성 평가 패키지에 포함됩니다."
+        }
+      ],
+      "resolutionEvidence": [
+        "review-history/round-1/asian-language-resolutions.json"
+      ]
+    },
+    "zh-Hant": {
+      "reviewHash": "3463916061ba5f4d9ccc8e5ec8d5638428a9d1629d2df46ad44f328964cb7911",
+      "reviewedTargetHash": "47f3e601169e114be07e8f5e60316ca7c613450c67f1de65b1e482c062a7d47e",
+      "finalTargetHash": "f7c5e17614284c57c83aa0277f08276e3fd0065069860bdc6c1e27551fccf95c",
+      "deterministicChecks": [],
+      "issues": [
+        {
+          "batch": 0,
+          "key": "aea73c958b81e30154cd",
+          "issue": "「槽鋼截面」將 channel 理解為鋼材槽鋼，額外引入了未在原文指定的材料。",
+          "disposition": "resolved",
+          "finalKey": "aea73c958b81e30154cd",
+          "finalText": "槽道截面；背板寬度；總高度及刷毛高度；刷絲牌號與直徑；密度；裁切長度。"
+        },
+        {
+          "batch": 1,
+          "key": "45de8260b47ffbd98074",
+          "issue": "「hole pattern」譯為「孔型」僅指孔的型式，遺漏孔位排列／配置的意思。",
+          "disposition": "resolved",
+          "finalKey": "45de8260b47ffbd98074",
+          "finalText": "H、F、T 或客製截面；鋁或鋼等級；孔位排列；表面處理；配合尺寸。"
+        },
+        {
+          "batch": 1,
+          "key": "287bcd94f4382c6ae5bf",
+          "issue": "「brushes」譯為「刷條」不當限縮了原文較廣義的客製設備刷具。",
+          "disposition": "resolved",
+          "finalKey": "287bcd94f4382c6ae5bf",
+          "finalText": "客製化設備用刷具"
+        },
+        {
+          "batch": 1,
+          "key": "f998ff1d65368c5c5972",
+          "issue": "「low-temperature response」譯為「低溫反應」不符材料技術語境，應指低溫性能／表現。",
+          "disposition": "resolved",
+          "finalKey": "f998ff1d65368c5c5972",
+          "finalText": "並非與所有流體均相容；低溫性能因膠料而異。"
+        },
+        {
+          "batch": 1,
+          "key": "8dca050923a8308a9d70",
+          "issue": "「dimensional response to moisture」譯為「材料尺寸對濕度的反應」不自然，且未清楚表達濕度造成的尺寸變化。",
+          "disposition": "resolved",
+          "finalKey": "8dca050923a8308a9d70",
+          "finalText": "需要考量濕度引起的尺寸變化時，可評估的尼龍選項。"
+        },
+        {
+          "batch": 1,
+          "key": "62b29f7ed411e65f6dde",
+          "issue": "原文指密封條在反覆使用後無法再隨門體回彈並保持接觸；「隨門體回復」表意不準確。",
+          "disposition": "resolved",
+          "finalKey": "62b29f7ed411e65f6dde",
+          "finalText": "經反覆使用後，壓扁的密封條無法再隨門體移動保持貼合。"
+        },
+        {
+          "batch": 1,
+          "key": "5634c065f6a814f53a84",
+          "issue": "「surface preparation」譯為「表面處理」可能指表面處理製程，未準確表達黏接前的表面前處理。",
+          "disposition": "resolved",
+          "finalKey": "5634c065f6a814f53a84",
+          "finalText": "審查指定膠帶及表面前處理；在實際基材上定義剝離或老化檢查。"
+        },
+        {
+          "batch": 1,
+          "key": "1351ea522f1af1f585c1",
+          "issue": "原文指設備開口處的漏塵問題；「設備開口處有灰塵」僅描述灰塵存在，遺漏逸散／洩漏的問題。",
+          "disposition": "resolved",
+          "finalKey": "1351ea522f1af1f585c1",
+          "finalText": "設備開口處的粉塵"
+        },
+        {
+          "batch": 2,
+          "key": "a3467dfe57ddebad346e",
+          "issue": "「槽道保持力」不夠準確地表達刷條槽道的固持能力。",
+          "disposition": "resolved",
+          "finalKey": "a3467dfe57ddebad346e",
+          "finalText": "檢查槽道固持力、端部封閉、重複衝擊及化學品暴露。"
+        },
+        {
+          "batch": 2,
+          "key": "5c84352af54bad5e8282",
+          "issue": "「掉毛」過於口語，未使用刷條的技術術語。",
+          "disposition": "resolved",
+          "finalKey": "5c84352af54bad5e8282",
+          "finalText": "透過樣品檢驗界定固持力及刷絲脫落的驗收檢查。"
+        },
+        {
+          "batch": 2,
+          "key": "414a99190cc5e72468d1",
+          "issue": "「保持方法」未準確表達 retention method 的固持／固定方式。",
+          "disposition": "resolved",
+          "finalKey": "414a99190cc5e72468d1",
+          "finalText": "固持方式、檢驗範圍及議定的驗收標準。"
+        },
+        {
+          "batch": 2,
+          "key": "16e6e17b44237a8daaac",
+          "issue": "「護罩」可能暗示安全防護裝置；原文僅指設備外罩及檢修開口。",
+          "disposition": "resolved",
+          "finalKey": "16e6e17b44237a8daaac",
+          "finalText": "用於檢修蓋及維修開口的型材、墊片及模製零件。"
+        },
+        {
+          "batch": 2,
+          "key": "8c3a321b29b8912532a8",
+          "issue": "bill of materials 應譯為「物料清單」，而非僅指材料的「材料清單」。",
+          "disposition": "resolved",
+          "finalKey": "8c3a321b29b8912532a8",
+          "finalText": "依據您已核准的物料清單組裝。"
+        },
+        {
+          "batch": 2,
+          "key": "9a76281d2600f8ec8b82",
+          "issue": "「緊密角部」未表達 tight corner 所指的小半徑轉角。",
+          "disposition": "resolved",
+          "finalKey": "9a76281d2600f8ec8b82",
+          "finalText": "說明室內或室外使用、溫度暴露、介質、開啟週期、材料等級（如已知）及所需驗收測試。按位置識別照片與量測資料，以免將小半徑轉角與直線段混淆。"
+        },
+        {
+          "batch": 2,
+          "key": "d22dfcc6d62e2648b34d",
+          "issue": "作為段落標題時，「適用於成形刷條」改變了原文單純限定適用範圍的意思。",
+          "disposition": "resolved",
+          "finalKey": "d22dfcc6d62e2648b34d",
+          "finalText": "成形刷條"
+        },
+        {
+          "batch": 3,
+          "key": "cce7c5d175d2c104ed8d",
+          "issue": "「具備內部擠製能力」將原文的「不表示為內部擠製」改為是否具備能力，擴大了原文所作的限定。",
+          "disposition": "resolved",
+          "finalKey": "cce7c5d175d2c104ed8d",
+          "finalText": "槽材與固定座材料可能不同。請確認鍍鋅鋼、不鏽鋼等級或鋁合金、切邊狀況及塗層。提供鋁製固定座不表示採用內部擠製。"
+        },
+        {
+          "batch": 4,
+          "key": "c54bb1d7342db8d0a4d9",
+          "issue": "「No.」被譯為「不一定」，弱化了原文明確表示不同 EPDM 配方不具等同性的結論。",
+          "disposition": "resolved",
+          "finalKey": "c54bb1d7342db8d0a4d9",
+          "finalText": "不。配方、硬度、硫化系統及測試條件均會影響性能。請審查指定牌號及已議定的驗收測試。"
+        },
+        {
+          "batch": 5,
+          "key": "e98ef78af8da37ed75bd",
+          "issue": "「sampled」被譯為「樣品驗證」，改變了原文關於樣品製作／提供方式的意思。",
+          "disposition": "resolved",
+          "finalKey": "e98ef78af8da37ed75bd",
+          "finalText": "清晰的規格只是開始。請議定零件的取樣、檢驗及管制方式。"
+        },
+        {
+          "batch": 5,
+          "key": "93022dba658fb05397a0",
+          "issue": "「what needs to work」被譯為「必須正常運作的事項」，語意生硬，且未準確表達應先釐清需實現的功能。",
+          "disposition": "resolved",
+          "finalKey": "93022dba658fb05397a0",
+          "finalText": "從需要\n發揮作用的功能開始。"
+        },
+        {
+          "batch": 5,
+          "key": "f0505437c5b5587802ba",
+          "issue": "「one-year retention target for review」的譯文不自然，且未清楚表達一年保存目標仍會接受檢視，而非保證固定保存期限。",
+          "disposition": "resolved",
+          "finalKey": "f0505437c5b5587802ba",
+          "finalText": "詢價紀錄的保存目標為一年，並會進行檢視。您可使用已公布的公司聯絡資料聯絡我們，要求存取、更正或刪除，但須遵守適用的紀錄保存要求。"
+        },
+        {
+          "batch": 6,
+          "key": "f11a27debcc7fd05cb7c",
+          "issue": "「使我們能了解其如何到達我們網站」將 submitted enquiry 的來源誤述為其到達網站的方式，語意不自然且不準確。",
+          "disposition": "resolved",
+          "finalKey": "f11a27debcc7fd05cb7c",
+          "finalText": "本網站會在工作階段儲存空間中儲存進入頁面、引薦網站網域及活動標籤，最長 24 小時。這些詳細資料會隨提交的詢價一併提供，使我們能了解該詢價如何送達我們。這些資訊不會驗證訪客身分。我們不使用廣告 Cookie 或第三方廣告分析工具。Cloudflare Turnstile 和主機安全服務可能會處理技術性請求資訊，以限制濫用。"
+        },
+        {
+          "batch": 6,
+          "key": "f84048c9b4dc1a402868",
+          "issue": "「公開註冊」遺漏 registration details 的「資料／詳情」含義。",
+          "disposition": "resolved",
+          "finalKey": "f84048c9b4dc1a402868",
+          "finalText": "在核准供應商或下單前，請於報價單上確認簽約實體及適用條款。如已設定，公開登記資料及聯絡詳細資料將顯示於下方。"
+        }
+      ],
+      "resolutionEvidence": [
+        "review-history/round-1/asian-language-resolutions.json"
+      ]
+    }
+  }
+}

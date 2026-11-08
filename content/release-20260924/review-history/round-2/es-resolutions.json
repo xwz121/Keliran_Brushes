@@ -1,0 +1,77 @@
+{
+  "reviewer": "Codex release coordinator",
+  "changes": [
+    {
+      "key": "faad8fa9bed926f54d33",
+      "before": "El diámetro del filamento, el recorte y el relleno siguen determinando el comportamiento de contacto.",
+      "after": "El diámetro del filamento, la longitud de fibra y la densidad de relleno siguen determinando el comportamiento de contacto.",
+      "reason": "Coordinator checked the additional terminology correction against the source."
+    },
+    {
+      "key": "62e3b385a55a7b659340",
+      "before": "Compruebe la geometría de la unión, el método, la deformación local y la posición de la junta.",
+      "after": "Compruebe la geometría de la unión, el método, la deformación local y la posición de la línea de unión.",
+      "reason": "Coordinator checked the additional terminology correction against the source."
+    },
+    {
+      "key": "182a7b02bac7bc793165",
+      "before": "Revise el recorte, el relleno y la posición del portacepillos; después ensaye el conjunto en condiciones operativas reales.",
+      "after": "Revise la longitud de fibra, la densidad de relleno y la posición del portacepillos; después ensaye el conjunto en condiciones operativas reales.",
+      "reason": "Coordinator checked the additional terminology correction against the source."
+    },
+    {
+      "key": "a3467dfe57ddebad346e",
+      "before": "Compruebe la retención del canal, el cierre de los extremos, los impactos repetidos y la exposición química.",
+      "after": "Compruebe la retención en el canal, el cierre de los extremos, los impactos repetidos y la exposición química.",
+      "reason": "Coordinator checked the additional terminology correction against the source."
+    },
+    {
+      "key": "56a44eabd032f8ac0183",
+      "before": "Un flujo de trabajo de compras ilustrativo, no un proyecto de cliente informado ni un resultado de rendimiento.",
+      "after": "Un flujo de trabajo de compras ilustrativo, no un proyecto de cliente documentado ni un resultado de rendimiento.",
+      "reason": "Coordinator checked the additional terminology correction against the source."
+    },
+    {
+      "key": "36820032cf161450690a",
+      "before": "La altura total incluye el soporte. La longitud efectiva de las cerdas es el filamento expuesto desde el canal hasta su punta. Indique ambas; no cite una «altura de cepillo» ambigua.",
+      "after": "La altura total incluye la base del cepillo. La longitud efectiva de las cerdas es el filamento expuesto desde el canal hasta su punta. Indique ambas; no cite una «altura de cepillo» ambigua.",
+      "reason": "Coordinator checked the additional terminology correction against the source."
+    },
+    {
+      "key": "8f785d95c393064b2d15",
+      "before": "Enumere cada medio, intervalo de temperatura y duración de la exposición. A continuación, defina el movimiento, la holgura cerrada, la compresión y las condiciones de servicio previstas. Elija una familia de materiales solo después de disponer de esta información.",
+      "after": "Enumere cada medio, intervalo de temperatura y duración de la exposición. A continuación, defina el movimiento, la holgura en posición cerrada, la compresión y las condiciones de servicio previstas. Elija una familia de materiales solo después de disponer de esta información.",
+      "reason": "Coordinator checked the additional terminology correction against the source."
+    },
+    {
+      "key": "f62877eabb5fae5ea807",
+      "before": "Defina si el cepillo limpia, guía o limita el polvo. Enumere la superficie en contacto, las marcas admisibles, el medio, la humedad, la temperatura y la deflexión de trabajo.",
+      "after": "Defina si el cepillo actúa como elemento de barrido, guía o limita el polvo. Enumere la superficie en contacto, las marcas admisibles, el medio, la humedad, la temperatura y la deflexión de trabajo.",
+      "reason": "Coordinator checked the additional terminology correction against the source."
+    },
+    {
+      "key": "21300def7e6217289e3d",
+      "before": "Los nombres de materiales no definen la fuerza de contacto. Confirme el diámetro del filamento, la longitud efectiva de filamento, la densidad y la deflexión; después, ensaye superficies representativas. No se implica ningún comportamiento ESD, frente a la llama o apto para contacto con alimentos.",
+      "after": "Los nombres de materiales no definen la fuerza de contacto. Confirme el diámetro del filamento, la longitud efectiva de filamento, la densidad y la deflexión; después, ensaye superficies representativas. No se presupone ninguna prestación ESD, de comportamiento frente a la llama ni de aptitud para el contacto con alimentos.",
+      "reason": "Coordinator checked the additional terminology correction against the source."
+    },
+    {
+      "key": "33831c7644301d2c5ed3",
+      "before": "| Síntoma | Investigar primero | Evidencia útil |\n| Fuga en puerta | Variación de holgura y carga del cierre | Mapa de holguras y marcas de contacto |\n| Junta aplanada | Compresión, tiempo y temperatura | Sección original y condiciones de recuperación |\n| Adhesivo despegado | Sustrato y preparación de superficie | Referencia de cinta y recubrimiento |\n| Fuga en esquina | Geometría de la unión y distorsión | Plano de unión y fotografía de detalle |\n| Pérdida de filamentos | Retención e impacto | Cierre de extremos y muestra de filamento suelto |\n| Desgaste rápido del cepillo | Deflexión, alineación y velocidad | Instalación y dirección de contacto |",
+      "after": "| Síntoma | Investigar primero | Evidencia útil |\n| Fuga en puerta | Variación de holgura y carga del pestillo | Mapa de holguras y marcas de contacto |\n| Junta aplanada | Compresión, tiempo y temperatura | Sección transversal original y condiciones de recuperación |\n| Adhesivo despegado | Sustrato y preparación de superficie | Referencia de cinta y recubrimiento |\n| Fuga en esquina | Geometría de la unión y distorsión | Plano de unión y fotografía de detalle |\n| Pérdida de filamentos | Retención e impacto | Cierre de extremos y muestra de filamento suelto |\n| Desgaste rápido del cepillo | Deflexión, alineación y velocidad | Instalación y dirección de contacto |",
+      "reason": "Coordinator checked the additional terminology correction against the source."
+    },
+    {
+      "key": "8ef9cd91235a740c8dee",
+      "before": "Revisamos los socios de producción, las herramientas, el proceso y la documentación frente al requisito real.",
+      "after": "Revisamos los socios de producción, el utillaje, el proceso y la documentación frente al requisito real.",
+      "reason": "Coordinator checked the additional terminology correction against the source."
+    },
+    {
+      "key": "0a89398d3c9bdbe0b042",
+      "before": "Una revisión de plano y una muestra aprobadas crean una referencia común. Acuerde las dimensiones críticas, la identidad del material, el embalaje y el control de cambios para el suministro recurrente.",
+      "after": "Una versión aprobada del plano y una muestra aprobada crean una referencia común. Acuerde las dimensiones críticas, la identidad del material, el embalaje y el control de cambios para el suministro recurrente.",
+      "reason": "Coordinator checked the additional terminology correction against the source."
+    }
+  ]
+}

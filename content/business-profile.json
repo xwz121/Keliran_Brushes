@@ -1,0 +1,19 @@
+{
+  "legalEntity": "上海柯立然科技有限公司",
+  "addressLines": "No. 33 Shenhong Road, Minhang District, Shanghai\n上海市闵行区申虹路33号",
+  "addressCountry": "China",
+  "secondaryLegalEntity": "Keliran LTD",
+  "secondaryRegistrationNo": "15698503",
+  "secondaryRegistrationJurisdiction": "England and Wales",
+  "secondaryAddressLines": "483 Green Lanes\nLondon, England\nN13 4BS",
+  "secondaryAddressCountry": "United Kingdom",
+  "publicEmail": "contact@keliran.com",
+  "phone": "+447536120830",
+  "phoneSecondary": "+8617509072335",
+  "whatsappNumber": "447536120830",
+  "whatsappNumberSecondary": "8617509072335",
+  "whatsappEnabled": true,
+  "whatsappFloating": true,
+  "facebookUrl": "",
+  "linkedinUrl": ""
+}

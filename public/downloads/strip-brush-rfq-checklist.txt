@@ -1,0 +1,23 @@
+KELIRAN | INDUSTRIAL STRIP BRUSH RFQ
+Complete the details you know; mark unknown items as "please advise".
+
+Company / contact / work email:
+Project / application / drawing revision and units:
+Construction: metal channel / planted / flexible polymer / other:
+Channel / backing material and section:
+Backing width / overall height / effective trim length (mm):
+Filament material, grade and diameter:
+Straight or crimped / fill arrangement / colour:
+Cut length and tolerance / end closure / straightness:
+Form: straight / inner / outer / side-facing; radius and tolerance:
+Holder profile, material, hole pattern and finish:
+Contact surface / working deflection / movement direction / speed:
+Temperature / wet or dry / media / contamination:
+Actual quantity and unit / sample quantity / annual usage:
+Destination / packing / filament protection:
+Retention, shedding and wear acceptance / inspection records:
+Safety-related function / special requirements and evidence:
+
+Brushes are not pressure-tight seals or machine safety devices.
+No food-contact, ESD or flame classification is implied.
+Keliran is a sourcing and quality-management trading business, not the manufacturer.

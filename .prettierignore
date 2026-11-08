@@ -1,0 +1,16 @@
+node_modules
+.next
+next-env.d.ts
+.local
+media
+public
+.env*
+pnpm-lock.yaml
+src/migrations
+src/payload-types.ts
+src/app/(payload)/admin/importMap.js
+src/styles/fonts.css
+docs/ibm-design-reference.md
+# Release evidence written by scripts/prepare-content-release.ts and bound to the published release;
+# keep the committed bytes exactly as the production release read them. README.md stays checked.
+content/release-20260924/**/*.json
