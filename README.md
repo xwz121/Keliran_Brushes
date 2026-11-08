@@ -11,6 +11,7 @@ brushes.keliran.com：Keliran 工业条刷独立网站。2026-11-08 从 keliran.
 - 路径与 keliran.com 拆分前一致（如 `/en/products/metal-channel-strip-brushes`、`/en/strip-brushes/<分类>`），首页为独立的工业刷首页。
 - 从 keliran.com 原样复制的共享资料在改写前，canonical 指向 keliran.com 原文且不进入本站 sitemap（[清单](src/lib/shared-canonical.ts)）。
 - 询价接口路径与字段不变；服务器只接受工业刷询盘，旧表单的 `both` 归为工业刷，密封件询盘返回 409 `line-moved` 并提示前往 keliran.com，不跨域重放。产品编号、附件、去重、限流与渠道归因保持原实现。
+- `/llms.txt`（按 [llmstxt.org](https://llmstxt.org/) 格式：H1、摘要、说明、H2 链接清单、Optional）与 `/llms-full.txt`（自有页面英文全文，`X-Robots-Tag: noindex`）由已发布 CMS 内容实时生成，只在生产环境提供；每个页面带 `Link: </llms.txt>; rel="describedby"`。共享原文只在 Optional 中链接 keliran.com 原址。第三方日志研究显示 AI 抓取器很少请求该文件、Google 表示不影响排名，它用于帮助代理快速读懂站点，不作为排名手段。实现见 [src/lib/llms.ts](src/lib/llms.ts)。
 - 站点常量集中在 [src/lib/site.ts](src/lib/site.ts)。
 
 ## 本地开发

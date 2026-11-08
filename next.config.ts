@@ -44,6 +44,8 @@ const config: NextConfig = {
           { key: 'X-Content-Type-Options', value: 'nosniff' },
           { key: 'Referrer-Policy', value: 'strict-origin-when-cross-origin' },
           { key: 'X-Frame-Options', value: 'SAMEORIGIN' },
+          // llmstxt.org discovery: every page points agents at the site's llms.txt index.
+          { key: 'Link', value: '</llms.txt>; rel="describedby"; type="text/markdown"' },
         ],
       },
     ]
