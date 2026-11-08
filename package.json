@@ -36,6 +36,7 @@
     "contacts:local": "node scripts/local-env.mjs node --import tsx scripts/apply-business-profile.ts",
     "audit:release:local": "node scripts/local-env.mjs node --import tsx scripts/audit-release.ts",
     "checklists:generate": "node --import tsx scripts/generate-checklists.ts",
+    "vercel:preflight": "node scripts/vercel-preflight.mjs",
     "migration:export": "node --import tsx scripts/migration/export-source.ts",
     "migration:import": "node --import tsx scripts/migration/import-target.ts",
     "migration:redirects": "node --import tsx scripts/migration/build-redirect-map.ts",
