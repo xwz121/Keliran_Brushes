@@ -1,7 +1,7 @@
 // Read-only public HTTP audit. Does not load .env, authenticate, or submit enquiries.
 import { mkdir, writeFile } from 'node:fs/promises'
 import { createHash } from 'node:crypto'
-const origin = process.argv[2] || 'https://keliran.com'
+const origin = process.argv[2] || 'https://brushes.keliran.com'
 const phase = process.argv[3] || 'before'
 if (!['before', 'after', 'local'].includes(phase)) throw Error('Unknown audit phase')
 const folder = `.local/seo-geo-${phase}`
@@ -138,7 +138,7 @@ const fields = [
 ]
 const cell = (x) => `"${(Array.isArray(x) ? x.join(' | ') : String(x ?? '')).replaceAll('"', '""')}"`
 await writeFile(
-  `reports/keliran-route-inventory-${phase}.csv`,
+  `reports/brushes-route-inventory-${phase}.csv`,
   [fields.join(','), ...rows.map((r) => fields.map((k) => cell(r[k])).join(','))].join('\n'),
 )
 const summary = {
@@ -159,7 +159,7 @@ const summary = {
   renderedBrowser: 'not-tested-by-this-script',
   rawEvidence: folder,
 }
-await writeFile(`reports/keliran-http-${phase}.json`, JSON.stringify(summary, null, 2) + '\n')
+await writeFile(`reports/brushes-http-${phase}.json`, JSON.stringify(summary, null, 2) + '\n')
 console.log(JSON.stringify(summary, null, 2))
 if (
   summary.errors.length ||

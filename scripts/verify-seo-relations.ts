@@ -42,7 +42,7 @@ try {
     localizedFamilyURLs: rows.filter((r) => r.url.includes('/products/')).length,
     uniqueURLs: new Set(rows.map((r) => r.url)).size,
   }
-  await writeFile('reports/keliran-relations-check.json', JSON.stringify(report, null, 2) + '\n')
+  await writeFile('reports/brushes-relations-check.json', JSON.stringify(report, null, 2) + '\n')
   console.log(JSON.stringify(report, null, 2))
   if (missing.length || rows.length !== new Set(rows.map((r) => r.url)).size) process.exitCode = 1
 } finally {

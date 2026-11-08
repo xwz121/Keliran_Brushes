@@ -1,5 +1,5 @@
 // Versioned navigation relationships, not engineering approval or a stock/supply declaration.
-// Evidence and review boundaries: reports/keliran-content-evidence-gaps.md.
+// Evidence and review boundaries: reports/keliran-content-evidence-gaps.md (written before the split).
 import { materialSlug } from './routes'
 export type MaterialRole = 'filament' | 'backing-channel' | 'mounting-holder'
 export type MaterialBinding = {
