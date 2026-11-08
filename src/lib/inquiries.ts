@@ -4,13 +4,14 @@ import { issueSession, verifySession } from './inquiry-session'
 import { brushRfq, rfqSchema } from './rfq-schema'
 import { createHmac } from 'node:crypto'
 import { z } from 'zod'
-import { Resend } from 'resend'
 import type { Payload, PayloadRequest } from 'payload'
 import { locales } from './locales'
 import { transaction } from './transactions'
 import { HttpError } from './http'
 import { isProductionDeployment, serviceStatus, siteURL } from './env'
 import { otherLine, otherSiteURL, siteLine } from './site'
+import { sendPostmark } from './postmark'
+import { autoReplyDailyCap, type AutoReplyStatus } from './inquiry-auto-reply'
 
 const plain = (max: number) =>
   z
@@ -44,7 +45,8 @@ export const inquirySchema = z.object({
   website: z.string().max(200).optional().default(''),
   turnstileToken: z.string().max(2048).optional().default(''),
 })
-export async function limit(payload: Payload, req: PayloadRequest, key: string, max: number) {
+// Counts one use of a limited action; false when the limit was already reached.
+export async function consume(payload: Payload, req: PayloadRequest, key: string, max: number) {
   const found = await payload.find({
     collection: 'rate-limits',
     where: { key: { equals: key } },
@@ -52,7 +54,7 @@ export async function limit(payload: Payload, req: PayloadRequest, key: string, 
     req,
   })
   const current = found.docs[0]
-  if (current && (current.count || 0) >= max) throw new HttpError(429, 'Please try again later.')
+  if (current && (current.count || 0) >= max) return false
   if (current)
     await payload.update({
       collection: 'rate-limits',
@@ -66,6 +68,10 @@ export async function limit(payload: Payload, req: PayloadRequest, key: string, 
       data: { key, count: 1, expiresAt: new Date(Date.now() + 86400000).toISOString() },
       req,
     })
+  return true
+}
+export async function limit(payload: Payload, req: PayloadRequest, key: string, max: number) {
+  if (!(await consume(payload, req, key, max))) throw new HttpError(429, 'Please try again later.')
 }
 export async function startInquirySession(payload: Payload, submissionId: string, token: string, ip: string) {
   if (!z.uuid().safeParse(submissionId).success || typeof token !== 'string' || token.length > 2048)
@@ -92,7 +98,11 @@ export async function startInquirySession(payload: Payload, submissionId: string
   } else if (isProductionDeployment) throw new HttpError(503, 'Contact verification is not configured.')
   return { sessionToken: issueSession(submissionId, ip) }
 }
-export async function acceptInquiry(payload: Payload, raw: unknown, ip: string) {
+export async function acceptInquiry(
+  payload: Payload,
+  raw: unknown,
+  ip: string,
+): Promise<{ accepted: true; jobIds: (number | string)[] }> {
   const parsed = inquirySchema.safeParse(raw)
   if (!parsed.success) throw new HttpError(400, 'Please check the form fields.')
   const data = parsed.data
@@ -156,7 +166,8 @@ export async function acceptInquiry(payload: Payload, raw: unknown, ip: string) 
       const prior = existing.docs[0]
       if (prior.email !== data.email || prior.message !== data.message)
         throw new HttpError(409, 'Submission ID already used.')
-      return { accepted: true }
+      // A repeated identical submission queues nothing: each enquiry is acknowledged once.
+      return { accepted: true, jobIds: [] }
     }
     const { lock } = await import('./transactions')
     await lock(req, `inquiry-email:${hmac(data.email.toLowerCase())}`)
@@ -167,20 +178,41 @@ export async function acceptInquiry(payload: Payload, raw: unknown, ip: string) 
       5,
     )
     for (const file of data.attachments) await verifyObject(data.submissionId, file)
+    const email = serviceStatus().email
+    // The visitor acknowledgement is capped per address and day (under the email lock above).
+    const autoReplyStatus: AutoReplyStatus = !email
+      ? 'not-configured'
+      : (await consume(
+            payload,
+            req,
+            `auto-reply:${hmac(data.email.toLowerCase())}:${Math.floor(Date.now() / 86400000)}`,
+            autoReplyDailyCap,
+          ))
+        ? 'pending'
+        : 'skipped'
     const { turnstileToken, website, sessionToken, ...record } = data
     const inquiry = await payload.create({
       collection: 'inquiries',
       data: {
         ...record,
         status: data.safetyCritical === 'yes' ? 'review' : 'new',
-        notificationStatus: serviceStatus().email ? 'pending' : 'not-configured',
+        notificationStatus: email ? 'pending' : 'not-configured',
+        autoReplyStatus,
         retentionUntil: new Date(Date.now() + 365 * 86400000).toISOString(),
       },
       req,
     })
-    if (serviceStatus().email)
-      await payload.jobs.queue({ task: 'inquiry-email', input: { inquiryId: inquiry.id }, req })
-    return { accepted: true }
+    // Jobs commit with the enquiry. The acknowledgement is queued first so it runs first.
+    const jobIds: (number | string)[] = []
+    if (autoReplyStatus === 'pending')
+      jobIds.push(
+        (await payload.jobs.queue({ task: 'inquiry-auto-reply', input: { inquiryId: inquiry.id }, req })).id,
+      )
+    if (email)
+      jobIds.push(
+        (await payload.jobs.queue({ task: 'inquiry-email', input: { inquiryId: inquiry.id }, req })).id,
+      )
+    return { accepted: true, jobIds }
   })
 }
 export async function sendInquiryEmail(payload: Payload, id: number) {
@@ -190,47 +222,43 @@ export async function sendInquiryEmail(payload: Payload, id: number) {
     await payload.update({ collection: 'inquiries', id, data: { notificationStatus: 'not-configured' } })
     return
   }
-  try {
-    const resend = new Resend(process.env.RESEND_API_KEY)
-    const result = await resend.emails.send(
-      {
-        from: process.env.EMAIL_FROM!,
-        to: process.env.SALES_EMAIL!,
-        replyTo: inquiry.email!,
-        subject: `${inquiry.safetyCritical === 'yes' ? '[SAFETY-FLAG] ' : ''}[${new URL(siteURL).host}] [${inquiry.line || 'General'}] Website inquiry — ${inquiry.productSlug || 'Component request'}`,
-        text: [
-          `Name: ${inquiry.name}`,
-          `Company: ${inquiry.company}`,
-          `Email: ${inquiry.email}`,
-          `Country: ${inquiry.country}`,
-          `Language: ${inquiry.locale}`,
-          `Attribution (visitor supplied): ${JSON.stringify(inquiry.attribution || {})}`,
-          `Product: ${inquiry.productSlug || '—'}`,
-          '',
-          inquiry.message,
-          `Safety-related: ${inquiry.safetyCritical || 'unsure'}`,
-          `Technical requirements: ${JSON.stringify(inquiry.rfq || {})}`,
-          `Attachments (staff access only): ${(inquiry.attachments || []).map((a) => a.name).join(', ') || 'None'}`,
-          `\nManage: ${siteURL}/admin/collections/inquiries/${id}`,
-        ].join('\n'),
-      },
-      { idempotencyKey: `keliran-inquiry-${inquiry.submissionId}` },
-    )
-    if (result.error) throw Error(`Email provider: ${result.error.name}`)
+  const result = await sendPostmark({
+    from: process.env.EMAIL_FROM!,
+    to: process.env.SALES_EMAIL!,
+    replyTo: inquiry.email!,
+    subject: `${inquiry.safetyCritical === 'yes' ? '[SAFETY-FLAG] ' : ''}[${new URL(siteURL).host}] [${inquiry.line || 'General'}] Website inquiry — ${inquiry.productSlug || 'Component request'}`,
+    textBody: [
+      `Name: ${inquiry.name}`,
+      `Company: ${inquiry.company}`,
+      `Email: ${inquiry.email}`,
+      `Country: ${inquiry.country}`,
+      `Language: ${inquiry.locale}`,
+      `Attribution (visitor supplied): ${JSON.stringify(inquiry.attribution || {})}`,
+      `Product: ${inquiry.productSlug || '—'}`,
+      '',
+      inquiry.message,
+      `Safety-related: ${inquiry.safetyCritical || 'unsure'}`,
+      `Technical requirements: ${JSON.stringify(inquiry.rfq || {})}`,
+      `Attachments (staff access only): ${(inquiry.attachments || []).map((a) => a.name).join(', ') || 'None'}`,
+      `Customer acknowledgement: ${inquiry.autoReplyStatus || 'none'}`,
+      `\nManage: ${siteURL}/admin/collections/inquiries/${id}`,
+    ].join('\n'),
+    tag: 'inquiry-notification',
+    metadata: { inquiryId: String(id), site: new URL(siteURL).host },
+  })
+  if (result.outcome === 'sent') {
     await payload.update({
       collection: 'inquiries',
       id,
-      data: { notificationStatus: 'sent', notificationError: null },
+      data: { notificationStatus: 'sent', notificationError: null, notificationMessageId: result.messageId },
     })
-  } catch (error) {
-    await payload.update({
-      collection: 'inquiries',
-      id,
-      data: {
-        notificationStatus: 'failed',
-        notificationError: error instanceof Error ? error.message.slice(0, 200) : 'Email failed',
-      },
-    })
-    throw error
+    return
   }
+  await payload.update({
+    collection: 'inquiries',
+    id,
+    data: { notificationStatus: 'failed', notificationError: result.error },
+  })
+  // An internal notification may repeat, so anything but a permanent rejection is retried.
+  if (result.outcome !== 'permanent') throw new Error(result.error)
 }

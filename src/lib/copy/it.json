@@ -169,5 +169,11 @@
   "sampleApproval": "Criteri di approvazione dei campioni",
   "criticalInspection": "Dimensioni critiche e metodo di controllo",
   "packingRecord": "Imballaggio ed etichette di lotto",
-  "changeRecord": "Notifica delle modifiche e revisione del disegno"
+  "changeRecord": "Notifica delle modifiche e revisione del disegno",
+  "autoReplySubject": "Richiesta ricevuta: {ref}",
+  "autoReplyGreeting": "Buongiorno,",
+  "autoReplyIntro": "Grazie per la tua richiesta a {site}. È stata salvata: esamineremo i dettagli e ti contatteremo a questo indirizzo e-mail.",
+  "autoReplyLine": "Linea di prodotti",
+  "autoReplyFollowUp": "Per aggiungere disegni, foto o altri dettagli, rispondi a questa e-mail mantenendo il riferimento della richiesta nell’oggetto.",
+  "autoReplyAutomatic": "Questa è una conferma automatica. Se non hai inviato questa richiesta, puoi ignorare questo messaggio."
 }

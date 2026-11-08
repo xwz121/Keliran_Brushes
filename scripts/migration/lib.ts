@@ -7,7 +7,7 @@ import path from 'node:path'
 import sharp from 'sharp'
 import type { Payload, PayloadRequest } from 'payload'
 import { sql } from '@payloadcms/db-postgres'
-import { hash } from '../../src/lib/ai/checks'
+import { hash } from '../../src/lib/content-checks'
 import { locales, type Locale } from '../../src/lib/locales'
 
 export const bundleFormat = 'keliran.brushes-migration.v1'
@@ -21,6 +21,16 @@ export const sourceMigrations = [
   '20260923_231224_release_contacts',
   '20260924_112728_inquiry_attribution',
 ]
+// keliran.com migrations that may follow the list above. They drop the AI translation records and
+// add enquiry email columns, none of which this export reads, so it runs before or after them.
+export const optionalSourceMigrations = ['20261108_131736_postmark_autoreply']
+export function acceptedSourceMigrations(applied: string[]) {
+  const extra = applied.slice(sourceMigrations.length)
+  return (
+    sourceMigrations.every((name, i) => applied[i] === name) &&
+    extra.every((name, i) => name === optionalSourceMigrations[i])
+  )
+}
 export const exportLines = ['brushes', 'both'] as const
 export const lineCollections = [
   'products',
@@ -69,7 +79,8 @@ export type BundleRecord = {
 export type Evidence = {
   status: 'release-20260924' | 'needs-review'
   differences: string[]
-  translationRuns: { id: number; status: string; releasedAt?: string | null }[]
+  // Only in bundles exported before keliran.com removed its AI translation records.
+  translationRuns?: { id: number; status: string; releasedAt?: string | null }[]
 }
 export type Bundle = {
   format: string

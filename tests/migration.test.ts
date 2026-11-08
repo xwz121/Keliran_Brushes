@@ -2,11 +2,14 @@ import { readFileSync } from 'node:fs'
 import { describe, expect, it } from 'vitest'
 import { locales } from '../src/lib/locales'
 import {
+  acceptedSourceMigrations,
   canonical,
   identityFingerprint,
+  optionalSourceMigrations,
   releaseEvidence,
   sameDatabase,
   snapshotHash,
+  sourceMigrations,
   type DatabaseIdentity,
   type RelationField,
 } from '../scripts/migration/lib'
@@ -99,5 +102,17 @@ describe('migration change detection', () => {
     expect(sameDatabase({ ...cms, database: 'keliran_brushes' }, cms)).toBe(false)
     expect(sameDatabase({ ...cms, serverAddress: '172.16.9.9:3433' }, cms)).toBe(false)
     expect(sameDatabase({ ...cms, serverAddress: null }, cms)).toBe(true)
+  })
+})
+
+describe('accepted keliran.com schema for the export', () => {
+  it('runs before or after keliran.com removes its AI translation records', () => {
+    expect(acceptedSourceMigrations(sourceMigrations)).toBe(true)
+    expect(acceptedSourceMigrations([...sourceMigrations, ...optionalSourceMigrations])).toBe(true)
+  })
+  it('stops on any other history', () => {
+    expect(acceptedSourceMigrations(sourceMigrations.slice(0, -1))).toBe(false)
+    expect(acceptedSourceMigrations([...sourceMigrations, '20270101_000000_unknown'])).toBe(false)
+    expect(acceptedSourceMigrations([...sourceMigrations, '20261108_103755_brushes_site'])).toBe(false)
   })
 })

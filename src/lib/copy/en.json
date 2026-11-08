@@ -169,5 +169,11 @@
   "sampleApproval": "Sample approval criteria",
   "criticalInspection": "Critical dimensions and inspection method",
   "packingRecord": "Packaging and batch labels",
-  "changeRecord": "Change notification and drawing revision"
+  "changeRecord": "Change notification and drawing revision",
+  "autoReplySubject": "Enquiry received: {ref}",
+  "autoReplyGreeting": "Hello,",
+  "autoReplyIntro": "Thank you for your enquiry to {site}. It has been saved, and we will review the details and contact you at this email address.",
+  "autoReplyLine": "Product line",
+  "autoReplyFollowUp": "To add drawings, photos or other details, reply to this email and keep the enquiry reference in the subject line.",
+  "autoReplyAutomatic": "This is an automatic confirmation. If you did not send this enquiry, you can ignore this message."
 }

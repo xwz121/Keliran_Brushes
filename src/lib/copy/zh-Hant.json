@@ -169,5 +169,11 @@
   "sampleApproval": "樣品核准標準",
   "criticalInspection": "關鍵尺寸與檢驗方法",
   "packingRecord": "包裝與批次標籤",
-  "changeRecord": "變更通知與圖紙版本"
+  "changeRecord": "變更通知與圖紙版本",
+  "autoReplySubject": "已收到您的詢盤：{ref}",
+  "autoReplyGreeting": "您好：",
+  "autoReplyIntro": "感謝您向 {site} 提交需求。需求已保存，我們會檢視內容並透過此電郵地址與您聯絡。",
+  "autoReplyLine": "產品線",
+  "autoReplyFollowUp": "如需補充圖紙、照片或其他資料，請直接回覆本電郵，並保留主旨中的詢盤參考編號。",
+  "autoReplyAutomatic": "這是一封自動確認電郵。如果您沒有提交此需求，請忽略本電郵。"
 }

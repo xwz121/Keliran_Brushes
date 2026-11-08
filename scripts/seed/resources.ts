@@ -450,7 +450,7 @@ add('pages', 'privacy', 'Privacy notice', 'How we use the information you provid
     sec(
       'services',
       'Service providers',
-      'Our website uses Vercel hosting, Alibaba Cloud database services, Cloudflare media storage and security services, and Resend email delivery. Enquiry information may be processed in China and in the regions used by these providers. Enquiry attachments are not sent to website translation or content-generation services.',
+      'Our website uses Vercel hosting, Alibaba Cloud database services, Cloudflare media storage and security services, and Postmark email delivery. After you submit an enquiry, an automatic confirmation is sent to the email address you provide. Enquiry information may be processed in China and in the regions used by these providers. Enquiry attachments are not sent to website translation or content-generation services.',
     ),
     sec(
       'analytics',

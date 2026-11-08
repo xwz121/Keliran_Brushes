@@ -3,7 +3,7 @@ import { writeFile, mkdir } from 'node:fs/promises'
 import { getPayload } from 'payload'
 import { contentSlugs } from '../src/collections'
 import { locales } from '../src/lib/locales'
-import { englishTexts } from '../src/lib/ai/checks'
+import { englishTexts } from '../src/lib/content-checks'
 const url = new URL(process.env.DATABASE_URL!)
 if (!['127.0.0.1', 'localhost'].includes(url.hostname) || url.pathname !== '/keliran_brushes')
   throw Error('This audit only reads the isolated local review database.')
@@ -91,7 +91,7 @@ try {
       : []),
     ...(documents.some((d) => d.status !== 'published')
       ? [
-          'CMS content remains in draft; complete translation and independent review in the release centre before publishing.',
+          'CMS content remains in draft; complete all eight locales and publish them together (publish checks or pnpm content:publish).',
         ]
       : []),
     ...(documents.some((d) => !d.factsConfirmed)

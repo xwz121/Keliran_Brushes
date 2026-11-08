@@ -169,5 +169,11 @@
   "sampleApproval": "Criterios de aprobación de muestras",
   "criticalInspection": "Dimensiones críticas y método de inspección",
   "packingRecord": "Embalaje y etiquetas de lote",
-  "changeRecord": "Aviso de cambios y revisión del plano"
+  "changeRecord": "Aviso de cambios y revisión del plano",
+  "autoReplySubject": "Solicitud recibida: {ref}",
+  "autoReplyGreeting": "Hola:",
+  "autoReplyIntro": "Gracias por su solicitud a {site}. Se ha guardado: revisaremos los datos y le contactaremos en esta dirección de correo.",
+  "autoReplyLine": "Línea de productos",
+  "autoReplyFollowUp": "Para añadir planos, fotos u otros datos, responda a este correo y mantenga la referencia de la consulta en el asunto.",
+  "autoReplyAutomatic": "Esta es una confirmación automática. Si no ha enviado esta solicitud, puede ignorar este mensaje."
 }

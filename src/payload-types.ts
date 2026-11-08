@@ -79,7 +79,6 @@ export interface Config {
     pages: Page;
     media: Media;
     inquiries: Inquiry;
-    'translation-runs': TranslationRun;
     glossary: Glossary;
     'rate-limits': RateLimit;
     'migration-records': MigrationRecord;
@@ -103,7 +102,6 @@ export interface Config {
     pages: PagesSelect<false> | PagesSelect<true>;
     media: MediaSelect<false> | MediaSelect<true>;
     inquiries: InquiriesSelect<false> | InquiriesSelect<true>;
-    'translation-runs': TranslationRunsSelect<false> | TranslationRunsSelect<true>;
     glossary: GlossarySelect<false> | GlossarySelect<true>;
     'rate-limits': RateLimitsSelect<false> | RateLimitsSelect<true>;
     'migration-records': MigrationRecordsSelect<false> | MigrationRecordsSelect<true>;
@@ -135,8 +133,8 @@ export interface Config {
   user: User;
   jobs: {
     tasks: {
-      'translation-step': TaskTranslationStep;
       'inquiry-email': TaskInquiryEmail;
+      'inquiry-auto-reply': TaskInquiryAutoReply;
       inline: {
         input: unknown;
         output: unknown;
@@ -183,7 +181,7 @@ export interface Solution {
     | null;
   sortOrder?: number | null;
   /**
-   * 确认当前版本的供货描述、技术信息和配图已获准用于官网。AI 检查通过后仍需勾选。
+   * 确认当前版本的供货描述、技术信息和配图已获准用于官网。发布时还会检查八种语言是否齐全，并与英文的数字、单位、结构和术语一致。
    */
   factsConfirmed?: boolean | null;
   seoTitle?: string | null;
@@ -259,7 +257,7 @@ export interface Product {
     | null;
   sortOrder?: number | null;
   /**
-   * 确认当前版本的供货描述、技术信息和配图已获准用于官网。AI 检查通过后仍需勾选。
+   * 确认当前版本的供货描述、技术信息和配图已获准用于官网。发布时还会检查八种语言是否齐全，并与英文的数字、单位、结构和术语一致。
    */
   factsConfirmed?: boolean | null;
   seoTitle?: string | null;
@@ -329,7 +327,7 @@ export interface Guide {
     | null;
   sortOrder?: number | null;
   /**
-   * 确认当前版本的供货描述、技术信息和配图已获准用于官网。AI 检查通过后仍需勾选。
+   * 确认当前版本的供货描述、技术信息和配图已获准用于官网。发布时还会检查八种语言是否齐全，并与英文的数字、单位、结构和术语一致。
    */
   factsConfirmed?: boolean | null;
   seoTitle?: string | null;
@@ -366,7 +364,7 @@ export interface Faq {
     | null;
   sortOrder?: number | null;
   /**
-   * 确认当前版本的供货描述、技术信息和配图已获准用于官网。AI 检查通过后仍需勾选。
+   * 确认当前版本的供货描述、技术信息和配图已获准用于官网。发布时还会检查八种语言是否齐全，并与英文的数字、单位、结构和术语一致。
    */
   factsConfirmed?: boolean | null;
   seoTitle?: string | null;
@@ -397,7 +395,7 @@ export interface Category {
     | null;
   sortOrder?: number | null;
   /**
-   * 确认当前版本的供货描述、技术信息和配图已获准用于官网。AI 检查通过后仍需勾选。
+   * 确认当前版本的供货描述、技术信息和配图已获准用于官网。发布时还会检查八种语言是否齐全，并与英文的数字、单位、结构和术语一致。
    */
   factsConfirmed?: boolean | null;
   seoTitle?: string | null;
@@ -430,7 +428,7 @@ export interface Application {
     | null;
   sortOrder?: number | null;
   /**
-   * 确认当前版本的供货描述、技术信息和配图已获准用于官网。AI 检查通过后仍需勾选。
+   * 确认当前版本的供货描述、技术信息和配图已获准用于官网。发布时还会检查八种语言是否齐全，并与英文的数字、单位、结构和术语一致。
    */
   factsConfirmed?: boolean | null;
   seoTitle?: string | null;
@@ -465,7 +463,7 @@ export interface Case {
     | null;
   sortOrder?: number | null;
   /**
-   * 确认当前版本的供货描述、技术信息和配图已获准用于官网。AI 检查通过后仍需勾选。
+   * 确认当前版本的供货描述、技术信息和配图已获准用于官网。发布时还会检查八种语言是否齐全，并与英文的数字、单位、结构和术语一致。
    */
   factsConfirmed?: boolean | null;
   seoTitle?: string | null;
@@ -529,7 +527,7 @@ export interface Material {
     | null;
   sortOrder?: number | null;
   /**
-   * 确认当前版本的供货描述、技术信息和配图已获准用于官网。AI 检查通过后仍需勾选。
+   * 确认当前版本的供货描述、技术信息和配图已获准用于官网。发布时还会检查八种语言是否齐全，并与英文的数字、单位、结构和术语一致。
    */
   factsConfirmed?: boolean | null;
   seoTitle?: string | null;
@@ -562,7 +560,7 @@ export interface Page {
     | null;
   sortOrder?: number | null;
   /**
-   * 确认当前版本的供货描述、技术信息和配图已获准用于官网。AI 检查通过后仍需勾选。
+   * 确认当前版本的供货描述、技术信息和配图已获准用于官网。发布时还会检查八种语言是否齐全，并与英文的数字、单位、结构和术语一致。
    */
   factsConfirmed?: boolean | null;
   seoTitle?: string | null;
@@ -624,54 +622,15 @@ export interface Inquiry {
   status?: ('new' | 'review' | 'in-progress' | 'closed') | null;
   notificationStatus?: ('pending' | 'sent' | 'failed' | 'not-configured') | null;
   notificationError?: string | null;
+  notificationMessageId?: string | null;
+  /**
+   * sent 表示 Postmark 已接收（不等于已送达）；unknown 表示结果不明，请在 Postmark Activity 按询盘 ID 核对，不要重发；skipped 表示同一邮箱当日已达上限。
+   */
+  autoReplyStatus?: ('pending' | 'sending' | 'sent' | 'failed' | 'skipped' | 'unknown' | 'not-configured') | null;
+  autoReplyError?: string | null;
+  autoReplyMessageId?: string | null;
   notes?: string | null;
   retentionUntil?: string | null;
-  updatedAt: string;
-  createdAt: string;
-}
-/**
- * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "translation-runs".
- */
-export interface TranslationRun {
-  id: number;
-  title?: string | null;
-  targetCollection:
-    'products' | 'categories' | 'materials' | 'applications' | 'pages' | 'solutions' | 'cases' | 'guides' | 'faqs';
-  targetId: number;
-  sourceHash: string;
-  source:
-    | {
-        [k: string]: unknown;
-      }
-    | unknown[]
-    | string
-    | number
-    | boolean
-    | null;
-  status?: ('queued' | 'running' | 'passed' | 'failed' | 'stale' | 'published') | null;
-  results?:
-    | {
-        [k: string]: unknown;
-      }
-    | unknown[]
-    | string
-    | number
-    | boolean
-    | null;
-  glossaryHash?: string | null;
-  pipelineVersion?: string | null;
-  usage?:
-    | {
-        [k: string]: unknown;
-      }
-    | unknown[]
-    | string
-    | number
-    | boolean
-    | null;
-  error?: string | null;
-  releasedAt?: string | null;
   updatedAt: string;
   createdAt: string;
 }
@@ -805,7 +764,7 @@ export interface PayloadJob {
     | {
         executedAt: string;
         completedAt: string;
-        taskSlug: 'inline' | 'translation-step' | 'inquiry-email';
+        taskSlug: 'inline' | 'inquiry-email' | 'inquiry-auto-reply';
         taskID: string;
         input?:
           | {
@@ -838,7 +797,7 @@ export interface PayloadJob {
         id?: string | null;
       }[]
     | null;
-  taskSlug?: ('inline' | 'translation-step' | 'inquiry-email') | null;
+  taskSlug?: ('inline' | 'inquiry-email' | 'inquiry-auto-reply') | null;
   queue?: string | null;
   waitUntil?: string | null;
   processing?: boolean | null;
@@ -899,10 +858,6 @@ export interface PayloadLockedDocument {
     | ({
         relationTo: 'inquiries';
         value: number | Inquiry;
-      } | null)
-    | ({
-        relationTo: 'translation-runs';
-        value: number | TranslationRun;
       } | null)
     | ({
         relationTo: 'glossary';
@@ -1342,28 +1297,12 @@ export interface InquiriesSelect<T extends boolean = true> {
   status?: T;
   notificationStatus?: T;
   notificationError?: T;
+  notificationMessageId?: T;
+  autoReplyStatus?: T;
+  autoReplyError?: T;
+  autoReplyMessageId?: T;
   notes?: T;
   retentionUntil?: T;
-  updatedAt?: T;
-  createdAt?: T;
-}
-/**
- * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "translation-runs_select".
- */
-export interface TranslationRunsSelect<T extends boolean = true> {
-  title?: T;
-  targetCollection?: T;
-  targetId?: T;
-  sourceHash?: T;
-  source?: T;
-  status?: T;
-  results?: T;
-  glossaryHash?: T;
-  pipelineVersion?: T;
-  usage?: T;
-  error?: T;
-  releasedAt?: T;
   updatedAt?: T;
   createdAt?: T;
 }
@@ -1564,22 +1503,19 @@ export interface CollectionsWidget {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "TaskTranslation-step".
+ * via the `definition` "TaskInquiry-email".
  */
-export interface TaskTranslationStep {
+export interface TaskInquiryEmail {
   input: {
-    runId: number;
-    locale: string;
-    stage: string;
-    round?: number | null;
+    inquiryId: number;
   };
   output?: unknown;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "TaskInquiry-email".
+ * via the `definition` "TaskInquiry-auto-reply".
  */
-export interface TaskInquiryEmail {
+export interface TaskInquiryAutoReply {
   input: {
     inquiryId: number;
   };

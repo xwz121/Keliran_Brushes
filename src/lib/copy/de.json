@@ -169,5 +169,11 @@
   "sampleApproval": "Kriterien für die Musterfreigabe",
   "criticalInspection": "Kritische Maße und Prüfverfahren",
   "packingRecord": "Verpackung und Chargenkennzeichnung",
-  "changeRecord": "Änderungsmitteilung und Zeichnungsstand"
+  "changeRecord": "Änderungsmitteilung und Zeichnungsstand",
+  "autoReplySubject": "Anfrage erhalten: {ref}",
+  "autoReplyGreeting": "Guten Tag,",
+  "autoReplyIntro": "Vielen Dank für Ihre Anfrage bei {site}. Sie wurde gespeichert. Wir prüfen die Angaben und kontaktieren Sie unter dieser E-Mail-Adresse.",
+  "autoReplyLine": "Produktlinie",
+  "autoReplyFollowUp": "Um Zeichnungen, Fotos oder weitere Angaben zu ergänzen, antworten Sie auf diese E-Mail und lassen Sie die Anfragereferenz im Betreff stehen.",
+  "autoReplyAutomatic": "Dies ist eine automatische Bestätigung. Falls Sie diese Anfrage nicht gesendet haben, können Sie diese Nachricht ignorieren."
 }

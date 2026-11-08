@@ -169,5 +169,11 @@
   "sampleApproval": "Critères d’approbation des échantillons",
   "criticalInspection": "Cotes critiques et méthode de contrôle",
   "packingRecord": "Emballage et étiquettes de lot",
-  "changeRecord": "Notification des modifications et révision du plan"
+  "changeRecord": "Notification des modifications et révision du plan",
+  "autoReplySubject": "Demande reçue : {ref}",
+  "autoReplyGreeting": "Bonjour,",
+  "autoReplyIntro": "Merci pour votre demande auprès de {site}. Elle a été enregistrée : nous examinerons les détails et vous contacterons à cette adresse e-mail.",
+  "autoReplyLine": "Gamme de produits",
+  "autoReplyFollowUp": "Pour ajouter des plans, des photos ou d’autres informations, répondez à cet e-mail en conservant la référence de la demande dans l’objet.",
+  "autoReplyAutomatic": "Ceci est une confirmation automatique. Si vous n’êtes pas à l’origine de cette demande, vous pouvez ignorer ce message."
 }

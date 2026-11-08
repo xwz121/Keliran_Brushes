@@ -8,6 +8,8 @@ export type SiteLine = typeof siteLine
 export const visibleLines = [siteLine, 'both'] as const
 export const siteLineWhere = { line: { in: [...visibleLines] } }
 export const siteName = 'Keliran Strip Brushes'
+// Interface copy key naming this site's product line (used in the enquiry acknowledgement).
+export const siteLineCopyKey = 'brushesTitle' as const
 // Category guide pages live under this path: /:locale/strip-brushes/:category.
 export const categoryRoute = 'strip-brushes'
 export const productionSiteURL = 'https://brushes.keliran.com'

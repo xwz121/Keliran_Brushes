@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest'
-import { deterministicChecks, englishTexts, hash, localizedData } from '../src/lib/ai/checks'
+import { deterministicChecks, englishTexts, hash, localizedData } from '../src/lib/content-checks'
 import { englishDictionary, translations } from '../src/lib/i18n'
 import { inquirySchema } from '../src/lib/inquiries'
 describe('publication checks', () => {

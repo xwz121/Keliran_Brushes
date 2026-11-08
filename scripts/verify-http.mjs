@@ -74,14 +74,12 @@ for (const source of mediaURLs) {
   assert.equal(url.origin, new URL(origin).origin, 'Verification only checks isolated local media')
   assert.equal((await fetch(url)).status, 200, url.pathname)
 }
-for (const path of [
-  '/api/release-center',
-  '/api/jobs/run',
-  '/api/inquiries',
-  '/api/translation-runs',
-  '/api/inquiry-attachments/1/0',
-])
+for (const path of ['/api/jobs/run', '/api/inquiries', '/api/inquiry-attachments/1/0'])
   assert.ok([401, 403].includes((await fetch(origin + path)).status), path)
+// The AI release centre and translation records were removed (2026-11).
+for (const path of ['/api/release-center', '/api/translation-runs'])
+  assert.equal((await fetch(origin + path)).status, 404, path)
+assert.equal((await fetch(`${origin}/api/revalidate`, { method: 'POST' })).status, 401, '/api/revalidate')
 // Anonymous draft queries may list published products, but never a document in any other state.
 const anonymous = await (await fetch(`${origin}/api/products?draft=true&locale=all&depth=0&limit=250`)).json()
 assert.ok(!anonymous.hasNextPage && anonymous.docs.length === anonymous.totalDocs, 'Check every product')

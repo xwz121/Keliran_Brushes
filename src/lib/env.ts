@@ -26,8 +26,7 @@ export function serviceStatus() {
     storage: ['R2_BUCKET', 'R2_ACCESS_KEY_ID', 'R2_SECRET_ACCESS_KEY', 'R2_ENDPOINT', 'R2_PUBLIC_URL'].every(
       (k) => Boolean(process.env[k]),
     ),
-    ai: Boolean(process.env.OPENAI_API_KEY),
-    email: ['RESEND_API_KEY', 'EMAIL_FROM', 'SALES_EMAIL'].every((k) => Boolean(process.env[k])),
+    email: ['POSTMARK_SERVER_TOKEN', 'EMAIL_FROM', 'SALES_EMAIL'].every((k) => Boolean(process.env[k])),
     turnstile: Boolean(process.env.TURNSTILE_SECRET_KEY && process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY),
     preview: previewMode,
   }

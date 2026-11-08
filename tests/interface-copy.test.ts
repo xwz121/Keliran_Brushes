@@ -2,7 +2,7 @@ import { describe, it, expect } from 'vitest'
 import { existsSync, readFileSync } from 'node:fs'
 import { locales } from '../src/lib/locales'
 import { interfaceDictionaries } from '../src/lib/interface-copy'
-import { deterministicChecks } from '../src/lib/ai/checks'
+import { deterministicChecks } from '../src/lib/content-checks'
 import {
   phoneNumbers,
   primaryWhatsApp,

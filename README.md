@@ -24,7 +24,7 @@ Node.js 24 与 pnpm 10.15.0（corepack）。本地数据库需要 PostgreSQL 14+
 | PostgreSQL  | `55439` / `keliran_redesign` | `55440` / `keliran_brushes` |
 | 后台 Cookie | `payload-token`              | `keliran-brushes-token`     |
 
-`scripts/local-env.mjs` 固定连接本机 `keliran_brushes`，关闭真实 R2、邮件、AI 与 Turnstile，不改写 `.env`。
+`scripts/local-env.mjs` 固定连接本机 `keliran_brushes`，关闭真实 R2、邮件与 Turnstile，不改写 `.env`。
 
 ```sh
 pnpm install --frozen-lockfile
@@ -43,16 +43,39 @@ pnpm dev:local
 
 ## 内容管理与发布
 
-1. 编辑英文草稿，确认产品事实与素材。
-2. 为图片填写八语替代文本并批准公开素材。
-3. 在「多语发布中心」运行翻译、技术审核、语言审核和确定性检查。
-4. 全部语言通过后统一发布；失败时事务回滚。
+内容由 Codex / Claude Code 直接维护，不再使用内置的 OpenAI 翻译/审核（2026-11-08 移除，与 keliran.com 同步），也不需要 API key。
 
-源文、译文、术语或模型配置改变后必须重新检查。迁移时原样复制且与已审发布包一致的文本沿用原审核证据；改写的正文和译文必须重新复审。
+1. 编写英文与七种语言的内容，确认产品事实与素材，勾选「产品事实与素材已确认」。
+2. 为图片填写八语替代文本并批准公开素材。
+3. 统一发布八种语言（不支持只发布单个语言）。发布前自动检查：
+   - 产品事实已确认；
+   - 产品与首页有图；
+   - 图片已批准并有八语替代文本；
+   - 每种语言都齐全，并与英文的数字、单位、表格/列表结构及术语表一致。
+
+   不通过时，后台列出具体问题。
+
+代理工具使用 `pnpm content:publish <bundle.json>`（格式见脚本头部注释）：
+
+- 默认在事务中完整执行后回滚，并打印逐语言差异；
+- `--apply` 才提交；
+- 写入非本地数据库需要 `--production` 和当次授权；
+- `--revalidate=https://brushes.keliran.com` 通过 `/api/revalidate`（`CRON_SECRET`）立即刷新缓存。
+
+确定性检查不等于语言质量审核。迁移时原样复制且与已审发布包一致的文本沿用原审核证据；改写的正文和译文须按惯例登记，等待人工语言审核。
 
 ## 询盘与文件
 
-询盘先校验写库，再由持久任务发送销售通知；通知主题带站点名，后台链接指向本站后台。RFQ 附件最多 5 个、每个 10 MB，经验证会话直传私有桶的 `brushes/inquiries/` 前缀，服务器核对大小、类型和文件头。CRM 以“站点＋记录 ID”关联本站询盘。
+询盘先校验写库，再由持久任务通过 Postmark 发送访客确认邮件和销售通知；两项任务在接口返回后立即运行，每分钟 Cron 兜底。销售通知主题带站点名，后台链接指向本站后台。
+
+访客确认邮件的规则：
+
+- 使用访客提交时的语言，Reply-To 为 `SALES_EMAIL`。
+- 内容只有参考号、已发布产品的名称/参考码与产品线，不回显访客输入，不承诺回复时限。
+- 同一邮箱每天最多 3 封。
+- 只发送一次：结果不明时记为 `unknown`，需在 Postmark Activity 核对，不自动重发。
+
+`sent` 表示 Postmark 已接收，不等于已送达。RFQ 附件最多 5 个、每个 10 MB，经验证会话直传私有桶的 `brushes/inquiries/` 前缀，服务器核对大小、类型和文件头。CRM 以“站点＋记录 ID”关联本站询盘。
 
 ## 验收
 
@@ -67,7 +90,7 @@ node scripts/local-env.mjs pnpm test:e2e
 node scripts/local-env.mjs pnpm verify:http
 ```
 
-集成测试只连接本机数据库、使用模拟 AI，不发送真实邮件。
+集成测试只连接本机数据库，邮件请求被模拟，不发送真实邮件。
 
 ## 部署资料
 

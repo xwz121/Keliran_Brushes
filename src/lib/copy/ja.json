@@ -169,5 +169,11 @@
   "sampleApproval": "サンプル承認基準",
   "criticalInspection": "重要寸法と検査方法",
   "packingRecord": "梱包とロット表示",
-  "changeRecord": "変更通知と図面改訂"
+  "changeRecord": "変更通知と図面改訂",
+  "autoReplySubject": "お問い合わせを受け付けました：{ref}",
+  "autoReplyGreeting": "ご担当者様",
+  "autoReplyIntro": "{site} へのお問い合わせありがとうございます。お問い合わせを保存しました。内容を確認し、このメールアドレス宛てにご連絡します。",
+  "autoReplyLine": "製品ライン",
+  "autoReplyFollowUp": "図面・写真・その他の情報を追加する場合は、件名のお問い合わせ参照番号を残したまま、このメールにご返信ください。",
+  "autoReplyAutomatic": "このメールは自動送信の確認メールです。お心当たりがない場合は、このメールを破棄してください。"
 }

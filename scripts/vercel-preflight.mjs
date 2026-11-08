@@ -27,10 +27,12 @@ for (const key of [
   'TURNSTILE_SECRET_KEY',
 ])
   if (!env[key]) fail(`${key} is not set.`)
-for (const key of ['RESEND_API_KEY', 'EMAIL_FROM', 'SALES_EMAIL'])
-  if (!env[key]) warnings.push(`${key} is not set: enquiries are saved but no notification email is sent.`)
-if (!env.OPENAI_API_KEY)
-  warnings.push('OPENAI_API_KEY is not set: the multilingual release centre cannot run checks.')
+for (const key of ['POSTMARK_SERVER_TOKEN', 'EMAIL_FROM', 'SALES_EMAIL'])
+  if (!env[key])
+    warnings.push(`${key} is not set: enquiries are saved but no notification or acknowledgement is sent.`)
+// Postmark's test token accepts requests without delivering anything: Preview only.
+if (production && env.POSTMARK_SERVER_TOKEN === 'POSTMARK_API_TEST')
+  problems.push('POSTMARK_SERVER_TOKEN is the Postmark test token; set the real server token in Production.')
 
 if (env.PAYLOAD_SECRET && env.PAYLOAD_SECRET.length < 32)
   fail('PAYLOAD_SECRET must be at least 32 characters and must differ from keliran.com.')

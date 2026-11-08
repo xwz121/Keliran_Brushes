@@ -169,5 +169,11 @@
   "sampleApproval": "샘플 승인 기준",
   "criticalInspection": "주요 치수 및 검사 방법",
   "packingRecord": "포장 및 로트 표시",
-  "changeRecord": "변경 통지 및 도면 개정"
+  "changeRecord": "변경 통지 및 도면 개정",
+  "autoReplySubject": "문의가 접수되었습니다: {ref}",
+  "autoReplyGreeting": "안녕하세요.",
+  "autoReplyIntro": "{site}에 문의해 주셔서 감사합니다. 문의가 저장되었으며, 내용을 검토한 후 이 이메일 주소로 연락드리겠습니다.",
+  "autoReplyLine": "제품군",
+  "autoReplyFollowUp": "도면, 사진 또는 기타 정보를 추가하시려면 제목의 문의 참조 번호를 그대로 두고 이 이메일에 회신해 주세요.",
+  "autoReplyAutomatic": "이 메일은 자동으로 발송된 확인 메일입니다. 문의를 보내신 적이 없다면 이 메일을 무시하셔도 됩니다."
 }

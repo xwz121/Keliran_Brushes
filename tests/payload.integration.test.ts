@@ -2,35 +2,9 @@ import 'dotenv/config'
 import { afterAll, beforeAll, describe, it, expect, vi } from 'vitest'
 import { randomUUID } from 'node:crypto'
 import type { Payload } from 'payload'
-const fake = vi.hoisted(() => ({ calls: 0, fail: false }))
-vi.mock('openai', () => ({
-  default: class {
-    responses = {
-      parse: async (args: any) => {
-        fake.calls++
-        if (fake.fail) throw Error('Test provider unavailable')
-        const data = JSON.parse(args.input)
-        return {
-          model: args.model,
-          id: 'test-response',
-          usage: { input_tokens: 10, output_tokens: 10 },
-          output_parsed:
-            args.text.format.name === 'translation'
-              ? {
-                  fields: Object.entries(data.source).map(([key, text]) => ({
-                    key,
-                    text: text ? `${data.targetLanguage}: ${text}` : '',
-                  })),
-                }
-              : { passed: true, issues: [] },
-        }
-      },
-    }
-  },
-}))
-import { startTranslation, runTranslationStep, publishRun } from '../src/lib/ai/workflow'
 import { issueSession } from '../src/lib/inquiry-session'
 import { acceptInquiry } from '../src/lib/inquiries'
+import { sendInquiryAutoReply } from '../src/lib/inquiry-auto-reply'
 import { locales, localeNames } from '../src/lib/locales'
 
 describe.runIf(process.env.RUN_INTEGRATION === 'true')(
@@ -38,7 +12,6 @@ describe.runIf(process.env.RUN_INTEGRATION === 'true')(
   () => {
     let cms: Payload
     const documents: number[] = []
-    const runs: number[] = []
     const inquiries: number[] = []
     const marker = `test-${randomUUID()}`
     beforeAll(async () => {
@@ -47,7 +20,7 @@ describe.runIf(process.env.RUN_INTEGRATION === 'true')(
       if (process.env.DEPLOYMENT_ENV === 'production' || process.env.VERCEL_ENV === 'production')
         throw Error('Integration tests cannot run in a production environment')
       for (const key of [
-        'RESEND_API_KEY',
+        'POSTMARK_SERVER_TOKEN',
         'EMAIL_FROM',
         'SALES_EMAIL',
         'TURNSTILE_SECRET_KEY',
@@ -59,7 +32,6 @@ describe.runIf(process.env.RUN_INTEGRATION === 'true')(
         'R2_PUBLIC_URL',
       ])
         vi.stubEnv(key, '')
-      vi.stubEnv('OPENAI_API_KEY', 'test-only-no-network')
       const { getPayload } = await import('payload')
       const config = (await import('../src/payload.config')).default
       cms = await getPayload({ config })
@@ -68,9 +40,8 @@ describe.runIf(process.env.RUN_INTEGRATION === 'true')(
       if (cms) {
         const jobs = await cms.find({ collection: 'payload-jobs', limit: 1000 })
         for (const job of jobs.docs)
-          if (runs.includes((job.input as any)?.runId))
+          if (inquiries.includes((job.input as any)?.inquiryId))
             await cms.delete({ collection: 'payload-jobs', id: job.id })
-        for (const id of runs) await cms.delete({ collection: 'translation-runs', id })
         for (const id of documents) await cms.delete({ collection: 'categories', id })
         for (const id of inquiries) await cms.delete({ collection: 'inquiries', id })
         await cms.destroy()
@@ -93,18 +64,6 @@ describe.runIf(process.env.RUN_INTEGRATION === 'true')(
       documents.push(d.id)
       return d
     }
-    async function runAll(id: number) {
-      for (let step = 0; step < 15; step++) {
-        const r = await cms.findByID({ collection: 'translation-runs', id })
-        if (!['running', 'queued'].includes(r.status!)) return r
-        for (const locale of locales) {
-          const result = (r.results as any)[locale]
-          if (!['passed', 'failed'].includes(result.stage))
-            await runTranslationStep(cms, { runId: id, locale, stage: result.stage, round: result.round })
-        }
-      }
-      throw Error('Pipeline did not finish')
-    }
     it('hides drafts and internal records from anonymous reads', async () => {
       const d = await source()
       const result = await cms.find({
@@ -115,81 +74,126 @@ describe.runIf(process.env.RUN_INTEGRATION === 'true')(
       expect(result.docs).toHaveLength(0)
       await expect(cms.find({ collection: 'inquiries', overrideAccess: false })).rejects.toThrow()
     }, 20000)
-    it('deduplicates jobs, survives rollback, and publishes all locales together', async () => {
+    async function translate(
+      id: number,
+      title = (l: string) => `${localeNames[l as never]}: FKM O-ring 25 mm`,
+    ) {
+      for (const locale of locales.filter((l) => l !== 'en'))
+        await cms.update({
+          collection: 'categories',
+          id,
+          locale,
+          draft: true,
+          data: {
+            title: title(locale),
+            summary: `${locale}: a ring for a defined application.`,
+            description: `${locale}: dimensions and compound must be confirmed.`,
+            _status: 'draft',
+          },
+        })
+    }
+    it('refuses to publish incomplete or inconsistent translations, then publishes all locales together', async () => {
       const d = await source()
-      const run = await startTranslation(cms, 'categories', d.id)
-      runs.push(run.id)
-      const same = await startTranslation(cms, 'categories', d.id)
-      expect(same.id).toBe(run.id)
-      expect((await runAll(run.id)).status).toBe('passed')
-      const original = cms.update.bind(cms)
-      const spy = vi.spyOn(cms, 'update').mockImplementation((async (args: any) => {
-        if (args.collection === 'categories' && args.locale === 'it') throw Error('Test interruption')
-        return original(args)
-      }) as any)
-      await expect(publishRun(cms, run.id)).rejects.toThrow('Test interruption')
-      spy.mockRestore()
-      expect(
-        (await cms.find({ collection: 'categories', where: { id: { equals: d.id } }, overrideAccess: false }))
-          .docs,
-      ).toHaveLength(0)
-      expect((await cms.findByID({ collection: 'translation-runs', id: run.id })).status).toBe('passed')
-      await publishRun(cms, run.id)
+      const publish = () =>
+        cms.update({ collection: 'categories', id: d.id, locale: 'en', data: { _status: 'published' } })
+      await expect(publish()).rejects.toThrow('发布前检查未通过')
+      await translate(d.id, (l) =>
+        l === 'fr' ? 'Joint FKM 26 mm' : `${localeNames[l as never]}: FKM O-ring 25 mm`,
+      )
+      await expect(publish()).rejects.toThrow('fr: title: numbers differ')
+      await translate(d.id)
+      await cms.update({ collection: 'categories', id: d.id, draft: true, data: { factsConfirmed: false } })
+      await expect(publish()).rejects.toThrow('产品事实与素材已确认')
+      await cms.update({ collection: 'categories', id: d.id, draft: true, data: { factsConfirmed: true } })
+      await publish()
       for (const locale of locales) {
         const read = await cms.findByID({ collection: 'categories', id: d.id, locale, overrideAccess: false })
-        expect(read.title).toContain('FKM O-ring 25 mm')
         expect(read._status).toBe('published')
-        if (locale !== 'en') expect(read.title).toBe(`${localeNames[locale]}: FKM O-ring 25 mm`)
+        expect(read.title).toBe(
+          locale === 'en' ? 'FKM O-ring 25 mm' : `${localeNames[locale]}: FKM O-ring 25 mm`,
+        )
       }
     }, 60000)
-    it('rejects a release after the reviewed source changes', async () => {
+    it('keeps the values of the locale saved together with the publish', async () => {
       const d = await source()
-      const run = await startTranslation(cms, 'categories', d.id)
-      runs.push(run.id)
-      await runAll(run.id)
+      await translate(d.id)
+      // The publish checks read every locale; the French values sent in this save must survive.
       await cms.update({
         collection: 'categories',
         id: d.id,
-        locale: 'en',
-        draft: true,
-        data: { summary: 'Changed after review', _status: 'draft' },
+        locale: 'fr',
+        data: { title: 'Français : joint FKM 25 mm', _status: 'published' },
       })
-      await expect(publishRun(cms, run.id)).rejects.toThrow('已改变')
+      const fr = await cms.findByID({
+        collection: 'categories',
+        id: d.id,
+        locale: 'fr',
+        overrideAccess: false,
+      })
+      const en = await cms.findByID({
+        collection: 'categories',
+        id: d.id,
+        locale: 'en',
+        overrideAccess: false,
+      })
+      expect(fr.title).toBe('Français : joint FKM 25 mm')
+      expect(en.title).toBe('FKM O-ring 25 mm')
     }, 60000)
-    it('does not overwrite an edited source with a stale queued result', async () => {
-      const d = await source()
-      const run = await startTranslation(cms, 'categories', d.id)
-      runs.push(run.id)
-      await cms.update({
-        collection: 'categories',
-        id: d.id,
-        locale: 'en',
-        draft: true,
-        data: { title: 'Changed source', _status: 'draft' },
-      })
-      await runTranslationStep(cms, { runId: run.id, locale: 'fr', stage: 'translate' })
-      expect((await cms.findByID({ collection: 'translation-runs', id: run.id })).status).toBe('stale')
-    }, 20000)
-    it('marks a run failed when native job retries are exhausted', async () => {
-      const d = await source()
-      const run = await startTranslation(cms, 'categories', d.id)
-      runs.push(run.id)
-      const jobs = await cms.find({ collection: 'payload-jobs', limit: 1000 })
-      const job = jobs.docs.find(
-        (j) => (j.input as any)?.runId === run.id && (j.input as any)?.locale === 'fr',
-      )!
-      fake.fail = true
+    it('caps visitor acknowledgements per address and sends each at most once', async () => {
+      vi.stubEnv('POSTMARK_SERVER_TOKEN', 'POSTMARK_API_TEST')
+      vi.stubEnv('EMAIL_FROM', 'Keliran <test@example.com>')
+      vi.stubEnv('SALES_EMAIL', 'sales@example.com')
+      const fetch = vi
+        .spyOn(globalThis, 'fetch')
+        .mockResolvedValue(Response.json({ ErrorCode: 0, Message: 'OK', MessageID: 'test-message' }))
       try {
+        const email = `cap-${marker}@example.com`
+        const statuses: string[] = []
         for (let n = 0; n < 4; n++) {
-          await cms.update({ collection: 'payload-jobs', id: job.id, data: { waitUntil: null } })
-          await cms.jobs.runByID({ id: job.id, silent: true })
+          const submissionId = randomUUID()
+          const { jobIds } = await acceptInquiry(
+            cms,
+            {
+              submissionId,
+              name: 'Cap test',
+              email,
+              message: 'Acknowledgement cap test; no email leaves this machine.',
+              consent: true,
+              locale: 'de',
+              sourcePath: '/de/contact',
+            },
+            '127.0.0.20',
+          )
+          const saved = (
+            await cms.find({ collection: 'inquiries', where: { submissionId: { equals: submissionId } } })
+          ).docs[0]
+          inquiries.push(saved.id)
+          statuses.push(saved.autoReplyStatus!)
+          expect(jobIds).toHaveLength(saved.autoReplyStatus === 'pending' ? 2 : 1)
         }
-        expect((await cms.findByID({ collection: 'payload-jobs', id: job.id })).hasError).toBe(true)
-        expect((await cms.findByID({ collection: 'translation-runs', id: run.id })).status).toBe('failed')
+        expect(statuses).toEqual(['pending', 'pending', 'pending', 'skipped'])
+        const first = inquiries[inquiries.length - 4]
+        await sendInquiryAutoReply(cms, first)
+        await sendInquiryAutoReply(cms, first)
+        expect(fetch).toHaveBeenCalledTimes(1)
+        const body = JSON.parse(String(fetch.mock.calls[0][1]?.body))
+        expect(body).toMatchObject({ To: email, ReplyTo: 'sales@example.com', Tag: 'inquiry-auto-reply' })
+        expect(body.TextBody).not.toContain('Cap test')
+        expect(body.TextBody).not.toContain('Acknowledgement cap test')
+        const sent = await cms.findByID({ collection: 'inquiries', id: first })
+        expect(sent).toMatchObject({ autoReplyStatus: 'sent', autoReplyMessageId: 'test-message' })
+        // A timeout may hide an accepted message: recorded as unknown and never retried.
+        fetch.mockRejectedValueOnce(new Error('The operation was aborted due to timeout'))
+        const second = inquiries[inquiries.length - 3]
+        await sendInquiryAutoReply(cms, second)
+        expect((await cms.findByID({ collection: 'inquiries', id: second })).autoReplyStatus).toBe('unknown')
+        await sendInquiryAutoReply(cms, second)
+        expect(fetch).toHaveBeenCalledTimes(2)
       } finally {
-        fake.fail = false
+        fetch.mockRestore()
+        for (const key of ['POSTMARK_SERVER_TOKEN', 'EMAIL_FROM', 'SALES_EMAIL']) vi.stubEnv(key, '')
       }
-    }, 30000)
+    }, 60000)
     it('preserves images referenced by historical drafts and generates unique filenames', async () => {
       const media = await cms.create({
         collection: 'media',
@@ -400,6 +404,7 @@ describe.runIf(process.env.RUN_INTEGRATION === 'true')(
       inquiries.push(...saved.docs.map((d) => d.id))
       expect(saved.totalDocs).toBe(1)
       expect(saved.docs[0].notificationStatus).toBe('not-configured')
+      expect(saved.docs[0].autoReplyStatus).toBe('not-configured')
       await expect(
         acceptInquiry(cms, { ...data, message: 'A changed duplicate message.' }, '127.0.0.2'),
       ).rejects.toThrow('already used')

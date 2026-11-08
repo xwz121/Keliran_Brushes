@@ -1,0 +1,71 @@
+{
+  "_note": "Privacy notice, Service providers: Resend replaced by Postmark, and the automatic enquiry confirmation disclosed. Only needed if brushes.keliran.com content was migrated from keliran.com before its privacy page was updated; the dry run shows the difference from the live text. Pending human language review. Production --apply needs explicit authorisation.",
+  "collection": "pages",
+  "slug": "privacy",
+  "locales": {
+    "en": {
+      "sections": [
+        {
+          "key": "services",
+          "text": "Our website uses Vercel hosting, Alibaba Cloud database services, Cloudflare media storage and security services, and Postmark email delivery. After you submit an enquiry, an automatic confirmation is sent to the email address you provide. Enquiry information may be processed in China and in the regions used by these providers. Enquiry attachments are not sent to website translation or content-generation services."
+        }
+      ]
+    },
+    "fr": {
+      "sections": [
+        {
+          "key": "services",
+          "text": "Notre site web utilise l’hébergement Vercel, les services de base de données Alibaba Cloud, les services de stockage de médias et de sécurité Cloudflare, ainsi que l’envoi d’e-mails Postmark. Après l’envoi d’une demande, une confirmation automatique est envoyée à l’adresse e-mail que vous indiquez. Les informations de demande peuvent être traitées en Chine et dans les régions utilisées par ces prestataires. Les pièces jointes aux demandes ne sont pas envoyées à des services de traduction du site web ou de génération de contenu."
+        }
+      ]
+    },
+    "de": {
+      "sections": [
+        {
+          "key": "services",
+          "text": "Unsere Website nutzt Vercel-Hosting, Alibaba Cloud-Datenbankdienste, Cloudflare-Dienste für Medienspeicherung und Sicherheit sowie Postmark für den E-Mail-Versand. Nach dem Absenden einer Anfrage wird eine automatische Bestätigung an die von Ihnen angegebene E-Mail-Adresse gesendet. Anfrageinformationen können in China und in den von diesen Anbietern genutzten Regionen verarbeitet werden. Anfrageanhänge werden nicht an Übersetzungs- oder Content-Generierungsdienste der Website gesendet."
+        }
+      ]
+    },
+    "es": {
+      "sections": [
+        {
+          "key": "services",
+          "text": "Nuestro sitio web utiliza alojamiento de Vercel, servicios de bases de datos de Alibaba Cloud, almacenamiento de medios y servicios de seguridad de Cloudflare, y entrega de correo electrónico de Postmark. Tras enviar una consulta, se envía una confirmación automática a la dirección de correo electrónico que indique. La información de las consultas puede procesarse en China y en las regiones utilizadas por estos proveedores. Los archivos adjuntos de las consultas no se envían a servicios de traducción o generación de contenido del sitio web."
+        }
+      ]
+    },
+    "it": {
+      "sections": [
+        {
+          "key": "services",
+          "text": "Il nostro sito web utilizza l'hosting Vercel, i servizi di database Alibaba Cloud, i servizi Cloudflare di archiviazione e sicurezza dei media e il recapito e-mail Postmark. Dopo l'invio di una richiesta, viene inviata una conferma automatica all'indirizzo e-mail indicato. Le informazioni delle richieste possono essere trattate in Cina e nelle regioni utilizzate da questi fornitori. Gli allegati delle richieste non vengono inviati a servizi di traduzione o generazione di contenuti del sito web."
+        }
+      ]
+    },
+    "ja": {
+      "sections": [
+        {
+          "key": "services",
+          "text": "当社ウェブサイトでは、Vercelのホスティング、Alibaba Cloudのデータベースサービス、Cloudflareのメディアストレージおよびセキュリティサービス、ならびにPostmarkのメール配信を利用しています。引合いを送信すると、ご入力いただいたメールアドレスに自動確認メールが送信されます。引合い情報は、中国およびこれらのプロバイダーが使用する地域で処理される場合があります。引合いの添付ファイルは、ウェブサイトの翻訳サービスまたはコンテンツ生成サービスには送信されません。"
+        }
+      ]
+    },
+    "ko": {
+      "sections": [
+        {
+          "key": "services",
+          "text": "당사 웹사이트는 Vercel 호스팅, Alibaba Cloud 데이터베이스 서비스, Cloudflare 미디어 저장 및 보안 서비스, 그리고 Postmark 이메일 전송 서비스를 사용합니다. 문의를 제출하시면 입력하신 이메일 주소로 자동 확인 메일이 발송됩니다. 문의 정보는 중국 및 이러한 제공업체가 사용하는 지역에서 처리될 수 있습니다. 문의 첨부파일은 웹사이트 번역 또는 콘텐츠 생성 서비스로 전송되지 않습니다."
+        }
+      ]
+    },
+    "zh-Hant": {
+      "sections": [
+        {
+          "key": "services",
+          "text": "我們的網站使用 Vercel 主機服務、Alibaba Cloud 資料庫服務、Cloudflare 媒體儲存與安全服務，以及 Postmark 電子郵件傳送服務。提交詢價後，系統會自動寄送確認郵件至您提供的電子郵件地址。詢價資訊可能會在中國及這些服務供應商使用的地區處理。詢價附件不會傳送至網站翻譯或內容生成服務。"
+        }
+      ]
+    }
+  }
+}

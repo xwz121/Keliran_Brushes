@@ -24,7 +24,7 @@ import {
   sha256,
   snapshotHash,
   sourceKey,
-  sourceMigrations,
+  acceptedSourceMigrations,
   sourceSite,
   tableExists,
   targetSite,
@@ -46,14 +46,13 @@ if (env.MIGRATION_SOURCE_SESSION_OPTIONS !== 'off')
 Object.assign(process.env, {
   DATABASE_URL: url.toString(),
   DATABASE_URL_UNPOOLED: '',
-  // Production mode disables schema push; no storage, email or AI service is configured here.
+  // Production mode disables schema push; no storage or email service is configured here.
   NODE_ENV: 'production',
   PAYLOAD_SECRET: process.env.PAYLOAD_SECRET || 'read-only-export-no-sessions-issued',
   DEPLOYMENT_ENV: 'development',
   VERCEL_ENV: 'development',
   R2_BUCKET: '',
-  RESEND_API_KEY: '',
-  OPENAI_API_KEY: '',
+  POSTMARK_SERVER_TOKEN: '',
 })
 const config = (await import('../../src/payload.config')).default
 const cms = await getPayload({ config })
@@ -73,7 +72,7 @@ try {
     'The source has a migration ledger: this looks like a brushes database, not keliran.com',
   )
   const migrations = await appliedMigrations(cms, req)
-  assert.deepEqual(migrations, sourceMigrations, `Unexpected source schema: ${migrations.join(', ')}`)
+  assert.ok(acceptedSourceMigrations(migrations), `Unexpected source schema: ${migrations.join(', ')}`)
   const identity = await databaseIdentity(cms, req)
 
   // Every content document's slug and line, to describe relations by slug and to drop
@@ -160,7 +159,7 @@ try {
       published: p,
       draft: d,
       sourceHash: '', // filled after media hashes are known
-      evidence: { status: 'needs-review', differences: [], translationRuns: [] },
+      evidence: { status: 'needs-review', differences: [] },
     })
     if (collection === 'pages' || (base || newest).line === 'both')
       for (const doc of [p, d].filter(Boolean))
@@ -204,7 +203,6 @@ try {
   }
   for (const id of mediaIds) assert.ok(media.has(id), `Referenced media ${id} not found`)
 
-  const runs = (await read('translation-runs')).docs as any[]
   const resolveMedia = (collection: string, id: unknown) =>
     collection === 'media'
       ? media.get(id as number)
@@ -224,9 +222,6 @@ try {
     record.evidence = {
       status: differences.length ? 'needs-review' : 'release-20260924',
       differences,
-      translationRuns: runs
-        .filter((r) => r.targetCollection === record.collection && r.targetId === record.sourceId)
-        .map((r) => ({ id: r.id, status: r.status, releasedAt: r.releasedAt ?? null })),
     }
   }
 

@@ -1,6 +1,8 @@
 import type { Access, CollectionConfig, Field, PayloadRequest } from 'payload'
 import { randomUUID } from 'node:crypto'
 import { lock } from '@/lib/transactions'
+import { assertPublishable } from '@/lib/publish-checks'
+import { autoReplyStatuses } from '@/lib/inquiry-auto-reply'
 import { routeFor } from '@/lib/routes'
 import { locales } from '@/lib/locales'
 import { siteLine, siteLineWhere } from '@/lib/site'
@@ -60,7 +62,10 @@ const contentFields: Field[] = [
     type: 'checkbox',
     defaultValue: false,
     label: '产品事实与素材已确认',
-    admin: { description: '确认当前版本的供货描述、技术信息和配图已获准用于官网。AI 检查通过后仍需勾选。' },
+    admin: {
+      description:
+        '确认当前版本的供货描述、技术信息和配图已获准用于官网。发布时还会检查八种语言是否齐全，并与英文的数字、单位、结构和术语一致。',
+    },
   },
   localizedText('seoTitle', 'SEO 标题'),
   localizedText('seoDescription', 'SEO 描述', 'textarea'),
@@ -87,8 +92,10 @@ function content(slug: ContentSlug, label: string, extra: Field[] = []): Collect
       beforeChange: [
         async ({ data, req, originalDoc }) => {
           if (originalDoc?.id) await lock(req, `content:${slug}:${originalDoc.id}`)
+          // Every locale is published together and must pass the release checks. Only trusted
+          // scripts that check their own content (and test fixtures) set releaseApproved.
           if (data._status === 'published' && req.context.releaseApproved !== true)
-            throw new Error('请在「多语发布中心」完成检查并统一发布。')
+            await assertPublishable(req, slug, originalDoc?.id, data)
           return data
         },
       ],
@@ -368,6 +375,7 @@ export const Inquiries: CollectionConfig = {
       'productSlug',
       'status',
       'notificationStatus',
+      'autoReplyStatus',
       'createdAt',
     ],
   },
@@ -427,33 +435,23 @@ export const Inquiries: CollectionConfig = {
       admin: { readOnly: true },
     },
     { name: 'notificationError', type: 'text', admin: { readOnly: true } },
+    { name: 'notificationMessageId', type: 'text', label: '销售通知 Postmark ID', admin: { readOnly: true } },
+    {
+      // No default: enquiries received before the acknowledgement existed keep an empty value.
+      name: 'autoReplyStatus',
+      type: 'select',
+      label: '客户自动确认邮件',
+      options: [...autoReplyStatuses],
+      admin: {
+        readOnly: true,
+        description:
+          'sent 表示 Postmark 已接收（不等于已送达）；unknown 表示结果不明，请在 Postmark Activity 按询盘 ID 核对，不要重发；skipped 表示同一邮箱当日已达上限。',
+      },
+    },
+    { name: 'autoReplyError', type: 'text', label: '自动确认邮件错误', admin: { readOnly: true } },
+    { name: 'autoReplyMessageId', type: 'text', label: '自动确认 Postmark ID', admin: { readOnly: true } },
     { name: 'notes', type: 'textarea', label: '内部备注' },
     { name: 'retentionUntil', type: 'date', admin: { readOnly: true } },
-  ],
-}
-export const TranslationRuns: CollectionConfig = {
-  slug: 'translation-runs',
-  labels: { singular: '翻译任务', plural: '翻译与检查记录' },
-  admin: { group: '管理', useAsTitle: 'title', defaultColumns: ['title', 'status', 'updatedAt'] },
-  access: { read: staff, create: () => false, update: () => false, delete: admin },
-  fields: [
-    { name: 'title', type: 'text' },
-    { name: 'targetCollection', type: 'select', options: [...contentSlugs], required: true },
-    { name: 'targetId', type: 'number', required: true },
-    { name: 'sourceHash', type: 'text', required: true, index: true },
-    { name: 'source', type: 'json', required: true },
-    {
-      name: 'status',
-      type: 'select',
-      options: ['queued', 'running', 'passed', 'failed', 'stale', 'published'],
-      defaultValue: 'queued',
-    },
-    { name: 'results', type: 'json' },
-    { name: 'glossaryHash', type: 'text' },
-    { name: 'pipelineVersion', type: 'text' },
-    { name: 'usage', type: 'json' },
-    { name: 'error', type: 'textarea' },
-    { name: 'releasedAt', type: 'date' },
   ],
 }
 export const Glossary: CollectionConfig = {
