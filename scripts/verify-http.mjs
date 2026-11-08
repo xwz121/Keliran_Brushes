@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict'
 import { readFileSync } from 'node:fs'
-const origin = process.env.VERIFY_ORIGIN || 'http://127.0.0.1:3000'
+const origin = process.env.VERIFY_ORIGIN || 'http://127.0.0.1:3200'
 assert.ok(['127.0.0.1', 'localhost'].includes(new URL(origin).hostname))
 const state = JSON.parse(readFileSync('.local/review-state.json', 'utf8'))
 const headers = { Cookie: state.cookies.map((c) => `${c.name}=${c.value}`).join('; '), Origin: origin }

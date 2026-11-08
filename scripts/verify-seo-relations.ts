@@ -3,7 +3,7 @@ import { contentSlugs } from '../src/collections'
 import { procurementRelations } from '../src/lib/procurement-relations'
 import { sitemapRecords } from '../src/lib/sitemap-records'
 const database = new URL(process.env.DATABASE_URL || 'http://invalid')
-if (database.hostname !== '127.0.0.1' || database.pathname !== '/keliran_redesign')
+if (database.hostname !== '127.0.0.1' || database.pathname !== '/keliran_brushes')
   throw Error('Local review database required')
 const { getCMS } = await import('../src/lib/payload')
 const cms = await getCMS()

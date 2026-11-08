@@ -4,10 +4,11 @@ import { cookies, headers } from 'next/headers'
 import { getCMS } from './payload'
 import { locales, type Locale } from './locales'
 import type { ContentSlug } from '@/collections'
+import { previewCookie, siteLine, siteLineWhere } from './site'
 import type { Product } from './preview-data'
-const contentCacheVersion = `content-20260924-release-final:${locales.join(',')}`
+const contentCacheVersion = `brushes-20261108-split:${locales.join(',')}`
 export async function canPreview(requested: boolean) {
-  if (!requested && (await cookies()).get('keliran-preview')?.value !== '1') return false
+  if (!requested && (await cookies()).get(previewCookie)?.value !== '1') return false
   const cms = await getCMS()
   return Boolean((await cms.auth({ headers: await headers() })).user)
 }
@@ -23,6 +24,8 @@ export async function getCollection(locale: Locale, collection: ContentSlug, pre
         draft: preview,
         overrideAccess: false,
         user,
+        // Signed-in previews bypass the anonymous access rule; keep them on this site's line too.
+        ...(collection === 'pages' ? {} : { where: siteLineWhere }),
         limit: 250,
         depth: 1,
         sort: 'sortOrder',
@@ -51,7 +54,7 @@ export async function getProducts(locale: Locale, preview = false): Promise<Prod
     title: d.title || '',
     summary: d.summary || '',
     description: d.description || '',
-    line: d.line || 'sealing',
+    line: d.line || siteLine,
     materials: d.materials || [],
     category: typeof d.category === 'object' ? d.category?.title || '' : '',
     categorySlug: d.category?.slug,

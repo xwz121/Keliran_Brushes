@@ -1,6 +1,6 @@
 {
   "framework": "nextjs",
-  "buildCommand": "pnpm generate:importmap && pnpm build && node --import tsx scripts/vercel-release.ts",
+  "buildCommand": "pnpm generate:importmap && pnpm build",
   "crons": [
     {
       "path": "/api/jobs/run",

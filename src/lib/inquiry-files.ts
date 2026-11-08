@@ -1,3 +1,4 @@
+import { inquiryFilePrefix } from './site'
 import { randomUUID } from 'node:crypto'
 import {
   S3Client,
@@ -68,17 +69,20 @@ export function validateFile(raw: unknown) {
     throw new HttpError(400, 'Use PDF, CAD, PNG, JPG or WebP files, up to 10 MB each.')
   return f.data
 }
+// Keys live under this site's prefix in the private bucket shared with keliran.com; the sweep
+// below only lists this prefix, and the sealing site only lists its own `inquiries/` prefix.
+const escapedPrefix = inquiryFilePrefix.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
 export function ownsKey(key: string, id: string) {
   if (!z.uuid().safeParse(id).success) return false
   return new RegExp(
-    `^inquiries/${id}/[a-f0-9-]{36}\\.(pdf|dxf|dwg|step|stp|iges|igs|png|jpg|jpeg|webp)$`,
+    `^${escapedPrefix}${id}/[a-f0-9-]{36}\\.(pdf|dxf|dwg|step|stp|iges|igs|png|jpg|jpeg|webp)$`,
   ).test(key)
 }
 export async function signUpload(id: string, raw: unknown) {
   const f = validateFile(raw),
     ext = extension(f.name),
     type = fileTypes[ext],
-    key = `inquiries/${id}/${randomUUID()}.${ext}`
+    key = `${inquiryFilePrefix}${id}/${randomUUID()}.${ext}`
   const url = await getSignedUrl(
     client(),
     new PutObjectCommand({ Bucket: bucket(), Key: key, ContentLength: f.size, ContentType: type }),
@@ -166,14 +170,14 @@ export async function sweepInquiryFiles(cms: Payload) {
     const objects = await s3.send(
       new ListObjectsV2Command({
         Bucket: bucket(),
-        Prefix: 'inquiries/',
+        Prefix: inquiryFilePrefix,
         ContinuationToken: cursor,
         MaxKeys: 100,
       }),
     )
     for (const o of objects.Contents || []) {
       if (!o.Key || !o.LastModified || Date.now() - o.LastModified.getTime() < 86400000) continue
-      const id = o.Key.split('/')[1]
+      const id = o.Key.slice(inquiryFilePrefix.length).split('/')[0]
       const found = await cms.find({
         collection: 'inquiries',
         where: { submissionId: { equals: id } },

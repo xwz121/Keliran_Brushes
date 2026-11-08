@@ -5,7 +5,7 @@ import { contentSlugs } from '../src/collections'
 import { locales } from '../src/lib/locales'
 import { englishTexts } from '../src/lib/ai/checks'
 const url = new URL(process.env.DATABASE_URL!)
-if (!['127.0.0.1', 'localhost'].includes(url.hostname) || url.pathname !== '/keliran_redesign')
+if (!['127.0.0.1', 'localhost'].includes(url.hostname) || url.pathname !== '/keliran_brushes')
   throw Error('This audit only reads the isolated local review database.')
 // Disable development schema push: an audit must not change the database.
 Object.assign(process.env, { NODE_ENV: 'production' })

@@ -21,6 +21,7 @@ import {
   Inquiries,
   Materials,
   Media,
+  MigrationRecords,
   Pages,
   Products,
   RateLimits,
@@ -28,7 +29,8 @@ import {
   Users,
 } from './collections'
 import { localeNames, locales } from './lib/locales'
-import { isProductionDeployment, serviceStatus, siteURL } from './lib/env'
+import { allowedOrigins, isProductionDeployment, serviceStatus, siteURL } from './lib/env'
+import { mediaPrefix, siteName } from './lib/site'
 
 const dirname = path.dirname(fileURLToPath(import.meta.url))
 const configured = serviceStatus()
@@ -40,9 +42,12 @@ if (isProductionDeployment && !configured.storage)
 export default buildConfig({
   secret: process.env.PAYLOAD_SECRET,
   serverURL: siteURL,
+  // Distinct cookie names keep this admin separate from keliran.com when both run on 127.0.0.1.
+  cookiePrefix: 'keliran-brushes',
+  telemetry: false,
   admin: {
     user: 'users',
-    meta: { titleSuffix: '— Keliran' },
+    meta: { titleSuffix: `— ${siteName}` },
     importMap: { baseDir: path.resolve(dirname) },
     components: {
       graphics: {
@@ -81,6 +86,7 @@ export default buildConfig({
     TranslationRuns,
     Glossary,
     RateLimits,
+    MigrationRecords,
   ],
   editor: lexicalEditor(),
   db: postgresAdapter({
@@ -93,8 +99,8 @@ export default buildConfig({
   typescript: { outputFile: path.resolve(dirname, 'payload-types.ts') },
   sharp,
   upload: { limits: { fileSize: 4 * 1024 * 1024 }, abortOnLimit: true },
-  cors: isProductionDeployment ? [siteURL] : [siteURL, 'http://127.0.0.1:3000', 'http://localhost:3000'],
-  csrf: isProductionDeployment ? [siteURL] : [siteURL, 'http://127.0.0.1:3000', 'http://localhost:3000'],
+  cors: allowedOrigins,
+  csrf: allowedOrigins,
   email:
     process.env.RESEND_API_KEY && process.env.EMAIL_FROM
       ? resendAdapter({
@@ -121,7 +127,7 @@ export default buildConfig({
           disablePayloadAccessControl: true,
           generateFileURL: ({ filename, prefix }) =>
             `${process.env.R2_PUBLIC_URL}/${prefix ? `${prefix}/` : ''}${encodeURIComponent(filename)}`,
-          prefix: 'sealing',
+          prefix: mediaPrefix,
         },
       },
       config: {

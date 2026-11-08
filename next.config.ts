@@ -22,7 +22,8 @@ const config: NextConfig = {
       }))
     if (!destination || !destination.startsWith('https://')) return contentRedirects
     return [
-      ...(process.env.LEGACY_HOSTS || 'sealing.keliran.com,www.keliran.com')
+      // Optional whole-host redirects (for example a www. alias); none by default.
+      ...(process.env.LEGACY_HOSTS || '')
         .split(',')
         .map((x) => x.trim())
         .filter((host) => host && host !== new URL(destination).hostname)

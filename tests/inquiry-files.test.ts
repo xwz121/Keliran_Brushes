@@ -18,7 +18,7 @@ it('cleans expired attachments beyond the first page of retained inquiries', asy
   }))
     vi.stubEnv(key, value)
   const send = vi.spyOn(S3Client.prototype, 'send').mockResolvedValue({ Contents: [] } as never)
-  const attachment = { key: 'inquiries/expired/part.pdf', name: 'part.pdf' }
+  const attachment = { key: 'brushes/inquiries/expired/part.pdf', name: 'part.pdf' }
   const cms = {
     find: vi
       .fn()

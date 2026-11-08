@@ -3,10 +3,15 @@ import { randomUUID } from 'node:crypto'
 import { lock } from '@/lib/transactions'
 import { routeFor } from '@/lib/routes'
 import { locales } from '@/lib/locales'
+import { siteLine, siteLineWhere } from '@/lib/site'
 
 export const staff = ({ req }: { req: PayloadRequest }) => Boolean(req.user)
 const admin = ({ req }: { req: PayloadRequest }) => req.user?.role === 'admin'
 const published: Access = ({ req }) => (req.user ? true : { _status: { equals: 'published' } })
+// Anonymous visitors (pages, REST/GraphQL, sitemap, llms.txt) only see this site's line
+// and shared documents. Records of the other line stay in the database for traceability.
+const publishedOnSite: Access = ({ req }) =>
+  req.user ? true : { and: [{ _status: { equals: 'published' } }, siteLineWhere] }
 export const contentSlugs = [
   'products',
   'categories',
@@ -71,7 +76,12 @@ function content(slug: ContentSlug, label: string, extra: Field[] = []): Collect
       preview: (doc) =>
         `/api/preview?path=${encodeURIComponent(routeFor(slug, doc as { slug: string; line?: string }))}`,
     },
-    access: { read: published, create: staff, update: staff, delete: admin },
+    access: {
+      read: extra.includes(lineField) ? publishedOnSite : published,
+      create: staff,
+      update: staff,
+      delete: admin,
+    },
     versions: { drafts: true, maxPerDoc: 50 },
     hooks: {
       beforeChange: [
@@ -151,7 +161,7 @@ export const lineField: Field = {
   name: 'line',
   type: 'select',
   options: ['sealing', 'brushes', 'both'],
-  defaultValue: 'sealing',
+  defaultValue: siteLine,
   required: true,
   label: '产品线',
 }
@@ -483,5 +493,31 @@ export const RateLimits: CollectionConfig = {
     { name: 'key', type: 'text', unique: true, required: true },
     { name: 'count', type: 'number', defaultValue: 0 },
     { name: 'expiresAt', type: 'date', required: true },
+  ],
+}
+
+// Ledger for scripts/migration/import-target.ts: one row per imported source record,
+// so a repeated import neither duplicates records nor overwrites later edits.
+export const MigrationRecords: CollectionConfig = {
+  slug: 'migration-records',
+  labels: { singular: '迁移记录', plural: '迁移记录' },
+  admin: {
+    group: '管理',
+    useAsTitle: 'sourceKey',
+    defaultColumns: ['sourceKey', 'targetCollection', 'targetId', 'evidenceStatus', 'updatedAt'],
+  },
+  access: { read: staff, create: () => false, update: () => false, delete: () => false },
+  fields: [
+    { name: 'sourceKey', type: 'text', unique: true, required: true, admin: { readOnly: true } },
+    { name: 'sourceCollection', type: 'text', required: true, admin: { readOnly: true } },
+    { name: 'sourceId', type: 'text', required: true, admin: { readOnly: true } },
+    { name: 'sourceSlug', type: 'text', admin: { readOnly: true } },
+    { name: 'targetCollection', type: 'text', required: true, admin: { readOnly: true } },
+    { name: 'targetId', type: 'text', required: true, admin: { readOnly: true } },
+    { name: 'sourceHash', type: 'text', required: true, admin: { readOnly: true } },
+    { name: 'importedHash', type: 'text', required: true, admin: { readOnly: true } },
+    { name: 'runId', type: 'text', required: true, admin: { readOnly: true } },
+    { name: 'evidenceStatus', type: 'text', admin: { readOnly: true } },
+    { name: 'evidence', type: 'json', admin: { readOnly: true } },
   ],
 }

@@ -39,26 +39,25 @@ describe('procurement content and public discovery', () => {
         .text,
     ).toContain('Revision')
   })
-  it('never announces drafts, redirects, duplicate routes or nonexistent language translations in the sitemap', () => {
+  it('never announces drafts, duplicate routes or nonexistent language translations in the sitemap', () => {
     const doc = {
-      slug: 'epdm',
+      slug: 'pbt',
       _status: 'published',
-      title: { en: 'EPDM', de: 'EPDM', fr: '' },
+      title: { en: 'PBT', de: 'PBT', fr: '' },
       updatedAt: '2026-09-24T00:00:00.000Z',
     }
-    const rows = sitemapRecords('https://keliran.com', [
+    const rows = sitemapRecords('https://brushes.keliran.com', [
       { collection: 'materials', docs: [doc, doc, { ...doc, slug: 'draft', _status: 'draft' }] },
-      { collection: 'applications', docs: [{ ...doc, slug: 'industrial-equipment' }] },
     ])
     const details = rows.filter((r) => r.url.includes('/materials/'))
     expect(details).toHaveLength(2)
     expect(details[0].alternates?.languages).toEqual({
-      en: 'https://keliran.com/en/materials/epdm',
-      de: 'https://keliran.com/de/materials/epdm',
-      'x-default': 'https://keliran.com/en/materials/epdm',
+      en: 'https://brushes.keliran.com/en/materials/pbt',
+      de: 'https://brushes.keliran.com/de/materials/pbt',
+      'x-default': 'https://brushes.keliran.com/en/materials/pbt',
     })
     expect(details[0].lastModified).toBe(doc.updatedAt)
-    expect(rows.some((r) => /draft|industrial-equipment|\?/.test(r.url))).toBe(false)
+    expect(rows.some((r) => /draft|\?/.test(r.url))).toBe(false)
   })
   it('preserves all existing eight language routes when translations exist and omits fabricated dates', () => {
     const rows = sitemapRecords('https://keliran.com', [

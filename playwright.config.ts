@@ -3,7 +3,7 @@ export default defineConfig({
   testDir: './tests/e2e',
   globalSetup: './tests/e2e/global-setup.ts',
   use: {
-    baseURL: 'http://127.0.0.1:3000',
+    baseURL: 'http://127.0.0.1:3200',
     trace: 'retain-on-failure',
     storageState: '.local/review-state.json',
     // Scroll reveals are exercised in motion.spec.ts; everything else runs with motion off.

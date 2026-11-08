@@ -1,12 +1,23 @@
+import { devPort, productionSiteURL } from './site'
 export const isProductionDeployment =
   process.env.VERCEL_ENV === 'production' || process.env.DEPLOYMENT_ENV === 'production'
-// The production domain is part of this release, including canonical URLs,
-// CSRF origin validation and the hostname expected from Turnstile.
+// Production always uses the launched domain: canonical URLs, CSRF origin
+// validation and the hostname expected from Turnstile all depend on it.
+// Preview deployments use their configured URL, then the stable branch URL.
 export const siteURL = (
   isProductionDeployment
-    ? 'https://keliran.com'
-    : process.env.NEXT_PUBLIC_SERVER_URL || 'http://localhost:3000'
+    ? productionSiteURL
+    : process.env.NEXT_PUBLIC_SERVER_URL ||
+      (process.env.VERCEL_BRANCH_URL ? `https://${process.env.VERCEL_BRANCH_URL}` : '') ||
+      `http://127.0.0.1:${devPort}`
 ).replace(/\/$/, '')
+// Browser origins allowed to post forms and use the admin. Outside production the
+// same port is accepted on both loopback names, since cookies differ between them.
+export const allowedOrigins = (() => {
+  const origin = new URL(siteURL)
+  if (isProductionDeployment || !['127.0.0.1', 'localhost'].includes(origin.hostname)) return [origin.origin]
+  return ['127.0.0.1', 'localhost'].map((host) => `${origin.protocol}//${host}:${origin.port || devPort}`)
+})()
 export const noIndexSite = !isProductionDeployment
 export const previewMode = process.env.CONTENT_PREVIEW_MODE === 'true' && !isProductionDeployment
 export function serviceStatus() {

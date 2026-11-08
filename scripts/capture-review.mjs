@@ -17,7 +17,7 @@ for (const [name, path, width] of [
   ['rfq-mobile', '/en/rfq?line=brushes', 390],
 ]) {
   await page.setViewportSize({ width, height: 1000 })
-  await page.goto(`http://127.0.0.1:3000${path}`, { waitUntil: 'networkidle' })
+  await page.goto(`http://127.0.0.1:3200${path}`, { waitUntil: 'networkidle' })
   await page.screenshot({ path: `docs/review/${name}.png`, fullPage: true })
   console.log(`${name}: ${await page.title()}`)
 }

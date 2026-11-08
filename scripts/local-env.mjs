@@ -3,10 +3,10 @@ import { randomBytes } from 'node:crypto'
 // Deliberately override every external service before dotenv loads the saved production settings.
 const env = {
   ...process.env,
-  DATABASE_URL: 'postgresql://keliran@127.0.0.1:55439/keliran_redesign',
-  DATABASE_URL_UNPOOLED: 'postgresql://keliran@127.0.0.1:55439/keliran_redesign',
-  NEXT_PUBLIC_SERVER_URL: 'http://127.0.0.1:3000',
-  PAYLOAD_SECRET: 'local-redesign-only-not-for-deployment-2026',
+  DATABASE_URL: 'postgresql://keliran@127.0.0.1:55440/keliran_brushes',
+  DATABASE_URL_UNPOOLED: 'postgresql://keliran@127.0.0.1:55440/keliran_brushes',
+  NEXT_PUBLIC_SERVER_URL: 'http://127.0.0.1:3200',
+  PAYLOAD_SECRET: 'local-brushes-only-not-for-deployment-2026',
   CRON_SECRET: randomBytes(32).toString('hex'),
   CONTENT_PREVIEW_MODE: 'false',
   DEPLOYMENT_ENV: 'development',

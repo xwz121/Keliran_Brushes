@@ -8,7 +8,7 @@ afterEach(() => {
 describe('media schema across deployment environments', () => {
   it.each([false, true])('retains the R2 prefix field with storage enabled=%s', async (enabled) => {
     vi.stubEnv('PAYLOAD_SECRET', 'test-only-config-validation-no-network')
-    vi.stubEnv('DATABASE_URL', 'postgresql://test@127.0.0.1:55439/test')
+    vi.stubEnv('DATABASE_URL', 'postgresql://test@127.0.0.1:55440/test')
     vi.stubEnv('DEPLOYMENT_ENV', 'development')
     vi.stubEnv('VERCEL_ENV', 'preview')
     for (const [key, value] of Object.entries({
@@ -26,7 +26,7 @@ describe('media schema across deployment environments', () => {
     const media = config.collections.find((collection) => collection.slug === 'media')
     expect(media?.fields.find((field) => 'name' in field && field.name === 'prefix')).toMatchObject({
       type: 'text',
-      defaultValue: 'sealing',
+      defaultValue: 'brushes',
     })
   })
 })

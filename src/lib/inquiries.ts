@@ -1,7 +1,7 @@
 import { attributionSchema } from './inquiry-attribution'
 import { attachmentSchema, verifyObject } from './inquiry-files'
 import { issueSession, verifySession } from './inquiry-session'
-import { rfqSchema } from './rfq-schema'
+import { brushRfq, rfqSchema } from './rfq-schema'
 import { createHmac } from 'node:crypto'
 import { z } from 'zod'
 import { Resend } from 'resend'
@@ -10,6 +10,7 @@ import { locales } from './locales'
 import { transaction } from './transactions'
 import { HttpError } from './http'
 import { isProductionDeployment, serviceStatus, siteURL } from './env'
+import { otherLine, otherSiteURL, siteLine } from './site'
 
 const plain = (max: number) =>
   z
@@ -96,6 +97,14 @@ export async function acceptInquiry(payload: Payload, raw: unknown, ip: string) 
   if (!parsed.success) throw new HttpError(400, 'Please check the form fields.')
   const data = parsed.data
   if (data.website) throw new HttpError(400, 'Submission rejected.')
+  // The other product line has its own site and back office. Answer before any catalogue
+  // lookup, because its products are not visible here and would look like a bad request.
+  if (data.line === otherLine || data.rfq?.line === otherLine)
+    throw new HttpError(409, `Please send this enquiry through ${otherSiteURL}.`, 'line-moved')
+  // Every enquiry received here belongs to this site's line. Older forms sent "both" (or no
+  // line) for general requests; they keep the common fields and are filed under this line.
+  data.line = siteLine
+  if (data.rfq) data.rfq = brushRfq.parse({ ...data.rfq, line: siteLine })
   // Only published content can provide an enquiry identity. Never trust a URL slug as catalogue data.
   if (data.productSlug) {
     const product = (
@@ -109,7 +118,8 @@ export async function acceptInquiry(payload: Payload, raw: unknown, ip: string) 
         depth: 0,
       })
     ).docs[0]
-    if (!product?.title || product.line !== data.line) throw new HttpError(400, 'Product line mismatch.')
+    // Access control already hides the other line, so a missing product is a mismatch.
+    if (!product?.title) throw new HttpError(400, 'Product line mismatch.')
   }
   if (data.rfq?.context) {
     const { kind, slug } = data.rfq.context
@@ -187,7 +197,7 @@ export async function sendInquiryEmail(payload: Payload, id: number) {
         from: process.env.EMAIL_FROM!,
         to: process.env.SALES_EMAIL!,
         replyTo: inquiry.email!,
-        subject: `${inquiry.safetyCritical === 'yes' ? '[SAFETY-FLAG] ' : ''}[${inquiry.line || 'General'}] Website inquiry — ${inquiry.productSlug || 'Component request'}`,
+        subject: `${inquiry.safetyCritical === 'yes' ? '[SAFETY-FLAG] ' : ''}[${new URL(siteURL).host}] [${inquiry.line || 'General'}] Website inquiry — ${inquiry.productSlug || 'Component request'}`,
         text: [
           `Name: ${inquiry.name}`,
           `Company: ${inquiry.company}`,

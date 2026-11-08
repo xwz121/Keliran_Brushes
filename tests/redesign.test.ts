@@ -35,9 +35,11 @@ describe('enquiry sessions and private files', () => {
   })
   it('rejects another enquiry’s object and malformed technical data', () => {
     const id = randomUUID(),
-      key = `inquiries/${id}/${randomUUID()}.pdf`
+      key = `brushes/inquiries/${id}/${randomUUID()}.pdf`
     expect(ownsKey(key, id)).toBe(true)
     expect(ownsKey(key, randomUUID())).toBe(false)
+    // keliran.com's attachments share the private bucket under `inquiries/`; never claim them.
+    expect(ownsKey(`inquiries/${id}/${randomUUID()}.pdf`, id)).toBe(false)
     expect(rfqSchema.safeParse({ line: 'brushes', filamentDiameter: '0.25' }).success).toBe(true)
     expect(rfqSchema.safeParse({ line: 'other' }).success).toBe(false)
   })

@@ -5,7 +5,7 @@ import { getPayload } from 'payload'
 import config from '../src/payload.config'
 if (
   new URL(process.env.DATABASE_URL!).hostname !== '127.0.0.1' ||
-  !process.env.DATABASE_URL!.endsWith('/keliran_redesign')
+  !process.env.DATABASE_URL!.endsWith('/keliran_brushes')
 )
   throw Error('Local redesign database only.')
 const cms = await getPayload({ config })

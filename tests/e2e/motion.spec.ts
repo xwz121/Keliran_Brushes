@@ -82,7 +82,7 @@ test('reduced motion loads no engine and hides nothing', async ({ browser }) => 
     storageState: '.local/review-state.json',
   })
   const page = await context.newPage()
-  await page.goto('http://127.0.0.1:3000/en')
+  await page.goto('http://127.0.0.1:3200/en')
   await page.waitForTimeout(800)
   await expect(page.locator('html')).not.toHaveAttribute('data-motion-ready')
   expect(await pending(page)).toBe(0)
@@ -95,7 +95,7 @@ test('without JavaScript all content is visible', async ({ browser }) => {
     storageState: '.local/review-state.json',
   })
   const page = await context.newPage()
-  await page.goto('http://127.0.0.1:3000/en')
+  await page.goto('http://127.0.0.1:3200/en')
   await page.waitForTimeout(1200)
   expect(await hiddenMotionElements(page)).toBe(0)
   expect(

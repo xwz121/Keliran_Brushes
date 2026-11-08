@@ -1,6 +1,7 @@
 import { NextResponse } from 'next/server'
 import { siteURL } from '@/lib/env'
 import { getCMS } from '@/lib/payload'
+import { previewCookie } from '@/lib/site'
 export async function GET(request: Request) {
   const url = new URL(request.url)
   const cms = await getCMS()
@@ -9,7 +10,7 @@ export async function GET(request: Request) {
   const path = url.searchParams.get('path') || '/en'
   const destination = /^\/(en|de|fr|es|it|ja|ko|zh-Hant)(\/|$)/.test(path) ? path : '/en'
   const response = NextResponse.redirect(new URL(destination, siteURL))
-  response.cookies.set('keliran-preview', url.searchParams.get('disable') === '1' ? '0' : '1', {
+  response.cookies.set(previewCookie, url.searchParams.get('disable') === '1' ? '0' : '1', {
     httpOnly: true,
     sameSite: 'lax',
     secure: url.protocol === 'https:',

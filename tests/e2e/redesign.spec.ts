@@ -88,12 +88,12 @@ test('owner-provided contacts are usable and unspecified social profiles remain 
 test('draft content and private files stay unavailable to anonymous visitors', async ({ browser }) => {
   const context = await browser.newContext()
   const api = context.request
-  const products = await api.get('http://127.0.0.1:3000/api/products?draft=true')
+  const products = await api.get('http://127.0.0.1:3200/api/products?draft=true')
   const result = await products.json()
   expect(result.docs.every((doc: { _status: string }) => doc._status === 'published')).toBe(true)
-  const drafts = await api.get('http://127.0.0.1:3000/api/products?draft=true&where[_status][equals]=draft')
+  const drafts = await api.get('http://127.0.0.1:3200/api/products?draft=true&where[_status][equals]=draft')
   expect((await drafts.json()).totalDocs).toBe(0)
-  const file = await api.get('http://127.0.0.1:3000/api/inquiry-attachments/1/0')
+  const file = await api.get('http://127.0.0.1:3200/api/inquiry-attachments/1/0')
   expect(file.status()).toBe(401)
   await context.close()
 })

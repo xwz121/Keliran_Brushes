@@ -1,16 +1,17 @@
-import { siteURL, isProductionDeployment } from './env'
+import { allowedOrigins } from './env'
 export class HttpError extends Error {
   constructor(
     public status: number,
     message: string,
+    // Machine-readable reason for clients that must react differently to the same status.
+    public code?: string,
   ) {
     super(message)
   }
 }
 export function requireSameOrigin(request: Request) {
-  const allowed = [new URL(siteURL).origin]
-  if (!isProductionDeployment) allowed.push('http://localhost:3000', 'http://127.0.0.1:3000')
-  if (!allowed.includes(request.headers.get('origin') || '')) throw new HttpError(403, 'Origin rejected')
+  if (!allowedOrigins.includes(request.headers.get('origin') || ''))
+    throw new HttpError(403, 'Origin rejected')
 }
 export async function readJSON(request: Request, max = 20000) {
   if (!request.headers.get('content-type')?.includes('application/json'))
@@ -38,6 +39,8 @@ export async function readJSON(request: Request, max = 20000) {
 }
 export const errorResponse = (error: unknown) =>
   Response.json(
-    { error: error instanceof HttpError ? error.message : 'Unable to complete request.' },
+    error instanceof HttpError
+      ? { error: error.message, ...(error.code ? { code: error.code } : {}) }
+      : { error: 'Unable to complete request.' },
     { status: error instanceof HttpError ? error.status : 500 },
   )

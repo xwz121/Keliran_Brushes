@@ -3,7 +3,7 @@ import { readFile } from 'node:fs/promises'
 import { getPayload } from 'payload'
 import config from '../src/payload.config'
 const url = new URL(process.env.DATABASE_URL!)
-if (!['127.0.0.1', 'localhost'].includes(url.hostname) || url.pathname !== '/keliran_redesign')
+if (!['127.0.0.1', 'localhost'].includes(url.hostname) || url.pathname !== '/keliran_brushes')
   throw Error('This script only updates the isolated local review database.')
 const cms = await getPayload({ config })
 try {
