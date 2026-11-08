@@ -82,6 +82,7 @@ export interface Config {
     'translation-runs': TranslationRun;
     glossary: Glossary;
     'rate-limits': RateLimit;
+    'migration-records': MigrationRecord;
     'payload-kv': PayloadKv;
     'payload-jobs': PayloadJob;
     'payload-locked-documents': PayloadLockedDocument;
@@ -105,6 +106,7 @@ export interface Config {
     'translation-runs': TranslationRunsSelect<false> | TranslationRunsSelect<true>;
     glossary: GlossarySelect<false> | GlossarySelect<true>;
     'rate-limits': RateLimitsSelect<false> | RateLimitsSelect<true>;
+    'migration-records': MigrationRecordsSelect<false> | MigrationRecordsSelect<true>;
     'payload-kv': PayloadKvSelect<false> | PayloadKvSelect<true>;
     'payload-jobs': PayloadJobsSelect<false> | PayloadJobsSelect<true>;
     'payload-locked-documents': PayloadLockedDocumentsSelect<false> | PayloadLockedDocumentsSelect<true>;
@@ -708,6 +710,34 @@ export interface RateLimit {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "migration-records".
+ */
+export interface MigrationRecord {
+  id: number;
+  sourceKey: string;
+  sourceCollection: string;
+  sourceId: string;
+  sourceSlug?: string | null;
+  targetCollection: string;
+  targetId: string;
+  sourceHash: string;
+  importedHash: string;
+  runId: string;
+  evidenceStatus?: string | null;
+  evidence?:
+    | {
+        [k: string]: unknown;
+      }
+    | unknown[]
+    | string
+    | number
+    | boolean
+    | null;
+  updatedAt: string;
+  createdAt: string;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "payload-kv".
  */
 export interface PayloadKv {
@@ -881,6 +911,10 @@ export interface PayloadLockedDocument {
     | ({
         relationTo: 'rate-limits';
         value: number | RateLimit;
+      } | null)
+    | ({
+        relationTo: 'migration-records';
+        value: number | MigrationRecord;
       } | null);
   globalSlug?: string | null;
   user: {
@@ -1363,6 +1397,25 @@ export interface RateLimitsSelect<T extends boolean = true> {
   key?: T;
   count?: T;
   expiresAt?: T;
+  updatedAt?: T;
+  createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "migration-records_select".
+ */
+export interface MigrationRecordsSelect<T extends boolean = true> {
+  sourceKey?: T;
+  sourceCollection?: T;
+  sourceId?: T;
+  sourceSlug?: T;
+  targetCollection?: T;
+  targetId?: T;
+  sourceHash?: T;
+  importedHash?: T;
+  runId?: T;
+  evidenceStatus?: T;
+  evidence?: T;
   updatedAt?: T;
   createdAt?: T;
 }
