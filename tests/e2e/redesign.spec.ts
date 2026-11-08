@@ -1,14 +1,14 @@
 import { test, expect } from '@playwright/test'
 import { approvedLink } from './whatsapp-numbers'
-test('two product lines link to product details and prefilled RFQ', async ({ page }) => {
+test('home leads through the brush hub to product details and a prefilled RFQ', async ({ page }) => {
   await page.goto('/en')
-  await page.locator('.line-card').nth(1).click()
+  await page.locator('.hero-line-links a').click()
   await expect(page).toHaveURL(/strip-brushes$/)
   await page.locator('.catalogue-grid .product-card').first().click()
   await expect(page.locator('h1')).toContainText('Metal-channel')
   await page.getByRole('link', { name: 'Request a quote for this product' }).click()
-  await expect(page).toHaveURL(/rfq\?line=brushes/)
-  await expect(page.getByRole('radio', { name: 'Industrial strip brushes' })).toBeChecked()
+  await expect(page).toHaveURL(/rfq\?product=metal-channel-strip-brushes$/)
+  await expect(page.getByRole('radio')).toHaveCount(0)
   await expect(page.getByLabel('Effective trim length (mm)')).toBeHidden()
   await page.getByText('Specification details (optional)', { exact: true }).click()
   await expect(page.getByLabel('Effective trim length (mm)')).toBeVisible()
@@ -17,8 +17,7 @@ test('two product lines link to product details and prefilled RFQ', async ({ pag
 test('guide tables, supplier checklist and scenario disclosure are visible', async ({ page }) => {
   await page.goto('/en/guides/standards-and-validation')
   await expect(page.locator('table')).toBeVisible()
-  await expect(page.locator('article')).toContainText('assembled enclosure')
-  await page.goto('/en/cases/scenario-enclosure-door-leaks')
+  await page.goto('/en/cases/scenario-dust-at-equipment-openings')
   await expect(page.locator('.resource-intro')).toContainText('Typical scenario')
   await expect(page.locator('article')).toContainText('not a reported customer project')
   await page.goto('/en/guides/supplier-qualification')
@@ -35,7 +34,7 @@ test('technical RFQ keeps brush fields in the submitted payload and accepts unkn
     body = r.request().postDataJSON()
     return r.fulfill({ status: 202, contentType: 'application/json', body: '{"accepted":true}' })
   })
-  await page.goto('/en/rfq?line=brushes&product=metal-channel-strip-brushes')
+  await page.goto('/en/rfq?product=metal-channel-strip-brushes')
   await page.getByText('Specification details (optional)', { exact: true }).click()
   await page.getByLabel('Effective trim length (mm)').fill('22')
   await page.getByRole('textbox', { name: 'Your name *', exact: true }).fill('Preview buyer')
@@ -103,11 +102,11 @@ test('key pages fit desktop and mobile without horizontal overflow', async ({ pa
     await page.setViewportSize({ width, height: 900 })
     for (const path of [
       '/en',
-      '/en/sealing',
       '/en/strip-brushes',
+      '/en/strip-brushes/brush-holders',
       '/en/products',
       '/en/guides/standards-and-validation',
-      '/en/rfq?line=brushes',
+      '/en/rfq',
       '/de',
       '/ja',
       '/zh-Hant',

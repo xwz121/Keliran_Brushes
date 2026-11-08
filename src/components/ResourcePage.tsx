@@ -18,7 +18,8 @@ import { routeFor } from '@/lib/routes'
 import { getSiteSettings } from '@/lib/settings'
 import { primaryWhatsApp } from '@/lib/contact-channels'
 import { RichSections, MarkdownLite } from './RichSections'
-import { Breadcrumbs, ResourceCard, RelatedLinks, StandardsNote, FaqList } from './ResourceUI'
+import { Breadcrumbs, ResourceCard, RelatedLinks, FaqList } from './ResourceUI'
+import { siteLine } from '@/lib/site'
 import { Catalogue } from './Catalogue'
 import { QuoteBanner } from './QuoteBanner'
 import { InquiryForm } from './InquiryForm'
@@ -44,7 +45,6 @@ function label(route: string, locale: Locale) {
     t = getDictionary(locale)
   return (
     {
-      sealing: c.sealing,
       'strip-brushes': c.brushes,
       solutions: c.solutions,
       cases: c.cases,
@@ -62,7 +62,6 @@ function label(route: string, locale: Locale) {
 function intros(locale: Locale): Record<string, string> {
   const u = interfaceCopy(locale)
   return {
-    sealing: u.introSealing,
     'strip-brushes': u.introBrushes,
     solutions: u.introSolutions,
     cases: u.introCases,
@@ -76,10 +75,7 @@ export async function resourceMetadata(route: string, props: ResourceProps) {
   const { locale, slug, category } = await props.params
   if (!isLocale(locale)) return {}
   const preview = await canPreview((await props.searchParams).preview === '1')
-  const collection =
-    route === 'sealing' || route === 'strip-brushes'
-      ? 'categories'
-      : listingMap[route as keyof typeof listingMap]
+  const collection = route === 'strip-brushes' ? 'categories' : listingMap[route as keyof typeof listingMap]
   const detail = slug || category
   const doc =
     detail && collection
@@ -106,8 +102,8 @@ export async function ResourcePage({ route, params, searchParams }: ResourceProp
     t = getDictionary(locale),
     title = label(route, locale)
   const collection = listingMap[route as keyof typeof listingMap]
-  const line = route === 'strip-brushes' ? 'brushes' : 'sealing'
-  if (route === 'sealing' || route === 'strip-brushes') {
+  const line = siteLine
+  if (route === 'strip-brushes') {
     const [categories, products, guides] = await Promise.all([
       getCollection(locale, 'categories', preview),
       getProducts(locale, preview),
@@ -121,13 +117,11 @@ export async function ResourcePage({ route, params, searchParams }: ResourceProp
         p.line === line &&
         (category
           ? p.categorySlug === category || processing
-          : (sprintProducts[line] as readonly string[]).includes(p.slug)),
+          : (sprintProducts as readonly string[]).includes(p.slug)),
     )
     const families = categories.filter((d: any) => d.line === line && d.title)
     const lineProducts = products.filter((p) => p.line === line).length
-    const measureGuide = guides.find(
-      (d) => d.slug === (line === 'brushes' ? 'measure-strip-brush' : 'measure-door-seal') && d.title,
-    )
+    const measureGuide = guides.find((d) => d.slug === 'measure-strip-brush' && d.title)
     return (
       <>
         <Breadcrumbs
@@ -139,16 +133,8 @@ export async function ResourcePage({ route, params, searchParams }: ResourceProp
         />
         <section className="container line-intro">
           <div>
-            <p className="eyebrow enter">
-              {c.lineLabel} / {line === 'sealing' ? '01' : '02'}
-            </p>
-            <h1>
-              {doc
-                ? `${doc.title}${processing ? '' : ` — ${u.selectionTitle}`}`
-                : line === 'sealing'
-                  ? u.sealingTitle
-                  : u.brushesTitle}
-            </h1>
+            <p className="eyebrow enter">{u.brushTags}</p>
+            <h1>{doc ? `${doc.title}${processing ? '' : ` — ${u.selectionTitle}`}` : u.brushesTitle}</h1>
             <p className="enter" style={{ '--i': 1 } as React.CSSProperties}>
               {doc?.summary || intros(locale)[route]}
             </p>
@@ -156,7 +142,7 @@ export async function ResourcePage({ route, params, searchParams }: ResourceProp
               {u.offerBody}
             </p>
             <Link
-              href={contextRfqHref(locale, doc ? { kind: 'categories', slug: doc.slug } : undefined, line)}
+              href={contextRfqHref(locale, doc ? { kind: 'categories', slug: doc.slug } : undefined)}
               className="button enter"
               style={{ '--i': 2 } as React.CSSProperties}
             >
@@ -166,7 +152,7 @@ export async function ResourcePage({ route, params, searchParams }: ResourceProp
           </div>
           <figure>
             <Image
-              src={`/images/keliran-v2/${line === 'sealing' ? 'sealing-profiles' : 'strip-brushes'}.webp`}
+              src="/images/keliran-v2/strip-brushes.webp"
               alt={t.renderNote}
               width={1536}
               height={1024}
@@ -184,7 +170,7 @@ export async function ResourcePage({ route, params, searchParams }: ResourceProp
                 <p>{u.entryBody}</p>
               </div>
               {lineProducts > filtered.length && (
-                <Link className="text-link" href={`/${locale}/products?line=${line}`}>
+                <Link className="text-link" href={`/${locale}/products`}>
                   {t.allProducts} →
                 </Link>
               )}
@@ -221,8 +207,7 @@ export async function ResourcePage({ route, params, searchParams }: ResourceProp
               <RichSections sections={distinctSections(doc.sections, doc.summary)} />
             </div>
           )}
-          {processing && <h2 className="processing-heading">{u.relatedSealing}</h2>}
-          <Catalogue products={filtered} locale={locale} initialLine={line} />
+          <Catalogue products={filtered} locale={locale} />
           {doc && <ProcurementSupport id={`categories/${doc.slug}`} locale={locale} preview={preview} />}
           <div className="download-bar line-requirements" data-motion="reveal">
             <div>
@@ -235,17 +220,13 @@ export async function ResourcePage({ route, params, searchParams }: ResourceProp
                 {measureGuide.title}
               </Link>
             )}
-            <a
-              href={`/downloads/${locale}/${line === 'brushes' ? 'strip-brush' : 'sealing'}-rfq-checklist.txt`}
-              download
-            >
+            <a href={`/downloads/${locale}/strip-brush-rfq-checklist.txt`} download>
               <Download size={18} />
               {c.downloads}
             </a>
           </div>
-          {line === 'sealing' && <StandardsNote locale={locale} />}
         </section>
-        <QuoteBanner locale={locale} line={line} />
+        <QuoteBanner locale={locale} />
       </>
     )
   }
@@ -257,14 +238,7 @@ export async function ResourcePage({ route, params, searchParams }: ResourceProp
       // The supplier-qualification guide is where purchasing and finance look for the company record.
       const supplierGuide = collection === 'guides' && slug === 'supplier-qualification'
       const context = collection === 'faqs' ? undefined : { kind: collection, slug }
-      const scenario = collection === 'cases' && slug === 'scenario-enclosure-door-leaks'
-      // The scenario keeps its situation and problem; diagnostic paragraphs remain on the linked solution.
-      const sections = distinctSections(
-        scenario
-          ? doc.sections?.filter((s: any) => !['approach', 'deliverables'].includes(s.key))
-          : doc.sections,
-        doc.summary,
-      )
+      const sections = distinctSections(doc.sections, doc.summary)
       const settings = supplierGuide ? await getSiteSettings() : null
       const items = [{ title, href: `/${locale}/${route}` }, { title: doc.title }]
       return (
@@ -281,7 +255,7 @@ export async function ResourcePage({ route, params, searchParams }: ResourceProp
           <div className="container article-layout">
             <article className="guide-body">
               <RichSections sections={sections} />
-              <PreparationInputs id={`${collection}/${slug}`} locale={locale} blank={scenario} />
+              <PreparationInputs id={`${collection}/${slug}`} locale={locale} />
               {collection === 'materials' && ['aluminium', 'ss304', 'ss316'].includes(slug) && (
                 <p className="technical-note">
                   {u.materialRoleNote}
@@ -321,7 +295,7 @@ export async function ResourcePage({ route, params, searchParams }: ResourceProp
               <div>
                 <h3>{u.clearEnquiry}</h3>
                 <p>{u.sendDrawing}</p>
-                <Link className="button" href={contextRfqHref(locale, context, doc.line)}>
+                <Link className="button" href={contextRfqHref(locale, context)}>
                   {c.start}
                   <ArrowUpRight size={18} />
                 </Link>
@@ -331,11 +305,7 @@ export async function ResourcePage({ route, params, searchParams }: ResourceProp
           <section className="container section">
             <RelatedLinks locale={locale} doc={doc} />
           </section>
-          <QuoteBanner
-            context={context}
-            locale={locale}
-            line={doc.line === 'brushes' || doc.line === 'sealing' ? doc.line : undefined}
-          />
+          <QuoteBanner context={context} locale={locale} />
         </>
       )
     }
@@ -353,10 +323,6 @@ export async function ResourcePage({ route, params, searchParams }: ResourceProp
                 <h2>{c.downloads}</h2>
                 <p>{u.downloadIntro}</p>
               </div>
-              <a href={`/downloads/${locale}/sealing-rfq-checklist.txt`} download>
-                <Download size={18} />
-                {c.sealing}
-              </a>
               <a href={`/downloads/${locale}/strip-brush-rfq-checklist.txt`} download>
                 <Download size={18} />
                 {c.brushes}

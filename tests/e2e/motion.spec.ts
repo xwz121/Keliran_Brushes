@@ -22,7 +22,7 @@ for (const size of [
   { width: 1280, height: 800 },
   { width: 390, height: 844 },
 ])
-  for (const path of ['/en', '/en/sealing', '/en/guides'])
+  for (const path of ['/en', '/en/strip-brushes', '/en/guides'])
     test(`${path} at ${size.width}px reveals every section once and leaves nothing hidden`, async ({
       page,
     }) => {
@@ -58,7 +58,7 @@ test('keyboard focus inside a waiting section reveals it', async ({ page }) => {
 })
 test('headline keeps readable text, and forms and WhatsApp are never animated', async ({ page }) => {
   await page.goto('/en')
-  await expect(page.locator('h1')).toHaveText('Industrial sealing components & strip brushes')
+  await expect(page.locator('h1')).toHaveText('Industrial strip brushes')
   await expect(page.locator('.hero-tagline')).toContainText('A clearer')
   await page.goto('/en/rfq')
   await expect(page.locator('.rfq-form [data-motion], .wa-panel[data-motion]')).toHaveCount(0)

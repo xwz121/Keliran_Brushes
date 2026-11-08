@@ -2,6 +2,8 @@ import type { Metadata } from 'next'
 import { locales, type Locale } from './locales'
 import { noIndexSite, siteURL } from './env'
 import { plainSummary } from './summary'
+import { otherSiteURL } from './site'
+import { sharedCanonicalPaths } from './shared-canonical'
 export function pageMetadata(
   locale: Locale,
   path: string,
@@ -10,6 +12,8 @@ export function pageMetadata(
   preview = false,
 ): Metadata {
   description = plainSummary(description)
+  // A shared document not yet rewritten for this site defers to the keliran.com original.
+  const canonicalOrigin = sharedCanonicalPaths.has(path) ? otherSiteURL : siteURL
   return {
     title: title.replace(/\n/g, ' '),
     description,
@@ -28,10 +32,10 @@ export function pageMetadata(
       images: [`${siteURL}/og`],
     },
     alternates: {
-      canonical: `${siteURL}/${locale}${path}`,
+      canonical: `${canonicalOrigin}/${locale}${path}`,
       languages: Object.fromEntries([
-        ...locales.map((l) => [l, `${siteURL}/${l}${path}`]),
-        ['x-default', `${siteURL}/en${path}`],
+        ...locales.map((l) => [l, `${canonicalOrigin}/${l}${path}`]),
+        ['x-default', `${canonicalOrigin}/en${path}`],
       ]),
     },
     robots: noIndexSite || preview ? { index: false, follow: false } : undefined,

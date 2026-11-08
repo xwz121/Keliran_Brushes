@@ -13,7 +13,6 @@ import { ResourceCard } from './ResourceUI'
 export function roleLabel(role: MaterialRole, locale: Locale) {
   const u = interfaceCopy(locale)
   return {
-    'seal-body': u.sealBodyRole,
     filament: u.filamentRole,
     'backing-channel': u.backingRole,
     'mounting-holder': u.holderRole,
@@ -101,10 +100,7 @@ export async function ProcurementSupport({
                 {[
                   ...new Set(
                     materialBindings({ slug, line: doc.line || undefined, materials: doc.materials || [] })
-                      .filter(
-                        (b) =>
-                          b.materialId === materialId || (materialId === 'epdm' && b.label === 'EPDM sponge'),
-                      )
+                      .filter((b) => b.materialId === materialId)
                       .map((b) => roleLabel(b.role, locale)),
                   ),
                 ].join(' · ')}
@@ -119,9 +115,7 @@ export async function ProcurementSupport({
 }
 
 export function GuideDownload({ locale, slug }: { locale: Locale; slug: string }) {
-  const line =
-    slug === 'measure-door-seal' ? 'sealing' : slug === 'measure-strip-brush' ? 'strip-brush' : undefined
-  if (!line) return null
+  if (slug !== 'measure-strip-brush') return null
   const c = siteCopy(locale)
   return (
     <section className="download-bar guide-download">
@@ -129,8 +123,8 @@ export function GuideDownload({ locale, slug }: { locale: Locale; slug: string }
         <h2>{c.downloads}</h2>
         <p>{interfaceCopy(locale).downloadIntro}</p>
       </div>
-      <a href={`/downloads/${locale}/${line}-rfq-checklist.txt`} download>
-        {line === 'sealing' ? c.sealing : c.brushes} — {c.downloads}
+      <a href={`/downloads/${locale}/strip-brush-rfq-checklist.txt`} download>
+        {c.brushes} — {c.downloads}
       </a>
     </section>
   )

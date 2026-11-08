@@ -19,9 +19,9 @@ export function parseContentContext(value: unknown): ContentContext | undefined 
     ? { kind: kind as ContentContext['kind'], slug }
     : undefined
 }
-export function contextRfqHref(locale: Locale, context?: ContentContext, line?: string) {
+// The site serves one product line, so the quote form needs no line parameter.
+export function contextRfqHref(locale: Locale, context?: ContentContext) {
   const q = new URLSearchParams()
-  if (line === 'brushes' || line === 'sealing') q.set('line', line)
   if (context) q.set('context', `${context.kind}/${context.slug}`)
   return `/${locale}/rfq${q.size ? `?${q}` : ''}`
 }
@@ -34,7 +34,7 @@ export function localizedInquiryPath(
   const localized = localizedPath(path, locale)
   if (!localized.endsWith('/rfq')) return localized
   const context = parseContentContext(search.get('context'))
-  const url = contextRfqHref(locale, context, search.get('line') || undefined)
+  const url = contextRfqHref(locale, context)
   const product = search.get('product')
   return product && /^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(product) && product.length <= 120
     ? `${url}${url.includes('?') ? '&' : '?'}product=${encodeURIComponent(product)}`

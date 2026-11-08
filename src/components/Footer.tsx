@@ -7,6 +7,7 @@ import { getDictionary } from '@/lib/i18n'
 import { siteCopy } from '@/lib/site-copy'
 import { localizedEntityName } from '@/lib/business-i18n'
 import { registeredEntityLines } from '@/lib/company'
+import { otherSiteURL } from '@/lib/site'
 import type { Locale } from '@/lib/locales'
 import type { SiteSetting } from '@/payload-types'
 export function Footer({ locale, settings }: { locale: Locale; settings: Partial<SiteSetting> }) {
@@ -24,7 +25,6 @@ export function Footer({ locale, settings }: { locale: Locale; settings: Partial
         <div>
           <h3>{t.footerProducts}</h3>
           {[
-            ['sealing', c.sealing],
             ['strip-brushes', c.brushes],
             ['products', c.all],
             ['materials', t.materials],
@@ -33,6 +33,11 @@ export function Footer({ locale, settings }: { locale: Locale; settings: Partial
               {title}
             </Link>
           ))}
+          {/* Sealing components are supplied by the same company on keliran.com. */}
+          <a className="footer-external" href={`${otherSiteURL}/${locale}`}>
+            {interfaceCopy(locale).sealingTitle}
+            <ArrowUpRight size={14} />
+          </a>
         </div>
         <div>
           <h3>{c.guides}</h3>

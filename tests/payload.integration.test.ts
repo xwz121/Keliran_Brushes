@@ -287,7 +287,7 @@ describe.runIf(process.env.RUN_INTEGRATION === 'true')(
       expect(saved.docs[0].notificationStatus).toBe('not-configured')
       await expect(acceptInquiry(cms, { ...data, submissionId: randomUUID() }, ip)).rejects.toThrow('session')
     }, 20000)
-    it('stores an unclassified quick RFQ and rejects a line mismatch', async () => {
+    it('files a general quick RFQ under brushes and refuses sealing enquiries as line-moved', async () => {
       const submissionId = randomUUID(),
         ip = '127.0.0.10'
       const data = {
@@ -295,25 +295,36 @@ describe.runIf(process.env.RUN_INTEGRATION === 'true')(
         sessionToken: issueSession(submissionId, ip),
         name: 'Quick RFQ test',
         email: `quick-${marker}@example.com`,
-        message: 'Seals and brushes for a machine guard, not sure which yet.',
+        message: 'Brushes for a machine guard, details to follow.',
         consent: true,
         locale: 'en',
         sourcePath: '/en/rfq',
         line: 'both',
         rfq: { line: 'both', quantity: '100 sets', dimensions: '' },
       }
-      // Same verified session, only the top-level line differs: must stop at the line check.
-      await expect(acceptInquiry(cms, { ...data, line: 'sealing' }, ip)).rejects.toThrow(
-        'Product line mismatch',
-      )
+      // Sealing belongs to keliran.com: refused before any catalogue lookup, with a machine-readable code.
+      for (const sealing of [
+        { ...data, line: 'sealing' },
+        { ...data, rfq: { ...data.rfq, line: 'sealing' } },
+        { ...data, line: 'sealing', productSlug: 'sponge-rubber-seals' },
+      ])
+        await expect(acceptInquiry(cms, sealing, ip)).rejects.toMatchObject({
+          status: 409,
+          code: 'line-moved',
+        })
+      expect(
+        (await cms.find({ collection: 'inquiries', where: { submissionId: { equals: submissionId } } }))
+          .totalDocs,
+      ).toBe(0)
+      // An older general form sends "both"; it is stored as a brushes enquiry with the common fields.
       await acceptInquiry(cms, data, ip)
       const saved = await cms.find({
         collection: 'inquiries',
         where: { submissionId: { equals: submissionId } },
       })
       inquiries.push(saved.docs[0].id)
-      expect(saved.docs[0].line).toBe('both')
-      expect(saved.docs[0].rfq).toMatchObject({ line: 'both', quantity: '100 sets' })
+      expect(saved.docs[0].line).toBe('brushes')
+      expect(saved.docs[0].rfq).toMatchObject({ line: 'brushes', quantity: '100 sets' })
     }, 20000)
     it('persists published topic context and independent holder fields, and rejects unknown identities', async () => {
       const topic = await source()

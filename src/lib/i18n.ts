@@ -806,6 +806,11 @@ const translations: Record<Exclude<Locale, 'en'>, Dictionary> = {
 export function getDictionary(locale: Locale): Dictionary {
   const current = locale === 'en' ? en : translations[locale]
   const copy = interfaceCopy(locale)
-  return { ...current, footerLine: copy.footerLine, heroBody: copy.heroBody, aboutBody: copy.companyPosition }
+  return {
+    ...current,
+    footerLine: copy.footerLine,
+    heroBody: copy.introBrushes,
+    aboutBody: copy.companyPosition,
+  }
 }
 export { en as englishDictionary, translations }

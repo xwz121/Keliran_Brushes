@@ -5,8 +5,7 @@ import { validateFile, validSignature, ownsKey } from '../src/lib/inquiry-files'
 import { rfqSchema } from '../src/lib/rfq-schema'
 import { safeJSON, productData } from '../src/lib/jsonld'
 import { routeFor } from '../src/lib/routes'
-import { drafts } from '../scripts/seed/catalogue'
-import '../scripts/seed/resources'
+import { siteDrafts as drafts } from '../scripts/seed/site-drafts'
 import { randomUUID } from 'node:crypto'
 describe('enquiry sessions and private files', () => {
   it('binds sessions to the submission, source address and expiry', () => {
@@ -65,7 +64,7 @@ it('uses explicit collection routes and escapes structured data', () => {
   )
 })
 it('has complete draft relationships and substantive procurement resources', () => {
-  expect(drafts.length).toBeGreaterThan(100)
+  expect(drafts.length).toBeGreaterThan(50)
   const keys = new Set(drafts.map((d) => `${d.collection}/${d.slug}`))
   expect(keys.size).toBe(drafts.length)
   for (const d of drafts) {
@@ -80,5 +79,13 @@ it('has complete draft relationships and substantive procurement resources', () 
   expect(drafts.filter((d) => d.collection === 'cases').every((d) => d.data.scenarioType === 'typical')).toBe(
     true,
   )
-  expect(drafts.filter((d) => d.collection === 'guides')).toHaveLength(8)
+  expect(drafts.filter((d) => d.collection === 'guides')).toHaveLength(6)
+  // The seed for this site carries no sealing documents; shared documents stay.
+  expect(drafts.some((d) => d.data.line === 'sealing')).toBe(false)
+  expect(drafts.filter((d) => d.collection === 'products').map((d) => d.data.code)).toEqual([
+    'BR01-CUSTOM',
+    'BR03-CUSTOM',
+    'BR04-CUSTOM',
+    'BR05-CUSTOM',
+  ])
 })

@@ -19,8 +19,8 @@ import '@/styles/redesign.css'
 import '@/styles/motion.css'
 export const metadata: Metadata = {
   metadataBase: new URL(siteURL),
-  title: { default: 'Keliran — Industrial sealing & strip brushes', template: '%s | Keliran' },
-  description: 'Industrial sealing and strip brushes, sourced and quality-managed to your specification.',
+  title: { default: 'Keliran — Industrial strip brushes', template: '%s | Keliran' },
+  description: 'Industrial strip brushes and holders, sourced and quality-managed to your specification.',
   robots: noIndexSite ? { index: false, follow: false } : { index: true, follow: true },
 }
 export default async function Layout({ children }: { children: React.ReactNode }) {

@@ -4,14 +4,16 @@ import { locales } from '../../src/lib/locales'
 test('language switching updates the document and shared layout as well as product content', async ({
   page,
 }) => {
-  await page.goto('/zh-Hant/products/custom-fkm-o-rings')
+  await page.goto('/zh-Hant/products/brush-holders')
   await expect(page.locator('html')).toHaveAttribute('lang', 'zh-Hant')
   await page.locator('.language-switch summary').click()
   await page.locator('.language-options a[lang="en"]').click()
-  await expect(page).toHaveURL(/\/en\/products\/custom-fkm-o-rings$/)
+  await expect(page).toHaveURL(/\/en\/products\/brush-holders$/)
   await expect(page.locator('html')).toHaveAttribute('lang', 'en')
   await expect(page.locator('.language-switch summary')).toHaveAttribute('aria-label', 'Language')
-  await expect(page.locator('footer')).toContainText('Industrial sealing & strip brushes. Sourced with care.')
+  await expect(page.locator('footer')).toContainText('Industrial strip brushes. Sourced with care.')
+  // The same company's sealing site is one footer link away.
+  await expect(page.locator('footer a[href="https://keliran.com/en"]')).toBeVisible()
 })
 
 test('all mobile homepages have complete layout and correct language', async ({ page }) => {
@@ -26,14 +28,11 @@ test('all mobile homepages have complete layout and correct language', async ({ 
   }
 })
 
-test('catalogue search, empty state and reset', async ({ page }) => {
+test('the short brush catalogue is shown in full without search controls', async ({ page }) => {
   await page.goto('/en/products')
-  await page.getByRole('searchbox', { name: 'Search products' }).fill('RUB-003')
-  await expect(page.locator('.catalogue-grid .product-card')).toHaveCount(1)
-  await page.getByRole('searchbox').fill('no-matching-part')
-  await expect(page.getByText('No products match your selection.')).toBeVisible()
-  await page.getByRole('button', { name: 'Reset filters' }).click()
-  await expect(page.locator('.catalogue-grid .product-card')).toHaveCount(16)
+  await expect(page.getByRole('searchbox')).toHaveCount(0)
+  await expect(page.locator('.catalogue-grid .product-card')).toHaveCount(4)
+  await expect(page.locator('.catalogue-grid')).toContainText('BR04-CUSTOM')
 })
 
 test('mobile navigation closes after choosing a page', async ({ page }) => {

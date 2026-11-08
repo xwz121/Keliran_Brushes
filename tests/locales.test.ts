@@ -1,7 +1,6 @@
 import { describe, expect, it } from 'vitest'
 import { isLocale, locales, localizedPath } from '../src/lib/locales'
 import { getDictionary, englishDictionary, translations } from '../src/lib/i18n'
-import { previewProducts } from '../src/lib/preview-data'
 import { pageMetadata } from '../src/lib/metadata'
 import { inquirySchema } from '../src/lib/inquiries'
 
@@ -18,19 +17,10 @@ describe('Traditional Chinese', () => {
     expect(isLocale('zh-Hant')).toBe(true)
     expect(isLocale('zh')).toBe(false)
   })
-  it('has a complete dictionary and translated product content with unchanged shared specifications', () => {
+  it('has a complete dictionary in every language', () => {
     expect(Object.keys(translations['zh-Hant']).sort()).toEqual(Object.keys(englishDictionary).sort())
     expect(getDictionary('zh-Hant').products).toBe('產品')
-    for (const locale of locales) {
-      for (const [index, product] of previewProducts(locale).entries()) {
-        for (const field of ['title', 'summary', 'description', 'category'] as const)
-          expect(product[field]?.trim()).toBeTruthy()
-        expect(product.materials).toEqual(previewProducts('en')[index].materials)
-        expect(product.slug).toBe(previewProducts('en')[index].slug)
-        expect(product.code).toBe(previewProducts('en')[index].code)
-      }
-    }
-    expect(previewProducts('zh-Hant')[2].title).toBe('客製化 FKM O 型環')
+    for (const locale of locales) expect(getDictionary(locale).heroBody?.trim()).toBeTruthy()
   })
   it('includes the script-qualified locale in canonical and alternate URLs', () => {
     const metadata = pageMetadata('zh-Hant', '/materials', '材料', '材料資訊')

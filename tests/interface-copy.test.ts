@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest'
-import { readFileSync } from 'node:fs'
+import { existsSync, readFileSync } from 'node:fs'
 import { locales } from '../src/lib/locales'
 import { interfaceDictionaries } from '../src/lib/interface-copy'
 import { deterministicChecks } from '../src/lib/ai/checks'
@@ -18,11 +18,14 @@ describe('complete public interface localisation', () => {
       expect(Object.values(dict).every((text) => text.trim())).toBe(true)
       expect(deterministicChecks(interfaceDictionaries.en, dict, locale, [])).toEqual([])
       expect(dict.filesEmail).toContain('contact@keliran.com')
-      for (const line of ['sealing', 'strip-brush']) {
-        const checklist = readFileSync(`public/downloads/${locale}/${line}-rfq-checklist.txt`, 'utf8')
-        expect(checklist).toContain(dict.drawingRevision)
-        expect(checklist).toContain('contact@keliran.com')
-      }
+      const checklist = readFileSync(`public/downloads/${locale}/strip-brush-rfq-checklist.txt`, 'utf8')
+      expect(checklist).toContain(dict.drawingRevision)
+      expect(checklist).toContain(dict.trimLength)
+      expect(checklist).toContain('contact@keliran.com')
+      expect(existsSync(`public/downloads/${locale}/sealing-rfq-checklist.txt`)).toBe(false)
+      expect(readFileSync(`public/downloads/${locale}/supplier-review-record.txt`, 'utf8')).toContain(
+        `https://brushes.keliran.com/${locale}/guides/supplier-qualification`,
+      )
     })
 })
 it('exposes both approved telephone and WhatsApp numbers without external calls', () => {

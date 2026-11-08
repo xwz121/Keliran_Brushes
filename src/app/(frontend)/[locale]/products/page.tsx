@@ -7,7 +7,7 @@ import { Catalogue } from '@/components/Catalogue'
 import { QuoteBanner } from '@/components/QuoteBanner'
 type Props = {
   params: Promise<{ locale: string }>
-  searchParams: Promise<{ preview?: string; line?: string }>
+  searchParams: Promise<{ preview?: string }>
 }
 export async function generateMetadata({ params, searchParams }: Props) {
   const { locale } = await params
@@ -28,7 +28,6 @@ export default async function Page({ params, searchParams }: Props) {
   const q = await searchParams
   const preview = await canPreview(q.preview === '1')
   const products = await getProducts(locale, preview)
-  const line = q.line === 'sealing' || q.line === 'brushes' ? q.line : ''
   return (
     <>
       <section className="container page-intro">
@@ -37,7 +36,7 @@ export default async function Page({ params, searchParams }: Props) {
         <p>{t.catalogueIntro}</p>
       </section>
       <section className="container section catalogue-section">
-        <Catalogue key={line || 'all'} products={products} locale={locale} defaultLine={line} />
+        <Catalogue products={products} locale={locale} />
       </section>
       <QuoteBanner locale={locale} />
     </>

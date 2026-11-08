@@ -19,8 +19,9 @@ for (const width of [1280, 390])
   test(`labels on product photos sit on a solid light chip at ${width}px`, async ({ page }) => {
     await page.setViewportSize({ width, height: 844 })
     await page.goto('/en')
-    const labels = page.locator('.hero-image-label > span, .line-card-image > span')
-    await expect(labels).toHaveCount(4)
+    // The brush home has one hero photo with two label chips (no product-line cards).
+    const labels = page.locator('.hero-image-label > span')
+    await expect(labels).toHaveCount(2)
     for (const label of await labels.all()) {
       const { color, background } = await colours(label)
       expect(contrast(color, background), await label.innerText()).toBeGreaterThanOrEqual(4.5)
@@ -60,7 +61,7 @@ test('phone assurance and capability rows stack in reading order', async ({ page
 })
 test('guide card summaries never show flattened Markdown list dashes', async ({ page }) => {
   for (const locale of ['en', 'ja']) {
-    await page.goto(`/${locale}/products/solid-rubber-profiles`)
+    await page.goto(`/${locale}/products/metal-channel-strip-brushes`)
     const card = page.locator('.related-block .resource-card[href$="/guides/rfq-checklist"] > p')
     await expect(card).toHaveCount(1)
     const text = await card.innerText()

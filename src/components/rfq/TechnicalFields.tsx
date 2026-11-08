@@ -1,18 +1,6 @@
 'use client'
 import { interfaceCopy, type InterfaceCopy } from '@/lib/interface-copy'
 import type { Locale } from '@/lib/locales'
-export type RfqLine = 'sealing' | 'brushes' | 'both'
-const sealing = [
-  'material',
-  'profileType',
-  'gapMin',
-  'gapMax',
-  'panelThickness',
-  'hardnessOrDensity',
-  'mounting',
-  'jointMethod',
-  'targetRating',
-] as const
 const brushes = [
   'filamentMaterial',
   'channelShape',
@@ -43,12 +31,11 @@ export function RfqField({ name, locale }: { name: keyof InterfaceCopy; locale: 
     </label>
   )
 }
-// Optional group A. Fields are keyed by name, so switching line keeps shared values and clears line-specific ones.
-export function SpecificationFields({ line, locale }: { line: RfqLine; locale: Locale }) {
-  const own = line === 'sealing' ? sealing : line === 'brushes' ? brushes : []
+// Optional group A: common dimensions plus the strip-brush specification fields.
+export function SpecificationFields({ locale }: { locale: Locale }) {
   return (
     <div className="technical-fields-grid">
-      {['dimensions', ...own, 'drawingRevision', 'tolerance', 'environment', 'tempMin', 'tempMax'].map(
+      {['dimensions', ...brushes, 'drawingRevision', 'tolerance', 'environment', 'tempMin', 'tempMax'].map(
         (name) => (
           <RfqField key={name} name={name as keyof InterfaceCopy} locale={locale} />
         ),

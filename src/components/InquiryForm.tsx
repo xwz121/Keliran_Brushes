@@ -5,12 +5,13 @@ import { useEffect, useRef, useState } from 'react'
 import Script from 'next/script'
 import { ArrowUpRight, CheckCircle2 } from 'lucide-react'
 import type { Locale } from '@/lib/locales'
-import { CommercialFields, RfqField, SpecificationFields, type RfqLine } from './rfq/TechnicalFields'
+import { CommercialFields, RfqField, SpecificationFields } from './rfq/TechnicalFields'
 import { getDictionary } from '@/lib/i18n'
 import { buildWhatsAppURL } from '@/lib/whatsapp'
 import { WhatsAppButton } from './WhatsAppButton'
 import { EmailText } from './EmailText'
 import type { ContentContext } from '@/lib/content-context'
+import { otherSiteURL, siteLine } from '@/lib/site'
 declare global {
   interface Window {
     turnstile?: {
@@ -26,7 +27,6 @@ export function InquiryForm({
   productTitle,
   productCode,
   technical = false,
-  initialLine = 'both',
   uploadsEnabled = false,
   whatsapp,
   contentContext,
@@ -37,7 +37,6 @@ export function InquiryForm({
   productTitle?: string
   productCode?: string
   technical?: boolean
-  initialLine?: RfqLine
   uploadsEnabled?: boolean
   whatsapp?: string
   contentContext?: ContentContext
@@ -45,9 +44,9 @@ export function InquiryForm({
 }) {
   const t = getDictionary(locale),
     u = interfaceCopy(locale)
-  const [line, setLine] = useState<RfqLine>(initialLine)
-  // A product reference follows the buyer's line choice unless the product itself spans both lines.
-  const selectedProduct = initialLine === 'both' || line === initialLine ? productSlug : undefined
+  // Every enquiry on this site is for its own product line; there is no line to choose.
+  const line = siteLine
+  const selectedProduct = productSlug
   const [files, setFiles] = useState<File[]>([])
   const [progress, setProgress] = useState(0)
   const [error, setError] = useState('')
@@ -175,7 +174,9 @@ export function InquiryForm({
         }),
       })
       if (!response.ok) {
-        await response.json()
+        const failure = await response.json().catch(() => ({}))
+        // The other product line has its own site; never replay the submission there.
+        if (failure?.code === 'line-moved') throw Error(u.lineMoved)
         if (response.status === 401) {
           session.current = ''
           uploaded.current = []
@@ -205,14 +206,21 @@ export function InquiryForm({
         signedUploads.current = []
         setProgress(0)
       }
-      const messages = [u.formExpired, u.uploadError, u.formRateLimit, u.formValidation, t.formError]
+      const messages = [
+        u.formExpired,
+        u.uploadError,
+        u.formRateLimit,
+        u.formValidation,
+        u.lineMoved,
+        t.formError,
+      ]
       setError(err instanceof Error && messages.includes(err.message) ? err.message : t.formError)
       setStatus('error')
       window.turnstile?.reset(widget.current || undefined)
       setToken('')
     }
   }
-  const drawingEmail = `mailto:contact@keliran.com?subject=${encodeURIComponent(`Keliran enquiry — ${submission.current || selectedProduct || (line === 'both' ? 'RFQ' : line)}`)}`
+  const drawingEmail = `mailto:contact@keliran.com?subject=${encodeURIComponent(`Keliran enquiry — ${submission.current || selectedProduct || 'RFQ'}`)}`
   const whatsappHref = (message: string) => (whatsapp ? buildWhatsAppURL(whatsapp, message) : null)
   const photosHref = whatsappHref(u.whatsappMessage)
   // Name the product the enquiry is about, with the same reference used on the page, in chats and quotes.
@@ -222,13 +230,7 @@ export function InquiryForm({
       {productCode ? ` · ${productCode}` : ''}
     </p>
   )
-  const messageHint = !technical
-    ? t.messageHint
-    : line === 'sealing'
-      ? u.rfqMessageHintSealing
-      : line === 'brushes'
-        ? u.rfqMessageHintBrushes
-        : u.rfqMessageHintGeneral
+  const messageHint = technical ? u.rfqMessageHintBrushes : t.messageHint
   if (status === 'success') {
     const followUp = whatsappHref(u.whatsappSubmittedMessage.replace('{ref}', submission.current))
     return (
@@ -311,41 +313,7 @@ export function InquiryForm({
           {u.contextLabel}: {contextTitle}
         </p>
       )}
-      {!technical && !productSlug && (
-        <label>
-          {u.yourComponent}
-          <select value={line} onChange={(e) => setLine(e.target.value as typeof line)}>
-            <option value="both">{u.lineNotSure}</option>
-            <option value="sealing">{u.sealingComponents}</option>
-            <option value="brushes">{u.brushesTitle}</option>
-          </select>
-        </label>
-      )}
-      {technical && (
-        <fieldset disabled={status === 'sending'} className="rfq-line">
-          <legend>{u.yourComponent}</legend>
-          <div className="rfq-choice">
-            {(
-              [
-                ['sealing', u.sealingComponents],
-                ['brushes', u.brushesTitle],
-                ['both', u.lineNotSure],
-              ] as const
-            ).map(([value, label]) => (
-              <label key={value}>
-                <input
-                  type="radio"
-                  name="productLine"
-                  checked={line === value}
-                  onChange={() => setLine(value)}
-                />
-                {label}
-              </label>
-            ))}
-          </div>
-          {productReference}
-        </fieldset>
-      )}
+      {technical && productReference}
       <fieldset disabled={status === 'sending'} className="contact-fields">
         {technical ? (
           <>
@@ -365,7 +333,7 @@ export function InquiryForm({
         <fieldset disabled={status === 'sending'} className="rfq-optional">
           <details className="technical-details">
             <summary>{u.moreTechnical}</summary>
-            <SpecificationFields line={line} locale={locale} />
+            <SpecificationFields locale={locale} />
           </details>
           <details className="technical-details">
             <summary>{u.commercialDetails}</summary>
@@ -487,6 +455,12 @@ export function InquiryForm({
       {(status === 'error' || error) && (
         <p className="form-error" role="alert">
           {error || t.formError}
+          {error === u.lineMoved && (
+            <>
+              {' '}
+              <a href={`${otherSiteURL}/${locale}/rfq`}>{otherSiteURL.replace(/^https:\/\//, '')}</a>
+            </>
+          )}
         </p>
       )}
       <button

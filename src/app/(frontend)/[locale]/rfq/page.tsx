@@ -44,15 +44,6 @@ export default async function Page({ params, searchParams }: ResourceProps) {
       ? fillCopy(u.whatsappProductMessage, { product: selected.title, ref: selected.code })
       : u.whatsappMessage,
   )
-  // A real product defines its line. Untrusted query parameters cannot relabel it.
-  const lineHint =
-    selected?.line ||
-    (q.line === 'brushes' || q.line === 'sealing'
-      ? q.line
-      : contextDoc && 'line' in contextDoc
-        ? contextDoc.line
-        : undefined)
-  const line = lineHint === 'brushes' || lineHint === 'sealing' ? lineHint : 'both'
   return (
     <>
       <section className="container page-intro rfq-intro">
@@ -92,7 +83,6 @@ export default async function Page({ params, searchParams }: ResourceProps) {
           key={`${selected?.slug || 'custom'}:${contentContext?.slug || ''}`}
           locale={locale}
           technical
-          initialLine={line}
           productSlug={selected?.slug}
           contentContext={contentContext}
           contextTitle={contextDoc?.title || undefined}

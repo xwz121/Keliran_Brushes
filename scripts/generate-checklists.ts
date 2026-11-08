@@ -1,6 +1,7 @@
 import { mkdir, writeFile } from 'node:fs/promises'
 import { interfaceCopy } from '../src/lib/interface-copy'
 import { locales } from '../src/lib/locales'
+import { productionSiteURL } from '../src/lib/site'
 const common = [
   'application',
   'drawingRevision',
@@ -12,17 +13,6 @@ const common = [
   'sampleQty',
   'destination',
   'safetyQuestion',
-] as const
-const sealing = [
-  'profileType',
-  'gapMin',
-  'gapMax',
-  'panelThickness',
-  'material',
-  'hardnessOrDensity',
-  'mounting',
-  'jointMethod',
-  'targetRating',
 ] as const
 const brushes = [
   'channelShape',
@@ -67,23 +57,20 @@ for (const locale of locales) {
         ] as const
       ).map((key) => `${u[key]}: ____________________`),
       '',
-      `https://keliran.com/${locale}/guides/supplier-qualification`,
+      `${productionSiteURL}/${locale}/guides/supplier-qualification`,
       '',
     ].join('\n'),
   )
-  for (const line of ['sealing', 'strip-brush'] as const) {
+  {
     const text = [
       'KELIRAN',
-      line === 'sealing' ? u.sealingTitle : u.brushesTitle,
+      u.brushesTitle,
       u.rfqTitle,
       '',
       u.checklistNote,
       '',
-      ...[...common, ...(line === 'sealing' ? sealing : brushes)].map(
-        (key) => `${u[key]}: ____________________`,
-      ),
+      ...[...common, ...brushes].map((key) => `${u[key]}: ____________________`),
       '',
-      ...(line === 'sealing' ? [u.ratingNote] : []),
       u.safetyNote,
       '',
       'contact@keliran.com',
@@ -91,7 +78,7 @@ for (const locale of locales) {
       '+447536120830',
       '',
     ].join('\n')
-    await writeFile(`public/downloads/${locale}/${line}-rfq-checklist.txt`, text)
+    await writeFile(`public/downloads/${locale}/strip-brush-rfq-checklist.txt`, text)
   }
 }
-console.log('Generated 16 localised RFQ checklists and 8 blank supplier-review records.')
+console.log('Generated 8 localised strip-brush RFQ checklists and 8 blank supplier-review records.')

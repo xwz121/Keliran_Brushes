@@ -3,15 +3,7 @@ import Link from 'next/link'
 import { ArrowUpRight } from 'lucide-react'
 import { interfaceCopy } from '@/lib/interface-copy'
 import type { Locale } from '@/lib/locales'
-export function QuoteBanner({
-  locale,
-  line,
-  context,
-}: {
-  locale: Locale
-  context?: ContentContext
-  line?: 'sealing' | 'brushes'
-}) {
+export function QuoteBanner({ locale, context }: { locale: Locale; context?: ContentContext }) {
   const u = interfaceCopy(locale)
   return (
     <section className="quote-banner">
@@ -19,7 +11,7 @@ export function QuoteBanner({
         <h2>{u.offerTitle}</h2>
         <div>
           <p>{u.offerBody}</p>
-          <Link className="button" href={contextRfqHref(locale, context, line)}>
+          <Link className="button" href={contextRfqHref(locale, context)}>
             {u.drawingCta}
             <ArrowUpRight size={20} />
           </Link>

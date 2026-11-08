@@ -2,6 +2,8 @@ import type { MetadataRoute } from 'next'
 import { locales } from './locales'
 import { routeFor } from './routes'
 import { legacyContent } from './legacy-content'
+import { categoryRoute } from './site'
+import { sharedCanonicalPaths } from './shared-canonical'
 
 // locale: 'all', fallbackLocale: false: only real localized titles are advertised.
 export function sitemapRecords(
@@ -15,7 +17,8 @@ export function sitemapRecords(
     for (const doc of docs) {
       if (
         doc._status !== 'published' ||
-        legacyContent.some(([kind, slug]) => kind === collection && slug === doc.slug)
+        legacyContent.some(([kind, slug]) => kind === collection && slug === doc.slug) ||
+        sharedCanonicalPaths.has(routeFor(collection, doc, 'en').slice('/en'.length))
       )
         continue
       const available = locales.filter((l) => typeof doc.title?.[l] === 'string' && doc.title[l].trim())
@@ -41,7 +44,7 @@ export function sitemapRecords(
       for (const locale of listed) add({ url: `${origin}/${locale}/${path}`, alternates: { languages } })
     }
   }
-  for (const path of ['sealing', 'strip-brushes', 'rfq']) {
+  for (const path of [categoryRoute, 'rfq']) {
     const languages = Object.fromEntries([
       ...locales.map((l) => [l, `${origin}/${l}/${path}`]),
       ['x-default', `${origin}/en/${path}`],

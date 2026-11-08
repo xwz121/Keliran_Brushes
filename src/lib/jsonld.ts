@@ -2,6 +2,7 @@ import { countryCode, localizedAddress, localizedEntityName } from './business-i
 import { phoneNumbers } from './contact-channels'
 import { getDictionary } from './i18n'
 import { siteURL } from './env'
+import { otherSiteURL } from './site'
 import type { Locale } from './locales'
 export function safeJSON(value: unknown) {
   return JSON.stringify(value).replace(/</g, '\\u003c')
@@ -64,6 +65,7 @@ export function organizationData(s: any, locale: Locale = 'en') {
           },
         }
       : {}),
-    sameAs: [s.facebookUrl, s.linkedinUrl].filter(Boolean),
+    // keliran.com is the same company's sealing site.
+    sameAs: [s.facebookUrl, s.linkedinUrl, otherSiteURL].filter(Boolean),
   }
 }

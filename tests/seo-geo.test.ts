@@ -6,6 +6,7 @@ import { materialName } from '../src/lib/material-names'
 import { parseContentContext, contextRfqHref } from '../src/lib/content-context'
 import { rfqSchema } from '../src/lib/rfq-schema'
 import { locales } from '../src/lib/locales'
+import { pageMetadata } from '../src/lib/metadata'
 describe('procurement content and public discovery', () => {
   it('removes exact repeated prose in English and German, retaining distinct follow-up blocks and original data', () => {
     for (const summary of ['Measure the interface first.', 'Zuerst die Schnittstelle messen.']) {
@@ -85,10 +86,12 @@ describe('procurement content and public discovery', () => {
       ),
     ).toEqual(['mounting-holder', 'mounting-holder'])
     expect(procurementRelations['materials/aluminium'].some((r) => r.kind === 'products')).toBe(false)
-    expect(procurementRelations['materials/epdm']).toContainEqual({
-      kind: 'products',
-      slug: 'sponge-rubber-seals',
-    })
+    // No hard-coded navigation points at the sealing catalogue, which lives on keliran.com.
+    const sealing = /epdm|nbr|fkm|foam|seal|gasket|o-ring|rubber|door-leak|enclosure/
+    for (const [id, relations] of Object.entries(procurementRelations)) {
+      expect(id).not.toMatch(sealing)
+      for (const r of relations) expect(r.slug).not.toMatch(sealing)
+    }
   })
   it('localizes material display without changing technical codes', () => {
     expect(materialName('EPDM sponge', 'de')).toBe('EPDM-Moosgummi')
@@ -105,7 +108,7 @@ describe('procurement content and public discovery', () => {
     ])
       expect(parseContentContext(value)).toBeUndefined()
     const context = parseContentContext('materials/pbt')!
-    expect(contextRfqHref('de', context, 'brushes')).toBe('/de/rfq?line=brushes&context=materials%2Fpbt')
+    expect(contextRfqHref('de', context)).toBe('/de/rfq?context=materials%2Fpbt')
     expect(
       rfqSchema.parse({
         line: 'brushes',
@@ -122,5 +125,28 @@ describe('procurement content and public discovery', () => {
       channelMaterial: 'steel',
       backingHeight: '5',
     })
+  })
+})
+describe('shared documents copied from keliran.com', () => {
+  it('defer canonical and hreflang to keliran.com and stay out of this sitemap until rewritten', () => {
+    const shared = pageMetadata('de', '/guides/rfq-checklist', 'RFQ', 'Checklist')
+    expect(shared.alternates?.canonical).toBe('https://keliran.com/de/guides/rfq-checklist')
+    expect(shared.alternates?.languages?.['x-default']).toBe('https://keliran.com/en/guides/rfq-checklist')
+    const own = pageMetadata('de', '/guides/measure-strip-brush', 'Measure', 'Guide')
+    expect(own.alternates?.canonical).toMatch(/\/de\/guides\/measure-strip-brush$/)
+    expect(own.alternates?.canonical).not.toContain('https://keliran.com/')
+    const doc = { _status: 'published', title: { en: 'X' } }
+    const rows = sitemapRecords('https://brushes.keliran.com', [
+      {
+        collection: 'guides',
+        docs: [
+          { ...doc, slug: 'rfq-checklist' },
+          { ...doc, slug: 'measure-strip-brush' },
+        ],
+      },
+    ])
+    expect(rows.some((r) => r.url.endsWith('/rfq-checklist'))).toBe(false)
+    expect(rows.some((r) => r.url.endsWith('/en/guides/measure-strip-brush'))).toBe(true)
+    expect(rows.some((r) => /\/sealing(\/|$)/.test(r.url))).toBe(false)
   })
 })

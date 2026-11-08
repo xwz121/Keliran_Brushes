@@ -33,12 +33,11 @@ export function Header({
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
   const c = siteCopy(locale)
-  // Carry the product line into the quote form when the visitor is already inside one line.
-  const quoteLine = path.includes('/strip-brushes') ? 'brushes' : path.includes('/sealing') ? 'sealing' : ''
-  const quoteHref = `/${locale}/rfq${quoteLine ? `?line=${quoteLine}` : ''}`
+  // Every enquiry on this site is a strip-brush enquiry; the form needs no line parameter.
+  const quoteHref = `/${locale}/rfq`
   const nav = [
-    ['sealing', c.sealing],
     ['strip-brushes', c.brushes],
+    ['products', c.all],
     ['solutions', c.solutions],
     ['guides', c.guides],
     ['about', t.about],

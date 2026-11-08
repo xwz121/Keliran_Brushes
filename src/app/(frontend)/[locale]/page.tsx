@@ -9,8 +9,8 @@ import { siteCopy } from '@/lib/site-copy'
 import { canPreview, getPage, getCollection, getProducts } from '@/lib/content'
 import { sprintProducts } from '@/lib/sprint-products'
 import { pageMetadata } from '@/lib/metadata'
-import { mediaURL } from '@/lib/media-url'
 import { ResourceCard } from '@/components/ResourceUI'
+import { ProductCard } from '@/components/ProductCard'
 import { QuoteBanner } from '@/components/QuoteBanner'
 type Props = { params: Promise<{ locale: string }>; searchParams: Promise<{ preview?: string }> }
 export async function generateMetadata({ params, searchParams }: Props) {
@@ -18,10 +18,10 @@ export async function generateMetadata({ params, searchParams }: Props) {
   if (!isLocale(locale)) return {}
   const preview = await canPreview((await searchParams).preview === '1')
   const p = await getPage(locale, 'home', preview)
-  // Brand and site-name searches should see the products first; an SEO title that editors set apart
-  // from the display headline still wins.
-  const title = p?.seoTitle && p.seoTitle !== p.title ? p.seoTitle : interfaceCopy(locale).productIdentity
-  return pageMetadata(locale, '', title, p?.summary || interfaceCopy(locale).heroBody, preview || !p)
+  // Brand and site-name searches should see the products first. The shared home record's SEO title
+  // names both Keliran product lines, so this site always leads with strip brushes.
+  const u = interfaceCopy(locale)
+  return pageMetadata(locale, '', u.brushesTitle, u.introBrushes, preview || !p)
 }
 export default async function Page({ params, searchParams }: Props) {
   const { locale } = await params
@@ -33,15 +33,12 @@ export default async function Page({ params, searchParams }: Props) {
     getCollection(locale, 'guides', preview),
     getProducts(locale, preview),
   ])
-  const entryTitles = (line: keyof typeof sprintProducts) =>
-    sprintProducts[line].map((slug) => products.find((p) => p.slug === slug)?.title).filter(Boolean)
+  const entries = sprintProducts.flatMap((slug) => products.filter((p) => p.slug === slug))
   if (!page) notFound()
   const u = interfaceCopy(locale)
   const t = getDictionary(locale),
     c = siteCopy(locale)
   const s = Object.fromEntries((page.sections || []).map((x) => [x.key, x]))
-  const hero: any = 'heroImage' in page ? page.heroImage : null
-  const heroURL = mediaURL(hero?.sizes?.detail?.url || hero?.url)
   return (
     <>
       <section className="home-hero">
@@ -50,27 +47,23 @@ export default async function Page({ params, searchParams }: Props) {
             <i />
             {s['hero-kicker']?.heading}
           </span>
-          <span>{s['hero-kicker']?.text || `${c.sealing} / ${c.brushes}`}</span>
+          <span>{c.brushes}</span>
         </div>
         <div className="container home-hero-grid">
           <div className="home-hero-copy">
             {/* Name the products before the brand line, so a first-time visitor knows what is supplied. */}
-            <p className="eyebrow enter">{u.productIdentity}</p>
-            <h1 className="business-heading">{u.productIdentity}</h1>
+            <p className="eyebrow enter">{u.brushTags}</p>
+            <h1 className="business-heading">{u.brushesTitle}</h1>
             <p className="hero-tagline">{page.title?.replaceAll('\n', ' ')}</p>
-            <p className="hero-description">{u.heroBody}</p>
+            <p className="hero-description">{u.introBrushes}</p>
             <div className="hero-buttons enter" style={{ '--i': 2 } as React.CSSProperties}>
               <Link href={`/${locale}/rfq`} className="button">
                 {u.drawingCta}
                 <ArrowUpRight size={20} />
               </Link>
               <span className="hero-line-links">
-                <Link href={`/${locale}/sealing`} className="text-link">
-                  {c.sealing}
-                  <ArrowRight size={18} />
-                </Link>
                 <Link href={`/${locale}/strip-brushes`} className="text-link">
-                  {c.brushes}
+                  {c.explore}
                   <ArrowRight size={18} />
                 </Link>
               </span>
@@ -81,22 +74,21 @@ export default async function Page({ params, searchParams }: Props) {
               <span>03 / {s.assurance3?.heading}</span>
             </div>
           </div>
+          {/* The shared CMS hero shows both product lines; this site uses its approved brush illustration. */}
           <figure className="home-hero-image">
-            {heroURL && (
-              <Image
-                src={heroURL}
-                width={1536}
-                height={1024}
-                alt={hero.alt || t.renderNote}
-                priority
-                sizes="(max-width:800px) 100vw, 58vw"
-              />
-            )}
+            <Image
+              src="/images/keliran-v2/strip-brushes.webp"
+              width={1536}
+              height={1024}
+              alt={u.brushAlt}
+              priority
+              sizes="(max-width:800px) 100vw, 58vw"
+            />
             <div className="hero-image-label">
               <span>{s['image-label']?.heading}</span>
-              <span>01—02</span>
+              <span>{c.brushes}</span>
             </div>
-            {hero?.illustrative && <figcaption>{t.renderNote}</figcaption>}
+            <figcaption>{t.renderNote}</figcaption>
           </figure>
         </div>
       </section>
@@ -111,67 +103,20 @@ export default async function Page({ params, searchParams }: Props) {
       <section className="section container" id="product-lines">
         <div className="section-heading" data-motion="reveal">
           <div>
-            <p className="eyebrow">01 / {c.lineLabel}</p>
-            <h2>{s.lines?.heading}</h2>
+            <p className="eyebrow">01 / {c.brushes}</p>
+            <h2>{s.brushes?.heading || u.brushesTitle}</h2>
           </div>
-          <p>{s.lines?.text}</p>
-        </div>
-        <div className="line-cards" data-motion="stagger">
-          {[
-            {
-              slug: 'sealing',
-              title: s.sealing?.heading,
-              desc: s.sealing?.text,
-              img: 'sealing-profiles',
-              label: c.sealing,
-              tags: interfaceCopy(locale).sealingTags,
-              num: '01',
-              entries: entryTitles('sealing'),
-            },
-            {
-              slug: 'strip-brushes',
-              title: s.brushes?.heading,
-              desc: s.brushes?.text,
-              img: 'strip-brushes',
-              label: c.brushes,
-              tags: interfaceCopy(locale).brushTags,
-              num: '02',
-              entries: entryTitles('brushes'),
-            },
-          ].map((line) => (
-            <Link key={line.slug} href={`/${locale}/${line.slug}`} className="line-card">
-              <div className="line-card-image" data-motion-clip>
-                <Image
-                  src={`/images/keliran-v2/${line.img}.webp`}
-                  width={1536}
-                  height={1024}
-                  alt={`${line.label} — ${t.renderNote}`}
-                  sizes="(max-width:800px) 100vw, 50vw"
-                />
-                <span>
-                  {line.num} / {line.label}
-                </span>
-              </div>
-              <div className="line-card-copy">
-                <p className="eyebrow">{line.tags}</p>
-                <h3>
-                  {line.title}
-                  <ArrowUpRight size={28} />
-                </h3>
-                <p>{line.desc}</p>
-                {line.entries.length > 0 && (
-                  <ul className="line-card-products">
-                    {line.entries.map((title) => (
-                      <li key={title}>{title}</li>
-                    ))}
-                  </ul>
-                )}
-                <span className="text-link">
-                  {c.explore}
-                  <ArrowRight size={18} />
-                </span>
-              </div>
+          <div>
+            <p>{s.brushes?.text || u.entryBody}</p>
+            <Link href={`/${locale}/strip-brushes`} className="text-link">
+              {c.explore}
+              <ArrowUpRight size={18} />
             </Link>
+          </div>
+        </div>
+        <div className="product-grid catalogue-grid" data-motion="stagger">
+          {entries.map((p, i) => (
+            <ProductCard product={p} index={i} locale={locale} key={p.id} />
           ))}
         </div>
       </section>
@@ -218,7 +163,7 @@ export default async function Page({ params, searchParams }: Props) {
           </div>
         </div>
         <div className="resource-grid solutions-featured" data-motion="stagger">
-          {['enclosure-door-leaks', 'adhesive-lifting', 'dust-at-equipment-openings', 'filament-shedding']
+          {['dust-at-equipment-openings', 'filament-shedding', 'brush-wear', 'holder-fit']
             .map((slug) => solutions.find((d) => d.slug === slug))
             .filter(Boolean)
             .map((d) => (
@@ -289,7 +234,7 @@ export default async function Page({ params, searchParams }: Props) {
         <div className="resource-grid" data-motion="stagger">
           {guides
             .filter((d) =>
-              ['measure-door-seal', 'measure-strip-brush', 'standards-and-validation'].includes(d.slug),
+              ['measure-strip-brush', 'brush-material-selection', 'rfq-checklist'].includes(d.slug),
             )
             .map((d) => (
               <ResourceCard key={d.id} doc={d} collection="guides" locale={locale} />

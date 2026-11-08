@@ -8,6 +8,8 @@ export type SiteLine = typeof siteLine
 export const visibleLines = [siteLine, 'both'] as const
 export const siteLineWhere = { line: { in: [...visibleLines] } }
 export const siteName = 'Keliran Strip Brushes'
+// Category guide pages live under this path: /:locale/strip-brushes/:category.
+export const categoryRoute = 'strip-brushes'
 export const productionSiteURL = 'https://brushes.keliran.com'
 // The other product line lives on its own site; enquiries for it are refused with `line-moved`.
 export const otherSiteURL = 'https://keliran.com'

@@ -1,7 +1,8 @@
 import { materialName } from '@/lib/material-names'
 import { InquiryNextSteps } from '@/components/InquiryNextSteps'
 import { RichSections } from '@/components/RichSections'
-import { StandardsNote, RelatedLinks } from '@/components/ResourceUI'
+import { RelatedLinks } from '@/components/ResourceUI'
+import { categoryRoute } from '@/lib/site'
 import { JsonLd } from '@/components/JsonLd'
 import { ProcurementSupport, PreparationInputs, roleLabel } from '@/components/ProcurementSupport'
 import { distinctSections } from '@/lib/summary'
@@ -56,10 +57,7 @@ export default async function Page({ params, searchParams }: Props) {
     fillCopy(u.whatsappProductMessage, { product: p.title, ref: p.code }),
   )
   const breadcrumbs = [
-    {
-      title: p.line === 'brushes' ? siteCopy(locale).brushes : siteCopy(locale).sealing,
-      href: `/${locale}/${p.line === 'brushes' ? 'strip-brushes' : 'sealing'}`,
-    },
+    { title: siteCopy(locale).brushes, href: `/${locale}/${categoryRoute}` },
     { title: p.title },
   ]
   const bindings = materialBindings(p)
@@ -75,7 +73,7 @@ export default async function Page({ params, searchParams }: Props) {
             p.images?.length
               ? p.images
               : previewMode
-                ? [{ url: '/images/sealing-hero.png', alt: t.renderNote, illustrative: true }]
+                ? [{ url: '/images/keliran-v2/strip-brushes.webp', alt: t.renderNote, illustrative: true }]
                 : []
           }
           caption={t.renderNote}
@@ -119,7 +117,7 @@ export default async function Page({ params, searchParams }: Props) {
           <p className="small-text">
             {u.familyNote} {t.availabilityBody}
           </p>
-          <Link href={`/${locale}/rfq?line=${p.line || 'sealing'}&product=${p.slug}`} className="button">
+          <Link href={`/${locale}/rfq?product=${p.slug}`} className="button">
             {t.quoteFor}
             <ArrowUpRight size={19} />
           </Link>
@@ -147,16 +145,11 @@ export default async function Page({ params, searchParams }: Props) {
             </table>
           )}
           <RichSections sections={sections} />
-          {p.line !== 'brushes' && !sections.some((s) => s.key === 'standards-note') && (
-            <StandardsNote locale={locale} />
-          )}
           <PreparationInputs id={`products/${p.slug}`} locale={locale} />
-          {p.line === 'brushes' && (
-            <p className="technical-note">
-              {u.materialRoleNote}
-              {p.slug === 'brush-holders' ? ` ${u.aluminiumReview}` : ''}
-            </p>
-          )}
+          <p className="technical-note">
+            {u.materialRoleNote}
+            {p.slug === 'brush-holders' ? ` ${u.aluminiumReview}` : ''}
+          </p>
           <ProcurementSupport
             id={`products/${p.slug}`}
             locale={locale}
@@ -182,7 +175,6 @@ export default async function Page({ params, searchParams }: Props) {
             productSlug={slug}
             productTitle={p.title}
             productCode={p.code}
-            initialLine={p.line === 'brushes' ? 'brushes' : 'sealing'}
             whatsapp={whatsapp[0]?.number}
           />
         </div>
@@ -193,7 +185,7 @@ export default async function Page({ params, searchParams }: Props) {
         </div>
         <div className="product-grid">
           {products
-            .filter((x) => x.id !== p.id && x.line === p.line)
+            .filter((x) => x.id !== p.id)
             .slice(0, 4)
             .map((x, i) => (
               <ProductCard product={x} locale={locale} index={i} key={x.id} />

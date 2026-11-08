@@ -1,4 +1,3 @@
-import { previewProducts } from '../../src/lib/preview-data'
 export type Draft = { collection: string; slug: string; data: Record<string, any> }
 export const drafts: Draft[] = []
 export const position =
@@ -582,24 +581,3 @@ for (const [i, sol] of [
           : ['metal-channel-strip-brushes', 'brush-holders'],
     },
   )
-
-for (const p of previewProducts('en'))
-  add('products', p.slug, p.title, p.summary, {
-    code: p.code,
-    line: 'sealing',
-    categorySlug: p.slug.includes('gasket') ? 'die-cut-gaskets' : 'moulded-rubber-components',
-    materials: p.materials,
-    imageKey: p.slug,
-    sortOrder: 30,
-    description: `${p.summary} ${scope}`,
-    sections: [
-      sec(
-        'rfq-inputs',
-        'What to include in your enquiry',
-        'Approved drawing revision, material grade, critical dimensions, tolerances, actual quantity and operating conditions.',
-      ),
-      sec('standards-note', 'Assembly validation', rating),
-    ],
-    guideSlugs: ['rfq-checklist', 'sealing-material-selection'],
-    solutionSlugs: ['replacement-seal-matching'],
-  })

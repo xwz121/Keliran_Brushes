@@ -1,8 +1,7 @@
 import 'dotenv/config'
 import { getPayload } from 'payload'
 import config from '../src/payload.config'
-import { drafts } from './seed/catalogue'
-import './seed/resources'
+import { siteDrafts as drafts } from './seed/site-drafts'
 import type { ContentSlug } from '../src/collections'
 import { registerProductImages } from './seed/product-media'
 const cms = await getPayload({ config })
@@ -11,13 +10,7 @@ const media = new Map<string, number>()
 const created = new Set<string>()
 try {
   for (const [slug, id] of await registerProductImages(cms)) media.set(slug, id)
-  for (const name of [
-    'components-hero',
-    'sealing-profiles',
-    'strip-brushes',
-    'gaskets-orings',
-    'moulded-parts',
-  ]) {
+  for (const name of ['components-hero', 'strip-brushes']) {
     const sourceNote = `Keliran redesign 2026-09-23 / ${name}. Built-in imagegen conceptual product-family rendering; prompt record in docs/assets-v2.md.`
     const found = await cms.find({
       collection: 'media',
@@ -34,13 +27,7 @@ try {
           alt:
             name === 'components-hero'
               ? 'Rubber sealing profiles and industrial strip brushes'
-              : name === 'strip-brushes'
-                ? 'Straight and formed strip brushes with mounting holder'
-                : name === 'gaskets-orings'
-                  ? 'Flat gaskets, washers and O-rings'
-                  : name === 'moulded-parts'
-                    ? 'Moulded rubber caps, plug, sleeve and grommet'
-                    : 'Rubber sealing profile family',
+              : 'Straight and formed strip brushes with mounting holder',
           sourceNote,
           illustrative: true,
           approved: false,

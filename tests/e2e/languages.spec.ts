@@ -6,7 +6,7 @@ import { numberOf, primaryNumber } from './whatsapp-numbers'
 for (const locale of locales)
   test(`${locale}: localised RFQ, contact links, checklist and error state`, async ({ page }) => {
     const copy = interfaceCopy(locale)
-    await page.goto(`/${locale}/rfq?line=brushes`)
+    await page.goto(`/${locale}/rfq`)
     await expect(page.locator('h1')).toHaveText(copy.offerTitle)
     await expect(page.getByLabel(copy.trimLength, { exact: true })).toBeHidden()
     await page.getByText(copy.moreTechnical, { exact: true }).click()
@@ -32,7 +32,7 @@ test('long translated RFQ labels fit a mobile screen', async ({ page }) => {
   test.setTimeout(60000)
   await page.setViewportSize({ width: 390, height: 844 })
   for (const locale of ['de', 'fr', 'ja', 'ko', 'zh-Hant'] as const) {
-    await page.goto(`/${locale}/rfq?line=brushes`)
+    await page.goto(`/${locale}/rfq`)
     expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), locale).toBe(true)
     await page.getByText(interfaceCopy(locale).moreTechnical, { exact: true }).click()
     await expect(page.getByLabel(interfaceCopy(locale).trimLength, { exact: true })).toBeVisible()

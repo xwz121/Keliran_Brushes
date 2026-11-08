@@ -1,4 +1,5 @@
 import type { Locale } from './locales'
+import { categoryRoute } from './site'
 export function routeFor(
   collection: string,
   doc: { slug: string; line?: string | null },
@@ -10,22 +11,13 @@ export function routeFor(
         ? ''
         : `/${doc.slug}`
       : collection === 'categories'
-        ? `/${doc.line === 'brushes' ? 'strip-brushes' : 'sealing'}/${doc.slug}`
+        ? `/${categoryRoute}/${doc.slug}`
         : `/${collection === 'faqs' ? 'faq' : collection}/${doc.slug}`
   return `/${locale}${path}`
 }
 
 export function materialSlug(material: string) {
   const map: Record<string, string> = {
-    EPDM: 'epdm',
-    NBR: 'nbr',
-    FKM: 'fkm',
-    Silicone: 'silicone',
-    VMQ: 'silicone',
-    CR: 'cr',
-    'EPDM sponge': 'foam',
-    'Silicone foam': 'foam',
-    'PU foam': 'foam',
     PA6: 'pa6',
     PA66: 'pa66',
     PA612: 'pa612',

@@ -11,12 +11,12 @@ const productLd = (page: Page) =>
       els.map((el) => JSON.parse(el.textContent || '{}')).find((d) => d['@type'] === 'Product'),
     )
 
-test('home names both product lines before the brand line and in the page title', async ({ page }) => {
+test('home names strip brushes before the brand line and in the page title', async ({ page }) => {
   for (const locale of ['en', 'de', 'ja', 'zh-Hant'] as const) {
     const copy = interfaceCopy(locale)
     await page.goto(`/${locale}`)
-    await expect(page.locator('.home-hero-copy > .eyebrow')).toHaveText(copy.productIdentity)
-    await expect(page).toHaveTitle(`${copy.productIdentity} | Keliran`)
+    await expect(page.locator('.home-hero-copy h1')).toHaveText(copy.brushesTitle)
+    await expect(page).toHaveTitle(`${copy.brushesTitle} | Keliran`)
   }
 })
 
@@ -24,14 +24,14 @@ test('product page states the family reference, supply status and supplier-revie
   page,
 }) => {
   const copy = interfaceCopy('en')
-  await page.goto('/en/products/sponge-rubber-seals')
+  await page.goto('/en/products/brush-holders')
   const facts = page.locator('.product-facts')
   await expect(facts.locator('dt')).toHaveText([copy.referenceLabel, copy.statusLabel])
-  await expect(facts.locator('dd')).toHaveText(['SE02-CUSTOM', getDictionary('en').availability])
+  await expect(facts.locator('dd')).toHaveText(['BR04-CUSTOM', getDictionary('en').availability])
   await expect(page.locator('.product-detail-copy')).toContainText(copy.familyNote)
   // Structured data describes the family; no SKU or offer is invented for a quoted-to-specification part.
   const ld = await productLd(page)
-  expect(ld.productID).toBe('SE02-CUSTOM')
+  expect(ld.productID).toBe('BR04-CUSTOM')
   expect(ld).not.toHaveProperty('sku')
   expect(ld).not.toHaveProperty('offers')
   const review = page.locator('.supplier-review')
@@ -41,11 +41,11 @@ test('product page states the family reference, supply status and supplier-revie
   for (const href of links) expect((await page.request.get(href!)).status(), href!).toBe(200)
   // The enquiry form and the chat both carry the same product reference.
   await expect(page.locator('.inquiry-form .form-product')).toHaveText(
-    `${copy.productReference}: ${await page.locator('h1').innerText()} · SE02-CUSTOM`,
+    `${copy.productReference}: ${await page.locator('h1').innerText()} · BR04-CUSTOM`,
   )
   const chat = await page.locator('.inquiry-section .wa-panel .wa-button').getAttribute('href')
   expect(numberOf(chat)).toBe(primaryNumber)
-  expect(decodeURIComponent(chat!.split('text=')[1])).toContain('(ref. SE02-CUSTOM)')
+  expect(decodeURIComponent(chat!.split('text=')[1])).toContain('(ref. BR04-CUSTOM)')
   await expect(page.locator('.chat-continue')).toHaveCount(0)
 })
 
@@ -71,8 +71,8 @@ test('RFQ names the selected product with its reference and offers a confidentia
   page,
 }) => {
   const copy = interfaceCopy('en')
-  await page.goto('/en/rfq?product=sponge-rubber-seals')
-  await expect(page.locator('.rfq-form .form-product')).toContainText('· SE02-CUSTOM')
+  await page.goto('/en/rfq?product=brush-holders')
+  await expect(page.locator('.rfq-form .form-product')).toContainText('· BR04-CUSTOM')
   const aside = page.locator('.rfq-aside .nda-note')
   await expect(aside).toContainText(copy.ndaNote)
   await expect(aside.locator('a')).toHaveAttribute('href', 'mailto:contact@keliran.com')
@@ -113,12 +113,12 @@ test('printed product and supplier pages keep the content, source address and co
   page,
 }) => {
   await page.emulateMedia({ media: 'print' })
-  await page.goto('/en/products/sponge-rubber-seals')
+  await page.goto('/en/products/brush-holders')
   for (const hidden of ['.site-header', '.inquiry-section', '.footer-grid', '.supplier-review nav'])
     await expect(page.locator(hidden).first(), hidden).toBeHidden()
   await expect(page.locator('.product-facts')).toBeVisible()
   await expect(page.locator('.footer-legal')).toBeVisible()
-  await expect(page.locator('.print-source')).toContainText('/en/products/sponge-rubber-seals')
+  await expect(page.locator('.print-source')).toContainText('/en/products/brush-holders')
   await page.goto('/en/guides/supplier-qualification')
   await expect(page.locator('.supplier-record')).toBeVisible()
   await page.emulateMedia({ media: 'screen' })
@@ -130,7 +130,7 @@ for (const width of [390, 1280])
     await page.setViewportSize({ width, height: 844 })
     for (const locale of ['de', 'fr', 'ja', 'ko']) {
       for (const path of [
-        '/products/sponge-rubber-seals?utm_source=whatsapp',
+        '/products/brush-holders?utm_source=whatsapp',
         '/rfq?product=metal-channel-strip-brushes',
         '/guides/supplier-qualification',
         '/legal',

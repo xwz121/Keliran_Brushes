@@ -1,6 +1,6 @@
 import { interfaceCopy } from '@/lib/interface-copy'
 import Link from 'next/link'
-import { ArrowUpRight, ArrowRight, FileText } from 'lucide-react'
+import { ArrowUpRight, ArrowRight } from 'lucide-react'
 import type { Locale } from '@/lib/locales'
 import { routeFor } from '@/lib/routes'
 import { siteCopy } from '@/lib/site-copy'
@@ -33,8 +33,7 @@ export function ResourceCard({ doc, collection, locale }: { doc: any; collection
         <span>
           {doc.scenarioType === 'typical'
             ? c.typical
-            : doc.code ||
-              (doc.line === 'brushes' ? c.brushes : doc.line === 'sealing' ? c.sealing : 'KELIRAN')}
+            : doc.code || (doc.line === 'brushes' ? c.brushes : 'KELIRAN')}
         </span>
         <ArrowUpRight size={20} />
       </div>
@@ -45,17 +44,6 @@ export function ResourceCard({ doc, collection, locale }: { doc: any; collection
         <ArrowRight size={17} />
       </span>
     </Link>
-  )
-}
-export function StandardsNote({ locale }: { locale: Locale }) {
-  return (
-    <aside className="standards-note">
-      <FileText size={20} />
-      <div>
-        <p>{interfaceCopy(locale).ratingNote}</p>
-        <Link href={`/${locale}/guides/standards-and-validation`}>{siteCopy(locale).readGuide} →</Link>
-      </div>
-    </aside>
   )
 }
 export function RelatedLinks({ locale, doc }: { locale: Locale; doc: any }) {
