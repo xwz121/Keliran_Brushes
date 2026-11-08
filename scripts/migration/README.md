@@ -16,23 +16,25 @@
 在本项目根目录创建 `.env.migration-source`（已被 git 忽略，切勿提交或粘贴到聊天）：
 
 ```sh
-# Neon 直连端点（不要用 -pooler 连接池地址），使用只读角色
-MIGRATION_SOURCE_DATABASE_URL=postgresql://brushes_export:<密码>@<endpoint>.neon.tech/<数据库>?sslmode=require
+# keliran.com 所在的阿里云 RDS PostgreSQL 实例，库名 keliran_CMS，使用只读账号；
+# 主机、端口与 SSL 参数与主站连接串相同
+MIGRATION_SOURCE_DATABASE_URL=postgresql://brushes_export:<密码>@<实例地址>:<端口>/keliran_CMS
 # 主站公开图片地址（即主站 R2_PUBLIC_URL），用于下载并校验图片
 MIGRATION_SOURCE_MEDIA_BASE_URL=https://<公开图片域名>
 ```
 
-只读角色由数据库管理员在 Neon 控制台或 SQL 编辑器创建，例如：
+只读账号的建法：在 RDS 控制台“账号管理”创建普通账号 `brushes_export`，再用高权限账号在 DMS 中连接 `keliran_CMS` 执行（大小写混合的库名需加双引号）：
 
 ```sql
-CREATE ROLE brushes_export LOGIN PASSWORD '<强密码>';
-GRANT CONNECT ON DATABASE <数据库> TO brushes_export;
+GRANT CONNECT ON DATABASE "keliran_CMS" TO brushes_export;
 GRANT USAGE ON SCHEMA public TO brushes_export;
 GRANT SELECT ON ALL TABLES IN SCHEMA public TO brushes_export;
 ALTER ROLE brushes_export SET default_transaction_read_only = on;
 ```
 
-导出脚本还有两道保护：连接参数要求会话只读（如 Neon 拒绝该参数，可设 `MIGRATION_SOURCE_SESSION_OPTIONS=off`，仍依赖角色与事务保护）；全部读取在同一个 `REPEATABLE READ READ ONLY` 事务中完成，结束时回滚。
+在本机运行导出时，临时把本机公网 IP 加入 RDS 白名单，导出后移除。
+
+导出脚本还有两道保护：连接参数要求会话只读（若数据库代理拒绝该参数，可设 `MIGRATION_SOURCE_SESSION_OPTIONS=off`，仍依赖账号与事务保护）；全部读取在同一个 `REPEATABLE READ READ ONLY` 事务中完成，结束时回滚。
 
 导出前停止条件：事务不是只读；源库存在 `migration_records`（说明连到了本站库）；源库迁移记录不是仓库已知的 6 个。
 
@@ -47,15 +49,15 @@ node scripts/local-env.mjs pnpm migration:import --plan
 node scripts/local-env.mjs pnpm migration:import --apply
 ```
 
-远程目标（新 Neon 库）先 `--plan`，确认输出的数据库名后，带 `--target-fingerprint=<plan 输出值>` 再 `--apply`。写生产库属于生产数据迁移，须另有授权。
+远程目标（RDS 上的 `keliran_brushes`）先 `--plan`，确认输出的数据库名后，带 `--target-fingerprint=<plan 输出值>` 再 `--apply`。写生产库属于生产数据迁移，须另有授权。
 
 写入前全部检查，任一项失败即停止且不写入：
 
-- 目标与源库为同一数据库（按 `current_database()` 与 Neon timeline / 系统标识比对，换连接池或角色也能识别）；
+- 目标与源库为同一数据库（按 `current_database()` 与服务器标识比对：Neon timeline、系统标识，或 RDS 上服务器自报的地址与端口；换公网/内网地址或账号也能识别）；
 - 目标没有 `migration_records` 表（未跑本站迁移，或连到了主站库）；
 - 本地目标不是 `keliran_brushes`；远程目标缺少或不匹配 `--target-fingerprint`；
 - 目标迁移未全部执行；
-- 首次导入时目标已有任何内容、图片或询盘（防止使用从生产分出的 Neon 分支）；
+- 首次导入时目标已有任何内容、图片或询盘（防止误用主站库的克隆或已有数据的库）；
 - bundle 缺文件、图片校验不符、批准原图无法复现、关系依赖缺失、slug 非法或重复。
 
 ## 幂等与不覆盖

@@ -40,6 +40,8 @@ if (env.R2_BUCKET && env.R2_PRIVATE_BUCKET && env.R2_BUCKET === env.R2_PRIVATE_B
   fail('R2_PRIVATE_BUCKET must be the private bucket, not the public R2_BUCKET.')
 if (env.R2_PUBLIC_URL && !/^https:\/\//.test(env.R2_PUBLIC_URL))
   fail('R2_PUBLIC_URL must be an https:// URL.')
+if (env.DATABASE_POOL_MAX && !/^([1-9]|1\d|20)$/.test(env.DATABASE_POOL_MAX))
+  fail('DATABASE_POOL_MAX must be a whole number from 1 to 20.')
 if (env.CONTENT_PREVIEW_MODE === 'true' && production)
   fail('CONTENT_PREVIEW_MODE must be false in production.')
 
@@ -73,7 +75,9 @@ if (connection) {
           'The database has no migration_records table: this is not the brushes database, or it is not migrated.',
         )
     } catch (error) {
-      fail(`Could not check database migrations: ${error instanceof Error ? error.message : error}`)
+      fail(
+        `Could not check database migrations: ${error instanceof Error ? error.message : error}. On Alibaba RDS, check the public endpoint, the IP whitelist for Vercel and the SSL parameters.`,
+      )
     } finally {
       await client.end().catch(() => {})
     }

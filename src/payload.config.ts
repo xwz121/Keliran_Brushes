@@ -90,7 +90,9 @@ export default buildConfig({
   ],
   editor: lexicalEditor(),
   db: postgresAdapter({
-    pool: { connectionString: process.env.DATABASE_URL, max: 5 },
+    // Each serverless instance keeps its own pool; both Keliran sites share one RDS instance's
+    // connection limit, so the size is adjustable (default 5).
+    pool: { connectionString: process.env.DATABASE_URL, max: Number(process.env.DATABASE_POOL_MAX) || 5 },
     push:
       process.env.NODE_ENV !== 'production' &&
       ['localhost', '127.0.0.1', '::1'].includes(new URL(process.env.DATABASE_URL!).hostname),

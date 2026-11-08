@@ -153,6 +153,9 @@ export type DatabaseIdentity = {
   systemIdentifier: string | null
   neonTimeline: string | null
   neonEndpoint: string | null
+  // Address and port the server itself reports. Alibaba RDS gives ordinary accounts no access to
+  // the system identifier, and its public and internal endpoints use different host names.
+  serverAddress: string | null
   host: string
 }
 async function query<T = any>(cms: Payload, text: ReturnType<typeof sql>, req?: PayloadRequest) {
@@ -171,7 +174,7 @@ const optional = async (cms: Payload, text: ReturnType<typeof sql>, req?: Payloa
   }
 }
 // Server-side identity: the same database reached through another host name or role
-// (pooler, direct endpoint, read-only role) still reports the same values here.
+// (public or internal endpoint, connection pooler, read-only account) reports the same values.
 export async function databaseIdentity(cms: Payload, req?: PayloadRequest): Promise<DatabaseIdentity> {
   const [row] = await query<{ database: string }>(cms, sql`select current_database() as database`, req)
   return {
@@ -183,24 +186,25 @@ export async function databaseIdentity(cms: Payload, req?: PayloadRequest): Prom
     ),
     neonTimeline: await optional(cms, sql`select current_setting('neon.timeline_id', true) as value`, req),
     neonEndpoint: await optional(cms, sql`select current_setting('neon.endpoint_id', true) as value`, req),
+    serverAddress: await optional(
+      cms,
+      sql`select inet_server_addr()::text || ':' || inet_server_port()::text as value`,
+      req,
+    ),
     host: new URL(process.env.DATABASE_URL!).hostname,
   }
 }
 export const identityFingerprint = (identity: DatabaseIdentity) =>
   sha256(
-    JSON.stringify([
-      identity.database,
-      identity.systemIdentifier,
-      identity.neonTimeline,
-      identity.neonEndpoint,
-    ]),
+    JSON.stringify([identity.database, identity.host, identity.systemIdentifier, identity.neonTimeline]),
   ).slice(0, 16)
 export function sameDatabase(a: DatabaseIdentity, b: DatabaseIdentity) {
   if (a.database !== b.database) return false
-  // A Neon branch keeps the system identifier but gets its own timeline, so check the timeline first.
-  for (const key of ['neonTimeline', 'systemIdentifier'] as const)
+  // Strongest identifier available on both sides first. A Neon branch keeps the system identifier
+  // but gets its own timeline; on Alibaba RDS usually only the server address is readable.
+  for (const key of ['neonTimeline', 'systemIdentifier', 'serverAddress'] as const)
     if (a[key] && b[key]) return a[key] === b[key]
-  // Without a strong identifier on both sides, the same name on the same host is the same database.
+  // Without any server identifier, the same name on the same host is the same database.
   return a.host === b.host
 }
 export async function tableExists(cms: Payload, table: string, req?: PayloadRequest) {

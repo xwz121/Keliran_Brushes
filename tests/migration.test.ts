@@ -78,11 +78,26 @@ describe('migration change detection', () => {
       systemIdentifier: '7301',
       neonTimeline: 'tl-1',
       neonEndpoint: 'ep-pooler',
+      serverAddress: '10.0.0.1:5432',
       host: 'ep-x-pooler.neon.tech',
     }
     expect(sameDatabase({ ...source, host: 'ep-x.neon.tech', neonEndpoint: 'ep-direct' }, source)).toBe(true)
     expect(sameDatabase({ ...source, neonTimeline: 'tl-2', systemIdentifier: '7302' }, source)).toBe(false)
     expect(sameDatabase({ ...source, database: 'keliran_brushes' }, source)).toBe(false)
     expect(identityFingerprint(source)).toMatch(/^[a-f0-9]{16}$/)
+    // Alibaba RDS: no system identifier for ordinary accounts; one instance, several databases.
+    const cms: DatabaseIdentity = {
+      database: 'keliran_CMS',
+      systemIdentifier: null,
+      neonTimeline: null,
+      neonEndpoint: null,
+      serverAddress: '172.16.0.8:3433',
+      host: 'pgm-example.pg.rds.aliyuncs.com',
+    }
+    const internal = { ...cms, host: 'pgm-example.pg.rds.aliyuncs.com.internal' }
+    expect(sameDatabase(internal, cms)).toBe(true)
+    expect(sameDatabase({ ...cms, database: 'keliran_brushes' }, cms)).toBe(false)
+    expect(sameDatabase({ ...cms, serverAddress: '172.16.9.9:3433' }, cms)).toBe(false)
+    expect(sameDatabase({ ...cms, serverAddress: null }, cms)).toBe(true)
   })
 })
